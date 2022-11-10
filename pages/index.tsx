@@ -96,16 +96,13 @@ const components = {
 }
   return (
     <div className={styles.container}>
-      {/* <div>
-      {content}
-      </div> */}
       <div>
         <Example />
       </div>
-      <MDXProvider components={components}>
-      <Post />
-    </MDXProvider>
       <div className='prose mx-auto'>
+        <MDXProvider components={components}>
+          <Post />
+        </MDXProvider>
       <div>
       <ReactMarkdown
         remarkPlugins={[[remarkGfm, {singleTilde: false}],[remarkMath]]}
