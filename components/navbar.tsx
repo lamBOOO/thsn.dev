@@ -7,6 +7,12 @@ import Image from 'next/image'
 import logo from '../public/favicon.png'
 import logo_me from '../public/me.jpg'
 
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faResearchgate } from '@fortawesome/free-brands-svg-icons'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const navigation = [
   { name: 'Home', href: '#', current: true },  //  🏡
   { name: 'Research', href: '#', current: false },  //  📑
@@ -123,7 +129,7 @@ export default function Navbar() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Github: @lambooo
+                            <FontAwesomeIcon icon={faGithub} /> @lambooo
                           </a>
                         )}
                       </Menu.Item>
@@ -133,7 +139,7 @@ export default function Navbar() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Settings
+                            <FontAwesomeIcon icon={faTwitter} /> @lmbrt_thsn
                           </a>
                         )}
                       </Menu.Item>
@@ -143,7 +149,17 @@ export default function Navbar() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Sign out
+                            <FontAwesomeIcon icon={faResearchgate} /> Lambert Theisen
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            <FontAwesomeIcon icon={faResearchgate} /> etc...
                           </a>
                         )}
                       </Menu.Item>
