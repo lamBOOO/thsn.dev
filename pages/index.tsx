@@ -19,7 +19,7 @@ import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for 
 import remarkGfm from 'remark-gfm'
 
 import { useMDXComponent } from 'next-contentlayer/hooks';
-import { allPages } from 'contentlayer/generated';
+// import { allPages } from 'contentlayer/generated';
 
 import {MDXProvider} from '@mdx-js/react'
 import Post from '../posts/home1.mdx'
@@ -62,7 +62,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({frontmatter, content}) {
+export default function Home({frontmatter, content} : any) {
   const markdown = `
 # Hello *world*! \n $a^2$ https://reactjs.com. \n\n $$a^2+b^2=c^2$$
 A paragraph with *emphasis* and **strong importance**.
@@ -92,7 +92,7 @@ console.log('It works!')
 
 `
 const components = {
-  em: props => <i {...props} />
+  em: (props : any) => <i {...props} />
 }
   return (
     <div className={styles.container}>
