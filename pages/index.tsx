@@ -108,10 +108,11 @@ const components = {
       <div className='prose mx-auto'>
       <div>
       <ReactMarkdown
-        children={markdown}
         remarkPlugins={[[remarkGfm, {singleTilde: false}],[remarkMath]]}
         rehypePlugins={[rehypeKatex]}
-      />
+      >
+        {markdown}
+      </ReactMarkdown>
       </div>
       <h1>{frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
