@@ -21,7 +21,7 @@ import remarkGfm from 'remark-gfm'
 import { useMDXComponent } from 'next-contentlayer/hooks';
 // import { allPages } from 'contentlayer/generated';
 
-import {MDXProvider} from '@mdx-js/react'
+import { MDXProvider } from '@mdx-js/react'
 import Post from '../posts/home1.mdx'
 
 // export async function getPostData(id) {
@@ -62,7 +62,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({frontmatter, content} : any) {
+export default function Home({ frontmatter, content }: any) {
   const markdown = `
 # Hello *world*! \n $a^2$ https://reactjs.com. \n\n $$a^2+b^2=c^2$$
 A paragraph with *emphasis* and **strong importance**.
@@ -91,9 +91,9 @@ console.log('It works!')
 ~~~
 
 `
-const components = {
-  em: (props : any) => <i {...props} />
-}
+  const components = {
+    em: (props: any) => <i {...props} />
+  }
   return (
     <div className={styles.container}>
       <div>
@@ -103,27 +103,27 @@ const components = {
         <MDXProvider components={components}>
           <Post />
         </MDXProvider>
-      <div>
-      <ReactMarkdown
-        remarkPlugins={[[remarkGfm, {singleTilde: false}],[remarkMath]]}
-        rehypePlugins={[rehypeKatex]}
-      >
-        {markdown}
-      </ReactMarkdown>
-      </div>
-      <h1>{frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-      </div>
-      <h1 className="text-3xl font-bold underline hover:text-2xl">
-        Hello world!
-      </h1>
-      <div>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Button
-        </button>
-        <button className=" hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">
-          Button 2
-        </button>
+        <div>
+          <ReactMarkdown
+            remarkPlugins={[[remarkGfm, { singleTilde: false }], [remarkMath]]}
+            rehypePlugins={[rehypeKatex]}
+          >
+            {markdown}
+          </ReactMarkdown>
+        </div>
+        <h1>{frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        <h2 id="test" className="text-3xl font-bold underline hover:text-2xl">
+          Hello world!
+        </h2>
+        <div>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Button
+          </button>
+          <button className=" hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">
+            Button 2
+          </button>
+        </div>
       </div>
       <Head>
         <title>Lambert Theisen - Researcher, Developer</title>
