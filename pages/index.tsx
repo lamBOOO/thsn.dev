@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import Example from '../components/example'
+import Navbar from '../components/navbar'
 
 import ReactMarkdown from 'react-markdown'
 
@@ -97,7 +97,7 @@ const components = {
   return (
     <div className={styles.container}>
       <div>
-        <Example />
+        <Navbar />
       </div>
       <div className='prose mx-auto'>
         <MDXProvider components={components}>
