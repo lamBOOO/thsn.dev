@@ -93,15 +93,10 @@ export default function Navbar() {
                 </button> */}
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
+                <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-yellow focus:ring-offset-2">
+                    <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      {/* <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      /> */}
                       <Image
                         className="h-8 w-8 rounded-full"
                         src={logo_me}
