@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const navigation = [
   { name: 'Home', href: '#', current: false },  //  🏡
-  { name: 'Research', href: '#', current: false },  //  📑
+  { name: 'Research', href: '#research', current: false },  //  📑
   { name: 'Teaching', href: '#', current: false },  //  👨‍🏫
   { name: 'Projects', href: '#', current: false },  //  🙈
   { name: 'Blog', href: '#', current: false },  //  📢

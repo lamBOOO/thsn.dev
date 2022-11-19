@@ -113,6 +113,12 @@ console.log('It works!')
         </div>
         <h1>{frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        <h2 id="research">
+          Research
+        </h2>
+        <div>
+          Test
+        </div>
         <h2 id="test" className="text-3xl font-bold underline hover:text-2xl">
           Hello world!
         </h2>
