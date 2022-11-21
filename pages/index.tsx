@@ -95,7 +95,7 @@ console.log('It works!')
     em: (props: any) => <i {...props} />
   }
   return (
-    <div className='relative'>
+    <div className='relative px-8'>
       <div className='sticky top-0 z-50'>
         <Navbar />
       </div>
