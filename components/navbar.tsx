@@ -124,10 +124,10 @@ export default function Navbar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="https://github.com/lamBOOO"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            <FontAwesomeIcon icon={faGithub} /> @lambooo
+                            <FontAwesomeIcon icon={faGithub}/> @lambooo
                           </a>
                         )}
                       </Menu.Item>
@@ -137,7 +137,7 @@ export default function Navbar() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            <FontAwesomeIcon icon={faTwitter} /> @lmbrt_thsn
+                            <FontAwesomeIcon icon={faTwitter}/> @lmbrt_thsn
                           </a>
                         )}
                       </Menu.Item>
@@ -147,7 +147,7 @@ export default function Navbar() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            <FontAwesomeIcon icon={faResearchgate} /> Lambert Theisen
+                            <FontAwesomeIcon icon={faResearchgate}/> Lambert Theisen
                           </a>
                         )}
                       </Menu.Item>
@@ -157,7 +157,7 @@ export default function Navbar() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            <FontAwesomeIcon icon={faResearchgate} /> etc...
+                            <FontAwesomeIcon icon={faResearchgate}/> etc...
                           </a>
                         )}
                       </Menu.Item>
