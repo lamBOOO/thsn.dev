@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 import logo from '../public/favicon.png'
 import logo_me from '../public/me.jpg'
@@ -27,7 +28,7 @@ function classNames(...classes: any[]) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-000">
+    <Disclosure as="nav" className="bg-white border-b border-gray-100">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-3xl px-2 sm:px-6 lg:px-8">
@@ -45,15 +46,17 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Image
-                    className="block h-8 w-auto"
-                    src={logo}
-                    alt="Picture of the author"
+                  <Link href="/">
+                    <Image
+                      className="block h-8 w-auto"
+                      src={logo}
+                      alt="Picture of the author"
                     // width={500} automatically provided
                     // height={500} automatically provided
                     // blurDataURL="data:..." automatically provided
                     // placeholder="blur" // Optional blur-up while loading
-                  />
+                    />
+                  </Link>
                   {/* <img
                     className="block h-8 w-auto lg:hidden"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
@@ -101,10 +104,10 @@ export default function Navbar() {
                         className="h-8 w-8 rounded-full"
                         src={logo_me}
                         alt="Picture of the author"
-                        // width={500} automatically provided
-                        // height={500} automatically provided
-                        // blurDataURL="data:..." automatically provided
-                        // placeholder="blur" // Optional blur-up while loading
+                      // width={500} automatically provided
+                      // height={500} automatically provided
+                      // blurDataURL="data:..." automatically provided
+                      // placeholder="blur" // Optional blur-up while loading
                       />
                     </Menu.Button>
                   </div>
