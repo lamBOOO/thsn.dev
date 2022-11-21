@@ -95,11 +95,11 @@ console.log('It works!')
     em: (props: any) => <i {...props} />
   }
   return (
-    <div className={styles.container}>
-      <div>
+    <div className='relative'>
+      <div className='sticky top-0 z-50'>
         <Navbar />
       </div>
-      <div className='prose mx-auto'>
+      <div className='mt-5 prose mx-auto'>
         <MDXProvider components={components}>
           <Post />
         </MDXProvider>
@@ -113,7 +113,7 @@ console.log('It works!')
         </div>
         <h1>{frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-        <h2 id="research">
+        <h2 id="research" className="scroll-mt-20">
           Research
         </h2>
         <div>
