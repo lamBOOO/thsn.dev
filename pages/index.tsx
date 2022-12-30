@@ -107,7 +107,7 @@ console.log('It works!')
       <div className="flex mb-6">
         <div className="flex-auto">
           <h1 className="mb-2 text-4xl">
-            Lambert Theisen<span className='text-gray-400'>, M.Sc.</span>
+            Lambert Theisen<span className='text-gray-400 text-xl'>, M.Sc.</span>
           </h1>
           <div className='leading-5 mb-2'>
             Researcher & PhD Student
@@ -144,7 +144,7 @@ console.log('It works!')
       </span>
       </div>
         <div>
-        <p className='font-normal leading-5 text-justify'>
+        <p className='font-normal text-sm leading-5 text-justify'>
       <Image
         className="float-right sm:w-48 w-32 p-2 m-0"
         src={dd_teaser}
