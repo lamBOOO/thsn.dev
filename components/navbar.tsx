@@ -46,11 +46,11 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link href="/">
+                  <Link href="/#">
                     <Image
                       className="block h-8 w-auto"
                       src={logo}
-                      alt="Picture of the author"
+                      alt="Lambert Theisens logo"
                     // width={500} automatically provided
                     // height={500} automatically provided
                     // blurDataURL="data:..." automatically provided
