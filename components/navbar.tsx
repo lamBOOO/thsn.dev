@@ -28,7 +28,7 @@ function classNames(...classes: any[]) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="backdrop-blur-sm bg-white/90 border-b border-gray-100">
+    <Disclosure as="nav" className="backdrop-blur-sm bg-white/90 border-b border-gray-100 -mx-4">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-3xl px-2 sm:px-6 lg:px-8">
