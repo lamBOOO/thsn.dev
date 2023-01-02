@@ -1,3 +1,5 @@
+
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,6 +26,18 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 
 import { MDXProvider } from '@mdx-js/react'
 import Post from '../posts/home1.mdx'
+
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faFaceRelieved } from '@fortawesome/pro-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+// import { faCode } from '@fortawesome/free-brands-svg-icons'
+// import { faFile } from '@fortawesome/free-solid-svg-icons'
+import { faFile } from '@fortawesome/free-regular-svg-icons'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+
 
 import logo_me from '../public/me.jpg'
 import dd_teaser from '../public/lambert_eigendd_teaser.jpg'
@@ -132,7 +146,7 @@ console.log('It works!')
             />
           </div>
         </div>
-        <button type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Contact me! 👋</button>
+        <button type="button" className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 hover:animate-pulse">👋 Contact me! </button>
         <h2 id="research" className="scroll-mt-20">
           Research Interest & Projects
         </h2>
@@ -223,10 +237,22 @@ console.log('It works!')
                 }
               </div>
               <div className='text-sm'>
-                <button type="button" className="mr-2 py-1 px-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">DOI</button>
-                <button type="button" className="mr-2 py-1 px-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">arXiv TODO</button>
+                <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                  <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                  <FontAwesomeIcon icon={faFile}/> PDF
+                  </span>
+                </button>
+                <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800">
+                  <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                  <FontAwesomeIcon icon={faCode}/> Code @ RWTH-Gitlab
+                  {/* https://git.rwth-aachen.de/lamBOO/fenicsR13 */}
+                  {/* <FontAwesomeIcon icon={faFaceRelieved} /> */}
+                  {/* <FontAwesomeIcon icon={icon({name: 'coffee', style: 'solid'})} /> */}
+
+                  </span>
+                </button>
               </div>
-              <div className='text-sm mb-2 leading-3 mt-1'>
+              <div className='text-sm mb-2 leading-3 mt-1 text-gray-400'>
                 <span className='text-xs'>
                 [1]: FEniCS Project: Bitbucket Repositories. FEniCS Project. url: https://bitbucket.org/fenics-project/ (visited on 08/28/2019).
                 <br></br>
