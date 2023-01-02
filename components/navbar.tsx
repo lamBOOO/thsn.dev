@@ -20,6 +20,7 @@ const navigation = [
   { name: 'Teaching', href: '#', current: false },  //  👨‍🏫
   { name: 'Projects', href: '#', current: false },  //  🙈
   { name: 'Blog', href: '#', current: false },  //  📢
+  { name: 'Contact', href: '#contact', current: false },  //  📢
 ]
 
 function classNames(...classes: any[]) {

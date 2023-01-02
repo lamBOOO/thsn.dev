@@ -144,12 +144,19 @@ console.log('It works!')
             />
           </div>
         </div>
-        <button type="button" className="transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 to-violet-500 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">👋 Contact me!</button>
-        <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 no-underline" href="#">
-          <span className="text-sm relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-            <FontAwesomeIcon icon={faFile} /> Download CV (soon)
-          </span>
-        </Link>
+        <div className='flex'>
+          <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 to-violet-500 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 no-underline scroll-smooth" href="#contact" scroll={false}>
+            <div className='flex '>
+              <span className="text-2xl -mt-1 -mb-2 mr-3 leading-none animate-waving-hand">👋</span>
+              Say hi!
+            </div>
+          </Link>  {/* workaround, see https://stackoverflow.com/questions/69825670/smooth-scroll-in-next-js */}
+          <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 no-underline" href="#">
+            <span className="text-sm relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              <FontAwesomeIcon icon={faFile} /> Download CV (soon)
+            </span>
+          </Link>
+        </div>
         <h2 id="research" className="scroll-mt-20">
           Research Interest & Projects
         </h2>
@@ -173,12 +180,12 @@ console.log('It works!')
               </span>
             </div>
             <div>
-            <Link href="https://doi.org/10.1137/21M1456005">
-              <span className="border-gray-500 ">
-                <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center  dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>DOI</span>
-                <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center  dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1137/21M1456005</span>
-              </span>
-            </Link>
+              <Link href="https://doi.org/10.1137/21M1456005">
+                <span className="border-gray-500 ">
+                  <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center  dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>DOI</span>
+                  <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center  dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1137/21M1456005</span>
+                </span>
+              </Link>
             </div>
             <div>
               <p className='font-normal text-sm leading-5 text-justify'>
@@ -354,6 +361,14 @@ console.log('It works!')
         <div className="border border-blue-200 rounded p-6 my-4 w-full dark:border-gray-800 bg-blue-50 dark:bg-blue-opaque">
           Test
         </div>
+        {/* <div> */}
+        <h2 id="contact" className="scroll-mt-20">
+          Contact
+        </h2>
+        <p>
+          x
+        </p>
+        {/* </div> */}
         <MDXProvider components={components}>
           <Post />
         </MDXProvider>
