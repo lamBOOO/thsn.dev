@@ -6,3 +6,4 @@
 - Recent blog posts box
 - Add vita and CV as PDF
 - add news section
+- use rwth publications and keep it updated

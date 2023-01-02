@@ -105,8 +105,6 @@ A table:
 | 12   | 124 | 124  | 21421   | 14   |
 | 4142 | 124 | 124  | 2141241 | 124  |
 
-gudes
-
 ~~~js
 console.log('It works!')
 ~~~
@@ -124,7 +122,7 @@ console.log('It works!')
         <div className="flex mb-6">
           <div className="flex-auto">
             <h1 className="my-2 mb-0 text-4xl">
-              Lambert Theisen
+              Lambert Theisens
             </h1>
             <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
             <div className='leading-5 mb-2'>
@@ -137,7 +135,6 @@ console.log('It works!')
                 # Researching <b>PDE eigenvalue problems</b>, <b>asymptotic analysis</b> of expanding domains, directional <b>homogenization</b>, <b>preconditioners</b> for <b>eigenvalue algorithms</b>, <b>preconditioners</b> for <b>linear solvers</b>, <b>spectral coarse spaces</b> for <b>domain decomposition</b>, and <b>Galerkin methods</b> for <b>moment models</b> in rarefied gas modelling.
               </small></i>
             </div>
-
           </div>
           <div className="flex-none sm:w-1/4 sm:h-1/4 w-14 h-14 hidden sm:block">
             <Image
@@ -147,16 +144,101 @@ console.log('It works!')
             />
           </div>
         </div>
-        <button type="button" className="transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-pink-500 to-orange-400 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">👋 Contact me! </button>
-
-        <button className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800">
+        <button type="button" className="transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 to-violet-500 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">👋 Contact me!</button>
+        <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 no-underline" href="#">
           <span className="text-sm relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          <FontAwesomeIcon icon={faFile}/> Download CV
+            <FontAwesomeIcon icon={faFile} /> Download CV (soon)
           </span>
-        </button>
+        </Link>
         <h2 id="research" className="scroll-mt-20">
           Research Interest & Projects
         </h2>
+        <h3>Journal Publications</h3>
+        <div className='transform transition-all rounded-xl w-full bg-gradient-to-r from-[#249c66] to-[#81f8ad] p-1 mb-2'>
+          <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
+            <span className='font-bold leading-5 mb-2'>
+              A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains
+            </span>
+            <div className='m-0 flex space-x-2 mb-1'>
+              <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 border">
+                <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
+                09/2022
+              </span>
+              <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-800 border border-red-500">Lambert Theisen</span>
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 border border-blue-500"><Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">Benjamin Stamm</ Link></span>
+            </div>
+            <div className='m-0 flex space-x-2'>
+              <span className="bg-green-100 text-green-800 text-xs font-mono inline-flex items-center px-2.5 py-0.5 rounded dark:bg-green-700 dark:text-green-300 border">
+                @ SINUM : SIAM Journal on Numerical Analysis, Volume 60, Issue 5
+              </span>
+            </div>
+            <div>
+            <Link href="https://doi.org/10.1137/21M1456005">
+              <span className="border-gray-500 ">
+                <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center  dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>DOI</span>
+                <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center  dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1137/21M1456005</span>
+              </span>
+            </Link>
+            </div>
+            <div>
+              <p className='font-normal text-sm leading-5 text-justify'>
+                <Image
+                  className="float-right sm:w-48 w-32 p-2 m-0"
+                  src={dd_teaser}
+                  alt="Picture of the author"
+                />
+                This paper provides a provably quasi-optimal preconditioning strategy of the linear Schrödinger eigenvalue problem with periodic potentials for a possibly nonuniform spatial expansion of the domain. The quasi-optimality is achieved by having the iterative eigenvalue algorithms converge in a constant number of iterations for different domain sizes. In the analysis, we derive an analytic factorization of the spectrum and asymptotically describe it using concepts from the homogenization theory. This decomposition allows us to express the eigenpair as an easy-to-calculate cell problem solution combined with an asymptotically vanishing remainder. We then prove that the easy-to-calculate limit eigenvalue can be used in a shift-and-invert preconditioning strategy to bound the number of eigensolver iterations uniformly. Several numerical examples illustrate the effectiveness of this quasi-optimal preconditioning strategy.
+              </p>
+              <div>
+              </div>
+              <div className='text-sm'>
+                <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                  <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    <FontAwesomeIcon icon={faFile} /> PDF @ Publisher
+                  </span>
+                </button>
+                <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-rose-500 to-red-500 group-hover:from-rose-500 group-hover:to-red-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-rose-200 dark:focus:ring-rose-800">
+                  <Link className="hover:text-white text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 no-underline" href="https://arxiv.org/abs/2110.14982">
+                    {/* <span className=""> */}
+                    <FontAwesomeIcon icon={faFile} /> PDF @ arXiv
+                    {/* </span> */}
+                  </Link>
+                </button>
+                <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-500 to-green-500 group-hover:from-teal-500 group-hover:to-green-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-teal-200 dark:focus:ring-teal-800">
+                  <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    <FontAwesomeIcon icon={faFile} /> PDF @ Publisher
+                  </span>
+                </button>
+                <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800">
+                  <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    <FontAwesomeIcon icon={faCode} /> Code @ Zenodo
+                    {/* https://git.rwth-aachen.de/lamBOO/fenicsR13 */}
+                    {/* <FontAwesomeIcon icon={faFaceRelieved} /> */}
+                    {/* <FontAwesomeIcon icon={icon({name: 'coffee', style: 'solid'})} /> */}
+
+                  </span>
+                </button>
+              </div>
+              <div className='text-sm mb-2'>
+                <span className='text-xs'>Keywords: </span>
+                {
+                  [
+                    "periodic Schrödinger equation",
+                    "iterative eigenvalue solvers",
+                    "preconditioner",
+                    "asymptotic eigenvalue analysis",
+                    "factorization principle",
+                    "directional homogenization"
+                  ].map(
+                    (a, b) =>
+                      (<span className="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-1 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800" key={b}># {a}</span>)
+                  )
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Projects</h3>
         <div className='transform transition-all rounded-xl w-full bg-gradient-to-r from-[#feb4b4] to-[#f88181] p-1 mb-2'>
           <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
             <span className='font-bold'>
@@ -246,24 +328,24 @@ console.log('It works!')
               <div className='text-sm'>
                 <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
                   <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  <FontAwesomeIcon icon={faFile}/> PDF
+                    <FontAwesomeIcon icon={faFile} /> PDF
                   </span>
                 </button>
                 <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800">
                   <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  <FontAwesomeIcon icon={faCode}/> Code @ RWTH-Gitlab
-                  {/* https://git.rwth-aachen.de/lamBOO/fenicsR13 */}
-                  {/* <FontAwesomeIcon icon={faFaceRelieved} /> */}
-                  {/* <FontAwesomeIcon icon={icon({name: 'coffee', style: 'solid'})} /> */}
+                    <FontAwesomeIcon icon={faCode} /> Code @ RWTH-Gitlab
+                    {/* https://git.rwth-aachen.de/lamBOO/fenicsR13 */}
+                    {/* <FontAwesomeIcon icon={faFaceRelieved} /> */}
+                    {/* <FontAwesomeIcon icon={icon({name: 'coffee', style: 'solid'})} /> */}
 
                   </span>
                 </button>
               </div>
               <div className='text-sm mb-2 leading-3 mt-1 text-gray-500'>
                 <span className='text-xs'>
-                [1]: FEniCS Project: Bitbucket Repositories. FEniCS Project. url: https://bitbucket.org/fenics-project/ (visited on 08/28/2019).
-                <br></br>
-                [2]: Lambert Theisen and Manuel Torrilhon. fenicsR13: Solver Repository. RWTH Aachen University, 2019. url: https://git.rwth-aachen.de/lamBOO/fenicsR13 (visited on 09/15/2019).
+                  [1]: FEniCS Project: Bitbucket Repositories. FEniCS Project. url: https://bitbucket.org/fenics-project/ (visited on 08/28/2019).
+                  <br></br>
+                  [2]: Lambert Theisen and Manuel Torrilhon. fenicsR13: Solver Repository. RWTH Aachen University, 2019. url: https://git.rwth-aachen.de/lamBOO/fenicsR13 (visited on 09/15/2019).
                 </span>
               </div>
             </div>
