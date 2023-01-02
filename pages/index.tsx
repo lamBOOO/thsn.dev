@@ -124,7 +124,7 @@ console.log('It works!')
         <div className="flex mb-6">
           <div className="flex-auto">
             <h1 className="mb-2 text-4xl">
-              Lambert Theisen<span className='text-gray-400 text-xl'>, M.Sc.</span>
+              Lambert Theisen<span className='text-gray-500 text-xl'>, M.Sc.</span>
             </h1>
             <div className='leading-5 mb-2'>
               Researcher & PhD Student
@@ -146,7 +146,12 @@ console.log('It works!')
             />
           </div>
         </div>
-        <button type="button" className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 hover:animate-pulse">👋 Contact me! </button>
+        <button type="button" className="transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-pink-500 to-orange-400 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">👋 Contact me! </button>
+        <button className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800">
+          <span className="text-sm relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+          <FontAwesomeIcon icon={faFile}/> Download CV
+          </span>
+        </button>
         <h2 id="research" className="scroll-mt-20">
           Research Interest & Projects
         </h2>
@@ -155,12 +160,12 @@ console.log('It works!')
             <span className='font-bold'>
               Domain Decomposition Methods for Electronic Structure Calculations
             </span>
-            <div className='m-0'>
-              <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-300">
+            <div className='m-0 flex space-x-2'>
+              <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                 <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
                 10/2019 – Now
               </span>
-              <span className="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-800">Lambert Theisen</span>
+              <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-800">Lambert Theisen</span>
               <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"><Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">Benjamin Stamm</ Link></span>
             </div>
             <div>
@@ -189,7 +194,7 @@ console.log('It works!')
               Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform (Master Thesis @ MathCCES)
             </span>
             <div className='m-0 flex flex-wrap'>
-              <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-300">
+              <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                 <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
                 04/2019 – 09/2019
               </span>
@@ -252,7 +257,7 @@ console.log('It works!')
                   </span>
                 </button>
               </div>
-              <div className='text-sm mb-2 leading-3 mt-1 text-gray-400'>
+              <div className='text-sm mb-2 leading-3 mt-1 text-gray-500'>
                 <span className='text-xs'>
                 [1]: FEniCS Project: Bitbucket Repositories. FEniCS Project. url: https://bitbucket.org/fenics-project/ (visited on 08/28/2019).
                 <br></br>
