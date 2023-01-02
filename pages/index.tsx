@@ -123,9 +123,10 @@ console.log('It works!')
       <div className='mt-5 prose mx-auto'>
         <div className="flex mb-6">
           <div className="flex-auto">
-            <h1 className="mb-2 text-4xl">
-              Lambert Theisen<span className='text-gray-500 text-xl'>, M.Sc.</span>
+            <h1 className="my-2 mb-0 text-4xl">
+              Lambert Theisen
             </h1>
+            <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
             <div className='leading-5 mb-2'>
               Researcher & PhD Student
               <br></br>
@@ -133,12 +134,12 @@ console.log('It works!')
             </div>
             <div className='leading-4'>
               <i><small>
-                # Researching <b>PDE eigenvalue problems</b>, <b>asymptotic analysis</b> of expanding domains, <b>homogenization</b>, <b>preconditioners</b> and <b>numerical methods</b> for <b>moment models</b> in rarefied gas modelling.
+                # Researching <b>PDE eigenvalue problems</b>, <b>asymptotic analysis</b> of expanding domains, directional <b>homogenization</b>, <b>preconditioners</b> for <b>eigenvalue algorithms</b>, <b>preconditioners</b> for <b>linear solvers</b>, <b>spectral coarse spaces</b> for <b>domain decomposition</b>, and <b>Galerkin methods</b> for <b>moment models</b> in rarefied gas modelling.
               </small></i>
             </div>
 
           </div>
-          <div className="flex-none sm:flex w-32 h-32 hidden">
+          <div className="flex-none sm:w-1/4 sm:h-1/4 w-14 h-14 hidden sm:block">
             <Image
               className="flex-none rounded-full m-0"
               src={logo_me}
@@ -147,6 +148,7 @@ console.log('It works!')
           </div>
         </div>
         <button type="button" className="transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-pink-500 to-orange-400 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">👋 Contact me! </button>
+
         <button className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800">
           <span className="text-sm relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
           <FontAwesomeIcon icon={faFile}/> Download CV
