@@ -15,7 +15,6 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const navigation = [
-  { name: 'Home', href: '#', current: false },  //  🏡
   { name: 'Research', href: '#research', current: false },  //  📑
   { name: 'Teaching', href: '#', current: false },  //  👨‍🏫
   { name: 'Projects', href: '#', current: false },  //  🙈
@@ -32,7 +31,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="backdrop-blur-lg bg-white/90 border-b border-gray-100 -mx-4">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-3xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl px-2 sm:px-6">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}

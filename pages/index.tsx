@@ -34,15 +34,17 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faFaceRelieved } from '@fortawesome/pro-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faStaylinked } from '@fortawesome/free-brands-svg-icons'
 import { faGitlab } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 // import { faCode } from '@fortawesome/free-brands-svg-icons'
 // import { faFile } from '@fortawesome/free-solid-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
-import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faPerson } from '@fortawesome/free-solid-svg-icons'
 
 
 import logo_me from '../public/me.jpg'
+import logo_me_large from '../public/me_large.jpg'
 import dd_teaser from '../public/lambert_eigendd_teaser.jpg'
 import plot1 from '../public/plot1.jpg'
 import plot2 from '../public/plot2.jpg'
@@ -117,29 +119,41 @@ console.log('It works!')
     em: (props: any) => <i {...props} />
   }
   return (
-    <div className='relative px-4'>
+    <div id="1" className='relative px-4'>
       <div className='sticky top-0 z-50'>
         <Navbar />
       </div>
       <div className='mt-5 prose mx-auto'>
-        <div className="flex mb-6">
+        <div className="flex mb-4">
           <div className="flex-auto">
-            <h1 className="my-2 mb-0 text-4xl">
-              Lambert Theisen
-            </h1>
-            <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
-            <div className='leading-5 mb-2'>
-              Computational Engineer & PhD Student
+            <div className='flex justify-between'>
+              <div>
+                <h1 className="my-2 mb-0 text-4xl mt-0">
+                  Lambert Theisen
+                </h1>
+                <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
+                <div className='leading-5 mb-2'>
+              Computational Engineer, PhD Student & Digital Artist
               <br></br>
               @ <Link href="https://www.rwth-aachen.de/">RWTH Aachen University</ Link> / <Link href="https://www.uni-stuttgart.de/">University of Stuttgart</Link>
             </div>
-            <div className='leading-4'>
+              </div>
+              <div className="sm:hidden flex-none w-20 h-20 block ml-1">
+                <Image
+                  className="flex-none rounded-full m-0"
+                  src={logo_me}
+                  alt="Picture of the author"
+                />
+              </div>
+            </div>
+
+            <div className='leading-6'>
               <i><small>
-                # Researching <b>PDE eigenvalue problems</b>, <b>asymptotic analysis</b> of expanding domains, directional <b>homogenization</b>, <b>preconditioners</b> for <b>eigenvalue algorithms</b>, <b>preconditioners</b> for <b>linear solvers</b>, <b>spectral coarse spaces</b> for <b>domain decomposition</b>, and <b>Galerkin methods</b> for <b>moment models</b> in rarefied gas modelling.
+                # Researching <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-amber-100 relative inline-block -z-10"><span className="relative"><b>PDE eigenvalue problems</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-red-100 relative inline-block -z-10"><span className="relative"><b>asymptotic analysis</b></span></span> of expanding domains, directional <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-teal-100 relative inline-block -z-10"><span className="relative"><b>homogenization</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block -z-10"><span className="relative"><b>preconditioners</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block -z-10"><span className="relative"><b>eigenvalue algorithms</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block -z-10"><span className="relative"><b>preconditioners</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block -z-10"><span className="relative"><b>linear solvers</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block -z-10"><span className="relative"><b>spectral coarse spaces</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block -z-10"><span className="relative"><b>domain decomposition</b></span></span>, and <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block -z-10"><span className="relative"><b>Galerkin methods</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block -z-10"><span className="relative"><b>moment models</b></span></span> in rarefied gas modelling.
               </small></i>
             </div>
           </div>
-          <div className="flex-none sm:w-1/4 sm:h-1/4 w-14 h-14 hidden sm:block">
+          <div className="flex-none sm:w-1/5 sm:h-1/5 w-14 h-14 hidden sm:block ml-1">
             <Image
               className="flex-none rounded-full m-0"
               src={logo_me}
@@ -147,16 +161,29 @@ console.log('It works!')
             />
           </div>
         </div>
-        <div className='flex'>
-          <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 to-violet-500 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 no-underline scroll-smooth" href="#contact" scroll={false}>
-            <div className='flex '>
-              <span className="text-2xl -mt-1 -mb-2 mr-3 leading-none animate-waving-hand">👋</span>
-              Say hi!
-            </div>
-          </Link>  {/* workaround, see https://stackoverflow.com/questions/69825670/smooth-scroll-in-next-js */}
-          <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 no-underline" href="#">
-            <span className="text-sm relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-              <FontAwesomeIcon icon={faFile} /> Download CV (soon)
+        <div className='flex flex-wrap items-center gap-1 border-b border-gray-100 pb-5'>
+        {/* <div
+  class="
+    w-full
+    h-screen
+    bg-gradient-to-r
+    from-pink-500
+    via-red-500
+    to-yellow-500
+    background-animate
+  "
+></div> */}
+          <span className="text-3xl mr-2 align-middle animate-waving-hand">👋</span>
+          {/* <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 to-violet-500 hover:from-red-600 hover:to-violet-600 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center mr-2 no-underline scroll-smooth" href="#contact" scroll={false}> */}
+          <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br     from-red-500     via-violet-500     to-teal-500     background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center mr-2 no-underline scroll-smooth" href="#contact" scroll={false}>
+            <span className='font-extralight'>Say </span>
+            <i className='font-extrabold'>Ei Gude, wie?</i>
+            <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
+          </Link>
+          {/* workaround, see https://stackoverflow.com/questions/69825670/smooth-scroll-in-next-js */}
+          <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 hover:from-red-600 hover:to-violet-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 no-underline" href="#">
+            <span className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              <FontAwesomeIcon icon={faFile} /> CV <span className='sm:inline hidden'>(soon)</span>
             </span>
           </Link>
         </div>
@@ -164,36 +191,33 @@ console.log('It works!')
           Research Interest & Projects
         </h2>
         <h3>Journal Publications</h3>
-        <div className='transform transition-all rounded-xl w-full bg-gradient-to-r from-[#249c66] to-[#81f8ad] p-1 mb-2'>
-          <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
+        <div className='transform transition-all rounded-lg w-full bg-black p-0.5 mb-2'>
+          <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-md p-4">
             <span className='font-bold leading-5 mb-2'>
               A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains
             </span>
-            <div className='m-0 flex space-x-2 mb-1'>
+            <div className='m-0 flex flex-wrap gap-1 mb-1'>
               <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 border">
                 <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
                 09/2022
               </span>
-              <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-800 border border-red-500">Lambert Theisen</span>
-              <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 border border-blue-500"><Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">Benjamin Stamm</ Link></span>
-            </div>
-            <div className='m-0 flex space-x-2'>
-              <span className="bg-green-100 text-green-800 text-xs font-mono inline-flex items-center px-2.5 py-0.5 rounded dark:bg-green-700 dark:text-green-300 border">
-                @ SINUM : SIAM Journal on Numerical Analysis, Volume 60, Issue 5
+              <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-800 border border-red-500">
+                <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
+                Lambert Theisen
               </span>
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 border border-blue-500"><Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">
+                <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
+                Benjamin Stamm
+              </ Link></span>
             </div>
+            <span className="border-gray-500 ">
+              <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>SINUM</span>
+              <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>Volume 60, Issue 5</span>
+            </span>
             <div>
-              <Link href="https://doi.org/10.1137/21M1456005">
-                <span className="border-gray-500 ">
-                  <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>DOI</span>
-                  <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1137/21M1456005</span>
-                </span>
-              </Link>
-            </div>
-            <div>
-              <p className='font-normal text-sm leading-5 text-justify'>
+              <p className='font-norma text-xs leading-4 text-justify my-2'>
                 <Image
-                  className="float-right sm:w-48 w-32 p-2 m-0"
+                  className="float-right sm:w-48 w-32 ml-1 mb-1 m-0"
                   src={dd_teaser}
                   alt="Picture of the author"
                 />
@@ -201,7 +225,7 @@ console.log('It works!')
               </p>
               <div>
               </div>
-              <div className='text-sm'>
+              {/* <div className='text-sm'>
                 <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
                   <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                     <FontAwesomeIcon icon={faFile} /> PDF @ Publisher
@@ -209,9 +233,9 @@ console.log('It works!')
                 </button>
                 <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-rose-500 to-red-500 group-hover:from-rose-500 group-hover:to-red-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-rose-200 dark:focus:ring-rose-800">
                   <Link className="hover:text-white text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 no-underline" href="https://arxiv.org/abs/2110.14982">
-                    {/* <span className=""> */}
+
                     <FontAwesomeIcon icon={faFile} /> PDF @ arXiv
-                    {/* </span> */}
+
                   </Link>
                 </button>
                 <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-500 to-green-500 group-hover:from-teal-500 group-hover:to-green-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-teal-200 dark:focus:ring-teal-800">
@@ -222,15 +246,12 @@ console.log('It works!')
                 <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800">
                   <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                     <FontAwesomeIcon icon={faCode} /> Code @ Zenodo
-                    {/* https://git.rwth-aachen.de/lamBOO/fenicsR13 */}
-                    {/* <FontAwesomeIcon icon={faFaceRelieved} /> */}
-                    {/* <FontAwesomeIcon icon={icon({name: 'coffee', style: 'solid'})} /> */}
-
                   </span>
                 </button>
-              </div>
+              </div> */}
+
               <div className='text-sm mb-2'>
-                <span className='text-xs'>Keywords: </span>
+                {/* <span className='text-xs'>Keywords: </span> */}
                 {
                   [
                     "periodic Schrödinger equation",
@@ -241,10 +262,44 @@ console.log('It works!')
                     "directional homogenization"
                   ].map(
                     (a, b) =>
-                      (<span className="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-1 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800" key={b}># {a}</span>)
+                      (<span className="bg-gray-50 text-gray-800 text-xs font-medium mr-1 py-0 rounded-sm dark:bg-gray-200 dark:text-gray-800" key={b}># {a}</span>)
                   )
                 }
               </div>
+
+              <div className='flex flex-wrap gap-1 leading-none my-2'>
+
+                <Link href="https://doi.org/10.1137/21M1456005">
+                  <span className="border-gray-500 hover:border-black">
+                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>
+                      <span className="pr-1"><i className="ai ai-doi"></i></span>
+                      DOI
+                    </span>
+                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1137/21M1456005</span>
+                  </span>
+                </Link>
+                <Link className="m-0" href="https://doi.org/10.1137/21M1456005">
+                  <span className="border-gray-500">
+                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-red-700 dark:text-red-300 rounded-tl rounded-bl px-2 py-0.5 bg-red-300 text-red-800 font-bold '>
+                      <span className="pr-1"><i className="ai ai-arxiv"></i></span>
+                      arXiv
+                    </span>
+                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-red-700 dark:text-red-300 rounded-tr rounded-br px-2 py-0.5 bg-red-200 text-red-800 font-mono decoration-red-700'>2110.14982</span>
+                  </span>
+                </Link>
+                <Link href="https://doi.org/10.1137/21M1456005">
+                  <span className="border-gray-500 ">
+                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-blue-700 dark:text-blue-300 rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
+                      <span className="pr-1"><i className="ai ai-zenodo"></i></span>
+                      Zenodo
+                    </span>
+                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-blue-700 dark:text-blue-300 rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>10.1137/21M1456005</span>
+                  </span>
+                </Link>
+              </div>
+
+
+
             </div>
           </div>
         </div>
@@ -344,10 +399,6 @@ console.log('It works!')
                 <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800">
                   <span className="text-sm relative px-2 py-0.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                     <FontAwesomeIcon icon={faCode} /> Code @ RWTH-Gitlab
-                    {/* https://git.rwth-aachen.de/lamBOO/fenicsR13 */}
-                    {/* <FontAwesomeIcon icon={faFaceRelieved} /> */}
-                    {/* <FontAwesomeIcon icon={icon({name: 'coffee', style: 'solid'})} /> */}
-
                   </span>
                 </button>
               </div>
@@ -361,13 +412,28 @@ console.log('It works!')
             </div>
           </div>
         </div>
-        <div className="border border-blue-200 rounded p-6 my-4 w-full dark:border-gray-800 bg-blue-50 dark:bg-blue-opaque">
-          Test
-        </div>
-        {/* <div> */}
-        <h2 id="contact" className="scroll-mt-20">
+
+        <h2 id="contact" className="scroll-mt-20 mb-5">
           Contact
         </h2>
+        <h3>
+          Matrix Protocol
+        </h3>
+        <p>
+          TODO Add direct chat link.
+        </p>
+        <h3>
+          E-Mail
+        </h3>
+        <p className='leading-6'>
+          You can contact me via the e-mail address <mark className='font-mono bg-gray-100 rounded-sm p-0'>lambert (dot) theisen (at) rwth (minus) aachen (dot) de</mark>, preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or can be downloaded <Link href="/lt-pgpkey.asc">here</Link>. The corresponding sigature reads <mark className='font-mono bg-gray-100 rounded-sm p-0'>9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87</mark>.
+        </p>
+        <h3>
+          Find my also on ..
+        </h3>
+        <p>
+          I'm part of the major science and networking sites, for example:
+        </p>
         <div className='flex flex-wrap gap-1 leading-3'>
           <Link href="https://doi.org/10.1137/21M1456005">
             <span className="border-gray-500">
@@ -419,99 +485,75 @@ console.log('It works!')
               <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-lime-700 dark:text-lime-300 rounded-tr rounded-br px-2 py-0.5 bg-lime-200 text-lime-800 font-mono'>0000-0001-5460-5425</span>
             </span>
           </Link>
-
-
-
+          <Link href="https://doi.org/10.1137/21M1456005">
+            <span className="border-gray-500">
+              <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-teal-700 dark:text-teal-300 rounded-tl rounded-bl px-2 py-0.5 bg-teal-300 text-teal-800 font-bold'>
+                <span>
+                  <span className="pr-1"><i className="ai ai-researchgate-square"></i></span>
+                  ResearchGate
+                </span>
+              </span>
+              <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-teal-700 dark:text-teal-300 rounded-tr rounded-br px-2 py-0.5 bg-teal-200 text-teal-800 font-mono'>Lambert-Theisen</span>
+            </span>
+          </Link>
+          <Link href="https://doi.org/10.1137/21M1456005">
+            <span className="border-gray-500">
+              <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-blue-700 dark:text-blue-300 rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
+                <span>
+                  <span className="pr-1"><FontAwesomeIcon icon={faLinkedin} /></span>
+                  LinkedIn
+                </span>
+              </span>
+              <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-blue-700 dark:text-blue-300 rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>Lambert-Theisen</span>
+            </span>
+          </Link>
+          <Link className='no-underline' href="https://doi.org/10.1137/21M1456005">
+            <span className="border-gray-500">
+              <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-700 text-white font-bold'>
+                <span>
+                  <span className="pr-1"><FontAwesomeIcon icon={faLinkedin} /></span>
+                  LinkedIn
+                </span>
+              </span>
+              <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-500 text-white font-mono'>Lambert-Theisen</span>
+            </span>
+          </Link>
         </div>
-        <Link className="transform transition-all duration-100 hover:scale-100 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 no-underline" href="#">
-          <span className="text-2xl relative px-3 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-            <FontAwesomeIcon icon={faGitlab} />
-          </span>
-        </Link>
-        <Link className="transform transition-all duration-100 hover:scale-100 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 no-underline" href="#">
-          <span className="text-2xl relative px-3 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-            <i className="ai ai-google-scholar-square text-gray-900"></i>
-          </span>
-        </Link>
+        <h3>
+          Impressum
+        </h3>
+        <p className='font-mono text-xs'>
+          Applied and Computational Mathematics (ACoM)
+          <br />
+          RWTH Aachen University
+          <br />
+          Schinkelstr. 2, Room 229 (Rogowski Building, 2nd floor)
+          <br />
+          D-52062 Aachen
+          <br />
+          Germany
+          <br />
+          Office Phone: +49 241 80-98671
+          <br />
+          Mobile Phone: +49 241 80-98686
+        </p>
+        <p className='font-mono text-xs'>
+          Institut für Angewandte Analysis und Numerische Simulation (IANS)
+          <br />
+          Lehrstuhl Numerische Mathematik für Höchstleistungsrechner (NMH)
+          <br />
+          Universität Stuttgart
+          <br />
+          Pfaffenwaldring 57, Raum 7.154
+          <br />
+          70569 Stuttgart
+          <br />
+          Germany
+          <br />
+          Phone: 0049 711 685 65522
+          <br />
+        </p>
 
-        <div className='flex flex-wrap justify-between text-4xl'>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://git.rwth-aachen.de/lamBOO">
-              <FontAwesomeIcon icon={faGitlab} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://doi.org/10.1137/21M1456005">
-              <i className="ai ai-google-scholar-square"></i>
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-          <div className=''>
-            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </div>
-        </div>
-        {/* </div> */}
         <MDXProvider components={components}>
           <Post />
         </MDXProvider>
