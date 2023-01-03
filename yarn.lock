@@ -956,6 +956,11 @@
   "resolved" "https://registry.npmjs.org/@xtuc/long/-/long-4.2.2.tgz"
   "version" "4.2.2"
 
+"academicons@^1.9.2":
+  "integrity" "sha512-LjlkK1E/daUUWqMJOXa/YeXL26K0FmN3cdyILgGCJKgo5bzgVYOO712DZDREzETrrC0MnKui8/hGYpM8kCTgZg=="
+  "resolved" "https://registry.npmjs.org/academicons/-/academicons-1.9.2.tgz"
+  "version" "1.9.2"
+
 "acorn-import-assertions@^1.7.6":
   "integrity" "sha512-m7VZ3jwz4eK6A4Vtt8Ew1/mNbP24u0FhdyfA7fSvnJR6LMdfOYnmuIrrJAgrYfYJ10F/otaHTtrtrtmHdMNzEw=="
   "resolved" "https://registry.npmjs.org/acorn-import-assertions/-/acorn-import-assertions-1.8.0.tgz"

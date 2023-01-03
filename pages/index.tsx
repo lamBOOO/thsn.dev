@@ -16,6 +16,8 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 
+import 'academicons'
+
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
@@ -33,6 +35,7 @@ config.autoAddCss = false
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faFaceRelieved } from '@fortawesome/pro-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGitlab } from '@fortawesome/free-brands-svg-icons'
 // import { faCode } from '@fortawesome/free-brands-svg-icons'
 // import { faFile } from '@fortawesome/free-solid-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
@@ -122,11 +125,11 @@ console.log('It works!')
         <div className="flex mb-6">
           <div className="flex-auto">
             <h1 className="my-2 mb-0 text-4xl">
-              Lambert Theisens
+              Lambert Theisen
             </h1>
             <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
             <div className='leading-5 mb-2'>
-              Researcher & PhD Student
+              Computational Engineer & PhD Student
               <br></br>
               @ <Link href="https://www.rwth-aachen.de/">RWTH Aachen University</ Link> / <Link href="https://www.uni-stuttgart.de/">University of Stuttgart</Link>
             </div>
@@ -182,8 +185,8 @@ console.log('It works!')
             <div>
               <Link href="https://doi.org/10.1137/21M1456005">
                 <span className="border-gray-500 ">
-                  <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center  dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>DOI</span>
-                  <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center  dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1137/21M1456005</span>
+                  <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>DOI</span>
+                  <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1137/21M1456005</span>
                 </span>
               </Link>
             </div>
@@ -365,9 +368,149 @@ console.log('It works!')
         <h2 id="contact" className="scroll-mt-20">
           Contact
         </h2>
-        <p>
-          x
-        </p>
+        <div className='flex flex-wrap gap-1 leading-3'>
+          <Link href="https://doi.org/10.1137/21M1456005">
+            <span className="border-gray-500">
+              <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-orange-300 text-orange-800 font-bold'><span><FontAwesomeIcon className="pr-1" icon={faGitlab} />RWTH</span></span>
+              <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-orange-200 text-orange-800 font-mono'>@lamBOO</span>
+            </span>
+          </Link>
+          <Link href="https://doi.org/10.1137/21M1456005">
+            <span className="border-gray-500">
+              <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-blue-700 dark:text-blue-300 rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
+                <span>
+                  <span className="pr-1"><i className="ai ai-google-scholar"></i></span>
+                  GScholar
+                </span>
+              </span>
+              <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-blue-700 dark:text-blue-300 rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>LINK</span>
+            </span>
+          </Link>
+          <Link href="https://doi.org/10.1137/21M1456005">
+            <span className="border-gray-500">
+              <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>
+                <span>
+                  <span className="pr-1"><FontAwesomeIcon icon={faGithub} /></span>
+                  Github
+                </span>
+              </span>
+              <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-gray-700 dark:text-gray-300 rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>@lamBOO</span>
+            </span>
+          </Link>
+          <Link href="https://doi.org/10.1137/21M1456005">
+            <span className="border-gray-500">
+              <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-red-700 dark:text-red-300 rounded-tl rounded-bl px-2 py-0.5 bg-red-300 text-red-800 font-bold'>
+                <span>
+                  <span className="pr-1"><i className="ai ai-arxiv"></i></span>
+                  arXiv
+                </span>
+              </span>
+              <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-red-700 dark:text-red-300 rounded-tr rounded-br px-2 py-0.5 bg-red-200 text-red-800 font-mono'>theisen_l_1</span>
+            </span>
+          </Link>
+          <Link href="https://doi.org/10.1137/21M1456005">
+            <span className="border-gray-500">
+              <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center dark:bg-lime-700 dark:text-lime-300 rounded-tl rounded-bl px-2 py-0.5 bg-lime-300 text-lime-800 font-bold'>
+                <span>
+                  <span className="pr-1"><i className="ai ai-orcid"></i></span>
+                  ORCID
+                </span>
+              </span>
+              <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center dark:bg-lime-700 dark:text-lime-300 rounded-tr rounded-br px-2 py-0.5 bg-lime-200 text-lime-800 font-mono'>0000-0001-5460-5425</span>
+            </span>
+          </Link>
+
+
+
+        </div>
+        <Link className="transform transition-all duration-100 hover:scale-100 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 no-underline" href="#">
+          <span className="text-2xl relative px-3 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            <FontAwesomeIcon icon={faGitlab} />
+          </span>
+        </Link>
+        <Link className="transform transition-all duration-100 hover:scale-100 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 group-hover:from-red-500 group-hover:to-violet-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 no-underline" href="#">
+          <span className="text-2xl relative px-3 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            <i className="ai ai-google-scholar-square text-gray-900"></i>
+          </span>
+        </Link>
+
+        <div className='flex flex-wrap justify-between text-4xl'>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://git.rwth-aachen.de/lamBOO">
+              <FontAwesomeIcon icon={faGitlab} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://doi.org/10.1137/21M1456005">
+              <i className="ai ai-google-scholar-square"></i>
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+          <div className=''>
+            <Link className="hover:text-red-500" href="https://github.com/lamBOOO">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </div>
+        </div>
         {/* </div> */}
         <MDXProvider components={components}>
           <Post />
@@ -401,7 +544,7 @@ console.log('It works!')
         </div>
       </div>
       <Head>
-        <title>Lambert Theisen - Researcher, Developer</title>
+        <title>Lambert Theisen - Computational Engineering Scientist</title>
         <meta name="description" content="Generated by create next app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
