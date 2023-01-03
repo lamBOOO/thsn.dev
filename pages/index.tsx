@@ -432,7 +432,7 @@ console.log('It works!')
           Find my also on ..
         </h3>
         <p>
-          I'm part of the major science and networking sites, for example:
+          I am part of the major science and networking sites, for example:
         </p>
         <div className='flex flex-wrap gap-1 leading-3'>
           <Link href="https://doi.org/10.1137/21M1456005">
