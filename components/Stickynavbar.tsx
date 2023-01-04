@@ -47,7 +47,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link className="scroll-smooth" href="#">
+                  <Link href="#home" className='scroll-smooth' scroll={false}>
                     <Image
                       className="block h-8 w-auto"
                       src={logo}

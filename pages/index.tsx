@@ -18,10 +18,6 @@ import { faFile } from '@fortawesome/free-regular-svg-icons'
 import { faBook, faBuilding, faBuildingColumns, faCode, faPerson, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
 
 import logo_me from '../public/me.jpg'
-import dd_teaser from '../public/lambert_eigendd_teaser.jpg'
-import plot1 from '../public/plot1.jpg'
-import plot2 from '../public/plot2.jpg'
-import sticker from '../public/sticker.png'
 
 import p2021_1 from '../public/p2021_1.jpg'
 import p2021_2 from '../public/p2021_2.jpg'
@@ -43,7 +39,7 @@ export default function Home() {
                 <div className="flex-auto">
                   <div className='flex justify-between'>
                     <div>
-                      <h1 className="my-2 mb-0 text-4xl mt-0">
+                      <h1 id="home" className="my-2 mb-0 text-4xl mt-0 scroll-mt-20">
                         Lambert Theisen
                       </h1>
                       <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
