@@ -39,7 +39,7 @@ export default function Home() {
                 <div className="flex-auto">
                   <div className='flex justify-between'>
                     <div>
-                      <h1 id="home" className="my-2 mb-0 text-4xl mt-0 scroll-mt-20">
+                      <h1 id="home" className="my-2 mb-0 text-4xl mt-0 scroll-mt-28">
                         Lambert Theisen
                       </h1>
                       <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
