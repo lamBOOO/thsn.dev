@@ -15,7 +15,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faGitlab } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
-import { faBuilding, faBuildingColumns, faCode, faPerson, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faBuilding, faBuildingColumns, faCode, faPerson, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
 
 import logo_me from '../public/me.jpg'
 import dd_teaser from '../public/lambert_eigendd_teaser.jpg'
@@ -32,64 +32,70 @@ export default function Home() {
         <main className='my-10'>
           <div className='prose mx-auto'>
             <section className=''>
-            <div className="flex mb-4">
-              <div className="flex-auto">
-                <div className='flex justify-between'>
-                  <div>
-                    <h1 className="my-2 mb-0 text-4xl mt-0">
-                      Lambert Theisen
-                    </h1>
-                    <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
-                    <div className='leading-5 mb-2'>
-                      Computational Engineer, PhD Student & Digital Artist
-                      <br></br>
-                      @ <Link href="https://www.rwth-aachen.de/">RWTH Aachen University</ Link> / <Link href="https://www.uni-stuttgart.de/">University of Stuttgart</Link>
+              <div className="flex mb-4">
+                <div className="flex-auto">
+                  <div className='flex justify-between'>
+                    <div>
+                      <h1 className="my-2 mb-0 text-4xl mt-0">
+                        Lambert Theisen
+                      </h1>
+                      <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
+                      <div className='leading-5 mb-2'>
+                        Computational Engineer, PhD Student & Digital Artist
+                        <br></br>
+                        @ <Link href="https://www.rwth-aachen.de/">RWTH Aachen University</ Link> / <Link href="https://www.uni-stuttgart.de/">University of Stuttgart</Link>
+                      </div>
+                    </div>
+                    <div className="sm:hidden flex-none w-20 h-20 block ml-1">
+                      <Image
+                        className="flex-none rounded-full m-0"
+                        src={logo_me}
+                        alt="Picture of the author"
+                      />
                     </div>
                   </div>
-                  <div className="sm:hidden flex-none w-20 h-20 block ml-1">
-                    <Image
-                      className="flex-none rounded-full m-0"
-                      src={logo_me}
-                      alt="Picture of the author"
-                    />
+
+                  <div className='leading-6'>
+                    <i><small>
+                      # Researching <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-amber-100 relative inline-block -z-10"><span className="relative"><b>PDE eigenvalue problems</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-red-100 relative inline-block -z-10"><span className="relative"><b>asymptotic analysis</b></span></span> of expanding domains, directional <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-teal-100 relative inline-block -z-10"><span className="relative"><b>homogenization</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block -z-10"><span className="relative"><b>preconditioners</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block -z-10"><span className="relative"><b>eigenvalue algorithms</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block -z-10"><span className="relative"><b>preconditioners</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block -z-10"><span className="relative"><b>linear solvers</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block -z-10"><span className="relative"><b>spectral coarse spaces</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block -z-10"><span className="relative"><b>domain decomposition</b></span></span>, and <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block -z-10"><span className="relative"><b>Galerkin methods</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block -z-10"><span className="relative"><b>moment models</b></span></span> in rarefied gas modelling.
+                    </small></i>
                   </div>
                 </div>
-
-                <div className='leading-6'>
-                  <i><small>
-                    # Researching <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-amber-100 relative inline-block -z-10"><span className="relative"><b>PDE eigenvalue problems</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-red-100 relative inline-block -z-10"><span className="relative"><b>asymptotic analysis</b></span></span> of expanding domains, directional <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-teal-100 relative inline-block -z-10"><span className="relative"><b>homogenization</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block -z-10"><span className="relative"><b>preconditioners</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block -z-10"><span className="relative"><b>eigenvalue algorithms</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block -z-10"><span className="relative"><b>preconditioners</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block -z-10"><span className="relative"><b>linear solvers</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block -z-10"><span className="relative"><b>spectral coarse spaces</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block -z-10"><span className="relative"><b>domain decomposition</b></span></span>, and <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block -z-10"><span className="relative"><b>Galerkin methods</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block -z-10"><span className="relative"><b>moment models</b></span></span> in rarefied gas modelling.
-                  </small></i>
+                <div className="flex-none sm:w-1/5 sm:h-1/5 w-14 h-14 hidden sm:block ml-1">
+                  <Image
+                    className="flex-none rounded-full m-0"
+                    src={logo_me}
+                    alt="Picture of the author"
+                  />
                 </div>
               </div>
-              <div className="flex-none sm:w-1/5 sm:h-1/5 w-14 h-14 hidden sm:block ml-1">
-                <Image
-                  className="flex-none rounded-full m-0"
-                  src={logo_me}
-                  alt="Picture of the author"
-                />
+              <div className='flex flex-wrap items-center gap-1 border-b border-gray-100 pb-5'>
+                <span className="text-3xl mr-2 align-middle animate-waving-hand">👋</span>
+                <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br     from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center mr-2 no-underline scroll-smooth" href="#contact" scroll={false}>
+                  <span className='font-extralight'>Say </span>
+                  <i className='font-extrabold'>Ei Gude, wie?</i>
+                  <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
+                </Link>
+                <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 hover:from-red-600 hover:to-violet-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline" href="#">
+                  <span className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
+                    <FontAwesomeIcon icon={faFile} /> CV <span className='sm:inline hidden'>(soon)</span>
+                  </span>
+                </Link>
               </div>
-            </div>
-            <div className='flex flex-wrap items-center gap-1 border-b border-gray-100 pb-5'>
-              <span className="text-3xl mr-2 align-middle animate-waving-hand">👋</span>
-              <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br     from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center mr-2 no-underline scroll-smooth" href="#contact" scroll={false}>
-                <span className='font-extralight'>Say </span>
-                <i className='font-extrabold'>Ei Gude, wie?</i>
-                <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
-              </Link>
-              <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 hover:from-red-600 hover:to-violet-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline" href="#">
-                <span className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
-                  <FontAwesomeIcon icon={faFile} /> CV <span className='sm:inline hidden'>(soon)</span>
-                </span>
-              </Link>
-            </div>
             </section>
             <h2 id="research" className="scroll-mt-20">
               Research Interest & Projects
             </h2>
             <h3>Journal Publications</h3>
             <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4">
-              <span className='font-bold leading-5 mb-2'>
-                A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains
+              <span className='leading-5 mb-2'>
+                <span className='font-bold'>
+                  A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains
+                </span>
+                <br />
+                <i className="text-xs">
+                  SIAM Journal on Numerical Analysis Vol. 60, Iss. 5 (2022)
+                </i>
               </span>
               <div className='m-0 flex flex-wrap gap-1 mb-1'>
                 <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
@@ -105,10 +111,6 @@ export default function Home() {
                   Benjamin Stamm
                 </ Link></span>
               </div>
-              <span className="border-gray-500">
-                <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>SINUM</span>
-                <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>Volume 60, Issue 5</span>
-              </span>
               <div>
                 <p className='font-norma text-xs leading-4 text-justify my-2'>
                   <Image
@@ -282,6 +284,10 @@ export default function Home() {
             </div>
             <h3>Talks</h3>
             <p>TODO</p>
+            <h3>Software</h3>
+            <p>TODO</p>
+            <h3>Miscellaneous</h3>
+            <p>TODO</p>
             <h3>Theses</h3>
             <p>TODO</p>
             <h2>Teaching</h2>
@@ -290,12 +296,14 @@ export default function Home() {
             </p>
             <h3>Selected classes</h3>
             <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4">
-              <span className=' mb-2 leading-3'>
-              <span className='font-bold leading-5'>
-                Vortragsübung Höhere Mathematik 1 für Ingenieure
-              </span>
-              <br/>
-              <span className='text-xs text-gray-500'> (global exercise higher mathematics 1 for engineers)</span>
+              <span className='leading-5 mb-2'>
+                <span className='font-bold'>
+                  Vortragsübung Höhere Mathematik 1 für Ingenieure
+                </span>
+                <br />
+                <i className="text-xs">
+                  (global exercise higher mathematics 1 for engineers)
+                </i>
               </span>
               <div className='m-0 flex flex-wrap gap-1 mb-1'>
                 <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
@@ -313,19 +321,28 @@ export default function Home() {
               </div>
 
               <div>
-                <p className='font-norma text-xs leading-4 text-justify my-2'>
+                <p className='font-normal text-xs leading-4 text-justify my-2'>
                   The class is about the basic concepts of linear algebra. For example:
-                  <ul className='leading-3'>
-                    <li>logics</li>
-                    <li>numbers, sets, inequalities</li>
-                    <li>euclidian vectorspace</li>
-                    <li>linear systems of equations</li>
-                    <li>transformations and transformation groups</li>
-                    <li>principal axis transformations</li>
-                  </ul>
                 </p>
+                <ul className='font-normal text-xs leading-3'>
+                  <li key="0">logics</li>
+                  <li key="1">numbers, sets, inequalities</li>
+                  <li key="2">euclidian vectorspace</li>
+                  <li key="3">linear systems of equations</li>
+                  <li key="4">transformations and transformation groups</li>
+                  <li key="5">principal axis transformations</li>
+                </ul>
                 <div>
                 </div>
+                <Link href="https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1">
+                  <span className="border-gray-500 hover:border-black">
+                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-green-300 text-green-800 font-bold'>
+                      <span className="pr-1"><FontAwesomeIcon icon={faBook} /></span>
+                      Course notes
+                    </span>
+                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-green-200 text-green-800 font-mono'>LINK</span>
+                  </span>
+                </Link>
 
 
 
