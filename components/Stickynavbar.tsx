@@ -52,6 +52,7 @@ export default function Navbar() {
                       className="block h-8 w-auto"
                       src={logo}
                       alt="Lambert Theisens logo"
+                      sizes="32px"
                     />
                   </Link>
                 </div>
@@ -82,6 +83,7 @@ export default function Navbar() {
                         className="h-8 w-8 rounded-full"
                         src={logo_me}
                         alt="Picture of the author"
+                        sizes="32px"
                       />
                     </Menu.Button>
                   </div>

@@ -133,16 +133,19 @@ export default function Home() {
                       className="w-40 m-0"
                       src={p2022_1}
                       alt="Picture of the author"
+                      sizes="160px"
                     />
                     <Image
                       className="w-40 m-0"
                       src={p2022_2}
                       alt="Picture of the author"
+                      sizes="160px"
                     />
                     <Image
                       className="w-40 m-0"
                       src={p2022_3}
                       alt="Picture of the author"
+                      sizes="160px"
                     />
                   </span>
                   This paper provides a provably quasi-optimal preconditioning strategy of the linear Schrödinger eigenvalue problem with periodic potentials for a possibly nonuniform spatial expansion of the domain. The quasi-optimality is achieved by having the iterative eigenvalue algorithms converge in a constant number of iterations for different domain sizes. In the analysis, we derive an analytic factorization of the spectrum and asymptotically describe it using concepts from the homogenization theory. This decomposition allows us to express the eigenpair as an easy-to-calculate cell problem solution combined with an asymptotically vanishing remainder. We then prove that the easy-to-calculate limit eigenvalue can be used in a shift-and-invert preconditioning strategy to bound the number of eigensolver iterations uniformly. Several numerical examples illustrate the effectiveness of this quasi-optimal preconditioning strategy.
@@ -232,16 +235,19 @@ export default function Home() {
                       className="w-40 m-0"
                       src={p2021_1}
                       alt="Picture of the author"
+                      sizes="160px"
                     />
                     <Image
                       className="w-40 m-0"
                       src={p2021_2}
                       alt="Picture of the author"
+                      sizes="160px"
                     />
                     <Image
                       className="w-40 m-0"
                       src={p2021_3}
                       alt="Picture of the author"
+                      sizes="160px"
                     />
                   </span>
                   We present a mixed finite element solver for the linearized regularized 13-moment equations of non-equilibrium gas dynamics. The Python implementation builds upon the software tools provided by the FEniCS computing platform. We describe a new tensorial approach utilizing the extension capabilities of FEniCS’ Unified Form Language to define required differential operators for tensors above second degree. The presented solver serves as an example for implementing tensorial variational formulations in FEniCS, for which the documentation and literature seem to be very sparse. Using the software abstraction levels provided by the Unified Form Language allows an almost one-to-one correspondence between the underlying mathematics and the resulting source code. Test cases support the correctness of the proposed method using validation with exact solutions. To justify the usage of extended gas flow models, we discuss typical application cases involving rarefaction effects. We provide the documented and validated solver publicly.
@@ -505,7 +511,7 @@ export default function Home() {
               E-Mail
             </h3>
             <p className='leading-6'>
-              You can contact me via the e-mail address <mark className='font-mono bg-gray-100 rounded-sm p-0'>lambert (dot) theisen (at) rwth (minus) aachen (dot) de</mark>, preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or can be downloaded <Link href="/lt-pgpkey.asc">here</Link>. The corresponding sigature reads <mark className='font-mono bg-gray-100 rounded-sm p-0'>9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87</mark>.
+              You can contact me via the e-mail address <mark className='font-mono bg-gray-100 rounded-sm p-0'>lambert (dot) theisen (at) rwth (minus) aachen (dot) de</mark>, preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding sigature reads <mark className='font-mono bg-gray-100 rounded-sm p-0'>9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87</mark>.
             </p>
             <h3>
               Find my also on ..
