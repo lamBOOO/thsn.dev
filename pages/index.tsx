@@ -24,7 +24,7 @@ import sticker from '../public/sticker.png'
 
 export default function Home() {
   return (
-    <div id="1" className='relative px-4'>
+    <div className='relative'>
       <div className='sticky top-0 z-50'>
         <Navbar />
       </div>

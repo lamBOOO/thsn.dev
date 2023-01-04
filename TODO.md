@@ -12,3 +12,4 @@
 - remove "dark" tags or make proper
 - Make components
 - Use proper html tags, see `<article class="prose prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600"> </article>` from https://tailwindcss.com/blog/tailwindcss-typography-v0-5 for reader mode
+- Make badges hover border effect uniform

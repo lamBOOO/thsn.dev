@@ -25,7 +25,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 // import { allPages } from 'contentlayer/generated';
 
 import { MDXProvider } from '@mdx-js/react'
-import Post from '../posts/home1.mdx'
+import Post from '../posts/testpost.mdx'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
