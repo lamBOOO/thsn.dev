@@ -28,6 +28,7 @@ function classNames(...classes: any[]) {
 
 export default function Navbar() {
   return (
+    <div className='sticky top-0 z-50'>
     <Disclosure as="nav" className="backdrop-blur-lg bg-white/90 border-b border-gray-100 -mx-4">
       {({ open }) => (
         <>
@@ -189,5 +190,6 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
+    </div>
   )
 }
