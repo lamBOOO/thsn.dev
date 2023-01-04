@@ -15,7 +15,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faGitlab } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
-import { faCode, faPerson } from '@fortawesome/free-solid-svg-icons'
+import { faBuilding, faBuildingColumns, faCode, faPerson, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
 
 import logo_me from '../public/me.jpg'
 import dd_teaser from '../public/lambert_eigendd_teaser.jpg'
@@ -29,8 +29,9 @@ export default function Home() {
       <div className='px-4'>
         <Metadata />
         <Stickynavbar />
-        <main className='my-5'>
+        <main className='my-10'>
           <div className='prose mx-auto'>
+            <section className=''>
             <div className="flex mb-4">
               <div className="flex-auto">
                 <div className='flex justify-between'>
@@ -81,6 +82,7 @@ export default function Home() {
                 </span>
               </Link>
             </div>
+            </section>
             <h2 id="research" className="scroll-mt-20">
               Research Interest & Projects
             </h2>
@@ -278,6 +280,57 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <h3>Talks</h3>
+            <p>TODO</p>
+            <h3>Theses</h3>
+            <p>TODO</p>
+            <h2>Teaching</h2>
+            <p>
+              You can find most of my teaching activity in the Github repository <Link href="https://github.com/lamBOOO/teaching">@lamBOOO/teaching</Link>.
+            </p>
+            <h3>Selected classes</h3>
+            <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4">
+              <span className=' mb-2 leading-3'>
+              <span className='font-bold leading-5'>
+                Vortragsübung Höhere Mathematik 1 für Ingenieure
+              </span>
+              <br/>
+              <span className='text-xs text-gray-500'> (global exercise higher mathematics 1 for engineers)</span>
+              </span>
+              <div className='m-0 flex flex-wrap gap-1 mb-1'>
+                <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
+                  <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
+                  WS22
+                </span>
+                <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
+                  <span className="pr-1"><FontAwesomeIcon icon={faUsers} /></span>
+                  ~1000
+                </span>
+                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border-blue-500">
+                  <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns} /></span>
+                  Unversity of Stuttgart
+                </span>
+              </div>
+
+              <div>
+                <p className='font-norma text-xs leading-4 text-justify my-2'>
+                  The class is about the basic concepts of linear algebra. For example:
+                  <ul className='leading-3'>
+                    <li>logics</li>
+                    <li>numbers, sets, inequalities</li>
+                    <li>euclidian vectorspace</li>
+                    <li>linear systems of equations</li>
+                    <li>transformations and transformation groups</li>
+                    <li>principal axis transformations</li>
+                  </ul>
+                </p>
+                <div>
+                </div>
+
+
+
+              </div>
+            </div>
             <h2 id="contact" className="scroll-mt-20 mb-5">
               Contact
             </h2>
@@ -359,17 +412,6 @@ export default function Home() {
                     </span>
                   </span>
                   <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-teal-200 text-teal-800 font-mono'>Lambert-Theisen</span>
-                </span>
-              </Link>
-              <Link href="https://doi.org/10.1137/21M1456005">
-                <span className="border-gray-500">
-                  <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
-                    <span>
-                      <span className="pr-1"><FontAwesomeIcon icon={faLinkedin} /></span>
-                      LinkedIn
-                    </span>
-                  </span>
-                  <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>Lambert-Theisen</span>
                 </span>
               </Link>
               <Link className='no-underline' href="https://doi.org/10.1137/21M1456005">
