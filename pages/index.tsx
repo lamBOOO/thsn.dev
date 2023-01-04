@@ -169,7 +169,7 @@ export default function Home() {
                       <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1137/21M1456005</span>
                     </span>
                   </Link>
-                  <Link className="m-0" href="https://doi.org/10.1137/21M1456005">
+                  <Link className="m-0" href="https://arxiv.org/abs/2110.14982">
                     <span className="border-gray-500">
                       <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-red-300 text-red-800 font-bold '>
                         <span className="pr-1"><i className="ai ai-arxiv"></i></span>
@@ -178,13 +178,13 @@ export default function Home() {
                       <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-red-200 text-red-800 font-mono decoration-red-700'>2110.14982</span>
                     </span>
                   </Link>
-                  <Link href="https://doi.org/10.1137/21M1456005">
+                  <Link href="https://doi.org/10.5281/zenodo.6576197">
                     <span className="border-gray-500">
                       <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
                         <span className="pr-1"><i className="ai ai-zenodo"></i></span>
-                        Zenodo
+                        Code
                       </span>
-                      <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>10.1137/21M1456005</span>
+                      <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>10.5281/zenodo.6576197</span>
                     </span>
                   </Link>
                 </div>
@@ -280,7 +280,7 @@ export default function Home() {
                     <span className="border-gray-500">
                       <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
                         <span className="pr-1"><i className="ai ai-zenodo"></i></span>
-                        Zenodo
+                        Code
                       </span>
                       <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>10.5281/zenodo.4172951</span>
                     </span>
@@ -405,7 +405,7 @@ export default function Home() {
             <p>TODO</p>
             <h3>Theses</h3>
             <p>TODO</p>
-            <h2>Teaching</h2>
+            <h2 id="teaching">Teaching</h2>
             <p>
               You can find most of my teaching activity in the Github repository <Link href="https://github.com/lamBOOO/teaching">@lamBOOO/teaching</Link>.
             </p>
