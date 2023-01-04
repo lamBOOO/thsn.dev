@@ -516,13 +516,13 @@ export default function Home() {
               I am part of the major science and networking sites, for example:
             </p>
             <div className='flex flex-wrap gap-1 leading-3'>
-              <Link href="https://doi.org/10.1137/21M1456005">
+              <Link href="https://git.rwth-aachen.de/lamBOO">
                 <span className="border-gray-500">
                   <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-orange-300 text-orange-800 font-bold'><span><FontAwesomeIcon className="pr-1" icon={faGitlab} />RWTH</span></span>
                   <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-orange-200 text-orange-800 font-mono'>@lamBOO</span>
                 </span>
               </Link>
-              <Link href="https://doi.org/10.1137/21M1456005">
+              <Link href="https://scholar.google.com/citations?user=ZD8cDyEAAAAJ">
                 <span className="border-gray-500">
                   <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
                     <span>
@@ -533,7 +533,7 @@ export default function Home() {
                   <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>LINK</span>
                 </span>
               </Link>
-              <Link href="https://doi.org/10.1137/21M1456005">
+              <Link href="https://github.com/lamBOOO">
                 <span className="border-gray-500">
                   <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>
                     <span>
@@ -544,7 +544,7 @@ export default function Home() {
                   <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>@lamBOO</span>
                 </span>
               </Link>
-              <Link href="https://doi.org/10.1137/21M1456005">
+              <Link href="https://arxiv.org/a/theisen_l_1.html">
                 <span className="border-gray-500">
                   <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-red-300 text-red-800 font-bold'>
                     <span>
@@ -555,7 +555,7 @@ export default function Home() {
                   <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-red-200 text-red-800 font-mono'>theisen_l_1</span>
                 </span>
               </Link>
-              <Link href="https://doi.org/10.1137/21M1456005">
+              <Link href="https://orcid.org/0000-0001-5460-5425">
                 <span className="border-gray-500">
                   <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-lime-300 text-lime-800 font-bold'>
                     <span>
@@ -566,7 +566,7 @@ export default function Home() {
                   <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-lime-200 text-lime-800 font-mono'>0000-0001-5460-5425</span>
                 </span>
               </Link>
-              <Link href="https://doi.org/10.1137/21M1456005">
+              <Link href="https://www.researchgate.net/profile/Lambert-Theisen">
                 <span className="border-gray-500">
                   <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-teal-300 text-teal-800 font-bold'>
                     <span>
@@ -577,7 +577,7 @@ export default function Home() {
                   <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-teal-200 text-teal-800 font-mono'>Lambert-Theisen</span>
                 </span>
               </Link>
-              <Link className='no-underline' href="https://doi.org/10.1137/21M1456005">
+              <Link className='no-underline' href="https://www.linkedin.com/in/lambert-theisen-4027b3184/">
                 <span className="border-gray-500">
                   <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-700 text-white font-bold'>
                     <span>
