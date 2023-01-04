@@ -90,6 +90,14 @@ export default function Home() {
                 </Link>
               </div>
             </section>
+            <h2 id="news" className="scroll-mt-20">
+              Blog & News
+            </h2>
+            <div>
+              <span className='font-mono font-bold bg-gray-900 text-white p-1 mr-1'>230103</span>I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
+              <hr className='m-0 my-2' />
+              <span className='font-mono font-bold bg-gray-900 text-white p-1 mr-1'>221001</span>From MO-THU, I work in Stuttgart and on FR from Aachen.
+            </div>
             <h2 id="research" className="scroll-mt-20">
               Research Interest & Projects
             </h2>
@@ -120,22 +128,22 @@ export default function Home() {
               </div>
               <div>
                 <p className='font-norma text-xs leading-4 text-justify my-2'>
-                <span className='float-right  ml-1 mb-1 border'>
-                  <Image
-                    className="w-40 m-0"
-                    src={p2022_1}
-                       alt="Picture of the author"
-                  />
-                  <Image
-                    className="w-40 m-0"
-                    src={p2022_2}
-                       alt="Picture of the author"
-                  />
-                  <Image
-                    className="w-40 m-0"
-                    src={p2022_3}
-                       alt="Picture of the author"
-                  />
+                  <span className='float-right  ml-1 mb-1 border'>
+                    <Image
+                      className="w-40 m-0"
+                      src={p2022_1}
+                      alt="Picture of the author"
+                    />
+                    <Image
+                      className="w-40 m-0"
+                      src={p2022_2}
+                      alt="Picture of the author"
+                    />
+                    <Image
+                      className="w-40 m-0"
+                      src={p2022_3}
+                      alt="Picture of the author"
+                    />
                   </span>
                   This paper provides a provably quasi-optimal preconditioning strategy of the linear Schrödinger eigenvalue problem with periodic potentials for a possibly nonuniform spatial expansion of the domain. The quasi-optimality is achieved by having the iterative eigenvalue algorithms converge in a constant number of iterations for different domain sizes. In the analysis, we derive an analytic factorization of the spectrum and asymptotically describe it using concepts from the homogenization theory. This decomposition allows us to express the eigenpair as an easy-to-calculate cell problem solution combined with an asymptotically vanishing remainder. We then prove that the easy-to-calculate limit eigenvalue can be used in a shift-and-invert preconditioning strategy to bound the number of eigensolver iterations uniformly. Several numerical examples illustrate the effectiveness of this quasi-optimal preconditioning strategy.
                 </p>
@@ -220,21 +228,21 @@ export default function Home() {
               <div>
                 <p className='font-norma text-xs leading-4 text-justify my-2'>
                   <span className='float-right ml-1 mb-1 border'>
-                  <Image
-                    className="w-40 m-0"
-                    src={p2021_1}
-                       alt="Picture of the author"
-                  />
-                  <Image
-                    className="w-40 m-0"
-                    src={p2021_2}
-                       alt="Picture of the author"
-                  />
-                  <Image
-                    className="w-40 m-0"
-                    src={p2021_3}
-                       alt="Picture of the author"
-                  />
+                    <Image
+                      className="w-40 m-0"
+                      src={p2021_1}
+                      alt="Picture of the author"
+                    />
+                    <Image
+                      className="w-40 m-0"
+                      src={p2021_2}
+                      alt="Picture of the author"
+                    />
+                    <Image
+                      className="w-40 m-0"
+                      src={p2021_3}
+                      alt="Picture of the author"
+                    />
                   </span>
                   We present a mixed finite element solver for the linearized regularized 13-moment equations of non-equilibrium gas dynamics. The Python implementation builds upon the software tools provided by the FEniCS computing platform. We describe a new tensorial approach utilizing the extension capabilities of FEniCS’ Unified Form Language to define required differential operators for tensors above second degree. The presented solver serves as an example for implementing tensorial variational formulations in FEniCS, for which the documentation and literature seem to be very sparse. Using the software abstraction levels provided by the Unified Form Language allows an almost one-to-one correspondence between the underlying mathematics and the resulting source code. Test cases support the correctness of the proposed method using validation with exact solutions. To justify the usage of extended gas flow models, we discuss typical application cases involving rarefaction effects. We provide the documented and validated solver publicly.
                 </p>
@@ -288,6 +296,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+
+
+
+{/*
             <h3>Projects</h3>
             <div className='transform transition-all rounded-xl w-full bg-gradient-to-r from-[#feb4b4] to-[#f88181] p-1 mb-2'>
               <div className="flex flex-col justify-between h-full bg-white rounded-lg p-4">
@@ -396,7 +409,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+
+
+
             <h3>Talks</h3>
             <p>TODO</p>
             <h3>Software</h3>
@@ -405,7 +422,7 @@ export default function Home() {
             <p>TODO</p>
             <h3>Theses</h3>
             <p>TODO</p>
-            <h2 id="teaching">Teaching</h2>
+            <h2 id="teaching" className='scroll-mt-20'>Teaching</h2>
             <p>
               You can find most of my teaching activity in the Github repository <Link href="https://github.com/lamBOOO/teaching">@lamBOOO/teaching</Link>.
             </p>
@@ -463,6 +480,18 @@ export default function Home() {
 
               </div>
             </div>
+
+
+
+            <h2 id="projects" className="scroll-mt-20">
+              Selected Projects
+            </h2>
+            <p>
+              The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overveiw of exam grading schemes.
+            </p>
+
+
+
             <h2 id="contact" className="scroll-mt-20 mb-5">
               Contact
             </h2>

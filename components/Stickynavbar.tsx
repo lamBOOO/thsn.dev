@@ -15,10 +15,10 @@ import { faCoffee, faRotateRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const navigation = [
+  { name: 'News', href: '#news', current: false },  //  📢
   { name: 'Research', href: '#research', current: false },  //  📑
-  { name: 'Teaching', href: '#', current: false },  //  👨‍🏫
-  { name: 'Projects', href: '#', current: false },  //  🙈
-  { name: 'Blog', href: '#', current: false },  //  📢
+  { name: 'Teaching', href: '#teaching', current: false },  //  👨‍🏫
+  { name: 'Projects', href: '#projects', current: false },  //  🙈
   { name: 'Contact', href: '#contact', current: false },  //  📢
 ]
 
