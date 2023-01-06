@@ -102,24 +102,29 @@ export default function Home({ allPostsData }: any) {
 
             <aside>
               <h2 id="news" className="scroll-mt-20">
-                News
+              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative">News</span></span>
               </h2>
-              <div>
-                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>23/01/03</span>
-                I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
-                <hr className='m-0 my-2 w-1/4' />
-                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>22/10/01</span>From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
+              <div className='grid columns-1 gap-2'>
+                <span className='leading-6'>
+                  <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>23/01/03</span>
+                  I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
+                </span>
+                <span>
+                  <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>22/10/01</span>From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
+                </span>
               </div>
+            </aside>
+
+            <section>
               <h2 id="blog" className="scroll-mt-20">
-                Blog
+              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-red-100 relative inline-block"><span className="relative">Blog</span></span>
               </h2>
-              <div >
+              <div className='grid columns-1 gap-2'>
                 {allPostsData.map(({ id, date, title, longtitle }: any) => (
-                  <div className='' key={id}>
+                  <span className='' key={id}>
                     <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>{date}</span>
                     <Link className="" href={"/blog/" + id}>{title}</Link>
-                    <hr className='m-0 my-2 w-1/4' />
-                  </div>
+                  </span>
                 ))}
               </div>
               <div className='my-3'>
@@ -127,13 +132,13 @@ export default function Home({ allPostsData }: any) {
                   Read more →
                 </Link>
               </div>
-            </aside>
+            </section>
 
             <section>
 
               <article>
                 <h2 id="research" className="scroll-mt-20">
-                  Research Interest & Projects
+                <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
                 </h2>
                 <h3>Journal Publications</h3>
                 <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
@@ -366,7 +371,9 @@ export default function Home({ allPostsData }: any) {
             </section>
 
             <section>
-              <h2 id="teaching" className='scroll-mt-20'>Teaching</h2>
+              <h2 id="teaching" className='scroll-mt-20'>
+              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-orange-100 relative inline-block"><span className="relative">Teaching</span></span>
+              </h2>
               <p>
                 You can find most of my teaching activity in the Github repository <Link href="https://github.com/lamBOOO/teaching">@lamBOOO/teaching</Link>.
                 <span className='text-xs text-gray-400'>[TODO Add all other teaching with PDF previews.]</span>
@@ -431,7 +438,7 @@ export default function Home({ allPostsData }: any) {
 
             <section>
               <h2 id="projects" className="scroll-mt-20">
-                Selected Projects
+              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative">Selected Projects</span></span>
               </h2>
               <p>
                 The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overveiw of exam grading schemes.
@@ -441,7 +448,7 @@ export default function Home({ allPostsData }: any) {
 
             <section>
               <h2 id="contact" className="scroll-mt-20 mb-5">
-                Contact
+              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><span className="relative">Contact</span></span>
               </h2>
               <h3>
                 Matrix Protocol
