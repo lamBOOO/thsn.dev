@@ -18,6 +18,8 @@ import { faFile } from '@fortawesome/free-regular-svg-icons'
 import { faBook, faBuilding, faBuildingColumns, faCode, faPerson, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
 
 import logo_me from '../public/me.jpg'
+import logo_me_large from '../public/me_large.jpg'
+import gradescaler_logo from '../public/gradescaler_logo.png'
 
 import p2021_1 from '../public/p2021_1.jpg'
 import p2021_2 from '../public/p2021_2.jpg'
@@ -57,7 +59,7 @@ export default function Home({ allPostsData }: any) {
                       </h1>
                       <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
                       <div className='leading-5 mb-2'>
-                        Computational Engineer, PhD Student & Digital Artist
+                        → Computational Engineer, PhD Student, Digital Creator.
                         <br></br>
                         @ <Link href="https://www.rwth-aachen.de/">RWTH Aachen University</ Link> / <Link href="https://www.uni-stuttgart.de/">University of Stuttgart</Link>
                       </div>
@@ -102,7 +104,7 @@ export default function Home({ allPostsData }: any) {
 
             <aside>
               <h2 id="news" className="scroll-mt-20">
-              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative">News</span></span>
+                <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative">News</span></span>
               </h2>
               <div className='grid columns-1 gap-2'>
                 <span className='leading-6'>
@@ -117,7 +119,7 @@ export default function Home({ allPostsData }: any) {
 
             <section>
               <h2 id="blog" className="scroll-mt-20">
-              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-red-100 relative inline-block"><span className="relative">Blog</span></span>
+                <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-red-100 relative inline-block"><span className="relative">Blog</span></span>
               </h2>
               <div className='grid columns-1 gap-2'>
                 {allPostsData.map(({ id, date, title, longtitle }: any) => (
@@ -129,7 +131,7 @@ export default function Home({ allPostsData }: any) {
               </div>
               <div className='my-3'>
                 <Link href="/blog" className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
-                  Read more →
+                  See all →
                 </Link>
               </div>
             </section>
@@ -138,7 +140,7 @@ export default function Home({ allPostsData }: any) {
 
               <article>
                 <h2 id="research" className="scroll-mt-20">
-                <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
+                  <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
                 </h2>
                 <h3>Journal Publications</h3>
                 <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
@@ -372,7 +374,7 @@ export default function Home({ allPostsData }: any) {
 
             <section>
               <h2 id="teaching" className='scroll-mt-20'>
-              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-orange-100 relative inline-block"><span className="relative">Teaching</span></span>
+                <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-orange-100 relative inline-block"><span className="relative">Teaching</span></span>
               </h2>
               <p>
                 You can find most of my teaching activity in the Github repository <Link href="https://github.com/lamBOOO/teaching">@lamBOOO/teaching</Link>.
@@ -434,12 +436,137 @@ export default function Home({ allPostsData }: any) {
                   </div>
                 </div>
               </article>
+              <span className='text-xs text-gray-400'>[TODO: Add all other classes from ACOM website]</span>
             </section>
 
             <section>
               <h2 id="projects" className="scroll-mt-20">
-              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative">Selected Projects</span></span>
+                <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative">Selected Projects</span></span>
               </h2>
+              {/* <div className='grid sm:grid-cols-2 gap-2'>
+                <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 pt-0 shadow-md border-gray-200">
+                  <a href="#">
+                    <Image
+                      className="rounded-t-lg h-40 w-full object-cover mt-0"
+                      src={logo_me}
+                      alt="Picture of the author"
+                      sizes="160px"
+                    />
+                  </a>
+                  <span className='leading-5 mb-2'>
+                    <span className='font-bold'>
+                      Gradescaler
+                    </span>
+                    <br />
+                    <i className="text-xs">
+                      (global exercise higher mathematics 1 for engineers)
+                    </i>
+                  </span>
+                  <div className='m-0 flex flex-wrap gap-1 mb-1'>
+                    <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
+                      <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
+                      WS22
+                    </span>
+                    <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
+                      <span className="pr-1"><FontAwesomeIcon icon={faUsers} /></span>
+                      ~1000
+                    </span>
+                    <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border-blue-500">
+                      <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns} /></span>
+                      Unversity of Stuttgart
+                    </span>
+                  </div>
+
+                  <div>
+                    <p className='font-normal text-xs leading-4 text-justify my-2'>
+                      The class is about the basic concepts of linear algebra. For example:
+                    </p>
+                    <ul className='font-normal text-xs leading-3'>
+                      <li key="0">logics</li>
+                      <li key="1">numbers, sets, inequalities</li>
+                      <li key="2">euclidian vectorspace</li>
+                      <li key="3">linear systems of equations</li>
+                      <li key="4">transformations and transformation groups</li>
+                      <li key="5">principal axis transformations</li>
+                    </ul>
+                    <div>
+                    </div>
+                    <Link href="https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1">
+                      <span className="border-gray-500 hover:border-black">
+                        <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-green-300 text-green-800 font-bold'>
+                          <span className="pr-1"><FontAwesomeIcon icon={faBook} /></span>
+                          Course notes
+                        </span>
+                        <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-green-200 text-green-800 font-mono'>LINK</span>
+                      </span>
+                    </Link>
+
+
+
+                  </div>
+                </div>
+                <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 pt-0 shadow-md border-gray-200">
+                  <a href="#">
+                    <Image
+                      className="rounded-t-lg h-40 w-full object-cover mt-0"
+                      src={gradescaler_logo}
+                      alt="Picture of the author"
+                    // sizes="160px"
+                    />
+                  </a>
+                  <span className='leading-5 mb-2'>
+                    <span className='font-bold'>
+                      Vortragsübung Höhere Mathematik 1 für Ingenieure
+                    </span>
+                    <br />
+                    <i className="text-xs">
+                      (global exercise higher mathematics 1 for engineers)
+                    </i>
+                  </span>
+                  <div className='m-0 flex flex-wrap gap-1 mb-1'>
+                    <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
+                      <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
+                      WS22
+                    </span>
+                    <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
+                      <span className="pr-1"><FontAwesomeIcon icon={faUsers} /></span>
+                      ~1000
+                    </span>
+                    <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border-blue-500">
+                      <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns} /></span>
+                      Unversity of Stuttgart
+                    </span>
+                  </div>
+
+                  <div>
+                    <p className='font-normal text-xs leading-4 text-justify my-2'>
+                      The class is about the basic concepts of linear algebra. For example:
+                    </p>
+                    <ul className='font-normal text-xs leading-3'>
+                      <li key="0">logics</li>
+                      <li key="1">numbers, sets, inequalities</li>
+                      <li key="2">euclidian vectorspace</li>
+                      <li key="3">linear systems of equations</li>
+                      <li key="4">transformations and transformation groups</li>
+                      <li key="5">principal axis transformations</li>
+                    </ul>
+                    <div>
+                    </div>
+                    <Link href="https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1">
+                      <span className="border-gray-500 hover:border-black">
+                        <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-green-300 text-green-800 font-bold'>
+                          <span className="pr-1"><FontAwesomeIcon icon={faBook} /></span>
+                          Course notes
+                        </span>
+                        <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-green-200 text-green-800 font-mono'>LINK</span>
+                      </span>
+                    </Link>
+
+
+
+                  </div>
+                </div>
+              </div> */}
               <p>
                 The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overveiw of exam grading schemes.
                 <span className='text-xs text-gray-400'>[TODO: Add grammarly script, latex templates, check Git repos, ...]</span>
@@ -448,19 +575,29 @@ export default function Home({ allPostsData }: any) {
 
             <section>
               <h2 id="contact" className="scroll-mt-20 mb-5">
-              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><span className="relative">Contact</span></span>
+                <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><span className="relative">Contact</span></span>
               </h2>
-              <h3>
-                Matrix Protocol
-              </h3>
-              <p>
-                <span className='text-xs text-gray-400'>[TODO Add direct chat link.]</span>
-              </p>
               <h3>
                 E-Mail
               </h3>
               <p className='leading-6'>
-                You can contact me via the e-mail address <mark className='font-mono bg-gray-100 rounded-sm p-0'>lambert (dot) theisen (at) rwth (minus) aachen (dot) de</mark>, preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding sigature reads <mark className='font-mono bg-gray-100 rounded-sm p-0'>9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87</mark>.
+                You can contact me via one of the e-mail addresses:
+                <div className='grid place-items-center'>
+                  <div className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
+                    lmbrt(at)thsn(dot)dev
+                  </div>
+                </div>
+                <div className='grid place-items-center'>
+                  <div className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
+                    lambert(dot)theisen(at)rwth(minus)aachen(dot)de
+                  </div>
+                </div>
+                preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding sigature reads:
+                <div className='grid place-items-center'>
+                  <div className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
+                    9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87
+                  </div>
+                </div>
               </p>
               <h3>
                 Profiles
