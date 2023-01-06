@@ -15,11 +15,11 @@ import { faCoffee, faRotateRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const navigation = [
-  { name: 'News', href: '#news', current: false },  //  📢
-  { name: 'Research', href: '#research', current: false },  //  📑
-  { name: 'Teaching', href: '#teaching', current: false },  //  👨‍🏫
-  { name: 'Projects', href: '#projects', current: false },  //  🙈
-  { name: 'Contact', href: '#contact', current: false },  //  📢
+  { name: 'News', href: '/#news', current: false },  //  📢
+  { name: 'Research', href: '/#research', current: false },  //  📑
+  { name: 'Teaching', href: '/#teaching', current: false },  //  👨‍🏫
+  { name: 'Projects', href: '/#projects', current: false },  //  🙈
+  { name: 'Contact', href: '/#contact', current: false },  //  📢
 ]
 
 function classNames(...classes: any[]) {
@@ -47,7 +47,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link href="#home" className='scroll-smooth' scroll={false}>
+                  <Link href="/#home" className='scroll-smooth' scroll={false}>
                     <Image
                       className="block h-8 w-auto"
                       src={logo}
