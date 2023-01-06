@@ -75,12 +75,12 @@ export default function Home() {
               </div>
               <div className='flex flex-wrap items-center gap-1 border-b border-gray-100 pb-5'>
                 <span className="text-3xl mr-2 align-middle animate-waving-hand">👋</span>
-                <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br     from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center mr-2 no-underline scroll-smooth" href="#contact" scroll={false}>
+                <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center mr-2 no-underline scroll-smooth" href="#contact" scroll={false}>
                   <span className='font-extralight'>Say </span>
                   <i className='font-extrabold'>Ei Gude, wie?</i>
                   <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
                 </Link>
-                <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-violet-500 hover:from-red-600 hover:to-violet-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline" href="#">
+                <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline" href="#">
                   <span className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
                     <FontAwesomeIcon icon={faFile} /> CV <span className='sm:inline hidden'>(soon)</span>
                   </span>
@@ -93,9 +93,9 @@ export default function Home() {
                 Blog & News
               </h2>
               <div>
-                <span className='font-mono font-bold bg-gray-900 text-white p-1 mr-1'>230103</span>I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
+                <span className='font-mono font-bold bg-gray-900 text-white p-1 mr-1'>23/01/03</span>I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
                 <hr className='m-0 my-2' />
-                <span className='font-mono font-bold bg-gray-900 text-white p-1 mr-1'>221001</span>From MO-THU, I work in Stuttgart and on FR from Aachen.
+                <span className='font-mono font-bold bg-gray-900 text-white p-1 mr-1'>22/10/01</span>From MO-THU, I work in Stuttgart and on FR from Aachen.
               </div>
             </aside>
 
