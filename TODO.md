@@ -15,3 +15,4 @@
 - Make badges hover border effect uniform
 - remove or refractor all CSS files
 - Link to acom and nmh site for cross ref
+- Make boxes like them: https://flowbite.com/blocks/marketing/blog/
