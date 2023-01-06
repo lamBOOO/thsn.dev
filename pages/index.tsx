@@ -582,22 +582,22 @@ export default function Home({ allPostsData }: any) {
               </h3>
               <p className='leading-6'>
                 You can contact me via one of the e-mail addresses:
-                <div className='grid place-items-center'>
-                  <div className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
+                <span className='grid place-items-center'>
+                  <span className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
                     lmbrt(at)thsn(dot)dev
-                  </div>
-                </div>
-                <div className='grid place-items-center'>
-                  <div className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
+                  </span>
+                </span>
+                <span className='grid place-items-center'>
+                  <span className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
                     lambert(dot)theisen(at)rwth(minus)aachen(dot)de
-                  </div>
-                </div>
+                  </span>
+                </span>
                 preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding sigature reads:
-                <div className='grid place-items-center'>
-                  <div className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
+                <span className='grid place-items-center'>
+                  <span className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
                     9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87
-                  </div>
-                </div>
+                  </span>
+                </span>
               </p>
               <h3>
                 Profiles
