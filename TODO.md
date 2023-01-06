@@ -3,7 +3,6 @@
 - Upcoming events (maybe as blog posts?)
 - Check other researchers for content ideas
 - Footer mit allen links (scholar, arxiv, ...) for SEO
-- Recent blog posts box
 - Add vita and CV as PDF
 - add news section
 - use rwth publications and keep it updated
@@ -18,3 +17,5 @@
 - Make boxes like them: https://flowbite.com/blocks/marketing/blog/
 - generate sitemap automatically
 - Add LTDS somewhere
+- Check academicons for more sites to list
+- add new mail to pgp key

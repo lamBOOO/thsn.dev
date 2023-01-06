@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import Stickynavbar from '../components/Stickynavbar'
 import Metadata from '../components/Metadata'
 import Footer from '../components/Footer'
+import Badge from '../components/Badge'
 
 import 'academicons'
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -96,7 +97,7 @@ export default function Home({ allPostsData }: any) {
                 </Link>
                 <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline" href="#">
                   <span className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
-                    <FontAwesomeIcon icon={faFile} /> CV <span className='sm:inline hidden'>(soon)</span>
+                    <FontAwesomeIcon icon={faFile}/> CV <span className='sm:inline hidden'>(soon)</span>
                   </span>
                 </Link>
               </div>
@@ -159,11 +160,11 @@ export default function Home({ allPostsData }: any) {
                       09/2022
                     </span>
                     <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faPerson}/></span>
                       Lambert Theisen
                     </span>
                     <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border-blue-500"><Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faPerson}/></span>
                       Benjamin Stamm
                     </ Link></span>
                   </div>
@@ -222,7 +223,7 @@ export default function Home({ allPostsData }: any) {
                         </span>
                       </Link>
                       <Link className="m-0" href="https://arxiv.org/abs/2110.14982">
-                        <span className="border-gray-500">
+                        <span className="border-gray-500 hover:border-black">
                           <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-red-300 text-red-800 font-bold '>
                             <span className="pr-1"><i className="ai ai-arxiv"></i></span>
                             arXiv
@@ -231,7 +232,7 @@ export default function Home({ allPostsData }: any) {
                         </span>
                       </Link>
                       <Link href="https://doi.org/10.5281/zenodo.6576197">
-                        <span className="border-gray-500">
+                        <span className="border-gray-500 hover:border-black">
                           <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
                             <span className="pr-1"><i className="ai ai-zenodo"></i></span>
                             Code
@@ -258,11 +259,11 @@ export default function Home({ allPostsData }: any) {
                       04/2021
                     </span>
                     <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faPerson}/></span>
                       Lambert Theisen
                     </span>
                     <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border-blue-500"><Link href="https://www.acom.rwth-aachen.de/5people/torrilhon/start">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faPerson}/></span>
                       Manuel Torrilhon
                     </ Link></span>
                   </div>
@@ -320,7 +321,7 @@ export default function Home({ allPostsData }: any) {
                         </span>
                       </Link>
                       <Link className="m-0" href="https://arxiv.org/abs/2007.05944">
-                        <span className="border-gray-500">
+                        <span className="border-gray-500 hover:border-black">
                           <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-red-300 text-red-800 font-bold '>
                             <span className="pr-1"><i className="ai ai-arxiv"></i></span>
                             arXiv
@@ -329,7 +330,7 @@ export default function Home({ allPostsData }: any) {
                         </span>
                       </Link>
                       <Link href="https://doi.org/10.5281/zenodo.4172951">
-                        <span className="border-gray-500">
+                        <span className="border-gray-500 hover:border-black">
                           <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
                             <span className="pr-1"><i className="ai ai-zenodo"></i></span>
                             Code
@@ -398,11 +399,11 @@ export default function Home({ allPostsData }: any) {
                       WS22
                     </span>
                     <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faUsers} /></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faUsers}/></span>
                       ~1000
                     </span>
                     <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border-blue-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns} /></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns}/></span>
                       Unversity of Stuttgart
                     </span>
                   </div>
@@ -424,7 +425,7 @@ export default function Home({ allPostsData }: any) {
                     <Link href="https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1">
                       <span className="border-gray-500 hover:border-black">
                         <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-green-300 text-green-800 font-bold'>
-                          <span className="pr-1"><FontAwesomeIcon icon={faBook} /></span>
+                          <span className="pr-1"><FontAwesomeIcon icon={faBook}/></span>
                           Course notes
                         </span>
                         <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-green-200 text-green-800 font-mono'>LINK</span>
@@ -443,130 +444,6 @@ export default function Home({ allPostsData }: any) {
               <h2 id="projects" className="scroll-mt-20">
                 <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative">Selected Projects</span></span>
               </h2>
-              {/* <div className='grid sm:grid-cols-2 gap-2'>
-                <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 pt-0 shadow-md border-gray-200">
-                  <a href="#">
-                    <Image
-                      className="rounded-t-lg h-40 w-full object-cover mt-0"
-                      src={logo_me}
-                      alt="Picture of the author"
-                      sizes="160px"
-                    />
-                  </a>
-                  <span className='leading-5 mb-2'>
-                    <span className='font-bold'>
-                      Gradescaler
-                    </span>
-                    <br />
-                    <i className="text-xs">
-                      (global exercise higher mathematics 1 for engineers)
-                    </i>
-                  </span>
-                  <div className='m-0 flex flex-wrap gap-1 mb-1'>
-                    <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
-                      <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
-                      WS22
-                    </span>
-                    <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faUsers} /></span>
-                      ~1000
-                    </span>
-                    <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border-blue-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns} /></span>
-                      Unversity of Stuttgart
-                    </span>
-                  </div>
-
-                  <div>
-                    <p className='font-normal text-xs leading-4 text-justify my-2'>
-                      The class is about the basic concepts of linear algebra. For example:
-                    </p>
-                    <ul className='font-normal text-xs leading-3'>
-                      <li key="0">logics</li>
-                      <li key="1">numbers, sets, inequalities</li>
-                      <li key="2">euclidian vectorspace</li>
-                      <li key="3">linear systems of equations</li>
-                      <li key="4">transformations and transformation groups</li>
-                      <li key="5">principal axis transformations</li>
-                    </ul>
-                    <div>
-                    </div>
-                    <Link href="https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1">
-                      <span className="border-gray-500 hover:border-black">
-                        <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-green-300 text-green-800 font-bold'>
-                          <span className="pr-1"><FontAwesomeIcon icon={faBook} /></span>
-                          Course notes
-                        </span>
-                        <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-green-200 text-green-800 font-mono'>LINK</span>
-                      </span>
-                    </Link>
-
-
-
-                  </div>
-                </div>
-                <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 pt-0 shadow-md border-gray-200">
-                  <a href="#">
-                    <Image
-                      className="rounded-t-lg h-40 w-full object-cover mt-0"
-                      src={gradescaler_logo}
-                      alt="Picture of the author"
-                    // sizes="160px"
-                    />
-                  </a>
-                  <span className='leading-5 mb-2'>
-                    <span className='font-bold'>
-                      Vortragsübung Höhere Mathematik 1 für Ingenieure
-                    </span>
-                    <br />
-                    <i className="text-xs">
-                      (global exercise higher mathematics 1 for engineers)
-                    </i>
-                  </span>
-                  <div className='m-0 flex flex-wrap gap-1 mb-1'>
-                    <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
-                      <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
-                      WS22
-                    </span>
-                    <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faUsers} /></span>
-                      ~1000
-                    </span>
-                    <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border-blue-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns} /></span>
-                      Unversity of Stuttgart
-                    </span>
-                  </div>
-
-                  <div>
-                    <p className='font-normal text-xs leading-4 text-justify my-2'>
-                      The class is about the basic concepts of linear algebra. For example:
-                    </p>
-                    <ul className='font-normal text-xs leading-3'>
-                      <li key="0">logics</li>
-                      <li key="1">numbers, sets, inequalities</li>
-                      <li key="2">euclidian vectorspace</li>
-                      <li key="3">linear systems of equations</li>
-                      <li key="4">transformations and transformation groups</li>
-                      <li key="5">principal axis transformations</li>
-                    </ul>
-                    <div>
-                    </div>
-                    <Link href="https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1">
-                      <span className="border-gray-500 hover:border-black">
-                        <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-green-300 text-green-800 font-bold'>
-                          <span className="pr-1"><FontAwesomeIcon icon={faBook} /></span>
-                          Course notes
-                        </span>
-                        <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-green-200 text-green-800 font-mono'>LINK</span>
-                      </span>
-                    </Link>
-
-
-
-                  </div>
-                </div>
-              </div> */}
               <p>
                 The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overveiw of exam grading schemes.
                 <span className='text-xs text-gray-400'>[TODO: Add grammarly script, latex templates, check Git repos, ...]</span>
@@ -602,84 +479,157 @@ export default function Home({ allPostsData }: any) {
               <h3>
                 Profiles
               </h3>
-              <p>
+              <p className='mb-1'>
                 I am part of the major science and networking sites, for example:
-
               </p>
               <div className='flex flex-wrap gap-1 leading-3'>
-                <Link href="https://git.rwth-aachen.de/lamBOO">
-                  <span className="border-gray-500">
-                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-orange-300 text-orange-800 font-bold'><span><FontAwesomeIcon className="pr-1" icon={faGitlab} />RWTH</span></span>
-                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-orange-200 text-orange-800 font-mono'>@lamBOO</span>
-                  </span>
-                </Link>
-                <Link href="https://scholar.google.com/citations?user=ZD8cDyEAAAAJ">
-                  <span className="border-gray-500">
-                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
-                      <span>
-                        <span className="pr-1"><i className="ai ai-google-scholar"></i></span>
-                        GScholar
-                      </span>
-                    </span>
-                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>LINK</span>
-                  </span>
-                </Link>
-                <Link href="https://github.com/lamBOOO">
-                  <span className="border-gray-500">
-                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>
-                      <span>
-                        <span className="pr-1"><FontAwesomeIcon icon={faGithub} /></span>
-                        Github
-                      </span>
-                    </span>
-                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>@lamBOO</span>
-                  </span>
-                </Link>
-                <Link href="https://arxiv.org/a/theisen_l_1.html">
-                  <span className="border-gray-500">
-                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-red-300 text-red-800 font-bold'>
-                      <span>
-                        <span className="pr-1"><i className="ai ai-arxiv"></i></span>
-                        arXiv
-                      </span>
-                    </span>
-                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-red-200 text-red-800 font-mono'>theisen_l_1</span>
-                  </span>
-                </Link>
-                <Link href="https://orcid.org/0000-0001-5460-5425">
-                  <span className="border-gray-500">
-                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-lime-300 text-lime-800 font-bold'>
-                      <span>
-                        <span className="pr-1"><i className="ai ai-orcid"></i></span>
-                        ORCID
-                      </span>
-                    </span>
-                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-lime-200 text-lime-800 font-mono'>0000-0001-5460-5425</span>
-                  </span>
-                </Link>
-                <Link href="https://www.researchgate.net/profile/Lambert-Theisen">
-                  <span className="border-gray-500">
-                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-teal-300 text-teal-800 font-bold'>
-                      <span>
-                        <span className="pr-1"><i className="ai ai-researchgate-square"></i></span>
-                        ResearchGate
-                      </span>
-                    </span>
-                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-teal-200 text-teal-800 font-mono'>Lambert-Theisen</span>
-                  </span>
-                </Link>
-                <Link className='no-underline' href="https://www.linkedin.com/in/lambert-theisen-4027b3184/">
-                  <span className="border-gray-500">
-                    <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-700 text-white font-bold'>
-                      <span>
-                        <span className="pr-1"><FontAwesomeIcon icon={faLinkedin} /></span>
-                        LinkedIn
-                      </span>
-                    </span>
-                    <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-500 text-white font-mono'>Lambert-Theisen</span>
-                  </span>
-                </Link>
-                <span className='text-xs text-gray-400'>[TODO Add all other from ACOM website.]</span>
+                <Badge
+                  link="https://git.rwth-aachen.de/lamBOO"
+                  icon={<FontAwesomeIcon className="pr-1" icon={faGitlab}/>}
+                  left="RWTH Gitlab"
+                  right="@lamBOO"
+                  lc="bg-orange-300"
+                  rc="bg-orange-200"
+                  textcolor="text-orange-800"
+                />
+                <Badge
+                  link="https://scholar.google.com/citations?user=ZD8cDyEAAAAJ"
+                  icon={<i className="ai ai-google-scholar"/>}
+                  left="GScholar"
+                  right="LINK"
+                  lc="bg-blue-300"
+                  rc="bg-blue-200"
+                  textcolor="text-blue-800"
+                />
+                <Badge
+                  link="https://github.com/lamBOOO"
+                  icon={<FontAwesomeIcon icon={faGithub}/>}
+                  left="Github"
+                  right="@lamBOOO"
+                  lc="bg-gray-300"
+                  rc="bg-gray-200"
+                  textcolor="text-gray-800"
+                />
+                <Badge
+                  link="https://arxiv.org/a/theisen_l_1.html"
+                  icon={<i className="ai ai-arxiv"/>}
+                  left="arXiv"
+                  right="theisen_l_1"
+                  lc="bg-red-300"
+                  rc="bg-red-200"
+                  textcolor="text-red-800"
+                />
+                <Badge
+                  link="https://orcid.org/0000-0001-5460-5425"
+                  icon={<i className="ai ai-orcid"/>}
+                  left="ORCID"
+                  right="0000-0001-5460-5425"
+                  lc="bg-lime-300"
+                  rc="bg-lime-200"
+                  textcolor="text-lime-800"
+                />
+                <Badge
+                  link="https://www.researchgate.net/profile/Lambert-Theisen"
+                  icon={<i className="ai ai-researchgate-square"/>}
+                  left="ResearchGate"
+                  right="Lambert-Theisen"
+                  lc="bg-teal-300"
+                  rc="bg-teal-200"
+                  textcolor="text-teal-800"
+                />
+                <Badge
+                  link="https://www.linkedin.com/in/lambert-theisen-4027b3184/"
+                  icon={<FontAwesomeIcon icon={faLinkedin}/>}
+                  left="LinkedIn"
+                  right="LINK"
+                  lc="bg-blue-300"
+                  rc="bg-blue-200"
+                  textcolor="text-blue-800"
+                />
+                <Badge
+                  link="https://www.semanticscholar.org/author/Lambert-Theisen/1811123350"
+                  icon={<i className="ai ai-semantic-scholar"></i>}
+                  left="SemanticScholar"
+                  right="LINK"
+                  lc="bg-slate-300"
+                  rc="bg-slate-200"
+                  textcolor="text-slate-800"
+                />
+                <Badge
+                  link="https://explore.openaire.eu/search/advanced/research-outcomes?f0=resultauthor&fv0=Lambert%2520Theisen&page=1&size=10&sortBy=&qf=false"
+                  left="OpenAIRE"
+                  right="LINK"
+                  lc="bg-indigo-300"
+                  rc="bg-indigo-200"
+                  textcolor="text-indigo-800"
+                />
+                <Badge
+                  link="https://core.ac.uk/search?q=author:(Lambert%20AND%20Theisen)&allOfTheWords=&exactPhrase=&atLeastOneOfTheWords=&withoutTheWords=&advAuthor=Lambert%20Theisen&publisher=&advRepository=&yearFrom=&yearTo=&findThoseWords=anywhere&doi="
+                  left="CORE"
+                  right="LINK"
+                  lc="bg-gray-300"
+                  rc="bg-gray-200"
+                  textcolor="text-gray-800"
+                />
+                <Badge
+                  link="https://figshare.com/authors/Lambert_Theisen/7342844"
+                  icon={<i className="ai ai-figshare"></i>}
+                  left="Figshare"
+                  right="LINK"
+                  lc="bg-slate-300"
+                  rc="bg-slate-200"
+                  textcolor="text-slate-800"
+                />
+                <Badge
+                  link="https://www.prophy.science/author/54631348/"
+                  left="Prophy"
+                  right="54631348"
+                  lc="bg-orange-300"
+                  rc="bg-orange-200"
+                  textcolor="text-orange-800"
+                />
+                <Badge
+                  link="https://zbmath.org/authors/?q=ai%3Atheisen.lambert"
+                  left="zbMATH"
+                  right="theisen.lambert"
+                  lc="bg-pink-300"
+                  rc="bg-pink-200"
+                  textcolor="text-pink-800"
+                />
+                <Badge
+                  link="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1439845"
+                  left="MathSciNet"
+                  right="1439845"
+                  lc="bg-orange-300"
+                  rc="bg-orange-200"
+                  textcolor="text-orange-800"
+                />
+                <Badge
+                  link="https://www.scopus.com/authid/detail.uri?authorId=57219764798"
+                  icon={<i className="ai ai-scopus"></i>}
+                  left="Scopus"
+                  right="57219764798"
+                  lc="bg-orange-300"
+                  rc="bg-orange-200"
+                  textcolor="text-orange-800"
+                />
+                <Badge
+                  link="https://sciprofiles.com/profile/1727525"
+                  icon={<i className="ai ai-scopus"></i>}
+                  left="SciProfiles"
+                  right="1727525"
+                  lc="bg-teal-300"
+                  rc="bg-teal-200"
+                  textcolor="text-teal-800"
+                />
+                <Badge
+                  link="https://scite.ai/users/lambert-theisen-jOAj"
+                  left="scite_"
+                  right="lambert-theisen-jOAj"
+                  lc="bg-gray-300"
+                  rc="bg-gray-200"
+                  textcolor="text-gray-800"
+                />
               </div>
               <h3>
                 Impressum
