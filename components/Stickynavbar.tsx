@@ -15,7 +15,7 @@ import { faCoffee, faRotateRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const navigation = [
-  { name: 'News', href: '/#news', current: false },  //  📢
+  { name: 'Blog', href: '/#blog', current: false },  //  📢
   { name: 'Research', href: '/#research', current: false },  //  📑
   { name: 'Teaching', href: '/#teaching', current: false },  //  👨‍🏫
   { name: 'Projects', href: '/#projects', current: false },  //  🙈

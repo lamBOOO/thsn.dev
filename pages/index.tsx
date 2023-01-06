@@ -105,17 +105,18 @@ export default function Home({ allPostsData }: any) {
                 News
               </h2>
               <div>
-                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>23/01/03</span>I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
+                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>23/01/03</span>
+                I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
                 <hr className='m-0 my-2 w-1/4' />
-                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>22/10/01</span>From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
+                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>22/10/01</span>From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
               </div>
-              <h2 id="news" className="scroll-mt-20">
+              <h2 id="blog" className="scroll-mt-20">
                 Blog
               </h2>
               <div >
                 {allPostsData.map(({ id, date, title, longtitle }: any) => (
                   <div className='' key={id}>
-                    <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>{date}</span>
+                    <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>{date}</span>
                     <Link className="" href={"/blog/" + id}>{title}</Link>
                     <hr className='m-0 my-2 w-1/4' />
                   </div>
