@@ -41,7 +41,6 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }: any) {
   return (
     <>
-      {console.log(allPostsData)}
       <div className='px-4'>
         <Metadata />
         <Stickynavbar />
