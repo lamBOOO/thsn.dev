@@ -26,9 +26,22 @@ import p2022_1 from '../public/p2022_1.jpg'
 import p2022_2 from '../public/p2022_2.jpg'
 import p2022_3 from '../public/p2022_3.jpg'
 
-export default function Home() {
+import { getSortedPostsData } from '../lib/posts';
+
+export async function getStaticProps() {
+
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home({ allPostsData }: any) {
   return (
     <>
+      {console.log(allPostsData)}
       <div className='px-4'>
         <Metadata />
         <Stickynavbar />
@@ -73,7 +86,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className='flex flex-wrap items-center gap-2 border-b border-gray-100 pb-5'>
+              <div className='flex flex-wrap items-center gap-3 border-b border-gray-100 pb-5'>
                 <span className="text-3xl align-middle animate-waving-hand">👋</span>
                 <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline scroll-smooth" href="#contact" scroll={false}>
                   <span className='font-extralight'>Say </span>
@@ -90,19 +103,29 @@ export default function Home() {
 
             <aside>
               <h2 id="news" className="scroll-mt-20">
-                Blog & News
+                News
               </h2>
               <div>
                 <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>23/01/03</span>I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
                 <hr className='m-0 my-2 w-1/4' />
-                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>22/10/01</span>From MO-THU, I work in Stuttgart and on FR from Aachen.
-                <br />
-                <div className='my-3'>
-                  <Link href="/blog" className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
-                    Read more (soon)
-                    <svg className="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                  </Link>
-                </div>
+                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>22/10/01</span>From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
+              </div>
+              <h2 id="news" className="scroll-mt-20">
+                Blog
+              </h2>
+              <div >
+                {allPostsData.map(({ id, date, title, longtitle }: any) => (
+                  <div className='' key={id}>
+                    <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>{date}</span>
+                    <Link className="" href={"/blog/" + id}>{title}</Link>
+                    <hr className='m-0 my-2 w-1/4' />
+                  </div>
+                ))}
+              </div>
+              <div className='my-3'>
+                <Link href="/blog" className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+                  Read more →
+                </Link>
               </div>
             </aside>
 
