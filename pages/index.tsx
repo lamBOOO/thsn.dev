@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faGitlab } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faFile } from '@fortawesome/free-regular-svg-icons'
+import { faEnvelope, faFile } from '@fortawesome/free-regular-svg-icons'
 import { faBook, faBuilding, faBuildingColumns, faCode, faPerson, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
 
 import logo_me from '../public/me.jpg'
@@ -30,7 +30,7 @@ import p2022_2 from '../public/p2022_2.jpg'
 import p2022_3 from '../public/p2022_3.jpg'
 
 import { getSortedPostsData } from '../lib/posts';
-import { scrollToIdNoUrlChange} from '../lib/scrolling';
+import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
 export async function getStaticProps() {
 
@@ -91,14 +91,14 @@ export default function Home({ allPostsData }: any) {
               </div>
               <div className='flex flex-wrap items-center gap-3 border-b border-gray-100 pb-5'>
                 <span className="text-3xl align-middle animate-waving-hand">👋</span>
-                <button className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline" onClick={() => scrollToIdNoUrlChange("contact", {behavior: "smooth"})}>
+                <button className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline" onClick={() => scrollToIdNoUrlChange("contact", { behavior: "smooth" })}>
                   <span className='font-extralight'>Say </span>
                   <i className='font-extrabold'>Ei Gude, wie?</i>
                   <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
                 </button>
                 <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline" href="#">
                   <span className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
-                    <FontAwesomeIcon icon={faFile}/> CV <span className='sm:inline hidden'>(soon)</span>
+                    <FontAwesomeIcon icon={faFile} /> CV <span className='sm:inline hidden'>(soon)</span>
                   </span>
                 </Link>
               </div>
@@ -161,11 +161,11 @@ export default function Home({ allPostsData }: any) {
                       09/2022
                     </span>
                     <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson}/></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
                       Lambert Theisen
                     </span>
                     <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border-blue-500"><Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson}/></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
                       Benjamin Stamm
                     </ Link></span>
                   </div>
@@ -260,11 +260,11 @@ export default function Home({ allPostsData }: any) {
                       04/2021
                     </span>
                     <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson}/></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
                       Lambert Theisen
                     </span>
                     <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border-blue-500"><Link href="https://www.acom.rwth-aachen.de/5people/torrilhon/start">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson}/></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
                       Manuel Torrilhon
                     </ Link></span>
                   </div>
@@ -400,11 +400,11 @@ export default function Home({ allPostsData }: any) {
                       WS22
                     </span>
                     <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faUsers}/></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faUsers} /></span>
                       ~1000
                     </span>
                     <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border-blue-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns}/></span>
+                      <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns} /></span>
                       Unversity of Stuttgart
                     </span>
                   </div>
@@ -426,7 +426,7 @@ export default function Home({ allPostsData }: any) {
                     <Link href="https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1">
                       <span className="border-gray-500 hover:border-black">
                         <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-green-300 text-green-800 font-bold'>
-                          <span className="pr-1"><FontAwesomeIcon icon={faBook}/></span>
+                          <span className="pr-1"><FontAwesomeIcon icon={faBook} /></span>
                           Course notes
                         </span>
                         <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-green-200 text-green-800 font-mono'>LINK</span>
@@ -459,23 +459,26 @@ export default function Home({ allPostsData }: any) {
                 E-Mail
               </h3>
               <p className='leading-6'>
-                You can contact me via one of the e-mail addresses:
-                <span className='grid place-items-center'>
-                  <span className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
-                    lmbrt(at)thsn(dot)dev
-                  </span>
+                You can contact me directly via the e-mail address <span className='whitespace-pre'><Badge
+                  link="mailto:lmbrt∂thsn.dev?subject=Ei gude&body=don't forget to integrate the e-mail address ;-)"
+                  icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
+                  left="Mail"
+                  right="lmbrt∂thsn.dev"
+                  lc="bg-gray-900"
+                  rc="bg-gray-700"
+                  textcolor="text-white"
+                /></span> or <span className='whitespace-pre'><Badge
+                  link="mailto:lambert.theisen∂rwth-aachen.de?subject=Ei gude&body=don't forget to integrate the e-mail address ;-)"
+                  icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
+                  left="Mail"
+                  right="lambert.theisen∂rwth-aachen.de"
+                  lc="bg-gray-900"
+                  rc="bg-gray-700"
+                  textcolor="text-white"
+                /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding sigature reads <span className='bg-gray-700 text-white m-0.5 font-mono p-0.5'>
+                  9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87
                 </span>
-                <span className='grid place-items-center'>
-                  <span className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
-                    lambert(dot)theisen(at)rwth(minus)aachen(dot)de
-                  </span>
-                </span>
-                preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding sigature reads:
-                <span className='grid place-items-center'>
-                  <span className='bg-gray-900 text-white m-0.5 text-center font-mono break-all'>
-                    9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87
-                  </span>
-                </span>
+                .
               </p>
               <h3>
                 Profiles
@@ -486,7 +489,7 @@ export default function Home({ allPostsData }: any) {
               <div className='flex flex-wrap gap-1 leading-3'>
                 <Badge
                   link="https://git.rwth-aachen.de/lamBOO"
-                  icon={<FontAwesomeIcon className="pr-1" icon={faGitlab}/>}
+                  icon={<FontAwesomeIcon className="pr-1" icon={faGitlab} />}
                   left="RWTH Gitlab"
                   right="@lamBOO"
                   lc="bg-orange-300"
@@ -495,7 +498,7 @@ export default function Home({ allPostsData }: any) {
                 />
                 <Badge
                   link="https://scholar.google.com/citations?user=ZD8cDyEAAAAJ"
-                  icon={<i className="ai ai-google-scholar"/>}
+                  icon={<i className="ai ai-google-scholar" />}
                   left="GScholar"
                   right="LINK"
                   lc="bg-blue-300"
@@ -504,7 +507,7 @@ export default function Home({ allPostsData }: any) {
                 />
                 <Badge
                   link="https://github.com/lamBOOO"
-                  icon={<FontAwesomeIcon icon={faGithub}/>}
+                  icon={<FontAwesomeIcon icon={faGithub} />}
                   left="Github"
                   right="@lamBOOO"
                   lc="bg-gray-300"
@@ -513,7 +516,7 @@ export default function Home({ allPostsData }: any) {
                 />
                 <Badge
                   link="https://arxiv.org/a/theisen_l_1.html"
-                  icon={<i className="ai ai-arxiv"/>}
+                  icon={<i className="ai ai-arxiv" />}
                   left="arXiv"
                   right="theisen_l_1"
                   lc="bg-red-300"
@@ -522,7 +525,7 @@ export default function Home({ allPostsData }: any) {
                 />
                 <Badge
                   link="https://orcid.org/0000-0001-5460-5425"
-                  icon={<i className="ai ai-orcid"/>}
+                  icon={<i className="ai ai-orcid" />}
                   left="ORCID"
                   right="0000-0001-5460-5425"
                   lc="bg-lime-300"
@@ -531,7 +534,7 @@ export default function Home({ allPostsData }: any) {
                 />
                 <Badge
                   link="https://www.researchgate.net/profile/Lambert-Theisen"
-                  icon={<i className="ai ai-researchgate-square"/>}
+                  icon={<i className="ai ai-researchgate-square" />}
                   left="ResearchGate"
                   right="Lambert-Theisen"
                   lc="bg-teal-300"
@@ -540,7 +543,7 @@ export default function Home({ allPostsData }: any) {
                 />
                 <Badge
                   link="https://www.linkedin.com/in/lambert-theisen-4027b3184/"
-                  icon={<FontAwesomeIcon icon={faLinkedin}/>}
+                  icon={<FontAwesomeIcon icon={faLinkedin} />}
                   left="LinkedIn"
                   right="LINK"
                   lc="bg-blue-300"
