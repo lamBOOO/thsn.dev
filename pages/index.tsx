@@ -475,7 +475,7 @@ export default function Home({ allPostsData }: any) {
                   lc="bg-gray-900"
                   rc="bg-gray-700"
                   textcolor="text-white"
-                /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding sigature reads <span className='bg-gray-700 text-white m-0.5 font-mono p-0.5'>
+                /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding sigature reads <span className='bg-gray-700 text-white font-mono p-px'>
                   9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87
                 </span>
                 .
