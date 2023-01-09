@@ -460,7 +460,7 @@ export default function Home({ allPostsData }: any) {
               </h3>
               <p className='leading-6'>
                 You can contact me directly via the e-mail address <span className='whitespace-pre'><Badge
-                  link="mailto:lmbrt∂thsn.dev?subject=Ei gude&body=don't forget to integrate the e-mail address ;-)"
+                  link="mailto:lmbrt∂thsn.dev?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)"
                   icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
                   left="Mail"
                   right="lmbrt∂thsn.dev"
@@ -468,7 +468,7 @@ export default function Home({ allPostsData }: any) {
                   rc="bg-gray-700"
                   textcolor="text-white"
                 /></span> or <span className='whitespace-pre'><Badge
-                  link="mailto:lambert.theisen∂rwth-aachen.de?subject=Ei gude&body=don't forget to integrate the e-mail address ;-)"
+                  link="mailto:lambert.theisen∂rwth-aachen.de?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)"
                   icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
                   left="Mail"
                   right="lambert.theisen∂rwth-aachen.de"
