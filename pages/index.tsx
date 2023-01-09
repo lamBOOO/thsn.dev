@@ -635,6 +635,29 @@ export default function Home({ allPostsData }: any) {
                   textcolor="text-gray-800"
                 />
               </div>
+              <p className='mb-1'>
+                Also have a look at my institute webpages:
+              </p>
+              <div className='flex flex-wrap gap-1 leading-3'>
+                <Badge
+                  link="https://www.acom.rwth-aachen.de/5people/theisen/start"
+                  icon={<FontAwesomeIcon icon={faBuildingColumns} />}
+                  left="ACoM @ RWTH Aachen"
+                  right="LINK"
+                  lc="bg-[#00549f]"
+                  rc="bg-[#407fb7]"
+                  textcolor="text-white"
+                />
+                <Badge
+                  link="https://www.ians.uni-stuttgart.de/institute/team/Theisen/"
+                  icon={<FontAwesomeIcon icon={faBuildingColumns} />}
+                  left="NMH/IANS @ University of Stuttgart"
+                  right="LINK"
+                  lc="bg-gray-50"
+                  rc="bg-white"
+                  textcolor="text-[#323232]"
+                />
+              </div>
               <h3>
                 Impressum
               </h3>
