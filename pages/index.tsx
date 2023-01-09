@@ -31,6 +31,15 @@ import p2022_3 from '../public/p2022_3.jpg'
 
 import { getSortedPostsData } from '../lib/posts';
 
+function scrollToIdNoUrlChange(id : string) {
+  const anchor = document.getElementById(id);
+  if (anchor === null) {
+    // alert("error")
+  } else {
+    anchor.scrollIntoView(true)
+  }
+}
+
 export async function getStaticProps() {
 
   const allPostsData = getSortedPostsData();
@@ -90,11 +99,11 @@ export default function Home({ allPostsData }: any) {
               </div>
               <div className='flex flex-wrap items-center gap-3 border-b border-gray-100 pb-5'>
                 <span className="text-3xl align-middle animate-waving-hand">👋</span>
-                <Link type="button" className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline scroll-smooth" href="#contact" scroll={false}>
+                <button className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline scroll-smooth" onClick={() => scrollToIdNoUrlChange("news")}>
                   <span className='font-extralight'>Say </span>
                   <i className='font-extrabold'>Ei Gude, wie?</i>
                   <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
-                </Link>
+                </button>
                 <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline" href="#">
                   <span className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
                     <FontAwesomeIcon icon={faFile}/> CV <span className='sm:inline hidden'>(soon)</span>
