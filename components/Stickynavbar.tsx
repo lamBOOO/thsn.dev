@@ -11,11 +11,12 @@ import logo_me from '../public/me.jpg'
 import { scrollToIdNoUrlChange } from '../lib/scrolling'
 
 const navigation = [
-  { name: 'Blog', id: 'blog', current: false },  //  📢
-  { name: 'Research', id: 'research', current: false },  //  📑
-  { name: 'Teaching', id: 'teaching', current: false },  //  👨‍🏫
-  { name: 'Projects', id: 'projects', current: false },  //  🙈
-  { name: 'Contact', id: 'contact', current: false },  //  📢
+  { name: 'Home', id: '/', current: false },  //  📢
+  { name: 'Blog', id: '/blog', current: false },  //  📢
+  // { name: 'Research', id: 'research', current: false },  //  📑
+  // { name: 'Teaching', id: 'teaching', current: false },  //  👨‍🏫
+  // { name: 'Projects', id: 'projects', current: false },  //  🙈
+  // { name: 'Contact', id: 'contact', current: false },  //  📢
 ]
 
 function classNames(...classes: any[]) {
@@ -43,8 +44,9 @@ export default function Navbar() {
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex flex-shrink-0 items-center">
-                    <button
-                      onClick={() => { scrollToIdNoUrlChange("home", { behavior: "auto" }); setEffect(true); }}
+                    <Link
+                      onClick={() => { setEffect(true); }}
+                      href="/"
                       className={`${effect && "animate-rotate"
                         }`}
                       onAnimationEnd={() => setEffect(false)}
@@ -55,14 +57,14 @@ export default function Navbar() {
                         alt="Lambert Theisens logo"
                         sizes="32px"
                       />
-                    </button>
+                    </Link>
                   </div>
                   <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
-                        <button
+                        <Link
                           key={item.name}
-                          onClick={() => scrollToIdNoUrlChange(item.id, { behavior: "auto" })}
+                          href={item.id}
                           className={classNames(
                             item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100 hover:text-black',
                             'px-3 py-2 rounded-md text-sm font-medium border-2 border-gray-100 hover:text-white'
@@ -70,7 +72,7 @@ export default function Navbar() {
                           aria-current={item.current ? 'page' : undefined}
                         >
                           {item.name}
-                        </button>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -100,12 +102,12 @@ export default function Navbar() {
                       <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
-                            <a
+                            <Link
                               href="#"
                               className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                             >
                               Add some menu
-                            </a>
+                            </Link>
                           )}
                         </Menu.Item>
                       </Menu.Items>
@@ -120,8 +122,8 @@ export default function Navbar() {
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}
-                    as="button"
-                    onClick={() => {scrollToIdNoUrlChange(item.id, { behavior: "auto" }); }}
+                    as="a"
+                    href={item.id}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100',
                       'block px-3 py-2 rounded-md text-base font-medium'
