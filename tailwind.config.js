@@ -18,9 +18,19 @@ module.exports = {
           '60%': { transform: 'rotate(0.0deg)' },
           '100%': { transform: 'rotate(0.0deg)' },
         },
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" }
+        },
+        rotate: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" }
+        },
       },
       animation: {
         'waving-hand': 'wave 2s linear infinite',
+        'wiggle': "wiggle 200ms ease-in-out",
+        'rotate': "rotate 500ms ease-in-out",
       },
     },
   },
