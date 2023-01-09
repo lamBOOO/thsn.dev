@@ -32,7 +32,6 @@ export default function Navbar() {
             <div className="mx-auto max-w-3xl px-2 sm:px-6">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  {/* Mobile menu button*/}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-black">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -45,7 +44,7 @@ export default function Navbar() {
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex flex-shrink-0 items-center">
                     <button
-                      onClick={() => { scrollToIdNoUrlChange("home"); setEffect(true); }}
+                      onClick={() => { scrollToIdNoUrlChange("home", { behavior: "auto" }); setEffect(true); }}
                       className={`${effect && "animate-rotate"
                         }`}
                       onAnimationEnd={() => setEffect(false)}
@@ -63,7 +62,7 @@ export default function Navbar() {
                       {navigation.map((item) => (
                         <button
                           key={item.name}
-                          onClick={() => scrollToIdNoUrlChange(item.id)}
+                          onClick={() => scrollToIdNoUrlChange(item.id, { behavior: "auto" })}
                           className={classNames(
                             item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100 hover:text-black',
                             'px-3 py-2 rounded-md text-sm font-medium border-2 border-gray-100 hover:text-white'
@@ -122,7 +121,7 @@ export default function Navbar() {
                   <Disclosure.Button
                     key={item.name}
                     as="button"
-                    onClick={() => scrollToIdNoUrlChange(item.id)}
+                    onClick={() => {scrollToIdNoUrlChange(item.id, { behavior: "auto" }); }}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100',
                       'block px-3 py-2 rounded-md text-base font-medium'

@@ -1,10 +1,9 @@
-export function scrollToIdNoUrlChange(id: string) {
+export function scrollToIdNoUrlChange(id: string, opts : any) {
   if (typeof window !== "undefined") {
     const anchor = document.getElementById(id);
     if (anchor === null) {
-      // alert("error")
     } else {
-      anchor.scrollIntoView(true)
+      anchor.scrollIntoView(opts)
     }
   }
 }

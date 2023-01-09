@@ -91,7 +91,7 @@ export default function Home({ allPostsData }: any) {
               </div>
               <div className='flex flex-wrap items-center gap-3 border-b border-gray-100 pb-5'>
                 <span className="text-3xl align-middle animate-waving-hand">👋</span>
-                <button className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline" onClick={() => scrollToIdNoUrlChange("contact")}>
+                <button className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline" onClick={() => scrollToIdNoUrlChange("contact", {behavior: "smooth"})}>
                   <span className='font-extralight'>Say </span>
                   <i className='font-extrabold'>Ei Gude, wie?</i>
                   <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
