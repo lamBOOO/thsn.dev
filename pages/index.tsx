@@ -32,8 +32,90 @@ import p2022_3 from '../public/p2022_3.jpg'
 import { getSortedPostsData } from '../lib/posts';
 import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
-export async function getStaticProps() {
+const teaching_data = [
+  {
+    "semester": "WS22",
+    "title_de": "Höhere Mathematik 1 für Ingenieure [Vortragsübung]",
+    "title_en": "Higher mathematics 1 for engineers [global exercise]",
+    "students": 1000,
+    "location": "University of Stuttgart",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1",
+    "labecodes": "",
+    "description": "Linear algebra is the study of the basic concepts and techniques involving vectors and matrices. The course topics include logic, numbers and sets; vectors and vector spaces; systems of linear equations; linear transformations and their properties; eigenvalues and eigenvectors. The course objectives are to develop students’ skills in reasoning, modeling and problem-solving with vectors and matrices."
+  },
+  {
+    "semester": "SS22",
+    "title_de": "Mathematische Aspekte in der computergestützten Chemie [Vortragsübung]",
+    "title_en": "Mathematical aspects in computational chemistry [global exercise]",
+    "students": 10,
+    "location": "RWTH Aachen University",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ss22-acom-macc",
+    "labecodes": "",
+    "description": "This course explores the use of mathematical concepts in computational chemistry, specifically in creating and breaking down models of molecules. We will take a mathematical approach to theoretical chemistry, covering topics such as electric charge interactions between molecular systems, the transition from classical to quantum mechanics, the Hartree-Fock model, and its breakdown. If time allows, we will also examine some aspects of Density Functional Theory (DFT). By the end of the course, students will have a deep understanding of the mathematical principles underlying computational chemistry and will be able to apply these principles to their own research in the field."
+  },
+  {
+    "semester": "WS21",
+    "title_de": "Mathematische Grundlagen III (CES) [Vortragsübung]",
+    "title_en": "Foundations of Mathematics III [global exercise]",
+    "students": 70,
+    "location": "RWTH Aachen University",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws21-acom-math3",
+    "labecodes": "",
+    "description": "This course introduces variational calculus, which is a branch of mathematics that deals with finding the best solution to a problem involving functions. It also teaches how to integrate functions in several variables and on different types of spaces, such as curves and surfaces. The course also covers numerical methods for solving ordinary differential equations, which are equations that relate a function and its derivatives. Moreover, the course explores optimization techniques for finding the minimum or maximum value of a function and eigenvalue computation methods for finding the characteristic values of a matrix. The course aims to help students acquire and apply these mathematical tools in various fields of science and engineering."
+  },
+  {
+    "semester": "WS20",
+    "title_de": "Mathematische Grundlagen III (CES) [Vortragsübung]",
+    "title_en": "Foundations of Mathematics III [global exercise]",
+    "students": 70,
+    "location": "RWTH Aachen University",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws20-acom-math3",
+    "labecodes": "",
+    "description": "This course introduces variational calculus, which is a branch of mathematics that deals with finding the best solution to a problem involving functions. It also teaches how to integrate functions in several variables and on different types of spaces, such as curves and surfaces. The course also covers numerical methods for solving ordinary differential equations, which are equations that relate a function and its derivatives. Moreover, the course explores optimization techniques for finding the minimum or maximum value of a function and eigenvalue computation methods for finding the characteristic values of a matrix. The course aims to help students acquire and apply these mathematical tools in various fields of science and engineering."
+  },
+  {
+    "semester": "SS20",
+    "title_de": "Mathematische Grundlagen IV (CES) [Vortragsübung]",
+    "title_en": "Foundations of Mathematics IV [global exercise]",
+    "students": 70,
+    "location": "RWTH Aachen University",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ss20-acom-math4",
+    "labecodes": "",
+    "description": "In this course, students will explore the theory and numerics of partial differential equations (PDEs), which are mathematical models of phenomena involving rates of change in multiple variables. The course will cover various aspects of PDEs, such as their classification by type and basic characteristics, their elementary solution methods for some classical examples, their generalization by using distributions and Sobolev spaces to define weak derivatives, their analysis by applying Fourier and other integral transformations to different domains, their discretization by finite difference methods on grids, and their numerical solution by efficient techniques such as FFT or filtering. The course will combine theoretical lectures with practical exercises using MATLAB or Julia."
+  },
+  {
+    "semester": "WS19",
+    "title_de": "Mathematische Grundlagen I (CES) [Vortragsübung]",
+    "title_en": "Foundations of Mathematics I [global exercise]",
+    "students": 70,
+    "location": "RWTH Aachen University",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws19-acom-math1",
+    "labecodes": "",
+    "description": "In this course, you will learn about various aspects of linear algebra and analysis of functions of several variables. You will explore how to solve eigenvalue problems and transform matrices into diagonal or normal forms. You will also learn how to use singular value decomposition, rank determination and regularization concepts. You will apply differentiation, Taylor expansion, inverse and implicit functions to analyze and optimize multivariable functions. You will use iterative methods such as Newton’s method or Gauss-Newton method to solve nonlinear systems of equations and least squares problems. You will understand how to interpolate data using polynomials and how to perform numerical differentiation and integration using Newton-Cotes formulas, Gauss quadrature and extrapolation. Finally, you will get an introduction to the theory of ordinary differential equations."
+  },
+  {
+    "semester": "SS19",
+    "title_de": "Mathematische Grundlagen IV (CES) [Tutor]",
+    "title_en": "Foundations of Mathematics IV [tutor]",
+    "students": 50,
+    "location": "RWTH Aachen University",
+    "coursenotes": "TODO",
+    "labecodes": "",
+    "description": "I executed the self exercise and supervised students in the course on partial differential equations (PDEs). I learned and applied the theory and numerics of PDEs, such as their types, characteristics, solutions, generalizations, analysis, discretization and numerical solution. I also helped the students understand and practice these concepts and methods using MATLAB or Julia."
+  },
+  {
+    "semester": "WS18",
+    "title_de": "Partielle Differentialgleichungen (CES) [Tutor]",
+    "title_en": "Partial differential equations (CES) [tutor]",
+    "students": 50,
+    "location": "RWTH Aachen University",
+    "coursenotes": "TODO",
+    "labecodes": "",
+    "description": "This course covers various aspects of the variational formulation for elliptic problems, such as the Galerkin technique and the Lax-Milgram theorem. It also introduces the finite element method for elliptic problems and some modern iterative methods, such as PCG and multigrid method. The course then extends to parabolic problems and shows how to use the method of lines for their discretization. It also presents the finite volume method as another discretization technique. The course then deals with saddle point problems and their application to Stokes equations. Finally, it discusses the Navier-Stokes equation for incompressible fluids. The main goals of this course are to help students understand the basic principles of discretizing partial differential equations and to teach them how to use different numerical methods for solving them. The students will also learn how to evaluate the results of these methods and how to adapt them to new tasks. The students will acquire confidence in using discretization techniques such as finite elements and finite volume methods, as well as iterative solution methods such as PCG and multigrid method."
+  },
+];
 
+export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -383,62 +465,56 @@ export default function Home({ allPostsData }: any) {
                 <span className='text-xs text-gray-400'>[TODO Add all other teaching with PDF previews.]</span>
               </p>
               <h3>Selected classes</h3>
-              <article>
-                <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 shadow-md border-gray-200">
-                  <span className='leading-5 mb-2'>
-                    <span className='font-bold'>
-                      Vortragsübung Höhere Mathematik 1 für Ingenieure
-                    </span>
-                    <br />
-                    <i className="text-xs">
-                      (global exercise higher mathematics 1 for engineers)
-                    </i>
-                  </span>
-                  <div className='m-0 flex flex-wrap gap-1 mb-1'>
-                    <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
-                      <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
-                      WS22
-                    </span>
-                    <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faUsers} /></span>
-                      ~1000
-                    </span>
-                    <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border-blue-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns} /></span>
-                      Unversity of Stuttgart
-                    </span>
-                  </div>
-
-                  <div>
-                    <p className='font-normal text-xs leading-4 text-justify my-2'>
-                      The class is about the basic concepts of linear algebra. For example:
-                    </p>
-                    <ul className='font-normal text-xs leading-3'>
-                      <li key="0">logics</li>
-                      <li key="1">numbers, sets, inequalities</li>
-                      <li key="2">euclidian vectorspace</li>
-                      <li key="3">linear systems of equations</li>
-                      <li key="4">transformations and transformation groups</li>
-                      <li key="5">principal axis transformations</li>
-                    </ul>
-                    <div>
-                    </div>
-                    <Link href="https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1">
-                      <span className="border-gray-500 hover:border-black">
-                        <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-green-300 text-green-800 font-bold'>
-                          <span className="pr-1"><FontAwesomeIcon icon={faBook} /></span>
-                          Course notes
-                        </span>
-                        <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-green-200 text-green-800 font-mono'>LINK</span>
+              {
+                teaching_data.map(
+                  ({title_de, title_en, description, students, coursenotes, location, semester}) =>
+                  <article>
+                  <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
+                    <span className='leading-5 mb-2'>
+                      <span className='font-bold'>
+                        {title_de}
                       </span>
-                    </Link>
+                      <br />
+                      <i className="text-xs">
+                        ({title_en})
+                      </i>
+                    </span>
+                    <div className='m-0 flex flex-wrap gap-1 mb-1'>
+                      <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
+                        <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
+                        {semester}
+                      </span>
+                      <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
+                        <span className="pr-1"><FontAwesomeIcon icon={faUsers} /></span>
+                        ~{students}
+                      </span>
+                      <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border-blue-500">
+                        <span className="pr-1"><FontAwesomeIcon icon={faBuildingColumns} /></span>
+                        {location}
+                      </span>
+                    </div>
 
-
-
+                    <div>
+                      <p className='font-normal text-xs leading-4 text-justify my-2'>
+                        {description}
+                      </p>
+                      <div>
+                      </div>
+                      <Link href={coursenotes}>
+                        <span className="border-gray-500 hover:border-black">
+                          <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-green-300 text-green-800 font-bold'>
+                            <span className="pr-1"><FontAwesomeIcon icon={faBook} /></span>
+                            Course notes
+                          </span>
+                          <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-green-200 text-green-800 font-mono'>LINK</span>
+                        </span>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </article>
-              <span className='text-xs text-gray-400'>[TODO: Add all other classes from ACOM website]</span>
+                </article>
+                )
+              }
+              <span className='text-xs text-gray-400'>[TODO: Add professors, add missing links, add lab codes]</span>
             </section>
 
             <section>
