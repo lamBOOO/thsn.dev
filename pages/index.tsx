@@ -467,8 +467,8 @@ export default function Home({ allPostsData }: any) {
               <h3>Selected classes</h3>
               {
                 teaching_data.map(
-                  ({title_de, title_en, description, students, coursenotes, location, semester}) =>
-                  <article>
+                  ({title_de, title_en, description, students, coursenotes, location, semester}, ind) =>
+                  <article key={ind}>
                   <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
                     <span className='leading-5 mb-2'>
                       <span className='font-bold'>
