@@ -554,7 +554,7 @@ export default function Home({ allPostsData }: any) {
                 teaching_data.map(
                   ({ title_de, title_en, description, students, coursenotes, labcodes, location, semester, people }, ind) =>
                     <article key={ind}>
-                      <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
+                      <div className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
                         <span className='leading-5 mb-0'>
                           <span className='font-bold text-lg leading-4'>
                             {title_de}
@@ -614,31 +614,33 @@ export default function Home({ allPostsData }: any) {
                             {description}
                           </p>
                           <div className="flex flex-wrap gap-1 leading-none">
-
-                          <Badge
-                            link={coursenotes}
-                            icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
-                            left="Notes"
-                            right="Link"
-                            lc="bg-orange-300"
-                            rc="bg-orange-200"
-                            textcolor="text-orange-800"
-                          />
-                          {
-                          labcodes != "" ?
-                          <Badge
-                            link={labcodes}
-                            icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
-                            left="Labcodes"
-                            right="Link"
-                            lc="bg-lime-300"
-                            rc="bg-lime-200"
-                            textcolor="text-lime-800"
-                          />
-                          :
-                          ""
-                        }
+                            <Badge
+                              link={coursenotes}
+                              icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
+                              left="Notes"
+                              right="Link"
+                              lc="bg-orange-300"
+                              rc="bg-orange-200"
+                              textcolor="text-orange-800"
+                            />
+                            {
+                              labcodes != "" ?
+                                <Badge
+                                  link={labcodes}
+                                  icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
+                                  left="Labcodes"
+                                  right="Link"
+                                  lc="bg-lime-300"
+                                  rc="bg-lime-200"
+                                  textcolor="text-lime-800"
+                                />
+                                :
+                                ""
+                            }
                           </div>
+                        </div>
+                        <div className="absolute right-3 bottom-2 text-5xl font-black text-black italic opacity-10">
+                        <span className='text-xl mr-1'>#</span>{teaching_data.length - ind}
                         </div>
                       </div>
                     </article>
