@@ -99,7 +99,7 @@ const teaching_data = [
     "title_en": "Foundations of Mathematics IV [tutor]",
     "students": 50,
     "location": "RWTH Aachen University",
-    "coursenotes": "TODO",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ss19-mathcces-math4",
     "labecodes": "",
     "description": "I executed the self exercise and supervised students in the course on partial differential equations (PDEs). I learned and applied the theory and numerics of PDEs, such as their types, characteristics, solutions, generalizations, analysis, discretization and numerical solution. I also helped the students understand and practice these concepts and methods using MATLAB or Julia."
   },
@@ -109,7 +109,7 @@ const teaching_data = [
     "title_en": "Partial differential equations (CES) [tutor]",
     "students": 50,
     "location": "RWTH Aachen University",
-    "coursenotes": "TODO",
+    "coursenotes": "https://github.com/lamBOOO/teaching/blob/main/rwth-aachen/ws18-mathcces-math5",
     "labecodes": "",
     "description": "This course covers various aspects of the variational formulation for elliptic problems, such as the Galerkin technique and the Lax-Milgram theorem. It also introduces the finite element method for elliptic problems and some modern iterative methods, such as PCG and multigrid method. The course then extends to parabolic problems and shows how to use the method of lines for their discretization. It also presents the finite volume method as another discretization technique. The course then deals with saddle point problems and their application to Stokes equations. Finally, it discusses the Navier-Stokes equation for incompressible fluids. The main goals of this course are to help students understand the basic principles of discretizing partial differential equations and to teach them how to use different numerical methods for solving them. The students will also learn how to evaluate the results of these methods and how to adapt them to new tasks. The students will acquire confidence in using discretization techniques such as finite elements and finite volume methods, as well as iterative solution methods such as PCG and multigrid method."
   },
@@ -326,6 +326,8 @@ export default function Home({ allPostsData }: any) {
                     </div>
                   </div>
                 </div>
+              </article>
+              <article>
                 <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
                   <span className='leading-5 mb-2'>
                     <span className='font-bold'>
@@ -495,7 +497,7 @@ export default function Home({ allPostsData }: any) {
                     </div>
 
                     <div>
-                      <p className='font-normal text-xs leading-4 text-justify my-2'>
+                      <p className='font-normal text-xs leading-3 text-justify my-2 text-gray-400'>
                         {description}
                       </p>
                       <div>
