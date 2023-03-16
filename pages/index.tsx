@@ -46,7 +46,7 @@ const teaching_data = [
       }
     ],
     "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/uni-stuttgart/ws22-nmh-hm1",
-    "labecodes": "",
+    "labcodes": "",
     "description": "Linear algebra is the study of the basic concepts and techniques involving vectors and matrices. The course topics include logic, numbers and sets; vectors and vector spaces; systems of linear equations; linear transformations and their properties; eigenvalues and eigenvectors. The course objectives are to develop students’ skills in reasoning, modeling and problem-solving with vectors and matrices."
   },
   {
@@ -62,7 +62,7 @@ const teaching_data = [
       }
     ],
     "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ss22-acom-macc",
-    "labecodes": "",
+    "labcodes": "",
     "description": "This course explores the use of mathematical concepts in computational chemistry, specifically in creating and breaking down models of molecules. We will take a mathematical approach to theoretical chemistry, covering topics such as electric charge interactions between molecular systems, the transition from classical to quantum mechanics, the Hartree-Fock model, and its breakdown. If time allows, we will also examine some aspects of Density Functional Theory (DFT). By the end of the course, students will have a deep understanding of the mathematical principles underlying computational chemistry and will be able to apply these principles to their own research in the field."
   },
   {
@@ -81,8 +81,8 @@ const teaching_data = [
         link: "https://www.scc.kit.edu/personen/sebastian.krumscheid.php"
       },
     ],
-    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws21-acom-math3",
-    "labecodes": "",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws21-acom-math3/notes",
+    "labcodes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws21-acom-math3/codes",
     "description": "This course introduces variational calculus, which is a branch of mathematics that deals with finding the best solution to a problem involving functions. It also teaches how to integrate functions in several variables and on different types of spaces, such as curves and surfaces. The course also covers numerical methods for solving ordinary differential equations, which are equations that relate a function and its derivatives. Moreover, the course explores optimization techniques for finding the minimum or maximum value of a function and eigenvalue computation methods for finding the characteristic values of a matrix. The course aims to help students acquire and apply these mathematical tools in various fields of science and engineering."
   },
   {
@@ -101,8 +101,8 @@ const teaching_data = [
         link: "https://www.mn.uio.no/math/english/people/aca/haakonah/index.html"
       },
     ],
-    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws20-acom-math3",
-    "labecodes": "",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws20-acom-math3/notes",
+    "labcodes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws20-acom-math3/codes",
     "description": "This course introduces variational calculus, which is a branch of mathematics that deals with finding the best solution to a problem involving functions. It also teaches how to integrate functions in several variables and on different types of spaces, such as curves and surfaces. The course also covers numerical methods for solving ordinary differential equations, which are equations that relate a function and its derivatives. Moreover, the course explores optimization techniques for finding the minimum or maximum value of a function and eigenvalue computation methods for finding the characteristic values of a matrix. The course aims to help students acquire and apply these mathematical tools in various fields of science and engineering."
   },
   {
@@ -121,8 +121,8 @@ const teaching_data = [
         link: "https://www.ians.uni-stuttgart.de/institute/team/Stamm/"
       },
     ],
-    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ss20-acom-math4",
-    "labecodes": "",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ss20-mathcces-math4/notes",
+    "labcodes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ss20-mathcces-math4/codes",
     "description": "In this course, students will explore the theory and numerics of partial differential equations (PDEs), which are mathematical models of phenomena involving rates of change in multiple variables. The course will cover various aspects of PDEs, such as their classification by type and basic characteristics, their elementary solution methods for some classical examples, their generalization by using distributions and Sobolev spaces to define weak derivatives, their analysis by applying Fourier and other integral transformations to different domains, their discretization by finite difference methods on grids, and their numerical solution by efficient techniques such as FFT or filtering. The course will combine theoretical lectures with practical exercises using MATLAB or Julia."
   },
   {
@@ -141,8 +141,8 @@ const teaching_data = [
         link: "https://www.ians.uni-stuttgart.de/institute/team/Stamm/"
       },
     ],
-    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws19-acom-math1",
-    "labecodes": "",
+    "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ws19-mathcces-math1",
+    "labcodes": "",
     "description": "In this course, you will learn about various aspects of linear algebra and analysis of functions of several variables. You will explore how to solve eigenvalue problems and transform matrices into diagonal or normal forms. You will also learn how to use singular value decomposition, rank determination and regularization concepts. You will apply differentiation, Taylor expansion, inverse and implicit functions to analyze and optimize multivariable functions. You will use iterative methods such as Newton’s method or Gauss-Newton method to solve nonlinear systems of equations and least squares problems. You will understand how to interpolate data using polynomials and how to perform numerical differentiation and integration using Newton-Cotes formulas, Gauss quadrature and extrapolation. Finally, you will get an introduction to the theory of ordinary differential equations."
   },
   {
@@ -170,7 +170,7 @@ const teaching_data = [
       },
     ],
     "coursenotes": "https://github.com/lamBOOO/teaching/tree/main/rwth-aachen/ss19-mathcces-math4",
-    "labecodes": "",
+    "labcodes": "",
     "description": "I executed the self exercise and supervised students in the course on partial differential equations (PDEs). I learned and applied the theory and numerics of PDEs, such as their types, characteristics, solutions, generalizations, analysis, discretization and numerical solution. I also helped the students understand and practice these concepts and methods using MATLAB or Julia."
   },
   {
@@ -194,7 +194,7 @@ const teaching_data = [
       },
     ],
     "coursenotes": "https://github.com/lamBOOO/teaching/blob/main/rwth-aachen/ws18-mathcces-math5",
-    "labecodes": "",
+    "labcodes": "",
     "description": "This course covers various aspects of the variational formulation for elliptic problems, such as the Galerkin technique and the Lax-Milgram theorem. It also introduces the finite element method for elliptic problems and some modern iterative methods, such as PCG and multigrid method. The course then extends to parabolic problems and shows how to use the method of lines for their discretization. It also presents the finite volume method as another discretization technique. The course then deals with saddle point problems and their application to Stokes equations. Finally, it discusses the Navier-Stokes equation for incompressible fluids. The main goals of this course are to help students understand the basic principles of discretizing partial differential equations and to teach them how to use different numerical methods for solving them. The students will also learn how to evaluate the results of these methods and how to adapt them to new tasks. The students will acquire confidence in using discretization techniques such as finite elements and finite volume methods, as well as iterative solution methods such as PCG and multigrid method."
   },
 ];
@@ -548,12 +548,11 @@ export default function Home({ allPostsData }: any) {
               </h2>
               <p>
                 You can find most of my teaching activity in the Github repository <Link href="https://github.com/lamBOOO/teaching">@lamBOOO/teaching</Link>.
-                <span className='text-xs text-gray-400'>[TODO Add all other teaching with PDF previews.]</span>
               </p>
               <h3>Selected classes</h3>
               {
                 teaching_data.map(
-                  ({ title_de, title_en, description, students, coursenotes, location, semester, people }, ind) =>
+                  ({ title_de, title_en, description, students, coursenotes, labcodes, location, semester, people }, ind) =>
                     <article key={ind}>
                       <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
                         <span className='leading-5 mb-0'>
@@ -614,8 +613,8 @@ export default function Home({ allPostsData }: any) {
                           <p className='font-normal text-xs leading-3 text-justify my-2 text-gray-500'>
                             {description}
                           </p>
-                          <div>
-                          </div>
+                          <div className="flex flex-wrap gap-1 leading-none">
+
                           <Badge
                             link={coursenotes}
                             icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
@@ -625,12 +624,27 @@ export default function Home({ allPostsData }: any) {
                             rc="bg-orange-200"
                             textcolor="text-orange-800"
                           />
+                          {
+                          labcodes != "" ?
+                          <Badge
+                            link={labcodes}
+                            icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
+                            left="Labcodes"
+                            right="Link"
+                            lc="bg-lime-300"
+                            rc="bg-lime-200"
+                            textcolor="text-lime-800"
+                          />
+                          :
+                          ""
+                        }
+                          </div>
                         </div>
                       </div>
                     </article>
                 )
               }
-              <span className='text-xs text-gray-400'>[TODO: Add professors, add missing links, add lab codes]</span>
+              <span className='text-xs text-gray-400'>[TODO: Add PDFs previews of notes]</span>
             </section>
 
             <section>
