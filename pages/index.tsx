@@ -557,11 +557,11 @@ export default function Home({ allPostsData }: any) {
                       <div className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
                         <span className='leading-5 mb-0'>
                           <span className='font-bold text-lg leading-4'>
-                            {title_de}
+                            {title_en}
                           </span>
                           <br />
                           <i className="text-xs">
-                            ({title_en})
+                            {title_de}
                           </i>
                         </span>
                         <div className='flex flex-wrap gap-1 leading-none my-1'>
