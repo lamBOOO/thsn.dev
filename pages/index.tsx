@@ -514,23 +514,53 @@ export default function Home({ allPostsData }: any) {
             <section>
               <article>
                 <h3>Preprints</h3>
+                → Currently none.
               </article>
             </section>
 
             <section>
               <article>
                 <h3>Talks</h3>
+                <ul>
+                  <li>
+                  <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://erc-emc2.eu/emc2-seminars/">EMC2 Seminar (ERC Synergy project - Extreme-scale Mathematically-based Computational Chemistry)</Link>, Paris (France), 10 March, 2023.
+                  </li>
+                  <li>
+                  <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.siam.org/conferences/cm/program/cse23">SIAM Conference on Computational Science and Engineering (CSE23)</Link>, Amsterdam (Netherlands), 28 February, 2023.
+                  </li>
+                  <li>
+                  <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.ians.uni-stuttgart.de/nmh/events/">IANS Oberseminar @ University of Stuttgart</Link>, Stuttgart (Germany), 24 November, 2022.
+                  </li>
+                  <li>
+                  <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.dd27.cz/">DD27: 7th International Domain Decomposition Conference – MS4: SCSs in DDMs and Multiscale Discretizations</Link>, Prague (Czech Republic), 27 July, 2022.
+                  </li>
+                  <li>
+                  <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.esco2022.femhub.com/">ESCO 2022: 8th European Seminar on Computing</Link>, Pilsen (Czech Republic), 14 June, 2022.
+                  </li>
+                  <li>
+                  <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 7 June, 2022.
+                  </li>
+                  <li>
+                  <b>An Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 15 June, 2021.
+                  </li>
+                  <li>
+                  <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://moansi.wixsite.com/gamm/2020">GAMM Activity Group: Modelling, Analysis and Simulation of Molecular Systems (MOANSI) Annual Meeting 2020</Link>, 24-25 September, 2020.
+                  </li>
+                  <li>
+                  <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 30 June, 2020.
+                  </li>
+                  <li>
+                  <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 15 October, 2019.
+                  </li>
+                  <li>
+                  <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, <Link href="https://www.acom.rwth-aachen.de/3teaching/0classes/ceswseminar/start">CES Seminar Presentation</Link>, RWTH Aachen, 10 April, 2019.
+                  </li>
+                  <li>
+                  <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 10 April, 2018.
+                  </li>
+                </ul>
                 <p>
-                  <span className='text-xs text-gray-400'>[TODO Add all talks from ACOM website.]</span>
-                </p>
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <h3>Talks</h3>
-                <p>
-                  <span className='text-xs text-gray-400'>[TODO Add all talks from ACOM website.]</span>
+                  <span className='text-xs text-gray-400'>[TODO Upload PDFs at uniform location, indicate invited and contributed talks, make first page as preview clickable.]</span>
                 </p>
               </article>
             </section>
@@ -544,7 +574,7 @@ export default function Home({ allPostsData }: any) {
                   </li>
                   <li>
                     <Image
-                      className="h-16 m-0 w-auto inline-block"
+                      className="h-14 m-0 w-auto inline-block"
                       src="/logo_ddeigenlab.png"
                       width={1}
                       height={1}
@@ -554,7 +584,7 @@ export default function Home({ allPostsData }: any) {
                   </li>
                   <li>
                     <Image
-                      className="h-16 m-0 w-auto inline-block"
+                      className="h-14 m-0 w-auto inline-block"
                       src="/sticker.png"
                       width={1}
                       height={1}
@@ -679,17 +709,17 @@ export default function Home({ allPostsData }: any) {
                     <b>Iterative Domain Decomposition Methods for Eigenvalue Problems</b>, Master Thesis of Hendrik Borchardt, RWTH Aachen, 2020.
                   </li>
                   <li>
-                  <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis of Lambert Theisen, RWTH Aachen / MathCCES, 2020.
+                    <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis of Lambert Theisen, RWTH Aachen / MathCCES, 2020.
                   </li>
                   <li>
-                  <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, Seminar Thesis of Lambert Theisen, RWTH Aachen / CATS, 2019.
+                    <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, Seminar Thesis of Lambert Theisen, RWTH Aachen / CATS, 2019.
                   </li>
                   <li>
-                  <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis of Lambert Theisen, RWTH Aachen / ABB Switzerland, 2018.
+                    <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis of Lambert Theisen, RWTH Aachen / ABB Switzerland, 2018.
                   </li>
                 </ul>
                 <p>
-                  <span className='text-xs text-gray-400'>[TODO Link PDFs, think about where to host, checkout people and link them.]</span>
+                  <span className='text-xs text-gray-400'>[TODO Link PDFs, think about where to host, checkout people and link them, upload own theses to RWTHPublications.]</span>
                 </p>
               </article>
 
@@ -805,7 +835,14 @@ export default function Home({ allPostsData }: any) {
               </h2>
               <ul>
                 <li>
-                  The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overveiw of exam grading schemes.
+                <Image
+                      className="h-8 m-0 w-auto inline-block"
+                      src="/gradescaler_logo.png"
+                      width={1}
+                      height={1}
+                      alt="3rd-order Lagrangian basis function on simplex #8"
+                      sizes="160px"
+                    /> The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overview of exam grading schemes.
                 </li>
                 <li>
                   Use the <Link href="https://gitlab.com/lamBOO/shopping-list">shopping-list</Link> LaTeX template to create your 4x4 double-sided reusable shopping list for easy ticking of required products based on the supermarket location to optimize shopping. Here's an <Link href="https://gitlab.com/lamBOO/shopping-list/-/raw/master/shopping-list.pdf?inline=true">example</Link>.
@@ -1065,7 +1102,8 @@ export default function Home({ allPostsData }: any) {
               </p>
             </section>
 
-            <span className='text-xs text-gray-400'>[TODO Add small CV section]</span>
+            <span className='text-xs text-gray-400'>[TODO Add small CV section with logos and timeline.]</span>
+            <span className='text-xs text-gray-400'>[TODO Add better email obfuscate strategy.]</span>
 
           </div>
         </main>
