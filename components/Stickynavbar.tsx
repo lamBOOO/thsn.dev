@@ -5,6 +5,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMugSaucer } from '@fortawesome/free-solid-svg-icons'
+
 import logo from '../public/favicon.png'
 import logo_me from '../public/me.jpg'
 
@@ -103,10 +106,10 @@ export default function Navbar() {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="#"
+                              href="https://www.buymeacoffee.com/theisen"
                               className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                             >
-                              Add some menu
+                              <FontAwesomeIcon icon={faMugSaucer} /> Buy me a coffee.
                             </Link>
                           )}
                         </Menu.Item>

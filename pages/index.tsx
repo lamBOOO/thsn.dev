@@ -15,6 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faGitlab } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faFile } from '@fortawesome/free-regular-svg-icons'
 import { faBook, faBuilding, faBuildingColumns, faCode, faPerson, faUser, faDesktop, faUsers, faClock } from '@fortawesome/free-solid-svg-icons'
 
@@ -491,7 +492,7 @@ export default function Home({ allPostsData }: any) {
                               />
                               <Badge
                                 link={"https://arxiv.org/abs/" + zenodo}
-                                icon={<FontAwesomeIcon icon={faDesktop} />}
+                                icon={<FontAwesomeIcon icon={faCode} />}
                                 left="Code"
                                 right={zenodo}
                                 lc="bg-violet-300"
@@ -512,6 +513,21 @@ export default function Home({ allPostsData }: any) {
 
             <section>
               <article>
+                <h3>Preprints</h3>
+              </article>
+            </section>
+
+            <section>
+              <article>
+                <h3>Talks</h3>
+                <p>
+                  <span className='text-xs text-gray-400'>[TODO Add all talks from ACOM website.]</span>
+                </p>
+              </article>
+            </section>
+
+            <section>
+              <article>
                 <h3>Talks</h3>
                 <p>
                   <span className='text-xs text-gray-400'>[TODO Add all talks from ACOM website.]</span>
@@ -522,26 +538,158 @@ export default function Home({ allPostsData }: any) {
             <section>
               <article>
                 <h3>Software</h3>
-                <p>
-                  <span className='text-xs text-gray-400'>[TODO Add fenicsR13, ddEigenlab, ....]</span>
-                </p>
+                <ul>
+                  <li>
+                    <Link href="https://github.com/lamBOOO/DBPrices.jl">DBPrices.jl</Link>: A Julia wrapper for the <Link href="https://github.com/juliuste/db-prices">db-prices</Link> module from <Link href="https://github.com/juliuste">@juliuste</Link>.
+                  </li>
+                  <li>
+                    <Image
+                      className="h-16 m-0 w-auto inline-block"
+                      src="/logo_ddeigenlab.png"
+                      width={1}
+                      height={1}
+                      alt="3rd-order Lagrangian basis function on simplex #8"
+                      sizes="160px"
+                    /> <Link href="https://git.rwth-aachen.de/lamBOO/ddEigenLab.jl">ddEigenlab.jl</Link>: A Domain-Decomposition Eigenvalue Problem Lab to benchmark various algorithms.
+                  </li>
+                  <li>
+                    <Image
+                      className="h-16 m-0 w-auto inline-block"
+                      src="/sticker.png"
+                      width={1}
+                      height={1}
+                      alt="3rd-order Lagrangian basis function on simplex #8"
+                      sizes="160px"
+                    /> <Link href="https://git.rwth-aachen.de/lamBOO/fenicsR13">fenicsR13</Link>: A Tensorial Mixed Finite Element Solver for the Linear R13 Equations Using the FEniCS Computing Platform.
+                  </li>
+                  <li>
+                    <Link href="https://github.com/lamBOOO/latextools">latextools</Link>: Some scripts to process LaTeX documents. Contains a conversion script for LaTeX files into plaintext while keeping the mathematical sentence structure intact. For example, the input <code>Let $\begin&#123;euqation&#125; h = \tfrac&#123;1&#125;&#123;N&#125; \end&#123;euqation&#125;$ where $N$ denotes the number of intervals.</code> will be converted to <code>Let noun verbs noun where noun denotes the number of intervals.</code> (valid sentence).
+                  </li>
+                </ul>
               </article>
             </section>
 
             <section>
               <article>
                 <h3>Miscellaneous</h3>
-                <p>
-                  <span className='text-xs text-gray-400'>[TODO Add P3 FEM script, ...]</span>
-                </p>
+                <ul>
+                  <li>
+                    Generate pictures of arbitrary-order Lagrangian finite element basis function with the Mathematica script from <Link href="https://doi.org/10.6084/m9.figshare.9767021.v1">10.6084/m9.figshare.9767021.v1</Link> (uploaded to figshare).
+                  </li>
+                </ul>
+                <div className="flex flex-wrap">
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-0.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #1"
+                    sizes="160px"
+                  />
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-1.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #2"
+                    sizes="160px"
+                  />
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-2.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #3"
+                    sizes="160px"
+                  />
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-3.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #4"
+                    sizes="160px"
+                  />
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-4.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #5"
+                    sizes="160px"
+                  />
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-5.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #6"
+                    sizes="160px"
+                  />
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-6.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #7"
+                    sizes="160px"
+                  />
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-7.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #8"
+                    sizes="160px"
+                  />
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-8.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #9"
+                    sizes="160px"
+                  />
+                  <Image
+                    className="w-32 m-0"
+                    src="/p3-9.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #10"
+                    sizes="160px"
+                  />
+                </div>
               </article>
             </section>
 
             <section>
               <article>
-                <h3>Theses</h3>
+                <h3>Theses and Supervised Work</h3>
+                <ul>
+                  <li>
+                    <b>Density Operator in Eigenvalue Problems with Application in Manifold Interpolation</b>, Bachelor Thesis of <Link href="https://de.linkedin.com/in/stefan-berger-29b1a4210">Stefan Berger</Link>, RWTH Aachen, 2022.
+                  </li>
+                  <li>
+                    <b>Evaluation and Implementation of Schrödinger-Type Eigenvalue Problems in Long Rectangular Domains using the Finite Element Method</b>, CES Project Thesis of Corinna Müller, Matthias Geratz, Celine Heger, Johanna Meyer, RWTH Aachen, 2021.
+                  </li>
+                  <li>
+                    <b>Using a Spectral Inference Network to Solve the Time-Independent Schrödinger Equation for a Two-Dimensional Hydrogen Atom</b>, Seminar Thesis of Alexander Kristof, RWTH Aachen, 2020.
+                  </li>
+                  <li>
+                    <b>Iterative Domain Decomposition Methods for Eigenvalue Problems</b>, Master Thesis of Hendrik Borchardt, RWTH Aachen, 2020.
+                  </li>
+                  <li>
+                  <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis of Lambert Theisen, RWTH Aachen / MathCCES, 2020.
+                  </li>
+                  <li>
+                  <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, Seminar Thesis of Lambert Theisen, RWTH Aachen / CATS, 2019.
+                  </li>
+                  <li>
+                  <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis of Lambert Theisen, RWTH Aachen / ABB Switzerland, 2018.
+                  </li>
+                </ul>
                 <p>
-                  <span className='text-xs text-gray-400'>[TODO Add supervised work from ACOM website.]</span>
+                  <span className='text-xs text-gray-400'>[TODO Link PDFs, think about where to host, checkout people and link them.]</span>
                 </p>
               </article>
 
@@ -655,10 +803,17 @@ export default function Home({ allPostsData }: any) {
               <h2 id="projects" className="scroll-mt-20">
                 <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative">Selected Projects</span></span>
               </h2>
-              <p>
-                The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overveiw of exam grading schemes.
-                <span className='text-xs text-gray-400'>[TODO: Add grammarly script, latex templates, check Git repos, ...]</span>
-              </p>
+              <ul>
+                <li>
+                  The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overveiw of exam grading schemes.
+                </li>
+                <li>
+                  Use the <Link href="https://gitlab.com/lamBOO/shopping-list">shopping-list</Link> LaTeX template to create your 4x4 double-sided reusable shopping list for easy ticking of required products based on the supermarket location to optimize shopping. Here's an <Link href="https://gitlab.com/lamBOO/shopping-list/-/raw/master/shopping-list.pdf?inline=true">example</Link>.
+                </li>
+                <li>
+                  A while ago, I build the website <Link href="http://kanara-bau.de">kanara-bau.de</Link> without using any tech stack in the editor.
+                </li>
+              </ul>
             </section>
 
             <section>
@@ -756,6 +911,15 @@ export default function Home({ allPostsData }: any) {
                   lc="bg-blue-300"
                   rc="bg-blue-200"
                   textcolor="text-blue-800"
+                />
+                <Badge
+                  link="https://twitter.com/LmbrtThsn"
+                  icon={<FontAwesomeIcon icon={faTwitter} />}
+                  left="Twitter"
+                  right="@LmbrtThsn"
+                  lc="bg-sky-300"
+                  rc="bg-sky-200"
+                  textcolor="text-sky-800"
                 />
                 <Badge
                   link="https://www.semanticscholar.org/author/Lambert-Theisen/1811123350"
@@ -899,8 +1063,9 @@ export default function Home({ allPostsData }: any) {
                 Office Phone: 0049 711 685 65522
                 <br />
               </p>
-
             </section>
+
+            <span className='text-xs text-gray-400'>[TODO Add small CV section]</span>
 
           </div>
         </main>
