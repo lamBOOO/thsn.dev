@@ -16,21 +16,96 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faGitlab } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faFile } from '@fortawesome/free-regular-svg-icons'
-import { faBook, faBuilding, faBuildingColumns, faCode, faPerson, faUser, faUsers, faClock } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faBuilding, faBuildingColumns, faCode, faPerson, faUser, faDesktop, faUsers, faClock } from '@fortawesome/free-solid-svg-icons'
 
 import logo_me from '../public/me.jpg'
 import logo_me_large from '../public/me_large.jpg'
-import gradescaler_logo from '../public/gradescaler_logo.png'
-
-import p2021_1 from '../public/p2021_1.jpg'
-import p2021_2 from '../public/p2021_2.jpg'
-import p2021_3 from '../public/p2021_3.jpg'
-import p2022_1 from '../public/p2022_1.jpg'
-import p2022_2 from '../public/p2022_2.jpg'
-import p2022_3 from '../public/p2022_3.jpg'
 
 import { getSortedPostsData } from '../lib/posts';
 import { scrollToIdNoUrlChange } from '../lib/scrolling';
+
+const publication_data = [
+  {
+    title: "A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains",
+    issue: "SIAM Journal on Numerical Analysis Vol. 60, Iss. 5 (2022)",
+    date: "09/2022",
+    authors: [
+      {
+        name: "Benjamin Stamm",
+        link: "https://www.ians.uni-stuttgart.de/institute/team/Stamm/",
+        me: false
+      },
+      {
+        me: true
+      },
+    ],
+    abstract: "This paper provides a provably quasi-optimal preconditioning strategy of the linear Schrödinger eigenvalue problem with periodic potentials for a possibly nonuniform spatial expansion of the domain. The quasi-optimality is achieved by having the iterative eigenvalue algorithms converge in a constant number of iterations for different domain sizes. In the analysis, we derive an analytic factorization of the spectrum and asymptotically describe it using concepts from the homogenization theory. This decomposition allows us to express the eigenpair as an easy-to-calculate cell problem solution combined with an asymptotically vanishing remainder. We then prove that the easy-to-calculate limit eigenvalue can be used in a shift-and-invert preconditioning strategy to bound the number of eigensolver iterations uniformly. Several numerical examples illustrate the effectiveness of this quasi-optimal preconditioning strategy.",
+    images: [
+      {
+        src: "/p2022_1.jpg",
+        alt: "Factorization principle"
+      },
+      {
+        src: "/p2022_2.jpg",
+        alt: "Convergence of quasi-optimal shifting preconditioner"
+      },
+      {
+        src: "/p2022_3.jpg",
+        alt: "Simulation of union of disks domain and limit problem"
+      }
+    ],
+    keywords: [
+      "periodic Schrödinger equation",
+      "iterative eigenvalue solvers",
+      "preconditioner",
+      "asymptotic eigenvalue analysis",
+      "factorization principle",
+      "directional homogenization"
+    ],
+    doi: "10.1137/21M1456005",
+    arxiv: "2110.14982",
+    zenodo: "10.5281/zenodo.6576197"
+  },
+  {
+    title: "fenicsR13: A Tensorial Mixed Finite Element Solver for theLinear R13 Equations Using the FEniCS Computing Platform",
+    issue: "ACM Trans. Math. Softw. 47, 2, Article 17 (April 2021)",
+    date: "04/2021",
+    authors: [
+      {
+        me: true
+      },
+      {
+        name: "Manuel Torrilhon",
+        link: "https://www.acom.rwth-aachen.de/5people/torrilhon/start",
+        highlight: false
+      },
+    ],
+    abstract: "We present a mixed finite element solver for the linearized regularized 13-moment equations of non-equilibrium gas dynamics. The Python implementation builds upon the software tools provided by the FEniCS computing platform. We describe a new tensorial approach utilizing the extension capabilities of FEniCS’ Unified Form Language to define required differential operators for tensors above second degree. The presented solver serves as an example for implementing tensorial variational formulations in FEniCS, for which the documentation and literature seem to be very sparse. Using the software abstraction levels provided by the Unified Form Language allows an almost one-to-one correspondence between the underlying mathematics and the resulting source code. Test cases support the correctness of the proposed method using validation with exact solutions. To justify the usage of extended gas flow models, we discuss typical application cases involving rarefaction effects. We provide the documented and validated solver publicly.",
+    images: [
+      {
+        src: "/p2021_1.jpg",
+        alt: "Simulation of the Knudsen pump test case"
+      },
+      {
+        src: "/p2021_2.jpg",
+        alt: "Convergence study of the fenicsR13 solver"
+      },
+      {
+        src: "/p2021_3.jpg",
+        alt: "Simulation of the thermal edge flow test case"
+      }
+    ],
+    keywords: [
+      "tensorial mixed finite element method",
+      "R13 equations",
+      "FEniCS project",
+      "continuous interior penalty"
+    ],
+    doi: "10.1145/3442378",
+    arxiv: "2007.05944",
+    zenodo: "10.5281/zenodo.4172951"
+  },
+]
 
 const teaching_data = [
   {
@@ -225,7 +300,9 @@ export default function Home({ allPostsData }: any) {
                       <h1 id="home" className="my-2 mb-0 text-4xl mt-0 scroll-mt-28">
                         Lambert Theisen
                       </h1>
-                      <span className='text-gray-500 text-xl font-bold'> M.Sc.</span>
+                      <span className='text-gray-500 text-xl font-bold'>
+                        M.Sc.
+                      </span>
                       <div className='leading-5 mb-2'>
                         → Computational Engineer, PhD Student, Digital Creator.
                         <br></br>
@@ -236,7 +313,7 @@ export default function Home({ allPostsData }: any) {
                       <Image
                         className="flex-none rounded-full m-0"
                         src={logo_me}
-                        alt="Picture of the author"
+                        alt="A picture of Lambert Theisen"
                       />
                     </div>
                   </div>
@@ -251,7 +328,7 @@ export default function Home({ allPostsData }: any) {
                   <Image
                     className="flex-none rounded-full m-0"
                     src={logo_me}
-                    alt="Picture of the author"
+                    alt="A picture of Lambert Theisen"
                   />
                 </div>
               </div>
@@ -268,6 +345,7 @@ export default function Home({ allPostsData }: any) {
                   </span>
                 </Link>
               </div>
+
             </section>
 
             <aside>
@@ -306,233 +384,160 @@ export default function Home({ allPostsData }: any) {
 
             <section>
 
-              <article>
-                <h2 id="research" className="scroll-mt-20">
-                  <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
-                </h2>
-                <h3>Journal Publications</h3>
-                <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
-                  <span className='leading-5 mb-2'>
-                    <span className='font-bold text-lg leading-4'>
-                      A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains
-                    </span>
-                    <br />
-                    <i className="text-xs">
-                      SIAM Journal on Numerical Analysis Vol. 60, Iss. 5 (2022)
-                    </i>
-                  </span>
-                  <div className='m-0 flex flex-wrap gap-1 mb-1'>
-                    <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
-                      <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
-                      09/2022
-                    </span>
-                    <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
-                      Lambert Theisen
-                    </span>
-                    <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border-blue-500"><Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
-                      Benjamin Stamm
-                    </ Link></span>
-                  </div>
-                  <div>
-                    <p className='font-norma text-xs leading-4 text-justify my-2'>
-                      <span className='float-right  ml-1 mb-1 border'>
-                        <Image
-                          className="w-40 m-0"
-                          src={p2022_1}
-                          alt="Picture of the author"
-                          sizes="160px"
-                        />
-                        <Image
-                          className="w-40 m-0"
-                          src={p2022_2}
-                          alt="Picture of the author"
-                          sizes="160px"
-                        />
-                        <Image
-                          className="w-40 m-0"
-                          src={p2022_3}
-                          alt="Picture of the author"
-                          sizes="160px"
-                        />
-                      </span>
-                      This paper provides a provably quasi-optimal preconditioning strategy of the linear Schrödinger eigenvalue problem with periodic potentials for a possibly nonuniform spatial expansion of the domain. The quasi-optimality is achieved by having the iterative eigenvalue algorithms converge in a constant number of iterations for different domain sizes. In the analysis, we derive an analytic factorization of the spectrum and asymptotically describe it using concepts from the homogenization theory. This decomposition allows us to express the eigenpair as an easy-to-calculate cell problem solution combined with an asymptotically vanishing remainder. We then prove that the easy-to-calculate limit eigenvalue can be used in a shift-and-invert preconditioning strategy to bound the number of eigensolver iterations uniformly. Several numerical examples illustrate the effectiveness of this quasi-optimal preconditioning strategy.
-                    </p>
-                    <div>
-                    </div>
+              <h2 id="research" className="scroll-mt-20">
+                <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
+              </h2>
+              <h3>Journal Publications</h3>
 
-                    <div className='text-sm mb-2'>
-                      <span className='text-xs'>Keywords: </span>
-                      {
-                        [
-                          "periodic Schrödinger equation",
-                          "iterative eigenvalue solvers",
-                          "preconditioner",
-                          "asymptotic eigenvalue analysis",
-                          "factorization principle",
-                          "directional homogenization"
-                        ].map(
-                          (a, b) =>
-                            (<span className="bg-gray-50 text-gray-800 text-xs font-medium mr-1 py-0 rounded-sm" key={b}># {a}</span>)
-                        )
-                      }
-                    </div>
-                    <div className='flex flex-wrap gap-1 leading-none my-2'>
+              {
+                publication_data.map(
+                  ({ title, issue, date, authors, abstract, images, keywords, doi, arxiv, zenodo }, ind) =>
+                    <article key={ind}>
+                      <div className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
+                        <span className='leading-5 mb-2'>
+                          <span className='font-bold text-lg leading-4'>
+                            {title}
+                          </span>
+                          <br />
+                          <i className="text-xs">
+                            {issue}
+                          </i>
+                        </span>
+                        <div className='flex flex-wrap gap-1 leading-none my-1'>
+                          <Badge
+                            icon={<FontAwesomeIcon icon={faClock} />}
+                            right={date}
+                            lc="bg-slate-300"
+                            rc="bg-slate-200"
+                            textcolor="text-slate-800"
+                          />
+                          {
+                            authors.map(
+                              ({ name, link, me }, ind) =>
+                                me == true
+                                  ?
+                                  <Badge
+                                    key={ind}
+                                    icon={<FontAwesomeIcon icon={faUser} />}
+                                    right="Lambert Theisen"
+                                    lc="bg-cyan-300"
+                                    rc="bg-cyan-200"
+                                    textcolor="text-cyan-800"
+                                  />
+                                  :
+                                  <Badge
+                                    key={ind}
+                                    icon={<FontAwesomeIcon icon={faUser} />}
+                                    right={name}
+                                    link={link}
+                                    lc="bg-slate-300"
+                                    rc="bg-slate-200"
+                                    textcolor="text-slate-800"
+                                  />
+                            )
+                          }
+                        </div>
+                        <div>
+                          <p className='text-xs leading-4 text-justify my-2'>
+                            <span className='float-right ml-2 mb-1 border'>
+                              {
+                                images.map(
+                                  ({ src, alt }, ind) =>
+                                    <Image
+                                      key={ind}
+                                      className="w-40 m-0"
+                                      src={src}
+                                      width={1}
+                                      height={1}
+                                      alt={alt}
+                                      sizes="160px"
+                                    />
+                                )
+                              }
+                            </span>
+                            {abstract}
+                          </p>
+                          <div>
+                          </div>
 
-                      <Link href="https://doi.org/10.1137/21M1456005">
-                        <span className="border-gray-500 hover:border-black">
-                          <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>
-                            <span className="pr-1"><i className="ai ai-doi"></i></span>
-                            DOI
-                          </span>
-                          <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1137/21M1456005</span>
-                        </span>
-                      </Link>
-                      <Link className="m-0" href="https://arxiv.org/abs/2110.14982">
-                        <span className="border-gray-500 hover:border-black">
-                          <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-red-300 text-red-800 font-bold '>
-                            <span className="pr-1"><i className="ai ai-arxiv"></i></span>
-                            arXiv
-                          </span>
-                          <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-red-200 text-red-800 font-mono decoration-red-700'>2110.14982</span>
-                        </span>
-                      </Link>
-                      <Link href="https://doi.org/10.5281/zenodo.6576197">
-                        <span className="border-gray-500 hover:border-black">
-                          <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
-                            <span className="pr-1"><i className="ai ai-zenodo"></i></span>
-                            Code
-                          </span>
-                          <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>10.5281/zenodo.6576197</span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article>
-                <div className="border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
-                  <span className='leading-5 mb-2'>
-                    <span className='font-bold text-lg leading-4'>
-                      fenicsR13: A Tensorial Mixed Finite Element Solver for theLinear R13 Equations Using the FEniCS Computing Platform
-                    </span>
-                    <br />
-                    <i className="text-xs">
-                      ACM Trans. Math. Softw. 47, 2, Article 17 (April 2021)
-                    </i>
-                  </span>
-                  <div className='m-0 flex flex-wrap gap-1 mb-1'>
-                    <span className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
-                      <svg aria-hidden="true" className="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
-                      04/2021
-                    </span>
-                    <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded border-red-500">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
-                      Lambert Theisen
-                    </span>
-                    <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border-blue-500"><Link href="https://www.acom.rwth-aachen.de/5people/torrilhon/start">
-                      <span className="pr-1"><FontAwesomeIcon icon={faPerson} /></span>
-                      Manuel Torrilhon
-                    </ Link></span>
-                  </div>
-                  <div>
-                    <p className='font-norma text-xs leading-4 text-justify my-2'>
-                      <span className='float-right ml-1 mb-1 border'>
-                        <Image
-                          className="w-40 m-0"
-                          src={p2021_1}
-                          alt="Picture of the author"
-                          sizes="160px"
-                        />
-                        <Image
-                          className="w-40 m-0"
-                          src={p2021_2}
-                          alt="Picture of the author"
-                          sizes="160px"
-                        />
-                        <Image
-                          className="w-40 m-0"
-                          src={p2021_3}
-                          alt="Picture of the author"
-                          sizes="160px"
-                        />
-                      </span>
-                      We present a mixed finite element solver for the linearized regularized 13-moment equations of non-equilibrium gas dynamics. The Python implementation builds upon the software tools provided by the FEniCS computing platform. We describe a new tensorial approach utilizing the extension capabilities of FEniCS’ Unified Form Language to define required differential operators for tensors above second degree. The presented solver serves as an example for implementing tensorial variational formulations in FEniCS, for which the documentation and literature seem to be very sparse. Using the software abstraction levels provided by the Unified Form Language allows an almost one-to-one correspondence between the underlying mathematics and the resulting source code. Test cases support the correctness of the proposed method using validation with exact solutions. To justify the usage of extended gas flow models, we discuss typical application cases involving rarefaction effects. We provide the documented and validated solver publicly.
-                    </p>
-                    <div>
-                    </div>
+                          <div className='text-sm mb-2 leading-3'>
+                            <span className='text-xs'>Keywords: </span>
+                            {
+                              <span className="text-gray-800 text-xs font-medium">
+                                {keywords.join(", ")}
+                              </span>
+                            }
+                          </div>
 
-                    <div className='text-sm mb-2'>
-                      <span className='text-xs'>Keywords: </span>
-                      {
-                        [
-                          "tensorial mixed finite element method",
-                          "R13 equations",
-                          "FEniCS project",
-                          "continuous interior penalty"
-                        ].map(
-                          (a, b) =>
-                            (<span className="bg-gray-50 text-gray-800 text-xs font-medium mr-1 py-0 rounded-sm" key={b}># {a}</span>)
-                        )
-                      }
-                    </div>
+                          <div className="grid grid-cols-7">
+                            <div className="col-span-6 flex flex-wrap gap-1 leading-none my-1">
+                              <Badge
+                                link={"https://doi.org/" + doi}
+                                icon={<span><i className="ai ai-doi"></i></span>}
+                                left="DOI"
+                                right={doi}
+                                lc="bg-orange-300"
+                                rc="bg-orange-200"
+                                textcolor="text-orange-800"
+                              />
+                              <Badge
+                                link={"https://arxiv.org/abs/" + arxiv}
+                                icon={<span><i className="ai ai-arxiv"></i></span>}
+                                left="arXiv"
+                                right={arxiv}
+                                lc="bg-lime-300"
+                                rc="bg-lime-200"
+                                textcolor="text-lime-800"
+                              />
+                              <Badge
+                                link={"https://arxiv.org/abs/" + zenodo}
+                                icon={<FontAwesomeIcon icon={faDesktop} />}
+                                left="Code"
+                                right={zenodo}
+                                lc="bg-violet-300"
+                                rc="bg-violet-200"
+                                textcolor="text-violet-800"
+                              />
+                            </div>
+                            <span className="col-span-1 opacity-10 text-black italic justify-self-end self-end p-0 absolute bottom-2 right-3">
+                              <span className='text-xl mr-1'>#</span><span className="text-5xl font-black">{publication_data.length - ind}</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                )
+              }
+            </section>
 
-                    <div className='flex flex-wrap gap-1 leading-none my-2'>
-
-                      <Link href="https://doi.org/10.1145/3442378">
-                        <span className="border-gray-500 hover:border-black">
-                          <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-gray-300 text-gray-800 font-bold'>
-                            <span className="pr-1"><i className="ai ai-doi"></i></span>
-                            DOI
-                          </span>
-                          <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-gray-200 text-gray-800 font-mono'>10.1145/3442378</span>
-                        </span>
-                      </Link>
-                      <Link className="m-0" href="https://arxiv.org/abs/2007.05944">
-                        <span className="border-gray-500 hover:border-black">
-                          <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-red-300 text-red-800 font-bold '>
-                            <span className="pr-1"><i className="ai ai-arxiv"></i></span>
-                            arXiv
-                          </span>
-                          <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-red-200 text-red-800 font-mono decoration-red-700'>2007.05944</span>
-                        </span>
-                      </Link>
-                      <Link href="https://doi.org/10.5281/zenodo.4172951">
-                        <span className="border-gray-500 hover:border-black">
-                          <span className='border-inherit border-t border-l border-b text-xs font-mono inline-flex items-center rounded-tl rounded-bl px-2 py-0.5 bg-blue-300 text-blue-800 font-bold'>
-                            <span className="pr-1"><i className="ai ai-zenodo"></i></span>
-                            Code
-                          </span>
-                          <span className='border-inherit border-t border-r border-b text-xs inline-flex items-center rounded-tr rounded-br px-2 py-0.5 bg-blue-200 text-blue-800 font-mono'>10.5281/zenodo.4172951</span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
+            <section>
               <article>
                 <h3>Talks</h3>
                 <p>
                   <span className='text-xs text-gray-400'>[TODO Add all talks from ACOM website.]</span>
                 </p>
               </article>
+            </section>
 
+            <section>
               <article>
                 <h3>Software</h3>
                 <p>
                   <span className='text-xs text-gray-400'>[TODO Add fenicsR13, ddEigenlab, ....]</span>
                 </p>
               </article>
+            </section>
 
+            <section>
               <article>
                 <h3>Miscellaneous</h3>
                 <p>
                   <span className='text-xs text-gray-400'>[TODO Add P3 FEM script, ...]</span>
                 </p>
               </article>
+            </section>
 
+            <section>
               <article>
                 <h3>Theses</h3>
                 <p>
@@ -567,7 +572,6 @@ export default function Home({ allPostsData }: any) {
                         <div className='flex flex-wrap gap-1 leading-none my-1'>
                           <Badge
                             icon={<FontAwesomeIcon icon={faClock} />}
-                            // left=""
                             right={semester}
                             lc="bg-slate-300"
                             rc="bg-slate-200"
@@ -575,7 +579,6 @@ export default function Home({ allPostsData }: any) {
                           />
                           <Badge
                             icon={<FontAwesomeIcon icon={faUsers} />}
-                            left=""
                             right={students}
                             lc="bg-slate-300"
                             rc="bg-slate-200"
@@ -583,7 +586,6 @@ export default function Home({ allPostsData }: any) {
                           />
                           <Badge
                             icon={<FontAwesomeIcon icon={faBuildingColumns} />}
-                            left=""
                             right={location}
                             lc="bg-slate-300"
                             rc="bg-slate-200"
@@ -640,7 +642,7 @@ export default function Home({ allPostsData }: any) {
                           </div>
                         </div>
                         <div className="absolute right-3 bottom-2 text-5xl font-black text-black italic opacity-10">
-                        <span className='text-xl mr-1'>#</span>{teaching_data.length - ind}
+                          <span className='text-xl mr-1'>#</span>{teaching_data.length - ind}
                         </div>
                       </div>
                     </article>
@@ -672,21 +674,18 @@ export default function Home({ allPostsData }: any) {
                   icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
                   left="Mail"
                   right="lmbrt∂thsn.dev"
-                  lc="bg-gray-900"
-                  rc="bg-gray-700"
-                  textcolor="text-white"
+                  lc="bg-gray-200"
+                  rc="bg-gray-50"
+                  textcolor="text-black"
                 /></span> or <span className='whitespace-pre'><Badge
                   link="mailto:lambert.theisen∂rwth-aachen.de?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)"
                   icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
                   left="Mail"
                   right="lambert.theisen∂rwth-aachen.de"
-                  lc="bg-gray-900"
-                  rc="bg-gray-700"
-                  textcolor="text-white"
-                /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding sigature reads <span className='bg-gray-700 text-white font-mono p-px'>
-                  9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87
-                </span>
-                .
+                  lc="bg-gray-200"
+                  rc="bg-gray-50"
+                  textcolor="text-black"
+                /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding signature reads 9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87.
               </p>
               <h3>
                 Profiles
@@ -876,13 +875,13 @@ export default function Home({ allPostsData }: any) {
                 <br />
                 Schinkelstr. 2, Room 229 (Rogowski Building, 2nd floor)
                 <br />
-                D-52062 Aachen
+                52062 Aachen
                 <br />
                 Germany
                 <br />
-                Office Phone: +49 241 80-98671
+                Office Phone: 0049 241 80-98671
                 <br />
-                Mobile Phone: +49 241 80-98686
+                Mobile Phone: 0049 241 80-98686
               </p>
               <p className='font-mono text-xs'>
                 Institut für Angewandte Analysis und Numerische Simulation (IANS)
@@ -897,7 +896,7 @@ export default function Home({ allPostsData }: any) {
                 <br />
                 Germany
                 <br />
-                Phone: 0049 711 685 65522
+                Office Phone: 0049 711 685 65522
                 <br />
               </p>
 
