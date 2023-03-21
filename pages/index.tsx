@@ -341,9 +341,9 @@ export default function Home({ allPostsData }: any) {
                   <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
                 </button>
                 <Link className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline" href="#">
-                  <span className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
-                    <FontAwesomeIcon icon={faFile} /> CV <span className='sm:inline hidden'>(soon)</span>
-                  </span>
+                  <button className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0" onClick={() => print()}>
+                    <FontAwesomeIcon icon={faFile} /> CV
+                  </button>
                 </Link>
               </div>
 
@@ -593,7 +593,7 @@ export default function Home({ allPostsData }: any) {
                     /> <Link href="https://git.rwth-aachen.de/lamBOO/fenicsR13">fenicsR13</Link>: A Tensorial Mixed Finite Element Solver for the Linear R13 Equations Using the FEniCS Computing Platform.
                   </li>
                   <li>
-                    <Link href="https://github.com/lamBOOO/latextools">latextools</Link>: Some scripts to process LaTeX documents. Contains a conversion script for LaTeX files into plaintext while keeping the mathematical sentence structure intact. For example, the input <code>Let $\begin&#123;euqation&#125; h = \tfrac&#123;1&#125;&#123;N&#125; \end&#123;euqation&#125;$ where $N$ denotes the number of intervals.</code> will be converted to <code>Let noun verbs noun where noun denotes the number of intervals.</code> (valid sentence).
+                    <Link href="https://github.com/lamBOOO/latextools">latextools</Link>: Some scripts to process LaTeX documents. Contains a conversion script for LaTeX files into plaintext while keeping the mathematical sentence structure intact. For example, the input <code>Let $\begin&#123;equation&#125; h = \tfrac&#123;1&#125;&#123;N&#125; \end&#123;equation&#125;$ where $N$ denotes the number of intervals.</code> will be converted to <code>Let noun verbs noun where noun denotes the number of intervals.</code> (valid sentence).
                   </li>
                 </ul>
               </article>
