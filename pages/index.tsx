@@ -835,7 +835,7 @@ export default function Home({ allPostsData }: any) {
             /> Protocol
           </h3>
           <p className='leading-6'>
-            You can also contact me via the Matrix protocol, which is an open-source, end-to-end and decentralised messaging service. Simply press
+            You can also contact me via the Matrix protocol, which is an open-source, end-to-end encrypted and decentralised messaging service. Simply press
             {' '}
             <Badge
               link="https://matrix.to/#/@lamboo:matrix.org"
