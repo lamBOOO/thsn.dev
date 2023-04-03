@@ -293,14 +293,14 @@ export default function Home({ allPostsData }: any) {
                   <h1 id="home" className="my-2 mb-0 text-4xl mt-0 scroll-mt-28">
                     Lambert Theisen
                   </h1>
-                  <span className='text-gray-500 text-xl font-bold'>
+                  <p className='text-gray-500 text-xl font-bold m-0'>
                     M.Sc.
-                  </span>
-                  <div className='leading-5 mb-2'>
+                  </p>
+                  <p className='leading-5 my-2'>
                     → Computational Engineer, PhD Student, Digital Creator.
                     <br></br>
                     @ <Link href="https://www.rwth-aachen.de/">RWTH Aachen University</ Link> / <Link href="https://www.uni-stuttgart.de/">University of Stuttgart</Link>
-                  </div>
+                  </p>
                 </div>
                 <div className="sm:hidden flex-none w-20 h-20 block ml-1">
                   <Image
