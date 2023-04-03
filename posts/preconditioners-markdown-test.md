@@ -1,5 +1,5 @@
 ---
-title: "Preconditioner for linear solvers (markdown test)"
+title: "Preconditioner for linear solvers (Markdown test)"
 date: '23/01/06'
 ---
 

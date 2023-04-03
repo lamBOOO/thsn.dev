@@ -314,17 +314,15 @@ export default function Home({ allPostsData }: any) {
 
               <div className='leading-6'>
                 <i><small>
-                  # Researching <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative"><b>PDE eigenvalue problems</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-red-100 relative inline-block"><span className="relative"><b>asymptotic analysis</b></span></span> of expanding domains, directional <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative"><b>homogenization</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><span className="relative"><b>preconditioners</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><span className="relative"><b>eigenvalue algorithms</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative"><b>preconditioners</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative"><b>linear solvers</b></span></span>, <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><span className="relative"><b>spectral coarse spaces</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><span className="relative"><b>domain decomposition</b></span></span>, and <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><span className="relative"><b>Galerkin methods</b></span></span> for <span className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><span className="relative"><b>moment models</b></span></span> in rarefied gas modelling.
+                  # Researching <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-amber-100 relative inline-block"><b className="relative">PDE eigenvalue problems</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-red-100 relative inline-block"><b className="relative">asymptotic analysis</b></em> of expanding domains, directional <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-teal-100 relative inline-block"><b className="relative">homogenization</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><b className="relative">eigenvalue algorithms</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><b className="relative">linear solvers</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><b className="relative">spectral coarse spaces</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><b className="relative">domain decomposition</b></em>, and <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><b className="relative">Galerkin methods</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><b className="relative">moment models</b></em> in rarefied gas modelling.
                 </small></i>
               </div>
             </div>
-            <div className="flex-none sm:w-1/5 sm:h-1/5 w-14 h-14 hidden sm:block ml-1">
               <Image
-                className="flex-none rounded-full m-0"
+                className="flex-none rounded-full m-0 sm:w-1/5 sm:h-1/5 w-14 h-14 hidden sm:block ml-1"
                 src={logo_me}
                 alt="A picture of Lambert Theisen"
               />
-            </div>
           </div>
           <div className='flex flex-wrap items-center gap-3 border-b border-gray-100 pb-5'>
             <span className="text-3xl align-middle animate-waving-hand">👋</span>
@@ -344,28 +342,34 @@ export default function Home({ allPostsData }: any) {
             <h2 id="news" className="scroll-mt-20">
               <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative">News</span></span>
             </h2>
-            <div className='grid columns-1 gap-2'>
-              <span className='leading-6'>
-                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>23/01/03</span>
+            <span className='grid columns-1 gap-2 pl-0 leading-6'>
+              <span className="pl-0">
+                <b className='font-mono font-bold bg-gray-800 text-white p-0.5'>23/01/03</b>
+                {" "}
                 I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
               </span>
-              <span>
-                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>22/10/01</span>From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
+              {" "}
+              <span className="pl-0">
+                <b className='font-mono font-bold bg-gray-800 text-white p-0.5'>22/10/01</b>
+                {" "}
+                From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
               </span>
-            </div>
+            </span>
           </aside>
 
           <h2 id="blog" className="scroll-mt-20">
             <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-red-100 relative inline-block"><span className="relative">Blog</span></span>
           </h2>
-          <div className='grid columns-1 gap-2'>
+          <span className='grid columns-1 gap-2 pl-0 leading-6'>
             {allPostsData.map(({ id, date, title, longtitle }: any) => (
               <span className='' key={id}>
-                <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>{date}</span>
+                <b className='font-mono font-bold bg-gray-800 text-white p-0.5'>{date}</b>
+                {" "}
                 <Link className="" prefetch={false} href={"/blog/" + id}>{title}</Link>
+                {" "}
               </span>
             ))}
-          </div>
+          </span>
           <div className='my-3'>
             <Link href="/blog" className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
               See all →
@@ -425,8 +429,7 @@ export default function Home({ allPostsData }: any) {
                     }
                   </div>
                   <div>
-                    <p className='text-xs leading-4 text-justify my-2'>
-                      <span className='float-right ml-2 mb-1 border'>
+                      <figure className='float-right ml-2 my-2 border'>
                         {
                           images.map(
                             ({ src, alt }, ind) =>
@@ -440,20 +443,15 @@ export default function Home({ allPostsData }: any) {
                               />
                           )
                         }
-                      </span>
+                      </figure>
+                    <p className='text-xs leading-4 text-justify my-2'>
                       {abstract}
                     </p>
-                    <div>
-                    </div>
 
-                    <div className='text-sm mb-2 leading-3'>
-                      <span className='text-xs'>Keywords: </span>
-                      {
-                        <span className="text-gray-800 text-xs font-medium">
-                          {keywords.join(", ")}
-                        </span>
-                      }
-                    </div>
+                    <p className='text-xs text-gray-800 my-2'>Keywords:
+                      {" "}
+                      {keywords.join(", ")}
+                    </p>
 
                     <div className="grid grid-cols-7">
                       <div className="col-span-6 flex flex-wrap gap-2 leading-none my-1">
@@ -700,7 +698,7 @@ export default function Home({ allPostsData }: any) {
                       {title_de}
                     </i>
                   </span>
-                  <div className='flex flex-wrap gap-2 leading-none my-1'>
+                  <div className='flex flex-wrap gap-2 leading-none my-2'>
                     <Badge
                       icon={<FontAwesomeIcon icon={faClock} />}
                       right={semester}
@@ -839,7 +837,7 @@ export default function Home({ allPostsData }: any) {
           <p className='leading-6'>
             You can also contact me via the Matrix protocol, which is an open-source, end-to-end and decentralised messaging service. Simply press
             {' '}
-            <span className=''><Badge
+            <Badge
               link="https://matrix.to/#/@lamboo:matrix.org"
               icon={<Image
                 className="h-3 m-0 w-auto inline-block pr-1"
@@ -853,7 +851,7 @@ export default function Home({ allPostsData }: any) {
               lc="bg-gray-200"
               rc="bg-gray-50"
               textcolor="text-black"
-            /></span>
+            />
             {' '}
             and start texting me.
           </p>
