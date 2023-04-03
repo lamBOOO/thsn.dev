@@ -6,7 +6,6 @@ import Stickynavbar from '../components/Stickynavbar'
 import Metadata from '../components/Metadata'
 import Footer from '../components/Footer'
 import Badge from '../components/Badge'
-
 import 'academicons'
 import 'fork-awesome/css/fork-awesome.min.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -884,7 +883,9 @@ export default function Home({ allPostsData }: any) {
                 Matrix Protocol <i className="fa fa-matrix-org fa-xl" aria-hidden="true"></i>
               </h3>
               <p className='leading-6'>
-                You can also contact me via the Matrix protocol, which is an open-source, end-to-end and decentralised messaging service. Simply press <span className='whitespace-pre'><Badge
+                You can also contact me via the Matrix protocol, which is an open-source, end-to-end and decentralised messaging service. Simply press
+                {' '}
+                <span className=''><Badge
                   link="https://matrix.to/#/@lamboo:matrix.org"
                   icon={<i className="fa fa-matrix-org pr-1" aria-hidden="true"></i>}
                   left="Matrix"
@@ -892,7 +893,9 @@ export default function Home({ allPostsData }: any) {
                   lc="bg-gray-200"
                   rc="bg-gray-50"
                   textcolor="text-black"
-                /></span> and start texting me.
+                /></span>
+                {' '}
+                and start texting me.
               </p>
               <h3>
                 Profiles
