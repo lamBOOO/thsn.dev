@@ -362,7 +362,7 @@ export default function Home({ allPostsData }: any) {
             {allPostsData.map(({ id, date, title, longtitle }: any) => (
               <span className='' key={id}>
                 <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-3'>{date}</span>
-                <Link className="" href={"/blog/" + id}>{title}</Link>
+                <Link className="" prefetch={false} href={"/blog/" + id}>{title}</Link>
               </span>
             ))}
           </div>
