@@ -1,26 +1,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
 
 import Stickynavbar from '../components/Stickynavbar'
 import Metadata from '../components/Metadata'
 import Footer from '../components/Footer'
 import Badge from '../components/Badge'
 import 'academicons'
-import 'fork-awesome/css/fork-awesome.min.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faGitlab } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faGitlab, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faFile } from '@fortawesome/free-regular-svg-icons'
-import { faBook, faBuilding, faBuildingColumns, faCode, faPerson, faUser, faDesktop, faUsers, faClock } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faBuildingColumns, faCode, faUser, faUsers, faClock } from '@fortawesome/free-solid-svg-icons'
 
 import logo_me from '../public/me.jpg'
-import logo_me_large from '../public/me_large.jpg'
 
 import { getSortedPostsData } from '../lib/posts';
 import { scrollToIdNoUrlChange } from '../lib/scrolling';
@@ -524,40 +518,40 @@ export default function Home({ allPostsData }: any) {
                 <h3>Talks</h3>
                 <ul>
                   <li>
-                  <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://erc-emc2.eu/emc2-seminars/">EMC2 Seminar (ERC Synergy project - Extreme-scale Mathematically-based Computational Chemistry)</Link>, Paris (France), 10 March, 2023.
+                    <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://erc-emc2.eu/emc2-seminars/">EMC2 Seminar (ERC Synergy project - Extreme-scale Mathematically-based Computational Chemistry)</Link>, Paris (France), 10 March, 2023.
                   </li>
                   <li>
-                  <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.siam.org/conferences/cm/program/cse23">SIAM Conference on Computational Science and Engineering (CSE23)</Link>, Amsterdam (Netherlands), 28 February, 2023.
+                    <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.siam.org/conferences/cm/program/cse23">SIAM Conference on Computational Science and Engineering (CSE23)</Link>, Amsterdam (Netherlands), 28 February, 2023.
                   </li>
                   <li>
-                  <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.ians.uni-stuttgart.de/nmh/events/">IANS Oberseminar @ University of Stuttgart</Link>, Stuttgart (Germany), 24 November, 2022.
+                    <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.ians.uni-stuttgart.de/nmh/events/">IANS Oberseminar @ University of Stuttgart</Link>, Stuttgart (Germany), 24 November, 2022.
                   </li>
                   <li>
-                  <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.dd27.cz/">DD27: 7th International Domain Decomposition Conference – MS4: SCSs in DDMs and Multiscale Discretizations</Link>, Prague (Czech Republic), 27 July, 2022.
+                    <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.dd27.cz/">DD27: 7th International Domain Decomposition Conference – MS4: SCSs in DDMs and Multiscale Discretizations</Link>, Prague (Czech Republic), 27 July, 2022.
                   </li>
                   <li>
-                  <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.esco2022.femhub.com/">ESCO 2022: 8th European Seminar on Computing</Link>, Pilsen (Czech Republic), 14 June, 2022.
+                    <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.esco2022.femhub.com/">ESCO 2022: 8th European Seminar on Computing</Link>, Pilsen (Czech Republic), 14 June, 2022.
                   </li>
                   <li>
-                  <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 7 June, 2022.
+                    <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 7 June, 2022.
                   </li>
                   <li>
-                  <b>An Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 15 June, 2021.
+                    <b>An Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 15 June, 2021.
                   </li>
                   <li>
-                  <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://moansi.wixsite.com/gamm/2020">GAMM Activity Group: Modelling, Analysis and Simulation of Molecular Systems (MOANSI) Annual Meeting 2020</Link>, 24-25 September, 2020.
+                    <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://moansi.wixsite.com/gamm/2020">GAMM Activity Group: Modelling, Analysis and Simulation of Molecular Systems (MOANSI) Annual Meeting 2020</Link>, 24-25 September, 2020.
                   </li>
                   <li>
-                  <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 30 June, 2020.
+                    <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 30 June, 2020.
                   </li>
                   <li>
-                  <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 15 October, 2019.
+                    <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 15 October, 2019.
                   </li>
                   <li>
-                  <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, <Link href="https://www.acom.rwth-aachen.de/3teaching/0classes/ceswseminar/start">CES Seminar Presentation</Link>, RWTH Aachen, 10 April, 2019.
+                    <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, <Link href="https://www.acom.rwth-aachen.de/3teaching/0classes/ceswseminar/start">CES Seminar Presentation</Link>, RWTH Aachen, 10 April, 2019.
                   </li>
                   <li>
-                  <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 10 April, 2018.
+                    <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 10 April, 2018.
                   </li>
                 </ul>
                 <p>
@@ -836,14 +830,14 @@ export default function Home({ allPostsData }: any) {
               </h2>
               <ul>
                 <li>
-                <Image
-                      className="h-8 m-0 w-auto inline-block"
-                      src="/gradescaler_logo.png"
-                      width={1}
-                      height={1}
-                      alt="3rd-order Lagrangian basis function on simplex #8"
-                      sizes="160px"
-                    /> The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overview of exam grading schemes.
+                  <Image
+                    className="h-8 m-0 w-auto inline-block"
+                    src="/gradescaler_logo.png"
+                    width={1}
+                    height={1}
+                    alt="3rd-order Lagrangian basis function on simplex #8"
+                    sizes="160px"
+                  /> The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overview of exam grading schemes.
                 </li>
                 <li>
                   Use the <Link href="https://gitlab.com/lamBOO/shopping-list">shopping-list</Link> LaTeX template to create your 4x4 double-sided reusable shopping list for easy ticking of required products based on the supermarket location to optimize shopping. Here's an <Link href="https://gitlab.com/lamBOO/shopping-list/-/raw/master/shopping-list.pdf?inline=true">example</Link>.
@@ -881,14 +875,26 @@ export default function Home({ allPostsData }: any) {
                 /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding signature reads 9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87.
               </p>
               <h3>
-                Matrix Protocol <i className="fa fa-matrix-org fa-xl" aria-hidden="true"></i>
+                <Image
+                  className="h-6 m-0 w-auto inline-block"
+                  src="/matrix.svg"
+                  width={1}
+                  height={1}
+                  alt="3rd-order Lagrangian basis function on simplex #8"
+                /> Protocol
               </h3>
               <p className='leading-6'>
                 You can also contact me via the Matrix protocol, which is an open-source, end-to-end and decentralised messaging service. Simply press
                 {' '}
                 <span className=''><Badge
                   link="https://matrix.to/#/@lamboo:matrix.org"
-                  icon={<i className="fa fa-matrix-org pr-1" aria-hidden="true"></i>}
+                  icon={<Image
+                    className="h-3 m-0 w-auto inline-block pr-1"
+                    src="/matrix.svg"
+                    width={1}
+                    height={1}
+                    alt="Matrix messenger logo"
+                  />}
                   left="Matrix"
                   right="@lamboo:matrix.org"
                   lc="bg-gray-200"
