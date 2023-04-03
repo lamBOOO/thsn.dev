@@ -396,7 +396,7 @@ export default function Home({ allPostsData }: any) {
                       right={date}
                       lc="bg-slate-300"
                       rc="bg-slate-200"
-                      textcolor="text-slate-800"
+                      textcolor="text-slate-900"
                     />
                     {
                       authors.map(
@@ -409,7 +409,7 @@ export default function Home({ allPostsData }: any) {
                               right="Lambert Theisen"
                               lc="bg-cyan-300"
                               rc="bg-cyan-200"
-                              textcolor="text-cyan-800"
+                              textcolor="text-cyan-900"
                             />
                             :
                             <Badge
@@ -419,7 +419,7 @@ export default function Home({ allPostsData }: any) {
                               link={link}
                               lc="bg-slate-300"
                               rc="bg-slate-200"
-                              textcolor="text-slate-800"
+                              textcolor="text-slate-900"
                             />
                       )
                     }
@@ -464,7 +464,7 @@ export default function Home({ allPostsData }: any) {
                           right={doi}
                           lc="bg-orange-300"
                           rc="bg-orange-200"
-                          textcolor="text-orange-800"
+                          textcolor="text-orange-900"
                         />
                         <Badge
                           link={"https://arxiv.org/abs/" + arxiv}
@@ -473,7 +473,7 @@ export default function Home({ allPostsData }: any) {
                           right={arxiv}
                           lc="bg-lime-300"
                           rc="bg-lime-200"
-                          textcolor="text-lime-800"
+                          textcolor="text-lime-900"
                         />
                         <Badge
                           link={"https://doi.org/" + zenodo}
@@ -482,7 +482,7 @@ export default function Home({ allPostsData }: any) {
                           right={zenodo}
                           lc="bg-violet-300"
                           rc="bg-violet-200"
-                          textcolor="text-violet-800"
+                          textcolor="text-violet-900"
                         />
                       </div>
                       <span className="col-span-1 opacity-10 text-black italic justify-self-end self-end p-0 absolute bottom-2 right-3">
@@ -710,21 +710,21 @@ export default function Home({ allPostsData }: any) {
                       right={semester}
                       lc="bg-slate-300"
                       rc="bg-slate-200"
-                      textcolor="text-slate-800"
+                      textcolor="text-slate-900"
                     />
                     <Badge
                       icon={<FontAwesomeIcon icon={faUsers} />}
                       right={students}
                       lc="bg-slate-300"
                       rc="bg-slate-200"
-                      textcolor="text-slate-800"
+                      textcolor="text-slate-900"
                     />
                     <Badge
                       icon={<FontAwesomeIcon icon={faBuildingColumns} />}
                       right={location}
                       lc="bg-slate-300"
                       rc="bg-slate-200"
-                      textcolor="text-slate-800"
+                      textcolor="text-slate-900"
                     />
                   </div>
                   <div className="flex flex-wrap gap-2 leading-none">
@@ -738,7 +738,7 @@ export default function Home({ allPostsData }: any) {
                               right={name}
                               lc="bg-sky-300"
                               rc="bg-sky-200"
-                              textcolor="text-sky-800"
+                              textcolor="text-sky-900"
                               key={ind}
                             />
                         )
@@ -758,7 +758,7 @@ export default function Home({ allPostsData }: any) {
                         right="Link"
                         lc="bg-orange-300"
                         rc="bg-orange-200"
-                        textcolor="text-orange-800"
+                        textcolor="text-orange-900"
                       />
                       {
                         labcodes != "" ?
@@ -769,7 +769,7 @@ export default function Home({ allPostsData }: any) {
                             right="Link"
                             lc="bg-lime-300"
                             rc="bg-lime-200"
-                            textcolor="text-lime-800"
+                            textcolor="text-lime-900"
                           />
                           :
                           ""
@@ -875,7 +875,7 @@ export default function Home({ allPostsData }: any) {
               right="@lamBOO"
               lc="bg-orange-300"
               rc="bg-orange-200"
-              textcolor="text-orange-800"
+              textcolor="text-orange-900"
             />
             <Badge
               link="https://scholar.google.com/citations?user=ZD8cDyEAAAAJ"
@@ -884,7 +884,7 @@ export default function Home({ allPostsData }: any) {
               right="LINK"
               lc="bg-blue-300"
               rc="bg-blue-200"
-              textcolor="text-blue-800"
+              textcolor="text-blue-900"
             />
             <Badge
               link="https://github.com/lamBOOO"
@@ -893,7 +893,7 @@ export default function Home({ allPostsData }: any) {
               right="@lamBOOO"
               lc="bg-gray-300"
               rc="bg-gray-200"
-              textcolor="text-gray-800"
+              textcolor="text-gray-900"
             />
             <Badge
               link="https://arxiv.org/a/theisen_l_1.html"
@@ -902,7 +902,7 @@ export default function Home({ allPostsData }: any) {
               right="theisen_l_1"
               lc="bg-red-300"
               rc="bg-red-200"
-              textcolor="text-red-800"
+              textcolor="text-red-900"
             />
             <Badge
               link="https://orcid.org/0000-0001-5460-5425"
@@ -911,7 +911,7 @@ export default function Home({ allPostsData }: any) {
               right="0000-0001-5460-5425"
               lc="bg-lime-300"
               rc="bg-lime-200"
-              textcolor="text-lime-800"
+              textcolor="text-lime-900"
             />
             <Badge
               link="https://www.researchgate.net/profile/Lambert-Theisen"
@@ -920,7 +920,7 @@ export default function Home({ allPostsData }: any) {
               right="Lambert-Theisen"
               lc="bg-teal-300"
               rc="bg-teal-200"
-              textcolor="text-teal-800"
+              textcolor="text-teal-900"
             />
             <Badge
               link="https://www.linkedin.com/in/lambert-theisen-4027b3184/"
@@ -929,7 +929,7 @@ export default function Home({ allPostsData }: any) {
               right="LINK"
               lc="bg-blue-300"
               rc="bg-blue-200"
-              textcolor="text-blue-800"
+              textcolor="text-blue-900"
             />
             <Badge
               link="https://twitter.com/LmbrtThsn"
@@ -938,7 +938,7 @@ export default function Home({ allPostsData }: any) {
               right="@LmbrtThsn"
               lc="bg-sky-300"
               rc="bg-sky-200"
-              textcolor="text-sky-800"
+              textcolor="text-sky-900"
             />
             <Badge
               link="https://www.semanticscholar.org/author/Lambert-Theisen/1811123350"
@@ -947,7 +947,7 @@ export default function Home({ allPostsData }: any) {
               right="LINK"
               lc="bg-slate-300"
               rc="bg-slate-200"
-              textcolor="text-slate-800"
+              textcolor="text-slate-900"
             />
             <Badge
               link="https://explore.openaire.eu/search/advanced/research-outcomes?f0=resultauthor&fv0=Lambert%2520Theisen&page=1&size=10&sortBy=&qf=false"
@@ -955,7 +955,7 @@ export default function Home({ allPostsData }: any) {
               right="LINK"
               lc="bg-indigo-300"
               rc="bg-indigo-200"
-              textcolor="text-indigo-800"
+              textcolor="text-indigo-900"
             />
             <Badge
               link="https://core.ac.uk/search?q=author:(Lambert%20AND%20Theisen)&allOfTheWords=&exactPhrase=&atLeastOneOfTheWords=&withoutTheWords=&advAuthor=Lambert%20Theisen&publisher=&advRepository=&yearFrom=&yearTo=&findThoseWords=anywhere&doi="
@@ -963,7 +963,7 @@ export default function Home({ allPostsData }: any) {
               right="LINK"
               lc="bg-gray-300"
               rc="bg-gray-200"
-              textcolor="text-gray-800"
+              textcolor="text-gray-900"
             />
             <Badge
               link="https://figshare.com/authors/Lambert_Theisen/7342844"
@@ -972,7 +972,7 @@ export default function Home({ allPostsData }: any) {
               right="LINK"
               lc="bg-slate-300"
               rc="bg-slate-200"
-              textcolor="text-slate-800"
+              textcolor="text-slate-900"
             />
             <Badge
               link="https://www.prophy.science/author/54631348/"
@@ -980,7 +980,7 @@ export default function Home({ allPostsData }: any) {
               right="54631348"
               lc="bg-orange-300"
               rc="bg-orange-200"
-              textcolor="text-orange-800"
+              textcolor="text-orange-900"
             />
             <Badge
               link="https://zbmath.org/authors/?q=ai%3Atheisen.lambert"
@@ -988,7 +988,7 @@ export default function Home({ allPostsData }: any) {
               right="theisen.lambert"
               lc="bg-pink-300"
               rc="bg-pink-200"
-              textcolor="text-pink-800"
+              textcolor="text-pink-900"
             />
             <Badge
               link="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1439845"
@@ -996,7 +996,7 @@ export default function Home({ allPostsData }: any) {
               right="1439845"
               lc="bg-orange-300"
               rc="bg-orange-200"
-              textcolor="text-orange-800"
+              textcolor="text-orange-900"
             />
             <Badge
               link="https://www.scopus.com/authid/detail.uri?authorId=57219764798"
@@ -1005,7 +1005,7 @@ export default function Home({ allPostsData }: any) {
               right="57219764798"
               lc="bg-orange-300"
               rc="bg-orange-200"
-              textcolor="text-orange-800"
+              textcolor="text-orange-900"
             />
             <Badge
               link="https://sciprofiles.com/profile/1727525"
@@ -1014,7 +1014,7 @@ export default function Home({ allPostsData }: any) {
               right="1727525"
               lc="bg-teal-300"
               rc="bg-teal-200"
-              textcolor="text-teal-800"
+              textcolor="text-teal-900"
             />
             <Badge
               link="https://scite.ai/users/lambert-theisen-jOAj"
@@ -1022,7 +1022,7 @@ export default function Home({ allPostsData }: any) {
               right="lambert-theisen-jOAj"
               lc="bg-gray-300"
               rc="bg-gray-200"
-              textcolor="text-gray-800"
+              textcolor="text-gray-900"
             />
           </div>
           <p className='mb-1'>
