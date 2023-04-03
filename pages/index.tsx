@@ -533,9 +533,7 @@ export default function Home({ allPostsData }: any) {
               <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 10 April, 2018.
             </li>
           </ul>
-          <p>
-            <span className='text-xs text-gray-400'>[TODO Upload PDFs at uniform location, indicate invited and contributed talks, make first page as preview clickable.]</span>
-          </p>
+          <p className='text-xs text-gray-500 leading-3'>[TODO Upload PDFs at uniform location, indicate invited and contributed talks, make first page as preview clickable.]</p>
 
           <h3>Software</h3>
           <ul>
@@ -680,9 +678,7 @@ export default function Home({ allPostsData }: any) {
               <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis of Lambert Theisen, RWTH Aachen / ABB Switzerland, 2018.
             </li>
           </ul>
-          <p>
-            <span className='text-xs text-gray-400'>[TODO Link PDFs, think about where to host, checkout people and link them, upload own theses to RWTHPublications.]</span>
-          </p>
+          <p className='text-xs text-gray-500 leading-3'>[TODO Link PDFs, think about where to host, checkout people and link them, upload own theses to RWTHPublications.]</p>
 
           <h2 id="teaching" className='scroll-mt-20'>
             <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-orange-100 relative inline-block"><span className="relative">Teaching</span></span>
@@ -782,7 +778,7 @@ export default function Home({ allPostsData }: any) {
                 </div>
             )
           }
-          <span className='text-xs text-gray-400'>[TODO: Add PDFs previews of notes]</span>
+          <p className='text-xs text-gray-500 leading-3'>[TODO: Add PDFs previews of notes]</p>
 
           <h2 id="projects" className="scroll-mt-20">
             <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative">Selected Projects</span></span>
@@ -1035,7 +1031,7 @@ export default function Home({ allPostsData }: any) {
               left="ACoM @ RWTH Aachen"
               right="LINK"
               lc="bg-[#00549f]"
-              rc="bg-[#407fb7]"
+              rc="bg-[#356997]"
               textcolor="text-white"
             />
             <Badge
@@ -1043,8 +1039,8 @@ export default function Home({ allPostsData }: any) {
               icon={<FontAwesomeIcon icon={faBuildingColumns} />}
               left="NMH/IANS @ University of Stuttgart"
               right="LINK"
-              lc="bg-gray-50"
-              rc="bg-white"
+              lc="bg-gray-100"
+              rc="bg-gray-50"
               textcolor="text-[#323232]"
             />
           </div>
@@ -1083,8 +1079,7 @@ export default function Home({ allPostsData }: any) {
             <br />
           </p>
 
-          <span className='text-xs text-gray-400'>[TODO Add small CV section with logos and timeline.]</span>
-          <span className='text-xs text-gray-400'>[TODO Add better email obfuscate strategy.]</span>
+          <p className='text-xs text-gray-500 leading-3'>[TODO Add small CV section with logos and timeline.] [TODO Add better email obfuscate strategy.]</p>
 
         </main>
         <Footer />
