@@ -315,6 +315,7 @@ export default function Home({ allPostsData }: any) {
                         className="flex-none rounded-full m-0"
                         src={logo_me}
                         alt="A picture of Lambert Theisen"
+                        sizes="80px"
                       />
                     </div>
                   </div>
