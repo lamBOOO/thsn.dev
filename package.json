@@ -29,6 +29,7 @@
     "eslint-config-next": "^13.1.1",
     "flowbite": "^1.6.0",
     "flowbite-react": "^0.3.7",
+    "fork-awesome": "^1.2.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "next": "^13.1.1",

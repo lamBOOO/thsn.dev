@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import Badge from '../components/Badge'
 
 import 'academicons'
+import 'fork-awesome/css/fork-awesome.min.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
@@ -491,7 +492,7 @@ export default function Home({ allPostsData }: any) {
                                 textcolor="text-lime-800"
                               />
                               <Badge
-                                link={"https://arxiv.org/abs/" + zenodo}
+                                link={"https://doi.org/" + zenodo}
                                 icon={<FontAwesomeIcon icon={faCode} />}
                                 left="Code"
                                 right={zenodo}
@@ -878,6 +879,20 @@ export default function Home({ allPostsData }: any) {
                   rc="bg-gray-50"
                   textcolor="text-black"
                 /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding signature reads 9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87.
+              </p>
+              <h3>
+                Matrix Protocol <i className="fa fa-matrix-org fa-xl" aria-hidden="true"></i>
+              </h3>
+              <p className='leading-6'>
+                You can also contact me via the Matrix protocol, which is an open-source, end-to-end and decentralised messaging service. Simply press <span className='whitespace-pre'><Badge
+                  link="https://matrix.to/#/@lamboo:matrix.org"
+                  icon={<i className="fa fa-matrix-org pr-1" aria-hidden="true"></i>}
+                  left="Matrix"
+                  right="@lamboo:matrix.org"
+                  lc="bg-gray-200"
+                  rc="bg-gray-50"
+                  textcolor="text-black"
+                /></span> and start texting me.
               </p>
               <h3>
                 Profiles
