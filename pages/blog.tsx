@@ -1,6 +1,8 @@
 import Link from 'next/link'
 
-import Navbar from '../components/Stickynavbar'
+import Stickynavbar from '../components/Stickynavbar'
+import Metadata from '../components/Metadata'
+import Footer from '../components/Footer'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -20,12 +22,11 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }: any) {
   return (
-    <div id="1" className='relative px-4'>
-      <div className='sticky top-0 z-50'>
-        <Navbar />
-      </div>
-      <div className='mt-5 prose mx-auto'>
-      <h1>Blog</h1>
+    <div className='px-4'>
+      <Metadata />
+      <Stickynavbar />
+      <main className='my-10 prose mx-auto'>
+        <h1>Blog</h1>
         <div >
           {allPostsData.map(({ id, date, title }: any) => (
             <div className='' key={id}>
@@ -35,7 +36,8 @@ export default function Home({ allPostsData }: any) {
             </div>
           ))}
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   )
 }
