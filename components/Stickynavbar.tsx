@@ -29,7 +29,7 @@ function classNames(...classes: any[]) {
 export default function Navbar() {
   const [effect, setEffect] = useState(false);
   return (
-      <Disclosure as="nav" className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 border-b border-gray-100 -mx-4">
+      <Disclosure as="nav" className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 border-b border-gray-100 -mx-4 px-4">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-3xl px-2 md:px-6">

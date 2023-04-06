@@ -1,9 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Stickynavbar from '../components/Stickynavbar'
-import Metadata from '../components/Metadata'
-import Footer from '../components/Footer'
 import Badge from '../components/Badge'
 import 'academicons'
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -281,8 +278,6 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }: any) {
   return <>
       <div className='px-4'>
-        <Metadata />
-        <Stickynavbar />
         <main className='my-10 prose mx-auto'>
 
           <div className="flex mb-4">
@@ -1079,7 +1074,6 @@ export default function Home({ allPostsData }: any) {
           <p className='text-xs text-gray-500 leading-3'>[TODO Add small CV section with logos and timeline.] [TODO Add better email obfuscate strategy.]</p>
 
         </main>
-        <Footer />
       </div>
     </>;
 }

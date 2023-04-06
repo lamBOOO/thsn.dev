@@ -1,9 +1,5 @@
 import Link from 'next/link'
 
-import Stickynavbar from '../components/Stickynavbar'
-import Metadata from '../components/Metadata'
-import Footer from '../components/Footer'
-
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
@@ -23,8 +19,6 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }: any) {
   return <>
     <div className='px-4'>
-      <Metadata />
-      <Stickynavbar />
       <main className='my-10 prose mx-auto'>
         <h1>Blog</h1>
         <div >
@@ -37,7 +31,6 @@ export default function Home({ allPostsData }: any) {
           ))}
         </div>
       </main>
-      <Footer />
     </div>
   </>;
 }

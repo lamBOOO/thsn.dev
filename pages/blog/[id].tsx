@@ -1,9 +1,5 @@
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
-import Stickynavbar from '../../components/Stickynavbar'
-import Metadata from '../../components/Metadata'
-import Footer from '../../components/Footer'
-
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
@@ -22,8 +18,6 @@ export async function getStaticProps({ params }: any) {
 export default function Post({ postData } : any) {
   return (
     <div className='px-4'>
-      <Metadata />
-      <Stickynavbar />
       <main className='my-10'>
         <div className='prose mx-auto'>
           <ReactMarkdown
@@ -34,7 +28,6 @@ export default function Post({ postData } : any) {
           </ReactMarkdown>
         </div>
       </main>
-      <Footer />
     </div>
 
   );
