@@ -6,6 +6,8 @@ import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for 
 import remarkGfm from 'remark-gfm'
 import ReactMarkdown from 'react-markdown'
 
+import Head from 'next/head'
+
 export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
   return {
@@ -15,30 +17,26 @@ export async function getStaticProps({ params }: any) {
   };
 }
 
-export default function Post({ postData } : any) {
-  return (
-    <div className='px-4'>
-      <main className='my-10'>
-        <div className='prose mx-auto'>
-          <ReactMarkdown
-            remarkPlugins={[[remarkGfm, { singleTilde: false }], [remarkMath]]}
-            rehypePlugins={[rehypeKatex]}
-          >
-            {postData.content}
-          </ReactMarkdown>
-        </div>
-      </main>
-    </div>
-
-  );
-}
-
-
-
 export async function getStaticPaths() {
+  // generate on build
   const paths = getAllPostIds();
   return {
     paths,
     fallback: false,
   };
+}
+
+export default function Post({ postData }: any) {
+  return <>
+    <Head>
+      <title>{postData.title}</title>
+    </Head>
+    <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>{postData.date}</span>
+    <ReactMarkdown
+      remarkPlugins={[[remarkGfm, { singleTilde: false }], [remarkMath]]}
+      rehypePlugins={[rehypeKatex]}
+    >
+      {postData.content}
+    </ReactMarkdown>
+  </>;
 }

@@ -6,7 +6,8 @@ export default function Layout({ children }) {
   return (
     <>
       <Stickynavbar />
-      <main>{children}</main>
+      <Metadata></Metadata>
+      <main className='px-4 my-10 prose mx-auto'>{children}</main>
       <Footer />
     </>
   )
