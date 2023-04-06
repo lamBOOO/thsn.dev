@@ -124,7 +124,7 @@ export default function Navbar() {
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}
-                    as="a"
+                    as={Link}
                     href={"/" + item.id}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100',
