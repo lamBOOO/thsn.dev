@@ -1,8 +1,10 @@
+import React, { PropsWithChildren } from "react";
+
 import Stickynavbar from '../components/stickynavbar'
 import Metadata from '../components/metadata'
 import Footer from '../components/footer'
 
-export default function Layout({ children }) {
+export default function Layout({ children } : PropsWithChildren) {
   return (
     <>
       <Stickynavbar />
