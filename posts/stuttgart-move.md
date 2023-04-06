@@ -1,6 +1,6 @@
 ---
 title: "I moved to Stuttgart (during the week)."
-date: '22/10/01'
+date: '2022-10-01'
 ---
 
 # Move to Stuggi

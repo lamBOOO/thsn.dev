@@ -31,12 +31,12 @@ export default function Post({ postData }: any) {
     <Head>
       <title>{postData.title} | Lambert Theisen</title>
     </Head>
-    <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>{postData.date}</span>
     <ReactMarkdown
       remarkPlugins={[[remarkGfm, { singleTilde: false }], [remarkMath]]}
       rehypePlugins={[rehypeKatex]}
     >
       {postData.content}
     </ReactMarkdown>
+    <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>{postData.date}</span>
   </>;
 }

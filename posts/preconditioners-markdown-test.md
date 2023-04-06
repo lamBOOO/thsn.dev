@@ -1,6 +1,6 @@
 ---
 title: "Preconditioner for linear solvers (Markdown test)"
-date: '23/01/06'
+date: '2023-01-06'
 ---
 
 # Preconditioner for linear solvers (markdown test)
