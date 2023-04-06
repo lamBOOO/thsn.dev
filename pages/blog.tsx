@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -18,7 +19,9 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }: any) {
   return <>
-
+    <Head>
+      <title>Blog - Lambert Theisen</title>
+    </Head>
     <h1>Blog</h1>
     <div >
       {allPostsData.map(({ id, date, title }: any) => (

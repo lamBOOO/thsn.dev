@@ -29,7 +29,7 @@ export async function getStaticPaths() {
 export default function Post({ postData }: any) {
   return <>
     <Head>
-      <title>{postData.title}</title>
+      <title>{postData.title} | Lambert Theisen</title>
     </Head>
     <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>{postData.date}</span>
     <ReactMarkdown
