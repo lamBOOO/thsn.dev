@@ -1,3 +1,5 @@
+"use client"
+
 import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -11,7 +13,7 @@ import { faMugSaucer } from '@fortawesome/free-solid-svg-icons'
 import logo from '../public/favicon.png'
 import logo_me from '../public/me.jpg'
 
-import { scrollToIdNoUrlChange } from '../lib/scrolling'
+import { scrollToIdNoUrlChange } from '../lib/scrolling' // TODO
 
 const navigation = [
   { name: 'Home', id: '#', current: false },  //  📢
@@ -29,7 +31,8 @@ function classNames(...classes: any[]) {
 export default function Navbar() {
   const [effect, setEffect] = useState(false);
   return (
-      <Disclosure as="nav" className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 border-b border-gray-100 -mx-4">
+    // TODO: Fix distance to y
+      <Disclosure as="nav" className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 border-b border-gray-100 -mx-4 px-4">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-3xl px-2 md:px-6">
@@ -46,9 +49,10 @@ export default function Navbar() {
                 </div>
                 <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
                   <div className="flex flex-shrink-0 items-center">
-                    <Link
+                    <a
+                      // TODO: Use next/link
                       onClick={() => { setEffect(true); }}
-                      href="/"
+                      href="/#"
                       className={`${effect && "animate-rotate"
                         }`}
                       onAnimationEnd={() => setEffect(false)}
@@ -59,12 +63,15 @@ export default function Navbar() {
                         alt="Lambert Theisens logo"
                         sizes="32px"
                       />
-                    </Link>
+                      {/* TODO: Scrolling doesnt work */}
+                    </a>
                   </div>
                   <div className="hidden md:ml-6 md:block">
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
-                        <Link
+                        <a
+                          // TODO: Fixme, upgrade to next/link
+                          // https://github.com/vercel/next.js/issues/44295
                           key={item.name}
                           href={"/" + item.id}
                           className={classNames(
@@ -74,7 +81,7 @@ export default function Navbar() {
                           aria-current={item.current ? 'page' : undefined}
                         >
                           {item.name}
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -125,7 +132,7 @@ export default function Navbar() {
                   <Disclosure.Button
                     key={item.name}
                     as="a"
-                    href={item.id}
+                    href={"/" + item.id}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100',
                       'block px-3 py-2 rounded-md text-base font-medium'
