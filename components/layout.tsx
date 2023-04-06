@@ -1,6 +1,6 @@
-import Stickynavbar from '../components/Stickynavbar'
-import Metadata from '../components/Metadata'
-import Footer from '../components/Footer'
+import Stickynavbar from '../components/stickynavbar'
+import Metadata from '../components/metadata'
+import Footer from '../components/footer'
 
 export default function Layout({ children }) {
   return (
