@@ -29,13 +29,13 @@ function classNames(...classes: any[]) {
 export default function Navbar() {
   const [effect, setEffect] = useState(false);
   return (
-      <Disclosure as="nav" className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 border-b border-gray-100 -mx-4 px-4">
+      <Disclosure as="nav" className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 border-b border-gray-100 px-4">
         {({ open }) => (
           <>
-            <div className="mx-auto max-w-3xl px-2 md:px-6">
+            <div className="mx-auto max-w-3xl">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-black">
+                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md text-gray-400 hover:bg-gray-100 hover:text-black">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -79,7 +79,7 @@ export default function Navbar() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                <div className="absolute inset-y-0 right-0 flex items-center md:static md:inset-auto md:ml-6">
                   <Menu as="div" className="relative ml-3">
                     <div>
                       <Menu.Button className="flex rounded-full bg-gray-800 text-sm">
@@ -120,7 +120,7 @@ export default function Navbar() {
             </div>
 
             <Disclosure.Panel className="md:hidden">
-              <div className="space-y-1 px-2 pt-2 pb-3">
+              <div className="">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}
@@ -128,7 +128,7 @@ export default function Navbar() {
                     href={"/" + item.id}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100',
-                      'block px-3 py-2 rounded-md text-base font-medium'
+                      'block py-2 rounded-md text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}
                   >
