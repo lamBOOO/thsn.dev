@@ -125,7 +125,7 @@ export default function Navbar() {
                   <Disclosure.Button
                     key={item.name}
                     as="a"
-                    href={item.id}
+                    href={"/" + item.id}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100',
                       'block px-3 py-2 rounded-md text-base font-medium'
