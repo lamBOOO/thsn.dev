@@ -8,6 +8,7 @@
 - Add LTDS somewhere
 - Check academicons for more sites to list
 - make news into an array
+- put journal article images in div container and dont make them floating => ios reader is broken
 
 ## Long term
 - switch to new next app router
