@@ -279,8 +279,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }: any) {
-  return (
-    <>
+  return <>
       <div className='px-4'>
         <Metadata />
         <Stickynavbar />
@@ -1082,6 +1081,5 @@ export default function Home({ allPostsData }: any) {
         </main>
         <Footer />
       </div>
-    </>
-  )
+    </>;
 }
