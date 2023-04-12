@@ -1,16 +1,16 @@
 import { getSortedPostsData } from '../lib/posts';
 
-const EXTERNAL_DATA_URL = "https://www.thsn.dev"
+const EXTERNAL_DATA_URL = "https://thsn.dev"
 
 function generateSiteMap(posts : any) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <!--We manually set the two URLs we know already-->
      <url>
-       <loc>https://www.thsn.dev</loc>
+       <loc>https://thsn.dev</loc>
      </url>
      <url>
-       <loc>https://www.thsn.dev/blog</loc>
+       <loc>https://thsn.dev/blog</loc>
      </url>
      ${posts
        .map(({ id } : any) => {
