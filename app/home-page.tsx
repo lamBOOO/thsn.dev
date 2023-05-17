@@ -335,7 +335,7 @@ export default function Home({ allPostsData }: any) {
             <Link
               className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline"
               href="#"
-              legacyBehavior>
+            >
               <button className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0" onClick={() => print()}>
                 <FontAwesomeIcon icon={faFile} /> CV
               </button>
@@ -369,7 +369,7 @@ export default function Home({ allPostsData }: any) {
               <span className='' key={id}>
                 <b className='font-mono font-bold bg-gray-800 text-white p-0.5'>{date}</b>
                 {" "}
-                <Link className="" prefetch={false} href={"/blog/" + id} legacyBehavior>{title}</Link>
+                <Link className="" prefetch={false} href={"/blog/" + id}>{title}</Link>
                 {" "}
               </span>
             ))}

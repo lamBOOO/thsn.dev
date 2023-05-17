@@ -31,9 +31,10 @@ export default async function Home() {
         <div className='' key={id}>
           <span className='font-mono font-bold bg-gray-900 text-white p-0.5 mr-1'>{date}</span>
           <Link
-            className="no-underline hover:underline"
-            href={"/blog/" + id}
-            legacyBehavior>{title}</Link>
+            className="no-underline hover:underline" href={"/blog/" + id}
+          >
+            {title}
+          </Link>
           <hr className='m-0 my-2 w-1/4' />
         </div>
       ))}
