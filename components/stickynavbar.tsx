@@ -1,6 +1,8 @@
+"use client"
+
 import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,10 +13,8 @@ import { faMugSaucer } from '@fortawesome/free-solid-svg-icons'
 import logo from '../public/favicon.png'
 import logo_me from '../public/me.jpg'
 
-import { scrollToIdNoUrlChange } from '../lib/scrolling'
-
 const navigation = [
-  { name: 'Home', id: '#', current: false },  //  📢
+  { name: 'Home', id: '#home', current: false },  //  📢
   { name: 'Blog', id: 'blog', current: false },  //  📢
   { name: 'Research', id: '#research', current: false },  //  📑
   { name: 'Teaching', id: '#teaching', current: false },  //  👨‍🏫
@@ -64,17 +64,19 @@ export default function Navbar() {
                   <div className="hidden md:ml-6 md:block">
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
-                        <Link
+                        <a
+                          // TODO: Use nextjs Link component
+                          // https://github.com/vercel/next.js/issues/49612
                           key={item.name}
                           href={"/" + item.id}
                           className={classNames(
                             item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100 hover:text-black',
-                            'px-3 py-2 rounded-md text-sm font-medium border-2 border-gray-100 hover:text-white'
+                            'px-3 py-2 rounded-md text-sm font-medium border-2 border-gray-100'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                         >
                           {item.name}
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -123,8 +125,10 @@ export default function Navbar() {
               <div className="">
                 {navigation.map((item) => (
                   <Disclosure.Button
+                    // TODO: Use nextjs link when finished
+                    // https://github.com/vercel/next.js/issues/49612
                     key={item.name}
-                    as={Link}
+                    as="a"
                     href={"/" + item.id}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100',
