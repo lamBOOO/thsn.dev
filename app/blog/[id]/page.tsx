@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostData } from '../../../lib/posts';
+import { getPostData } from '../../../lib/posts';
 
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
@@ -6,34 +6,22 @@ import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for 
 import remarkGfm from 'remark-gfm'
 import ReactMarkdown from 'react-markdown'
 
-import Head from 'next/head'
+import { Metadata, ResolvingMetadata } from 'next';
 
-// export async function getStaticProps({ params }: any) {
-//   const postData = await getPostData(params.id);
-//   return {
-//     props: {
-//       postData,
-//     },
-//   };
-// }
+export async function generateMetadata(
+  { params }: any,
+): Promise<Metadata> {
+  const postData = await getPostData(params.id);
+  // console.log(postData)
+  return {
+    title: postData.title,
+  };
+}
 
-
-// TODO: getStaticPaths: What was that for?
-// export async function getStaticPaths() {
-//   // generate on build
-//   const paths = getAllPostIds();
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// }
 
 export default async function Page({ params }: any) {
   const postData = await getPostData(params.id);
   return <>
-    <Head>
-      <title>{postData.title} | Lambert Theisen</title>
-    </Head>
     <ReactMarkdown
       remarkPlugins={[[remarkGfm, { singleTilde: false }], [remarkMath]]}
       rehypePlugins={[rehypeKatex]}

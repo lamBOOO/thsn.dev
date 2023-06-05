@@ -8,9 +8,43 @@ import Stickynavbar from '../components/stickynavbar'
 import Footer from '../components/footer'
 
 export const metadata: Metadata = {
-  title: 'TODO',
-  description: 'TODO',
-};
+  title: {
+    default: 'Lambert Theisen | Scientist, computational engineer, developer.',
+    template: '%s | Lambert Theisen',
+  },
+  description: 'Scientist, computational engineer, developer.',
+  keywords: ["research", "science", "portfolio", "personal webpage"],
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
+  openGraph: {
+    title: 'Lambert Theisen',
+    description: 'Developer, writer, and creator.',
+    url: 'https://thsn.dev',
+    siteName: 'Lambert Theisen',
+    images: [
+      {
+        url: '/favicon.ico',
+        width: 650,
+        height: 650,
+      },
+    ],
+    locale: 'en-US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
 
 export default function RootLayout({
   // Layouts must accept a children prop.

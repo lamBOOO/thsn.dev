@@ -1,6 +1,5 @@
-
+import { Metadata } from "next"
 import Link from 'next/link'
-import Head from 'next/head'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -8,23 +7,14 @@ config.autoAddCss = false
 
 import { getSortedPostsData } from '../../lib/posts';
 
-// export async function getStaticProps() {
-
-//   const allPostsData = getSortedPostsData();
-//   return {
-//     props: {
-//       allPostsData,
-//     },
-//   };
-// }
+export const metadata: Metadata = {
+  title: 'Blog',
+};
 
 export default async function Home() {
 
   const allPostsData = await getSortedPostsData();
   return <>
-    {/* <Head>
-      <title>Blog - Lambert Theisen</title>
-    </Head> */}
     <h1>Blog</h1>
     <div >
       {allPostsData.map(({ id, date, title }: any) => (
