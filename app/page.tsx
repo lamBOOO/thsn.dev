@@ -1,4 +1,3 @@
-// Import your Client Component
 import HomePage from './home-page';
 
 import { getSortedPostsData } from '../lib/posts';

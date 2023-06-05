@@ -2,7 +2,7 @@
 
 import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,8 +12,6 @@ import { faMugSaucer } from '@fortawesome/free-solid-svg-icons'
 
 import logo from '../public/favicon.png'
 import logo_me from '../public/me.jpg'
-
-import { scrollToIdNoUrlChange } from '../lib/scrolling'
 
 const navigation = [
   { name: 'Home', id: '#home', current: false },  //  📢

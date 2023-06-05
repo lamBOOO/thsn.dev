@@ -1,16 +1,11 @@
 import { Metadata } from 'next';
 
-// import { Html, Head, Main, NextScript } from 'next/document'
 import '../styles/globals.css'
-// import type { AppProps } from 'next/app'
-// import Layout from '../components/layout'
 
-import React, { PropsWithChildren } from "react";
+import React from "react";
 
 import Stickynavbar from '../components/stickynavbar'
-// import Metadata from '../components/metadata'
 import Footer from '../components/footer'
-
 
 export const metadata: Metadata = {
   title: 'TODO',
@@ -36,44 +31,3 @@ export default function RootLayout({
 
   );
 }
-
-
-
-
-
-
-// export default function Layout({ children } : PropsWithChildren) {
-//   return (
-//     <>
-//       <Stickynavbar />
-//       <Metadata />
-//       <main className='px-4 my-10 prose mx-auto'>{children}</main>
-//       <Footer />
-//     </>
-//   )
-// }
-
-
-
-// export default function App({ Component, pageProps }: AppProps) {
-//   return (
-//     <Layout>
-//       <Component {...pageProps} />
-//     </Layout>
-//   )
-// }
-
-
-
-
-// export default function Document() {
-//   return (
-//     <Html lang="en">
-//       <Head />
-//       <body>
-//         <Main />
-//         <NextScript />
-//       </body>
-//     </Html>
-//   )
-// }

@@ -15,7 +15,6 @@ import { faBook, faBuildingColumns, faCode, faUser, faUsers, faClock } from '@fo
 
 import logo_me from '../public/me.jpg'
 
-import { getSortedPostsData } from '../lib/posts';
 import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
 const publication_data = [
@@ -268,820 +267,803 @@ const teaching_data = [
   },
 ];
 
-// export async function getStaticProps() {
-//   const allPostsData = getSortedPostsData();
-//   return {
-//     props: {
-//       allPostsData,
-//     },
-//   };
-// }
-
 export default function Home({ allPostsData }: any) {
   return <>
-      {/* <div className='px-4'> */}
-        {/* <Metadata />
-        <Stickynavbar /> TODO*/}
-        {/* <main className='my-10 prose mx-auto'> */}
+    <div className="flex mb-4">
+      <div className="flex-auto">
+        <div className='flex justify-between'>
+          <div>
+            <h1 id="home" className="my-2 mb-0 text-4xl mt-0 scroll-mt-28">
+              Lambert Theisen
+            </h1>
+            <p className='text-gray-500 text-xl font-bold m-0'>
+              M.Sc.
+            </p>
+            <p className='leading-5 my-2'>
+              → Computational Engineer, PhD Student, Digital Creator.
+              <br></br>
+              @ <Link href="https://www.rwth-aachen.de/">RWTH Aachen University</ Link> / <Link href="https://www.uni-stuttgart.de/">University of Stuttgart</Link>
+            </p>
+          </div>
+          <div className="sm:hidden flex-none w-20 h-20 block ml-1">
+            <Image
+              className="flex-none rounded-full m-0"
+              src={logo_me}
+              alt="A picture of Lambert Theisen"
+              sizes="80px"
+            />
+          </div>
+        </div>
 
-          <div className="flex mb-4">
-            <div className="flex-auto">
-              <div className='flex justify-between'>
-                <div>
-                  <h1 id="home" className="my-2 mb-0 text-4xl mt-0 scroll-mt-28">
-                    Lambert Theisen
-                  </h1>
-                  <p className='text-gray-500 text-xl font-bold m-0'>
-                    M.Sc.
-                  </p>
-                  <p className='leading-5 my-2'>
-                    → Computational Engineer, PhD Student, Digital Creator.
-                    <br></br>
-                    @ <Link href="https://www.rwth-aachen.de/">RWTH Aachen University</ Link> / <Link href="https://www.uni-stuttgart.de/">University of Stuttgart</Link>
-                  </p>
-                </div>
-                <div className="sm:hidden flex-none w-20 h-20 block ml-1">
-                  <Image
-                    className="flex-none rounded-full m-0"
-                    src={logo_me}
-                    alt="A picture of Lambert Theisen"
-                    sizes="80px"
+        <div className='leading-6'>
+          <i><small>
+            # Researching <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-amber-100 relative inline-block"><b className="relative">PDE eigenvalue problems</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-red-100 relative inline-block"><b className="relative">asymptotic analysis</b></em> of expanding domains, directional <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-teal-100 relative inline-block"><b className="relative">homogenization</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><b className="relative">eigenvalue algorithms</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><b className="relative">linear solvers</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><b className="relative">spectral coarse spaces</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><b className="relative">domain decomposition</b></em>, and <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><b className="relative">Galerkin methods</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><b className="relative">moment models</b></em> in rarefied gas modelling.
+          </small></i>
+        </div>
+      </div>
+      <Image
+        className="flex-none rounded-full m-0 sm:w-1/5 sm:h-1/5 w-14 h-14 hidden sm:block ml-1"
+        src={logo_me}
+        alt="A picture of Lambert Theisen"
+      />
+    </div>
+    <div className='flex flex-wrap items-center gap-3 border-b border-gray-100 pb-5'>
+      <span className="text-3xl align-middle animate-waving-hand">👋</span>
+      <button className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline" onClick={() => scrollToIdNoUrlChange("contact", { behavior: "smooth" })}>
+        <span className='font-extralight'>Say </span>
+        <i className='font-extrabold'>Ei Gude, wie?</i>
+        <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
+      </button>
+      <Link
+        className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline"
+        href="#"
+      >
+        <button className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0" onClick={() => print()}>
+          <FontAwesomeIcon icon={faFile} /> CV
+        </button>
+      </Link>
+    </div>
+
+    <aside>
+      <h2 id="news" className="scroll-mt-20">
+        <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative">News</span></span>
+      </h2>
+      <span className='grid columns-1 gap-2 pl-0 leading-6'>
+        <span className="pl-0">
+          <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2023-01-03</b>
+          {" "}
+          I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
+        </span>
+        {" "}
+        <span className="pl-0">
+          <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2022-10-01</b>
+          {" "}
+          From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
+        </span>
+      </span>
+    </aside>
+
+    <h2 id="blog" className="scroll-mt-20">
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-red-100 relative inline-block"><span className="relative">Blog</span></span>
+    </h2>
+    <span className='grid columns-1 gap-2 pl-0 leading-6'>
+      {allPostsData.map(({ id, date, title }: any) => (
+        <span className='' key={id}>
+          <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>{date}</b>
+          {" "}
+          <Link className="" prefetch={false} href={"/blog/" + id}>{title}</Link>
+          {" "}
+        </span>
+      ))}
+    </span>
+    <div className='my-3'>
+      <Link href="/blog" className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+        See all →
+      </Link>
+    </div>
+
+    <h2 id="research" className="scroll-mt-20">
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
+    </h2>
+    <h3>Journal Publications</h3>
+
+    {
+      publication_data.map(
+        ({ title, issue, date, authors, abstract, images, keywords, doi, arxiv, zenodo }, ind) =>
+          <div key={ind} className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
+            <span className='leading-5 mb-2'>
+              <span className='font-bold text-lg leading-4'>
+                {title}
+              </span>
+              <br />
+              <i className="text-xs">
+                {issue}
+              </i>
+            </span>
+            <div className='flex flex-wrap gap-2 leading-none my-1'>
+              <Badge
+                icon={<FontAwesomeIcon icon={faClock} />}
+                right={date}
+                lc="bg-slate-300"
+                rc="bg-slate-200"
+                textcolor="text-slate-900"
+              />
+              {
+                authors.map(
+                  ({ name, link, me }, ind) =>
+                    me == true
+                      ?
+                      <Badge
+                        key={ind}
+                        icon={<FontAwesomeIcon icon={faUser} />}
+                        right="Lambert Theisen"
+                        lc="bg-cyan-300"
+                        rc="bg-cyan-200"
+                        textcolor="text-cyan-900"
+                      />
+                      :
+                      <Badge
+                        key={ind}
+                        icon={<FontAwesomeIcon icon={faUser} />}
+                        right={name}
+                        link={link}
+                        lc="bg-slate-300"
+                        rc="bg-slate-200"
+                        textcolor="text-slate-900"
+                      />
+                )
+              }
+            </div>
+            <div>
+              <figure className='float-right ml-2 my-2 border'>
+                {
+                  images.map(
+                    ({ src, alt }, ind) =>
+                      <Image
+                        key={ind}
+                        className="w-40 m-0"
+                        src={src}
+                        width={100}
+                        height={10}
+                        alt={alt}
+                      />
+                  )
+                }
+              </figure>
+              <p className='text-xs leading-4 text-justify my-2'>
+                {abstract}
+              </p>
+
+              <p className='text-xs text-gray-800 my-2'>Keywords:
+                {" "}
+                {keywords.join(", ")}
+              </p>
+
+              <div className="grid grid-cols-7">
+                <div className="col-span-6 flex flex-wrap gap-2 leading-none my-1">
+                  <Badge
+                    link={"https://doi.org/" + doi}
+                    icon={<span><i className="ai ai-doi"></i></span>}
+                    left="DOI"
+                    right={doi}
+                    lc="bg-orange-300"
+                    rc="bg-orange-200"
+                    textcolor="text-orange-900"
+                  />
+                  <Badge
+                    link={"https://arxiv.org/abs/" + arxiv}
+                    icon={<span><i className="ai ai-arxiv"></i></span>}
+                    left="arXiv"
+                    right={arxiv}
+                    lc="bg-lime-300"
+                    rc="bg-lime-200"
+                    textcolor="text-lime-900"
+                  />
+                  <Badge
+                    link={"https://doi.org/" + zenodo}
+                    icon={<FontAwesomeIcon icon={faCode} />}
+                    left="Code"
+                    right={zenodo}
+                    lc="bg-violet-300"
+                    rc="bg-violet-200"
+                    textcolor="text-violet-900"
                   />
                 </div>
-              </div>
-
-              <div className='leading-6'>
-                <i><small>
-                  # Researching <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-amber-100 relative inline-block"><b className="relative">PDE eigenvalue problems</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-red-100 relative inline-block"><b className="relative">asymptotic analysis</b></em> of expanding domains, directional <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-teal-100 relative inline-block"><b className="relative">homogenization</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><b className="relative">eigenvalue algorithms</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><b className="relative">linear solvers</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><b className="relative">spectral coarse spaces</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><b className="relative">domain decomposition</b></em>, and <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><b className="relative">Galerkin methods</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><b className="relative">moment models</b></em> in rarefied gas modelling.
-                </small></i>
+                <span className="col-span-1 opacity-10 text-black italic justify-self-end self-end p-0 absolute bottom-2 right-3">
+                  <span className='text-xl mr-1'>#</span><span className="text-5xl font-black">{publication_data.length - ind}</span>
+                </span>
               </div>
             </div>
-              <Image
-                className="flex-none rounded-full m-0 sm:w-1/5 sm:h-1/5 w-14 h-14 hidden sm:block ml-1"
-                src={logo_me}
-                alt="A picture of Lambert Theisen"
-              />
           </div>
-          <div className='flex flex-wrap items-center gap-3 border-b border-gray-100 pb-5'>
-            <span className="text-3xl align-middle animate-waving-hand">👋</span>
-            <button className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline" onClick={() => scrollToIdNoUrlChange("contact", { behavior: "smooth" })}>
-              <span className='font-extralight'>Say </span>
-              <i className='font-extrabold'>Ei Gude, wie?</i>
-              <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
-            </button>
-            <Link
-              className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline"
-              href="#"
-            >
-              <button className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0" onClick={() => print()}>
-                <FontAwesomeIcon icon={faFile} /> CV
-              </button>
-            </Link>
-          </div>
+      )
+    }
 
-          <aside>
-            <h2 id="news" className="scroll-mt-20">
-              <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative">News</span></span>
-            </h2>
-            <span className='grid columns-1 gap-2 pl-0 leading-6'>
-              <span className="pl-0">
-                <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2023-01-03</b>
-                {" "}
-                I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
+    <h3>Talks</h3>
+    <ul>
+      <li>
+        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://erc-emc2.eu/emc2-seminars/">EMC2 Seminar (ERC Synergy project - Extreme-scale Mathematically-based Computational Chemistry)</Link>, Paris (France), 10 March, 2023.
+      </li>
+      <li>
+        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.siam.org/conferences/cm/program/cse23">SIAM Conference on Computational Science and Engineering (CSE23)</Link>, Amsterdam (Netherlands), 28 February, 2023.
+      </li>
+      <li>
+        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.ians.uni-stuttgart.de/nmh/events/">IANS Oberseminar @ University of Stuttgart</Link>, Stuttgart (Germany), 24 November, 2022.
+      </li>
+      <li>
+        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.dd27.cz/">DD27: 7th International Domain Decomposition Conference – MS4: SCSs in DDMs and Multiscale Discretizations</Link>, Prague (Czech Republic), 27 July, 2022.
+      </li>
+      <li>
+        <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.esco2022.femhub.com/">ESCO 2022: 8th European Seminar on Computing</Link>, Pilsen (Czech Republic), 14 June, 2022.
+      </li>
+      <li>
+        <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 7 June, 2022.
+      </li>
+      <li>
+        <b>An Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 15 June, 2021.
+      </li>
+      <li>
+        <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://moansi.wixsite.com/gamm/2020">GAMM Activity Group: Modelling, Analysis and Simulation of Molecular Systems (MOANSI) Annual Meeting 2020</Link>, 24-25 September, 2020.
+      </li>
+      <li>
+        <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 30 June, 2020.
+      </li>
+      <li>
+        <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 15 October, 2019.
+      </li>
+      <li>
+        <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, <Link href="https://www.acom.rwth-aachen.de/3teaching/0classes/ceswseminar/start">CES Seminar Presentation</Link>, RWTH Aachen, 10 April, 2019.
+      </li>
+      <li>
+        <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 10 April, 2018.
+      </li>
+    </ul>
+    <p className='text-xs text-gray-500 leading-3'>[TODO Upload PDFs at uniform location, indicate invited and contributed talks, make first page as preview clickable.]</p>
+
+    <h3>Software</h3>
+    <ul>
+      <li>
+        <Link href="https://github.com/lamBOOO/DBPrices.jl">DBPrices.jl</Link>: A Julia wrapper for the <Link href="https://github.com/juliuste/db-prices">db-prices</Link> module from <Link href="https://github.com/juliuste">@juliuste</Link>.
+      </li>
+      <li>
+        <Image
+          className="h-14 m-0 w-auto inline-block"
+          src="/logo_ddeigenlab.png"
+          width={1}
+          height={1}
+          alt="3rd-order Lagrangian basis function on simplex #8"
+          sizes="160px"
+        /> <Link href="https://git.rwth-aachen.de/lamBOO/ddEigenLab.jl">ddEigenlab.jl</Link>: A Domain-Decomposition Eigenvalue Problem Lab to benchmark various algorithms.
+      </li>
+      <li>
+        <Image
+          className="h-14 m-0 w-auto inline-block fill"
+          src="/sticker.png"
+          width={1}
+          height={1}
+          alt="3rd-order Lagrangian basis function on simplex #8"
+          sizes="160px"
+        /> <Link href="https://git.rwth-aachen.de/lamBOO/fenicsR13">fenicsR13</Link>: A Tensorial Mixed Finite Element Solver for the Linear R13 Equations Using the FEniCS Computing Platform.
+      </li>
+      <li>
+        <Link href="https://github.com/lamBOOO/latextools">latextools</Link>: Some scripts to process LaTeX documents. Contains a conversion script for LaTeX files into plaintext while keeping the mathematical sentence structure intact. For example, the input <code>Let $\begin&#123;equation&#125; h = \tfrac&#123;1&#125;&#123;N&#125; \end&#123;equation&#125;$ where $N$ denotes the number of intervals.</code> will be converted to <code>Let noun verbs noun where noun denotes the number of intervals.</code> (valid sentence).
+      </li>
+    </ul>
+
+    <h3>Miscellaneous</h3>
+    <ul>
+      <li>
+        Generate pictures of arbitrary-order Lagrangian finite element basis function with the Mathematica script from <Link href="https://doi.org/10.6084/m9.figshare.9767021.v1">10.6084/m9.figshare.9767021.v1</Link> (uploaded to figshare).
+      </li>
+    </ul>
+    <div className="flex flex-wrap">
+      <Image
+        className="w-32 m-0"
+        src="/p3-0.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #2"
+        sizes="160px"
+      />
+      <Image
+        className="w-32 m-0"
+        src="/p3-1.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #2"
+        sizes="160px"
+      />
+      <Image
+        className="w-32 m-0"
+        src="/p3-2.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #3"
+        sizes="160px"
+      />
+      <Image
+        className="w-32 m-0"
+        src="/p3-3.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #4"
+        sizes="160px"
+      />
+      <Image
+        className="w-32 m-0"
+        src="/p3-4.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #5"
+        sizes="160px"
+      />
+      <Image
+        className="w-32 m-0"
+        src="/p3-5.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #6"
+        sizes="160px"
+      />
+      <Image
+        className="w-32 m-0"
+        src="/p3-6.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #7"
+        sizes="160px"
+      />
+      <Image
+        className="w-32 m-0"
+        src="/p3-7.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #8"
+        sizes="160px"
+      />
+      <Image
+        className="w-32 m-0"
+        src="/p3-8.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #9"
+        sizes="160px"
+      />
+      <Image
+        className="w-32 m-0"
+        src="/p3-9.png"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #10"
+        sizes="160px"
+      />
+    </div>
+
+    <h3>Theses and Supervised Work</h3>
+    <ul>
+      <li>
+        <b>Density Operator in Eigenvalue Problems with Application in Manifold Interpolation</b>, Bachelor Thesis of <Link href="https://de.linkedin.com/in/stefan-berger-29b1a4210">Stefan Berger</Link>, RWTH Aachen, 2022.
+      </li>
+      <li>
+        <b>Evaluation and Implementation of Schrödinger-Type Eigenvalue Problems in Long Rectangular Domains using the Finite Element Method</b>, CES Project Thesis of Corinna Müller, Matthias Geratz, Celine Heger, Johanna Meyer, RWTH Aachen, 2021.
+      </li>
+      <li>
+        <b>Using a Spectral Inference Network to Solve the Time-Independent Schrödinger Equation for a Two-Dimensional Hydrogen Atom</b>, Seminar Thesis of Alexander Kristof, RWTH Aachen, 2020.
+      </li>
+      <li>
+        <b>Iterative Domain Decomposition Methods for Eigenvalue Problems</b>, Master Thesis of Hendrik Borchardt, RWTH Aachen, 2020.
+      </li>
+      <li>
+        <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis of Lambert Theisen, RWTH Aachen / MathCCES, 2020.
+      </li>
+      <li>
+        <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, Seminar Thesis of Lambert Theisen, RWTH Aachen / CATS, 2019.
+      </li>
+      <li>
+        <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis of Lambert Theisen, RWTH Aachen / ABB Switzerland, 2018.
+      </li>
+    </ul>
+    <p className='text-xs text-gray-500 leading-3'>[TODO Link PDFs, think about where to host, checkout people and link them, upload own theses to RWTHPublications.]</p>
+
+    <h2 id="teaching" className='scroll-mt-20'>
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-orange-100 relative inline-block"><span className="relative">Teaching</span></span>
+    </h2>
+    <p>
+      You can find most of my teaching activity in the Github repository <Link href="https://github.com/lamBOOO/teaching">@lamBOOO/teaching</Link>.
+    </p>
+    <h3>Selected classes</h3>
+    {
+      teaching_data.map(
+        ({ title_de, title_en, description, students, coursenotes, labcodes, location, semester, people }, ind) =>
+          <div key={ind} className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
+            <span className='leading-5 mb-0'>
+              <span className='font-bold text-lg leading-4'>
+                {title_en}
               </span>
-              {" "}
-              <span className="pl-0">
-                <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2022-10-01</b>
-                {" "}
-                From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
-              </span>
+              <br />
+              <i className="text-xs">
+                {title_de}
+              </i>
             </span>
-          </aside>
-
-          <h2 id="blog" className="scroll-mt-20">
-            <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-red-100 relative inline-block"><span className="relative">Blog</span></span>
-          </h2>
-          <span className='grid columns-1 gap-2 pl-0 leading-6'>
-            {allPostsData.map(({ id, date, title }: any) => (
-              <span className='' key={id}>
-                <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>{date}</b>
-                {" "}
-                <Link className="" prefetch={false} href={"/blog/" + id}>{title}</Link>
-                {" "}
-              </span>
-            ))}
-          </span>
-          <div className='my-3'>
-            <Link href="/blog" className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
-              See all →
-            </Link>
-          </div>
-
-          <h2 id="research" className="scroll-mt-20">
-            <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
-          </h2>
-          <h3>Journal Publications</h3>
-
-          {
-            publication_data.map(
-              ({ title, issue, date, authors, abstract, images, keywords, doi, arxiv, zenodo }, ind) =>
-                <div key={ind} className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
-                  <span className='leading-5 mb-2'>
-                    <span className='font-bold text-lg leading-4'>
-                      {title}
-                    </span>
-                    <br />
-                    <i className="text-xs">
-                      {issue}
-                    </i>
-                  </span>
-                  <div className='flex flex-wrap gap-2 leading-none my-1'>
-                    <Badge
-                      icon={<FontAwesomeIcon icon={faClock} />}
-                      right={date}
-                      lc="bg-slate-300"
-                      rc="bg-slate-200"
-                      textcolor="text-slate-900"
-                    />
-                    {
-                      authors.map(
-                        ({ name, link, me }, ind) =>
-                          me == true
-                            ?
-                            <Badge
-                              key={ind}
-                              icon={<FontAwesomeIcon icon={faUser} />}
-                              right="Lambert Theisen"
-                              lc="bg-cyan-300"
-                              rc="bg-cyan-200"
-                              textcolor="text-cyan-900"
-                            />
-                            :
-                            <Badge
-                              key={ind}
-                              icon={<FontAwesomeIcon icon={faUser} />}
-                              right={name}
-                              link={link}
-                              lc="bg-slate-300"
-                              rc="bg-slate-200"
-                              textcolor="text-slate-900"
-                            />
-                      )
-                    }
-                  </div>
-                  <div>
-                      <figure className='float-right ml-2 my-2 border'>
-                        {
-                          images.map(
-                            ({ src, alt }, ind) =>
-                              <Image
-                                key={ind}
-                                className="w-40 m-0"
-                                src={src}
-                                width={100}
-                                height={10}
-                                alt={alt}
-                              />
-                          )
-                        }
-                      </figure>
-                    <p className='text-xs leading-4 text-justify my-2'>
-                      {abstract}
-                    </p>
-
-                    <p className='text-xs text-gray-800 my-2'>Keywords:
-                      {" "}
-                      {keywords.join(", ")}
-                    </p>
-
-                    <div className="grid grid-cols-7">
-                      <div className="col-span-6 flex flex-wrap gap-2 leading-none my-1">
-                        <Badge
-                          link={"https://doi.org/" + doi}
-                          icon={<span><i className="ai ai-doi"></i></span>}
-                          left="DOI"
-                          right={doi}
-                          lc="bg-orange-300"
-                          rc="bg-orange-200"
-                          textcolor="text-orange-900"
-                        />
-                        <Badge
-                          link={"https://arxiv.org/abs/" + arxiv}
-                          icon={<span><i className="ai ai-arxiv"></i></span>}
-                          left="arXiv"
-                          right={arxiv}
-                          lc="bg-lime-300"
-                          rc="bg-lime-200"
-                          textcolor="text-lime-900"
-                        />
-                        <Badge
-                          link={"https://doi.org/" + zenodo}
-                          icon={<FontAwesomeIcon icon={faCode} />}
-                          left="Code"
-                          right={zenodo}
-                          lc="bg-violet-300"
-                          rc="bg-violet-200"
-                          textcolor="text-violet-900"
-                        />
-                      </div>
-                      <span className="col-span-1 opacity-10 text-black italic justify-self-end self-end p-0 absolute bottom-2 right-3">
-                        <span className='text-xl mr-1'>#</span><span className="text-5xl font-black">{publication_data.length - ind}</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-            )
-          }
-
-          <h3>Talks</h3>
-          <ul>
-            <li>
-              <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://erc-emc2.eu/emc2-seminars/">EMC2 Seminar (ERC Synergy project - Extreme-scale Mathematically-based Computational Chemistry)</Link>, Paris (France), 10 March, 2023.
-            </li>
-            <li>
-              <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.siam.org/conferences/cm/program/cse23">SIAM Conference on Computational Science and Engineering (CSE23)</Link>, Amsterdam (Netherlands), 28 February, 2023.
-            </li>
-            <li>
-              <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.ians.uni-stuttgart.de/nmh/events/">IANS Oberseminar @ University of Stuttgart</Link>, Stuttgart (Germany), 24 November, 2022.
-            </li>
-            <li>
-              <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.dd27.cz/">DD27: 7th International Domain Decomposition Conference – MS4: SCSs in DDMs and Multiscale Discretizations</Link>, Prague (Czech Republic), 27 July, 2022.
-            </li>
-            <li>
-              <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.esco2022.femhub.com/">ESCO 2022: 8th European Seminar on Computing</Link>, Pilsen (Czech Republic), 14 June, 2022.
-            </li>
-            <li>
-              <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 7 June, 2022.
-            </li>
-            <li>
-              <b>An Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 15 June, 2021.
-            </li>
-            <li>
-              <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://moansi.wixsite.com/gamm/2020">GAMM Activity Group: Modelling, Analysis and Simulation of Molecular Systems (MOANSI) Annual Meeting 2020</Link>, 24-25 September, 2020.
-            </li>
-            <li>
-              <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 30 June, 2020.
-            </li>
-            <li>
-              <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 15 October, 2019.
-            </li>
-            <li>
-              <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, <Link href="https://www.acom.rwth-aachen.de/3teaching/0classes/ceswseminar/start">CES Seminar Presentation</Link>, RWTH Aachen, 10 April, 2019.
-            </li>
-            <li>
-              <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 10 April, 2018.
-            </li>
-          </ul>
-          <p className='text-xs text-gray-500 leading-3'>[TODO Upload PDFs at uniform location, indicate invited and contributed talks, make first page as preview clickable.]</p>
-
-          <h3>Software</h3>
-          <ul>
-            <li>
-              <Link href="https://github.com/lamBOOO/DBPrices.jl">DBPrices.jl</Link>: A Julia wrapper for the <Link href="https://github.com/juliuste/db-prices">db-prices</Link> module from <Link href="https://github.com/juliuste">@juliuste</Link>.
-            </li>
-            <li>
-              <Image
-                className="h-14 m-0 w-auto inline-block"
-                src="/logo_ddeigenlab.png"
-                width={1}
-                height={1}
-                alt="3rd-order Lagrangian basis function on simplex #8"
-                sizes="160px"
-              /> <Link href="https://git.rwth-aachen.de/lamBOO/ddEigenLab.jl">ddEigenlab.jl</Link>: A Domain-Decomposition Eigenvalue Problem Lab to benchmark various algorithms.
-            </li>
-            <li>
-              <Image
-                className="h-14 m-0 w-auto inline-block fill"
-                src="/sticker.png"
-                width={1}
-                height={1}
-                alt="3rd-order Lagrangian basis function on simplex #8"
-                sizes="160px"
-              /> <Link href="https://git.rwth-aachen.de/lamBOO/fenicsR13">fenicsR13</Link>: A Tensorial Mixed Finite Element Solver for the Linear R13 Equations Using the FEniCS Computing Platform.
-            </li>
-            <li>
-              <Link href="https://github.com/lamBOOO/latextools">latextools</Link>: Some scripts to process LaTeX documents. Contains a conversion script for LaTeX files into plaintext while keeping the mathematical sentence structure intact. For example, the input <code>Let $\begin&#123;equation&#125; h = \tfrac&#123;1&#125;&#123;N&#125; \end&#123;equation&#125;$ where $N$ denotes the number of intervals.</code> will be converted to <code>Let noun verbs noun where noun denotes the number of intervals.</code> (valid sentence).
-            </li>
-          </ul>
-
-          <h3>Miscellaneous</h3>
-          <ul>
-            <li>
-              Generate pictures of arbitrary-order Lagrangian finite element basis function with the Mathematica script from <Link href="https://doi.org/10.6084/m9.figshare.9767021.v1">10.6084/m9.figshare.9767021.v1</Link> (uploaded to figshare).
-            </li>
-          </ul>
-          <div className="flex flex-wrap">
-            <Image
-              className="w-32 m-0"
-              src="/p3-0.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #2"
-              sizes="160px"
-            />
-            <Image
-              className="w-32 m-0"
-              src="/p3-1.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #2"
-              sizes="160px"
-            />
-            <Image
-              className="w-32 m-0"
-              src="/p3-2.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #3"
-              sizes="160px"
-            />
-            <Image
-              className="w-32 m-0"
-              src="/p3-3.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #4"
-              sizes="160px"
-            />
-            <Image
-              className="w-32 m-0"
-              src="/p3-4.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #5"
-              sizes="160px"
-            />
-            <Image
-              className="w-32 m-0"
-              src="/p3-5.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #6"
-              sizes="160px"
-            />
-            <Image
-              className="w-32 m-0"
-              src="/p3-6.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #7"
-              sizes="160px"
-            />
-            <Image
-              className="w-32 m-0"
-              src="/p3-7.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #8"
-              sizes="160px"
-            />
-            <Image
-              className="w-32 m-0"
-              src="/p3-8.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #9"
-              sizes="160px"
-            />
-            <Image
-              className="w-32 m-0"
-              src="/p3-9.png"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #10"
-              sizes="160px"
-            />
-          </div>
-
-          <h3>Theses and Supervised Work</h3>
-          <ul>
-            <li>
-              <b>Density Operator in Eigenvalue Problems with Application in Manifold Interpolation</b>, Bachelor Thesis of <Link href="https://de.linkedin.com/in/stefan-berger-29b1a4210">Stefan Berger</Link>, RWTH Aachen, 2022.
-            </li>
-            <li>
-              <b>Evaluation and Implementation of Schrödinger-Type Eigenvalue Problems in Long Rectangular Domains using the Finite Element Method</b>, CES Project Thesis of Corinna Müller, Matthias Geratz, Celine Heger, Johanna Meyer, RWTH Aachen, 2021.
-            </li>
-            <li>
-              <b>Using a Spectral Inference Network to Solve the Time-Independent Schrödinger Equation for a Two-Dimensional Hydrogen Atom</b>, Seminar Thesis of Alexander Kristof, RWTH Aachen, 2020.
-            </li>
-            <li>
-              <b>Iterative Domain Decomposition Methods for Eigenvalue Problems</b>, Master Thesis of Hendrik Borchardt, RWTH Aachen, 2020.
-            </li>
-            <li>
-              <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis of Lambert Theisen, RWTH Aachen / MathCCES, 2020.
-            </li>
-            <li>
-              <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, Seminar Thesis of Lambert Theisen, RWTH Aachen / CATS, 2019.
-            </li>
-            <li>
-              <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis of Lambert Theisen, RWTH Aachen / ABB Switzerland, 2018.
-            </li>
-          </ul>
-          <p className='text-xs text-gray-500 leading-3'>[TODO Link PDFs, think about where to host, checkout people and link them, upload own theses to RWTHPublications.]</p>
-
-          <h2 id="teaching" className='scroll-mt-20'>
-            <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-orange-100 relative inline-block"><span className="relative">Teaching</span></span>
-          </h2>
-          <p>
-            You can find most of my teaching activity in the Github repository <Link href="https://github.com/lamBOOO/teaching">@lamBOOO/teaching</Link>.
-          </p>
-          <h3>Selected classes</h3>
-          {
-            teaching_data.map(
-              ({ title_de, title_en, description, students, coursenotes, labcodes, location, semester, people }, ind) =>
-                <div key={ind} className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
-                  <span className='leading-5 mb-0'>
-                    <span className='font-bold text-lg leading-4'>
-                      {title_en}
-                    </span>
-                    <br />
-                    <i className="text-xs">
-                      {title_de}
-                    </i>
-                  </span>
-                  <div className='flex flex-wrap gap-2 leading-none my-2'>
-                    <Badge
-                      icon={<FontAwesomeIcon icon={faClock} />}
-                      right={semester}
-                      lc="bg-slate-300"
-                      rc="bg-slate-200"
-                      textcolor="text-slate-900"
-                    />
-                    <Badge
-                      icon={<FontAwesomeIcon icon={faUsers} />}
-                      right={students}
-                      lc="bg-slate-300"
-                      rc="bg-slate-200"
-                      textcolor="text-slate-900"
-                    />
-                    <Badge
-                      icon={<FontAwesomeIcon icon={faBuildingColumns} />}
-                      right={location}
-                      lc="bg-slate-300"
-                      rc="bg-slate-200"
-                      textcolor="text-slate-900"
-                    />
-                  </div>
-                  <div className="flex flex-wrap gap-2 leading-none">
-                    {
-                      people != undefined ?
-                        people.map(
-                          ({ name, link }, ind) =>
-                            <Badge
-                              icon={<FontAwesomeIcon icon={faUser} />}
-                              link={link}
-                              right={name}
-                              lc="bg-sky-300"
-                              rc="bg-sky-200"
-                              textcolor="text-sky-900"
-                              key={ind}
-                            />
-                        )
-                        :
-                        ""
-                    }
-                  </div>
-                  <div>
-                    <p className='font-normal text-xs leading-3 text-justify my-2 text-gray-500'>
-                      {description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 leading-none">
+            <div className='flex flex-wrap gap-2 leading-none my-2'>
+              <Badge
+                icon={<FontAwesomeIcon icon={faClock} />}
+                right={semester}
+                lc="bg-slate-300"
+                rc="bg-slate-200"
+                textcolor="text-slate-900"
+              />
+              <Badge
+                icon={<FontAwesomeIcon icon={faUsers} />}
+                right={students}
+                lc="bg-slate-300"
+                rc="bg-slate-200"
+                textcolor="text-slate-900"
+              />
+              <Badge
+                icon={<FontAwesomeIcon icon={faBuildingColumns} />}
+                right={location}
+                lc="bg-slate-300"
+                rc="bg-slate-200"
+                textcolor="text-slate-900"
+              />
+            </div>
+            <div className="flex flex-wrap gap-2 leading-none">
+              {
+                people != undefined ?
+                  people.map(
+                    ({ name, link }, ind) =>
                       <Badge
-                        link={coursenotes}
-                        icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
-                        left="Notes"
-                        right="Link"
-                        lc="bg-orange-300"
-                        rc="bg-orange-200"
-                        textcolor="text-orange-900"
+                        icon={<FontAwesomeIcon icon={faUser} />}
+                        link={link}
+                        right={name}
+                        lc="bg-sky-300"
+                        rc="bg-sky-200"
+                        textcolor="text-sky-900"
+                        key={ind}
                       />
-                      {
-                        labcodes != "" ?
-                          <Badge
-                            link={labcodes}
-                            icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
-                            left="Labcodes"
-                            right="Link"
-                            lc="bg-lime-300"
-                            rc="bg-lime-200"
-                            textcolor="text-lime-900"
-                          />
-                          :
-                          ""
-                      }
-                    </div>
-                  </div>
-                  <div className="absolute right-3 bottom-2 text-5xl font-black text-black italic opacity-10">
-                    <span className='text-xl mr-1'>#</span>{teaching_data.length - ind}
-                  </div>
-                </div>
-            )
-          }
-          <p className='text-xs text-gray-500 leading-3'>[TODO: Add PDFs previews of notes]</p>
-
-          <h2 id="projects" className="scroll-mt-20">
-            <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative">Selected Projects</span></span>
-          </h2>
-          <ul>
-            <li>
-              <Image
-                className="h-8 m-0 w-auto inline-block"
-                src="/gradescaler_logo.png"
-                width={1}
-                height={1}
-                alt="3rd-order Lagrangian basis function on simplex #8"
-                sizes="160px"
-              /> The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overview of exam grading schemes.
-            </li>
-            <li>
-              Use the <Link href="https://gitlab.com/lamBOO/shopping-list">shopping-list</Link> LaTeX template to create your 4x4 double-sided reusable shopping list for easy ticking of required products based on the supermarket location to optimize shopping. Here's an <Link href="https://gitlab.com/lamBOO/shopping-list/-/raw/master/shopping-list.pdf?inline=true">example</Link>.
-            </li>
-            <li>
-              A while ago, I build the website <Link href="http://kanara-bau.de">kanara-bau.de</Link> without using any tech stack in the editor.
-            </li>
-          </ul>
-
-          <h2 id="contact" className="scroll-mt-20 mb-5">
-            <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><span className="relative">Contact</span></span>
-          </h2>
-          <h3>
-            E-Mail
-          </h3>
-          <p className='leading-6'>
-            You can contact me directly via the e-mail address <span className='whitespace-pre'><Badge
-              link="mailto:lmbrt∂thsn.dev?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)"
-              icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
-              left="Mail"
-              right="lmbrt∂thsn.dev"
-              lc="bg-gray-200"
-              rc="bg-gray-50"
-              textcolor="text-black"
-            /></span> or <span className='whitespace-pre'><Badge
-              link="mailto:lambert.theisen∂rwth-aachen.de?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)"
-              icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
-              left="Mail"
-              right="lambert.theisen∂rwth-aachen.de"
-              lc="bg-gray-200"
-              rc="bg-gray-50"
-              textcolor="text-black"
-            /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding signature reads 9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87.
-          </p>
-          <h3>
-            <Image
-              className="h-6 m-0 w-auto inline-block"
-              src="/matrix.svg"
-              width={1}
-              height={1}
-              alt="3rd-order Lagrangian basis function on simplex #8"
-            /> Protocol
-          </h3>
-          <p className='leading-6'>
-            You can also contact me via the Matrix protocol, which is an open-source, end-to-end encrypted and decentralised messaging service. Simply press
-            {' '}
-            <Badge
-              link="https://matrix.to/#/@lamboo:matrix.org"
-              icon={<Image
-                className="h-3 m-0 w-auto inline-block pr-1"
-                src="/matrix.svg"
-                width={1}
-                height={1}
-                alt="Matrix messenger logo"
-              />}
-              left="Matrix"
-              right="@lamboo:matrix.org"
-              lc="bg-gray-200"
-              rc="bg-gray-50"
-              textcolor="text-black"
-            />
-            {' '}
-            and start texting me.
-          </p>
-          <h3>
-            Profiles
-          </h3>
-          <p className='mb-1'>
-            I am part of the major science and networking sites, for example:
-          </p>
-          <div className='flex flex-wrap gap-2 leading-3'>
-            <Badge
-              link="https://git.rwth-aachen.de/lamBOO"
-              icon={<FontAwesomeIcon className="pr-1" icon={faGitlab} />}
-              left="RWTH Gitlab"
-              right="@lamBOO"
-              lc="bg-orange-300"
-              rc="bg-orange-200"
-              textcolor="text-orange-900"
-            />
-            <Badge
-              link="https://scholar.google.com/citations?user=ZD8cDyEAAAAJ"
-              icon={<i className="ai ai-google-scholar" />}
-              left="GScholar"
-              right="LINK"
-              lc="bg-blue-300"
-              rc="bg-blue-200"
-              textcolor="text-blue-900"
-            />
-            <Badge
-              link="https://github.com/lamBOOO"
-              icon={<FontAwesomeIcon icon={faGithub} />}
-              left="Github"
-              right="@lamBOOO"
-              lc="bg-gray-300"
-              rc="bg-gray-200"
-              textcolor="text-gray-900"
-            />
-            <Badge
-              link="https://arxiv.org/a/theisen_l_1.html"
-              icon={<i className="ai ai-arxiv" />}
-              left="arXiv"
-              right="theisen_l_1"
-              lc="bg-red-300"
-              rc="bg-red-200"
-              textcolor="text-red-900"
-            />
-            <Badge
-              link="https://orcid.org/0000-0001-5460-5425"
-              icon={<i className="ai ai-orcid" />}
-              left="ORCID"
-              right="0000-0001-5460-5425"
-              lc="bg-lime-300"
-              rc="bg-lime-200"
-              textcolor="text-lime-900"
-            />
-            <Badge
-              link="https://www.researchgate.net/profile/Lambert-Theisen"
-              icon={<i className="ai ai-researchgate-square" />}
-              left="ResearchGate"
-              right="Lambert-Theisen"
-              lc="bg-teal-300"
-              rc="bg-teal-200"
-              textcolor="text-teal-900"
-            />
-            <Badge
-              link="https://www.linkedin.com/in/lambert-theisen-4027b3184/"
-              icon={<FontAwesomeIcon icon={faLinkedin} />}
-              left="LinkedIn"
-              right="LINK"
-              lc="bg-blue-300"
-              rc="bg-blue-200"
-              textcolor="text-blue-900"
-            />
-            <Badge
-              link="https://twitter.com/LmbrtThsn"
-              icon={<FontAwesomeIcon icon={faTwitter} />}
-              left="Twitter"
-              right="@LmbrtThsn"
-              lc="bg-sky-300"
-              rc="bg-sky-200"
-              textcolor="text-sky-900"
-            />
-            <Badge
-              link="https://www.semanticscholar.org/author/Lambert-Theisen/1811123350"
-              icon={<i className="ai ai-semantic-scholar"></i>}
-              left="SemanticScholar"
-              right="LINK"
-              lc="bg-slate-300"
-              rc="bg-slate-200"
-              textcolor="text-slate-900"
-            />
-            <Badge
-              link="https://explore.openaire.eu/search/advanced/research-outcomes?f0=resultauthor&fv0=Lambert%2520Theisen&page=1&size=10&sortBy=&qf=false"
-              left="OpenAIRE"
-              right="LINK"
-              lc="bg-indigo-300"
-              rc="bg-indigo-200"
-              textcolor="text-indigo-900"
-            />
-            <Badge
-              link="https://core.ac.uk/search?q=author:(Lambert%20AND%20Theisen)&allOfTheWords=&exactPhrase=&atLeastOneOfTheWords=&withoutTheWords=&advAuthor=Lambert%20Theisen&publisher=&advRepository=&yearFrom=&yearTo=&findThoseWords=anywhere&doi="
-              left="CORE"
-              right="LINK"
-              lc="bg-gray-300"
-              rc="bg-gray-200"
-              textcolor="text-gray-900"
-            />
-            <Badge
-              link="https://figshare.com/authors/Lambert_Theisen/7342844"
-              icon={<i className="ai ai-figshare"></i>}
-              left="Figshare"
-              right="LINK"
-              lc="bg-slate-300"
-              rc="bg-slate-200"
-              textcolor="text-slate-900"
-            />
-            <Badge
-              link="https://www.prophy.science/author/54631348/"
-              left="Prophy"
-              right="54631348"
-              lc="bg-orange-300"
-              rc="bg-orange-200"
-              textcolor="text-orange-900"
-            />
-            <Badge
-              link="https://zbmath.org/authors/?q=ai%3Atheisen.lambert"
-              left="zbMATH"
-              right="theisen.lambert"
-              lc="bg-pink-300"
-              rc="bg-pink-200"
-              textcolor="text-pink-900"
-            />
-            <Badge
-              link="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1439845"
-              left="MathSciNet"
-              right="1439845"
-              lc="bg-orange-300"
-              rc="bg-orange-200"
-              textcolor="text-orange-900"
-            />
-            <Badge
-              link="https://www.scopus.com/authid/detail.uri?authorId=57219764798"
-              icon={<i className="ai ai-scopus"></i>}
-              left="Scopus"
-              right="57219764798"
-              lc="bg-orange-300"
-              rc="bg-orange-200"
-              textcolor="text-orange-900"
-            />
-            <Badge
-              link="https://sciprofiles.com/profile/1727525"
-              icon={<i className="ai ai-scopus"></i>}
-              left="SciProfiles"
-              right="1727525"
-              lc="bg-teal-300"
-              rc="bg-teal-200"
-              textcolor="text-teal-900"
-            />
-            <Badge
-              link="https://scite.ai/users/lambert-theisen-jOAj"
-              left="scite_"
-              right="lambert-theisen-jOAj"
-              lc="bg-gray-300"
-              rc="bg-gray-200"
-              textcolor="text-gray-900"
-            />
+                  )
+                  :
+                  ""
+              }
+            </div>
+            <div>
+              <p className='font-normal text-xs leading-3 text-justify my-2 text-gray-500'>
+                {description}
+              </p>
+              <div className="flex flex-wrap gap-2 leading-none">
+                <Badge
+                  link={coursenotes}
+                  icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
+                  left="Notes"
+                  right="Link"
+                  lc="bg-orange-300"
+                  rc="bg-orange-200"
+                  textcolor="text-orange-900"
+                />
+                {
+                  labcodes != "" ?
+                    <Badge
+                      link={labcodes}
+                      icon={<FontAwesomeIcon className="pr-1" icon={faBook} />}
+                      left="Labcodes"
+                      right="Link"
+                      lc="bg-lime-300"
+                      rc="bg-lime-200"
+                      textcolor="text-lime-900"
+                    />
+                    :
+                    ""
+                }
+              </div>
+            </div>
+            <div className="absolute right-3 bottom-2 text-5xl font-black text-black italic opacity-10">
+              <span className='text-xl mr-1'>#</span>{teaching_data.length - ind}
+            </div>
           </div>
-          <p className='mb-1'>
-            Also have a look at my institute webpages:
-          </p>
-          <div className='flex flex-wrap gap-2 leading-3'>
-            <Badge
-              link="https://www.acom.rwth-aachen.de/5people/theisen/start"
-              icon={<FontAwesomeIcon icon={faBuildingColumns} />}
-              left="ACoM @ RWTH Aachen"
-              right="LINK"
-              lc="bg-[#00549f]"
-              rc="bg-[#356997]"
-              textcolor="text-white"
-            />
-            <Badge
-              link="https://www.ians.uni-stuttgart.de/institute/team/Theisen/"
-              icon={<FontAwesomeIcon icon={faBuildingColumns} />}
-              left="NMH/IANS @ University of Stuttgart"
-              right="LINK"
-              lc="bg-gray-100"
-              rc="bg-gray-50"
-              textcolor="text-[#323232]"
-            />
-          </div>
-          <h3>
-            Impressum
-          </h3>
-          <p className='font-mono text-xs'>
-            Applied and Computational Mathematics (ACoM)
-            <br />
-            RWTH Aachen University
-            <br />
-            Schinkelstr. 2, Room 229 (Rogowski Building, 2nd floor)
-            <br />
-            52062 Aachen
-            <br />
-            Germany
-            <br />
-            Office Phone: 0049 241 80-98671
-            <br />
-            Mobile Phone: 0049 241 80-98686
-          </p>
-          <p className='font-mono text-xs'>
-            Institut für Angewandte Analysis und Numerische Simulation (IANS)
-            <br />
-            Lehrstuhl Numerische Mathematik für Höchstleistungsrechner (NMH)
-            <br />
-            Universität Stuttgart
-            <br />
-            Pfaffenwaldring 57, Raum 7.154
-            <br />
-            70569 Stuttgart
-            <br />
-            Germany
-            <br />
-            Office Phone: 0049 711 685 65522
-            <br />
-          </p>
+      )
+    }
+    <p className='text-xs text-gray-500 leading-3'>[TODO: Add PDFs previews of notes]</p>
 
-          <p className='text-xs text-gray-500 leading-3'>[TODO Add small CV section with logos and timeline.] [TODO Add better email obfuscate strategy.]</p>
+    <h2 id="projects" className="scroll-mt-20">
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative">Selected Projects</span></span>
+    </h2>
+    <ul>
+      <li>
+        <Image
+          className="h-8 m-0 w-auto inline-block"
+          src="/gradescaler_logo.png"
+          width={1}
+          height={1}
+          alt="3rd-order Lagrangian basis function on simplex #8"
+          sizes="160px"
+        /> The tool <Link href="http://gradescaler.com">gradescaler.com</Link> provides a graphical overview of exam grading schemes.
+      </li>
+      <li>
+        Use the <Link href="https://gitlab.com/lamBOO/shopping-list">shopping-list</Link> LaTeX template to create your 4x4 double-sided reusable shopping list for easy ticking of required products based on the supermarket location to optimize shopping. Here's an <Link href="https://gitlab.com/lamBOO/shopping-list/-/raw/master/shopping-list.pdf?inline=true">example</Link>.
+      </li>
+      <li>
+        A while ago, I build the website <Link href="http://kanara-bau.de">kanara-bau.de</Link> without using any tech stack in the editor.
+      </li>
+    </ul>
 
-        {/* </main> */}
-        {/* <Footer /> */}
-      {/* </div> */}
-    </>;
+    <h2 id="contact" className="scroll-mt-20 mb-5">
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><span className="relative">Contact</span></span>
+    </h2>
+    <h3>
+      E-Mail
+    </h3>
+    <p className='leading-6'>
+      You can contact me directly via the e-mail address <span className='whitespace-pre'><Badge
+        link="mailto:lmbrt∂thsn.dev?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)"
+        icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
+        left="Mail"
+        right="lmbrt∂thsn.dev"
+        lc="bg-gray-200"
+        rc="bg-gray-50"
+        textcolor="text-black"
+      /></span> or <span className='whitespace-pre'><Badge
+        link="mailto:lambert.theisen∂rwth-aachen.de?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)"
+        icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
+        left="Mail"
+        right="lambert.theisen∂rwth-aachen.de"
+        lc="bg-gray-200"
+        rc="bg-gray-50"
+        textcolor="text-black"
+      /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding signature reads 9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87.
+    </p>
+    <h3>
+      <Image
+        className="h-6 m-0 w-auto inline-block"
+        src="/matrix.svg"
+        width={1}
+        height={1}
+        alt="3rd-order Lagrangian basis function on simplex #8"
+      /> Protocol
+    </h3>
+    <p className='leading-6'>
+      You can also contact me via the Matrix protocol, which is an open-source, end-to-end encrypted and decentralised messaging service. Simply press
+      {' '}
+      <Badge
+        link="https://matrix.to/#/@lamboo:matrix.org"
+        icon={<Image
+          className="h-3 m-0 w-auto inline-block pr-1"
+          src="/matrix.svg"
+          width={1}
+          height={1}
+          alt="Matrix messenger logo"
+        />}
+        left="Matrix"
+        right="@lamboo:matrix.org"
+        lc="bg-gray-200"
+        rc="bg-gray-50"
+        textcolor="text-black"
+      />
+      {' '}
+      and start texting me.
+    </p>
+    <h3>
+      Profiles
+    </h3>
+    <p className='mb-1'>
+      I am part of the major science and networking sites, for example:
+    </p>
+    <div className='flex flex-wrap gap-2 leading-3'>
+      <Badge
+        link="https://git.rwth-aachen.de/lamBOO"
+        icon={<FontAwesomeIcon className="pr-1" icon={faGitlab} />}
+        left="RWTH Gitlab"
+        right="@lamBOO"
+        lc="bg-orange-300"
+        rc="bg-orange-200"
+        textcolor="text-orange-900"
+      />
+      <Badge
+        link="https://scholar.google.com/citations?user=ZD8cDyEAAAAJ"
+        icon={<i className="ai ai-google-scholar" />}
+        left="GScholar"
+        right="LINK"
+        lc="bg-blue-300"
+        rc="bg-blue-200"
+        textcolor="text-blue-900"
+      />
+      <Badge
+        link="https://github.com/lamBOOO"
+        icon={<FontAwesomeIcon icon={faGithub} />}
+        left="Github"
+        right="@lamBOOO"
+        lc="bg-gray-300"
+        rc="bg-gray-200"
+        textcolor="text-gray-900"
+      />
+      <Badge
+        link="https://arxiv.org/a/theisen_l_1.html"
+        icon={<i className="ai ai-arxiv" />}
+        left="arXiv"
+        right="theisen_l_1"
+        lc="bg-red-300"
+        rc="bg-red-200"
+        textcolor="text-red-900"
+      />
+      <Badge
+        link="https://orcid.org/0000-0001-5460-5425"
+        icon={<i className="ai ai-orcid" />}
+        left="ORCID"
+        right="0000-0001-5460-5425"
+        lc="bg-lime-300"
+        rc="bg-lime-200"
+        textcolor="text-lime-900"
+      />
+      <Badge
+        link="https://www.researchgate.net/profile/Lambert-Theisen"
+        icon={<i className="ai ai-researchgate-square" />}
+        left="ResearchGate"
+        right="Lambert-Theisen"
+        lc="bg-teal-300"
+        rc="bg-teal-200"
+        textcolor="text-teal-900"
+      />
+      <Badge
+        link="https://www.linkedin.com/in/lambert-theisen-4027b3184/"
+        icon={<FontAwesomeIcon icon={faLinkedin} />}
+        left="LinkedIn"
+        right="LINK"
+        lc="bg-blue-300"
+        rc="bg-blue-200"
+        textcolor="text-blue-900"
+      />
+      <Badge
+        link="https://twitter.com/LmbrtThsn"
+        icon={<FontAwesomeIcon icon={faTwitter} />}
+        left="Twitter"
+        right="@LmbrtThsn"
+        lc="bg-sky-300"
+        rc="bg-sky-200"
+        textcolor="text-sky-900"
+      />
+      <Badge
+        link="https://www.semanticscholar.org/author/Lambert-Theisen/1811123350"
+        icon={<i className="ai ai-semantic-scholar"></i>}
+        left="SemanticScholar"
+        right="LINK"
+        lc="bg-slate-300"
+        rc="bg-slate-200"
+        textcolor="text-slate-900"
+      />
+      <Badge
+        link="https://explore.openaire.eu/search/advanced/research-outcomes?f0=resultauthor&fv0=Lambert%2520Theisen&page=1&size=10&sortBy=&qf=false"
+        left="OpenAIRE"
+        right="LINK"
+        lc="bg-indigo-300"
+        rc="bg-indigo-200"
+        textcolor="text-indigo-900"
+      />
+      <Badge
+        link="https://core.ac.uk/search?q=author:(Lambert%20AND%20Theisen)&allOfTheWords=&exactPhrase=&atLeastOneOfTheWords=&withoutTheWords=&advAuthor=Lambert%20Theisen&publisher=&advRepository=&yearFrom=&yearTo=&findThoseWords=anywhere&doi="
+        left="CORE"
+        right="LINK"
+        lc="bg-gray-300"
+        rc="bg-gray-200"
+        textcolor="text-gray-900"
+      />
+      <Badge
+        link="https://figshare.com/authors/Lambert_Theisen/7342844"
+        icon={<i className="ai ai-figshare"></i>}
+        left="Figshare"
+        right="LINK"
+        lc="bg-slate-300"
+        rc="bg-slate-200"
+        textcolor="text-slate-900"
+      />
+      <Badge
+        link="https://www.prophy.science/author/54631348/"
+        left="Prophy"
+        right="54631348"
+        lc="bg-orange-300"
+        rc="bg-orange-200"
+        textcolor="text-orange-900"
+      />
+      <Badge
+        link="https://zbmath.org/authors/?q=ai%3Atheisen.lambert"
+        left="zbMATH"
+        right="theisen.lambert"
+        lc="bg-pink-300"
+        rc="bg-pink-200"
+        textcolor="text-pink-900"
+      />
+      <Badge
+        link="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1439845"
+        left="MathSciNet"
+        right="1439845"
+        lc="bg-orange-300"
+        rc="bg-orange-200"
+        textcolor="text-orange-900"
+      />
+      <Badge
+        link="https://www.scopus.com/authid/detail.uri?authorId=57219764798"
+        icon={<i className="ai ai-scopus"></i>}
+        left="Scopus"
+        right="57219764798"
+        lc="bg-orange-300"
+        rc="bg-orange-200"
+        textcolor="text-orange-900"
+      />
+      <Badge
+        link="https://sciprofiles.com/profile/1727525"
+        icon={<i className="ai ai-scopus"></i>}
+        left="SciProfiles"
+        right="1727525"
+        lc="bg-teal-300"
+        rc="bg-teal-200"
+        textcolor="text-teal-900"
+      />
+      <Badge
+        link="https://scite.ai/users/lambert-theisen-jOAj"
+        left="scite_"
+        right="lambert-theisen-jOAj"
+        lc="bg-gray-300"
+        rc="bg-gray-200"
+        textcolor="text-gray-900"
+      />
+    </div>
+    <p className='mb-1'>
+      Also have a look at my institute webpages:
+    </p>
+    <div className='flex flex-wrap gap-2 leading-3'>
+      <Badge
+        link="https://www.acom.rwth-aachen.de/5people/theisen/start"
+        icon={<FontAwesomeIcon icon={faBuildingColumns} />}
+        left="ACoM @ RWTH Aachen"
+        right="LINK"
+        lc="bg-[#00549f]"
+        rc="bg-[#356997]"
+        textcolor="text-white"
+      />
+      <Badge
+        link="https://www.ians.uni-stuttgart.de/institute/team/Theisen/"
+        icon={<FontAwesomeIcon icon={faBuildingColumns} />}
+        left="NMH/IANS @ University of Stuttgart"
+        right="LINK"
+        lc="bg-gray-100"
+        rc="bg-gray-50"
+        textcolor="text-[#323232]"
+      />
+    </div>
+    <h3>
+      Impressum
+    </h3>
+    <p className='font-mono text-xs'>
+      Applied and Computational Mathematics (ACoM)
+      <br />
+      RWTH Aachen University
+      <br />
+      Schinkelstr. 2, Room 229 (Rogowski Building, 2nd floor)
+      <br />
+      52062 Aachen
+      <br />
+      Germany
+      <br />
+      Office Phone: 0049 241 80-98671
+      <br />
+      Mobile Phone: 0049 241 80-98686
+    </p>
+    <p className='font-mono text-xs'>
+      Institut für Angewandte Analysis und Numerische Simulation (IANS)
+      <br />
+      Lehrstuhl Numerische Mathematik für Höchstleistungsrechner (NMH)
+      <br />
+      Universität Stuttgart
+      <br />
+      Pfaffenwaldring 57, Raum 7.154
+      <br />
+      70569 Stuttgart
+      <br />
+      Germany
+      <br />
+      Office Phone: 0049 711 685 65522
+      <br />
+    </p>
+
+    <p className='text-xs text-gray-500 leading-3'>[TODO Add small CV section with logos and timeline.] [TODO Add better email obfuscate strategy.]</p>
+
+  </>;
 }
