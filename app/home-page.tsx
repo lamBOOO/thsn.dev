@@ -3,10 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Stickynavbar from '../components/Stickynavbar'
-import Metadata from '../components/Metadata'
-import Footer from '../components/Footer'
-import Badge from '../components/Badge'
+import Badge from '../components/badge'
 import 'academicons'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -282,10 +279,10 @@ const teaching_data = [
 
 export default function Home({ allPostsData }: any) {
   return <>
-      <div className='px-4'>
+      {/* <div className='px-4'> */}
         {/* <Metadata />
         <Stickynavbar /> TODO*/}
-        <main className='my-10 prose mx-auto'>
+        {/* <main className='my-10 prose mx-auto'> */}
 
           <div className="flex mb-4">
             <div className="flex-auto">
@@ -1083,8 +1080,8 @@ export default function Home({ allPostsData }: any) {
 
           <p className='text-xs text-gray-500 leading-3'>[TODO Add small CV section with logos and timeline.] [TODO Add better email obfuscate strategy.]</p>
 
-        </main>
+        {/* </main> */}
         {/* <Footer /> */}
-      </div>
+      {/* </div> */}
     </>;
 }
