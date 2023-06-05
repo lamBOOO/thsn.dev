@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 
-import { Html, Head, Main, NextScript } from 'next/document'
+// import { Html, Head, Main, NextScript } from 'next/document'
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Layout from '../components/layout'
+// import type { AppProps } from 'next/app'
+// import Layout from '../components/layout'
 
 import React, { PropsWithChildren } from "react";
 
