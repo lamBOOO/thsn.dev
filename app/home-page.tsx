@@ -345,13 +345,13 @@ export default function Home({ allPostsData }: any) {
             </h2>
             <span className='grid columns-1 gap-2 pl-0 leading-6'>
               <span className="pl-0">
-                <b className='font-mono font-bold bg-gray-800 text-white p-0.5'>23/01/03</b>
+                <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2023-01-03</b>
                 {" "}
                 I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
               </span>
               {" "}
               <span className="pl-0">
-                <b className='font-mono font-bold bg-gray-800 text-white p-0.5'>22/10/01</b>
+                <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2022-10-01</b>
                 {" "}
                 From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
               </span>
@@ -362,9 +362,9 @@ export default function Home({ allPostsData }: any) {
             <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-red-100 relative inline-block"><span className="relative">Blog</span></span>
           </h2>
           <span className='grid columns-1 gap-2 pl-0 leading-6'>
-            {allPostsData.map(({ id, date, title, longtitle }: any) => (
+            {allPostsData.map(({ id, date, title }: any) => (
               <span className='' key={id}>
-                <b className='font-mono font-bold bg-gray-800 text-white p-0.5'>{date}</b>
+                <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>{date}</b>
                 {" "}
                 <Link className="" prefetch={false} href={"/blog/" + id}>{title}</Link>
                 {" "}
