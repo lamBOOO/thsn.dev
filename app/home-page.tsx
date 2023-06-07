@@ -330,6 +330,16 @@ export default function Home({ allPostsData }: any) {
       </h2>
       <span className='grid columns-1 gap-2 pl-0 leading-6'>
         <span className="pl-0">
+          <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2023-06-07</b>
+          {" "}
+          End of june, I'll join the <Link href="https://numericalanalysisconference.org.uk/">Biennial Numerical Analysis Conference</Link> in Glasgow. Many thanks to <Link href="https://www.numerical.rl.ac.uk/people/h_aldaas/">Hussam</Link> and <Link href="https://giref.ulaval.ca/~fkwok/index_en.htm">Felix</Link> for organizing a mini about <i>Recent advances in multilevel, multiscale, and parallel in time methods</i>.
+        </span>
+        <span className="pl-0">
+          <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2023-03-10</b>
+          {" "}
+          I had a short (but great 😍) visit to the <Link href="https://www.ljll.math.upmc.fr/?lang=fr">LJLL</Link> in Paris, where I had the chance to present my work in the EMC2 seminar series organized by <Link href="https://www.ljll.math.upmc.fr/hassan/">Hassan</Link> and <Link href="https://msdupuy.github.io">Mi-Song</Link>.
+        </span>
+        <span className="pl-0">
           <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2023-01-03</b>
           {" "}
           I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
