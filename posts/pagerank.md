@@ -3,6 +3,8 @@ title: "Analyse des Google PageRank Algorithmus (GER)"
 date: '2023-05-09'
 ---
 
+<!-- pandoc --citeproc --bibliography=bib.bib -s SuppMaterial.tex -o output.md -t gfm -->
+
 # Analyse des Google PageRank Algorithmus
 
 ## Grundlagen
@@ -24,7 +26,9 @@ $$
 \begin{aligned}
     V &= \{A,B,C,D\}
     \\
-    E &= \left\{ (A,B), (A,C), (B,C), (B,D), (C,A), (D,B), (D,C) \right\}
+    E &= \{ (A,B), (A,C), (B,C), (B,D),
+    \\
+    & \quad (C,A), (D,B), (D,C) \}
 
 \end{aligned}
 $$
@@ -52,7 +56,7 @@ $\boldsymbol{A} \in {\{0,1\}}^{n \times n}$ mit
 $$
 A_{ij} :=
     \begin{cases}
-      1 & \textnormal{es existiert eine Kante von } j \textnormal{ nach } i
+      1 & \textnormal{es existiert Kante } j \textnormal{ nach } i
       \\
       0 & \textnormal{sonst}
     \end{cases}
@@ -94,11 +98,12 @@ U_{ij} :=
       \frac{A_{ij}}{s_j} & s_j \neq 0 \\
       A_{ij} & s_j = 0 \\
     \end{cases}
-    \textnormal{ mit der }j\textnormal{-ten Spaltensumme }
-    s_j := \sum_{i=1}^n A_{ij}
-    .
 $$
-
+mit der
+$$
+j\textnormal{-ten Spaltensumme }
+    s_j := \sum_{i=1}^n A_{ij}
+$$
 
 </div>
 
@@ -272,13 +277,15 @@ PageRank Algorithmus nicht für alle $\boldsymbol{x}_0$, denn mit
 z.B. $\boldsymbol{x}_0 = {(1,0,0,0,0)}^T$ gilt
 
 $$
+\begin{aligned}
 \boldsymbol{x}_1 = \boldsymbol{U} \boldsymbol{x}_0 = {(0,1,0,0,0)}^T
-    ,\quad
+    ,\\
     \boldsymbol{x}_2 = \boldsymbol{U} \boldsymbol{x}_1 = {(1,0,0,0,0)}^T = \boldsymbol{x}_0
-    ,\quad
+    ,\\
     \boldsymbol{x}_3 = \boldsymbol{x}_1
-    ,\quad
+    ,\\
     \textnormal{usw.}
+\end{aligned}
 $$
 
 
@@ -382,14 +389,17 @@ ist, $\boldsymbol{w}$ unterschiedliche Vorzeichen hat und somit
 mindestens ein Summand $M_{ij} w_j$ negativ ist. Summation über $i$ und
 Vertauschen der Summen liefert:
 $$
+\begin{aligned}
 \sum_{i=1}^n |w_i|
-    <
+    &<
     \sum_{i=1}^n \sum_{j=1}^n M_{ij} \left| w_j \right|
     =
     \sum_{j=1}^n \left| w_j \right| \underbrace{\sum_{i=1}^n M_{ij}}_{=1}
-    =
+    \\
+    &=
     \sum_{j=1}^n \left| w_j \right|
     ,
+\end{aligned}
 $$
  was einen Widerspruch darstellt. $\square$
 
@@ -427,7 +437,8 @@ $$
     \sum_{i=1}^n x_i
     &=
     \sum_{i=1}^n \left[ \left( - \frac{\sum_{j=1}^n w_j}{d} \right) v_i \right] + \sum_{i=1}^n w_i
-    =
+    \\
+    &=
     \left( - \frac{\sum_{j=1}^n w_j}{d} \right) \sum_{i=1}^n v_i + \sum_{i=1}^n w_i
     \\
     &=
@@ -500,16 +511,19 @@ ist.
 $\boldsymbol{w} = \boldsymbol{M} \boldsymbol{v}$, dass
 $w_i = \sum_{j=1}^n M_{ij} v_j$ und daher:
 $$
-\sum_{i=1}^n w_i
-    =
+\begin{aligned}
+    \sum_{i=1}^n w_i
+    &=
     \sum_{i=1}^n \sum_{j=1}^n M_{ij} v_j
     =
     \sum_{j=1}^n v_j \underbrace{\sum_{i=1}^n M_{ij}}_{=1}
-    =
+    \\
+    &=
     \sum_{j=1}^n v_j
     =
     0
     .
+\end{aligned}
 $$
  Somit ist $\boldsymbol{w} \in V$. Für die Normabschätzung
 betrachten wir
@@ -569,18 +583,21 @@ $$
  sodass $|a_j| \le c < 1$ gilt für alle $j$. Letztlich folgt dann
 
 $$
+\begin{aligned}
 {\|\boldsymbol{w}\|}_1
-    =
+    &=
     \sum_{j=1}^n v_j a_j
     =
     \left| \sum_{j=1}^n v_j a_j \right|
     \le
     \sum_{j=1}^n |v_j| |a_j|
-    \le
+    \\
+    &\le
     c \sum_{j=1}^n |v_j|
     =
     c \sum_{j=1}^n {\|\boldsymbol{v}\|}_1
     .
+\end{aligned}
 $$
  $\square$
 
@@ -634,12 +651,15 @@ data-reference="lem:unterraum">1.21</a> kann mit vollständige Induktion
 folgende Aussage gezeigt werden:
 
 $$
+\begin{aligned}
 \textnormal{Für alle } k \textnormal{ gilt }
     \boldsymbol{M}^k \boldsymbol{v} \in V
+    \\
     \textnormal{ sowie }
     {\|\boldsymbol{M}^k \boldsymbol{v}\|}_1 \le c^k {\|\boldsymbol{v}\|}_1
     \textnormal{ mit } 0 \le c < 1
     .
+\end{aligned}
 $$
  Somit erhalten wir
 $\lim_{k \to \infty} c^k {\|\boldsymbol{v}\|}_1 = 0$ und mit dem
