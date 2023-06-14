@@ -3,6 +3,7 @@ import { getPostData } from '../../../lib/posts';
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
+import rehypeRaw from "rehype-raw";
 import remarkGfm from 'remark-gfm'
 import ReactMarkdown from 'react-markdown'
 
@@ -24,7 +25,7 @@ export default async function Page({ params }: any) {
   return <>
     <ReactMarkdown
       remarkPlugins={[[remarkGfm, { singleTilde: false }], [remarkMath]]}
-      rehypePlugins={[rehypeKatex]}
+      rehypePlugins={[[rehypeKatex],[rehypeRaw]]}
     >
       {postData.content}
     </ReactMarkdown>

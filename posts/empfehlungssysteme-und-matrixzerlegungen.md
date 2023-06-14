@@ -1,5 +1,5 @@
 ---
-title: "Empfehlungssysteme und Matrixzerlegungen (German)"
+title: "Empfehlungssysteme und Matrixzerlegungen (GER)"
 date: '2023-06-13'
 ---
 
