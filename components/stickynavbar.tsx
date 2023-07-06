@@ -64,9 +64,7 @@ export default function Navbar() {
                 <div className="hidden md:ml-6 md:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
-                        // TODO: Use nextjs Link component
-                        // https://github.com/vercel/next.js/issues/49612
+                      <Link
                         key={item.name}
                         href={"/" + item.id}
                         className={classNames(
@@ -76,7 +74,7 @@ export default function Navbar() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -125,10 +123,8 @@ export default function Navbar() {
             <div className="">
               {navigation.map((item) => (
                 <Disclosure.Button
-                  // TODO: Use nextjs link when finished
-                  // https://github.com/vercel/next.js/issues/49612
                   key={item.name}
-                  as="a"
+                  as={Link}
                   href={"/" + item.id}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100',
