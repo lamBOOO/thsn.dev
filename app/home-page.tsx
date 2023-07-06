@@ -361,7 +361,7 @@ export default function Home({ allPostsData }: any) {
         <span className='' key={id}>
           <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>{date}</b>
           {" "}
-          <Link className="" prefetch={false} href={"/blog/" + id}>{title}</Link>
+          <Link className="" href={"/blog/" + id}>{title}</Link>
           {" "}
         </span>
       ))}
