@@ -141,6 +141,22 @@ const publication_data = [
 
 const teaching_data = [
   {
+    "semester": "SS23",
+    "title_de": "Schulmathematik vom höheren Standpunkt [50% der Vorlesung]",
+    "title_en": "School mathematics from the higher perspective [50% of lecture]",
+    "students": 20,
+    "location": "University of Stuttgart",
+    "people": [
+      {
+        name: "Prof. Benjamin Stamm",
+        link: "https://www.ians.uni-stuttgart.de/institute/team/Stamm/"
+      }
+    ],
+    "coursenotes": "https://thsn.dev/blog",
+    "labcodes": "",
+    "description": "We covered topics from the real life including: How does GPS work?; Why is the Netflix recommendation algorithm so good?; How to optimize solar plants?; What's the algorithm to detect traffic lights?; How is data compression done?; What was the idea of the initial PageRank algorithm by Google? We used the learning concept from CAMMP (https://www.cammp.online) in a workshop style and reflected the mathematical concepts from the higher perspective and how to embedded them in the mathematics class in the school ."
+  },
+  {
     "semester": "WS22",
     "title_de": "Höhere Mathematik 1 für Ingenieure [Vortragsübung]",
     "title_en": "Higher mathematics 1 for engineers [global exercise]",
