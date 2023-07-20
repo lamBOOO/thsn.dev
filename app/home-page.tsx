@@ -17,6 +17,45 @@ import logo_me from '../public/me.jpg'
 
 import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
+const news_data = [
+  {
+    date: "2023-07-20",
+    text: <>
+      There's a chance to visit me in Stuttgart in the <Link href="https://moansi.wixsite.com/gamm/2023">MOANSI Annual Meeting 2023</Link> at 16-17 November 2023. Further information follow. <b>Save the date! 🚨🚨</b>
+    </>,
+  },
+  {
+    date: "2023-06-22",
+    text: <>
+      We had a great workshop at the University of Augsburg about the <Link href="https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/numa/events/numanaschroedinger/">Numerical Analysis of Nonlinear Schrödinger Equations</Link> organized by the group of <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/peterseim/">Daniel Peterseim</Link>. I learned a lot from the talks of <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/tatjana-stykel/">Tatjana</Link>, <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/christoph-zimmer/">Christoph</Link>, <Link href="https://gaspardkemlin.frama.io/">Gaspard</Link>, <Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">Benjamin</Link>, <Link href="https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/mds/team/uschmajew/">André</Link>. Also, many thanks to <Link href="https://de.linkedin.com/in/jonas-p%C3%BCschel-b86ba4232?trk=public_profile_browsemap">Jonas</Link> for the nice city tour. 😄
+    </>,
+  },
+  {
+    date: "2023-06-07",
+    text: <>
+      End of june, I'll join the <Link href="https://numericalanalysisconference.org.uk/">Biennial Numerical Analysis Conference</Link> in Glasgow. Many thanks to <Link href="https://www.numerical.rl.ac.uk/people/h_aldaas/">Hussam</Link> and <Link href="https://giref.ulaval.ca/~fkwok/index_en.htm">Felix</Link> for organizing a mini about <i>Recent advances in multilevel, multiscale, and parallel in time methods</i>.
+    </>,
+  },
+  {
+    date: "2023-03-10",
+    text: <>
+      I had a short (but great 😍) visit to the <Link href="https://www.ljll.math.upmc.fr/?lang=fr">LJLL</Link> in Paris, where I had the chance to present my work in the EMC2 seminar series organized by <Link href="https://www.ljll.math.upmc.fr/hassan/">Hassan</Link> and <Link href="https://msdupuy.github.io">Mi-Song</Link>.
+    </>,
+  },
+  {
+    date: "2023-01-03",
+    text: <>
+      I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
+    </>,
+  },
+  {
+    date: "2023-06-07",
+    text: <>
+      From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
+    </>,
+  },
+]
+
 const publication_data = [
   {
     title: "A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains",
@@ -329,27 +368,13 @@ export default function Home({ allPostsData }: any) {
         <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative">News</span></span>
       </h2>
       <span className='grid columns-1 gap-2 pl-0 leading-6'>
-        <span className="pl-0">
-          <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2023-06-07</b>
-          {" "}
-          End of june, I'll join the <Link href="https://numericalanalysisconference.org.uk/">Biennial Numerical Analysis Conference</Link> in Glasgow. Many thanks to <Link href="https://www.numerical.rl.ac.uk/people/h_aldaas/">Hussam</Link> and <Link href="https://giref.ulaval.ca/~fkwok/index_en.htm">Felix</Link> for organizing a mini about <i>Recent advances in multilevel, multiscale, and parallel in time methods</i>.
-        </span>
-        <span className="pl-0">
-          <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2023-03-10</b>
-          {" "}
-          I had a short (but great 😍) visit to the <Link href="https://www.ljll.math.upmc.fr/?lang=fr">LJLL</Link> in Paris, where I had the chance to present my work in the EMC2 seminar series organized by <Link href="https://www.ljll.math.upmc.fr/hassan/">Hassan</Link> and <Link href="https://msdupuy.github.io">Mi-Song</Link>.
-        </span>
-        <span className="pl-0">
-          <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2023-01-03</b>
-          {" "}
-          I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
-        </span>
-        {" "}
-        <span className="pl-0">
-          <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>2022-10-01</b>
-          {" "}
-          From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
-        </span>
+        {news_data.map(({ id, date, text }: any) => (
+          <span className="pl-0" key={id}>
+            <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>{date}</b>
+            {" "}
+            {text}
+          </span>
+        ))}
       </span>
     </aside>
 
