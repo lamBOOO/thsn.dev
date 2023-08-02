@@ -1,4 +1,4 @@
-import { getPostData } from '../../../lib/posts';
+import { getAllPostIds, getPostData } from '../../../lib/posts';
 
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
@@ -19,9 +19,13 @@ export async function generateMetadata(
   };
 }
 
+export function generateStaticParams() {
+  return getAllPostIds()
+}
 
 export default async function Page({ params }: any) {
-  const postData = await getPostData(params.id);
+  const { id } = params;
+  const postData = await getPostData(id);
   return <>
     <ReactMarkdown
       remarkPlugins={[[remarkGfm, { singleTilde: false }], [remarkMath]]}
