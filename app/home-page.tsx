@@ -11,7 +11,7 @@ config.autoAddCss = false
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faGitlab, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faFile } from '@fortawesome/free-regular-svg-icons'
-import { faBook, faBuildingColumns, faCode, faUser, faUsers, faClock } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faBuildingColumns, faCode, faUser, faUsers, faClock, faArchive } from '@fortawesome/free-solid-svg-icons'
 
 import logo_me from '../public/me.jpg'
 
@@ -844,23 +844,7 @@ export default function Home({ allPostsData }: any) {
       E-Mail
     </h3>
     <p className='leading-6'>
-      You can contact me directly via the e-mail address <span className='whitespace-pre'><Badge
-        link="mailto:lmbrt∂thsn.dev?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)"
-        icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
-        left="Mail"
-        right="lmbrt∂thsn.dev"
-        lc="bg-gray-200"
-        rc="bg-gray-50"
-        textcolor="text-black"
-      /></span> or <span className='whitespace-pre'><Badge
-        link="mailto:lambert.theisen∂rwth-aachen.de?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)"
-        icon={<FontAwesomeIcon className="pr-1" icon={faEnvelope} />}
-        left="Mail"
-        right="lambert.theisen∂rwth-aachen.de"
-        lc="bg-gray-200"
-        rc="bg-gray-50"
-        textcolor="text-black"
-      /></span> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding signature reads 9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87.
+      You can contact me directly via the e-mail address <Link href="mailto:lmbrt∂thsn.dev?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)">lmbrt∂thsn.dev</Link> or <Link href="mailto:lambert.theisen∂rwth-aachen.de?subject=Ei gude, wie?&body=don't forget to integrate the e-mail address ;-)">lambert.theisen∂rwth-aachen.de</Link> preferrable using PGP encryption. My PGP key can be found on the keyserver <Link href="https://keys.openpgp.org/">keys.openpgp.org</Link> or you can directlty download it here using the link <Link href="/lt-pgpkey.asc">lt-pgpkey.asc</Link>. The corresponding signature reads 9C32 B2D9 E59B 09C1 72AB C577 F2C2 52C0 F331 EB87.
     </p>
     <h3>
       <Image
@@ -872,25 +856,7 @@ export default function Home({ allPostsData }: any) {
       /> Protocol
     </h3>
     <p className='leading-6'>
-      You can also contact me via the Matrix protocol, which is an open-source, end-to-end encrypted and decentralised messaging service. Simply press
-      {' '}
-      <Badge
-        link="https://matrix.to/#/@lamboo:matrix.org"
-        icon={<Image
-          className="h-3 m-0 w-auto inline-block pr-1"
-          src="/matrix.svg"
-          width={1}
-          height={1}
-          alt="Matrix messenger logo"
-        />}
-        left="Matrix"
-        right="@lamboo:matrix.org"
-        lc="bg-gray-200"
-        rc="bg-gray-50"
-        textcolor="text-black"
-      />
-      {' '}
-      and start texting me.
+      You can also contact me via the Matrix protocol, which is an open-source, end-to-end encrypted and decentralised messaging service. Simply hit <Link href="https://matrix.to/#/@lamboo:matrix.org">@lamboo:matrix.org</Link> and start texting me.
     </p>
     <h3>
       Profiles
@@ -912,7 +878,7 @@ export default function Home({ allPostsData }: any) {
         link="https://scholar.google.com/citations?user=ZD8cDyEAAAAJ"
         icon={<i className="ai ai-google-scholar" />}
         left="GScholar"
-        right="LINK"
+        right="ZD8cDyEAAAAJ"
         lc="bg-blue-300"
         rc="bg-blue-200"
         textcolor="text-blue-900"
@@ -943,6 +909,14 @@ export default function Home({ allPostsData }: any) {
         lc="bg-lime-300"
         rc="bg-lime-200"
         textcolor="text-lime-900"
+      />
+      <Badge
+        link="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1439845"
+        left="MathSciNet"
+        right="1439845"
+        lc="bg-orange-300"
+        rc="bg-orange-200"
+        textcolor="text-orange-900"
       />
       <Badge
         link="https://www.researchgate.net/profile/Lambert-Theisen"
@@ -1022,14 +996,6 @@ export default function Home({ allPostsData }: any) {
         textcolor="text-pink-900"
       />
       <Badge
-        link="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1439845"
-        left="MathSciNet"
-        right="1439845"
-        lc="bg-orange-300"
-        rc="bg-orange-200"
-        textcolor="text-orange-900"
-      />
-      <Badge
         link="https://www.scopus.com/authid/detail.uri?authorId=57219764798"
         icon={<i className="ai ai-scopus"></i>}
         left="Scopus"
@@ -1037,6 +1003,33 @@ export default function Home({ allPostsData }: any) {
         lc="bg-orange-300"
         rc="bg-orange-200"
         textcolor="text-orange-900"
+      />
+      <Badge
+        link="https://www.webofscience.com/wos/author/record/AAR-2324-2021"
+        icon={<i className="ai ai-clarivate"></i>}
+        left="Web of Science"
+        right="AAR-2324-2021"
+        lc="bg-violet-800"
+        rc="bg-violet-700"
+        textcolor="text-white"
+      />
+      <Badge
+        link="https://dblp.org/pid/270/0289.html"
+        icon={<i className="ai ai-dblp"></i>}
+        left="dblp"
+        right="270/0289"
+        lc="bg-sky-700"
+        rc="bg-yellow-400"
+        textcolor="text-white"
+      />
+      <Badge
+        link="https://scholar.archive.org/search?q=%22lambert+theisen%22"
+        icon={<FontAwesomeIcon icon={faArchive} />}
+        left="IA Scholar"
+        right="LINK"
+        lc="bg-gray-300"
+        rc="bg-gray-200"
+        textcolor="text-gray-900"
       />
       <Badge
         link="https://sciprofiles.com/profile/1727525"
