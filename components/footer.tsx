@@ -10,7 +10,7 @@ export default function Footer() {
         <span className="px-4 block text-sm text-gray-500 text-center">
           © 2023 Lambert Theisen. All Rights Reserved.
           <br></br>
-          <span className='text-xs text-gray-500 font-mono'>// build time: {currentDate}</span>
+          <span className='text-xs text-gray-500 font-mono'>{"//"} build time: {currentDate}</span>
         </span>
       </footer>
     </>
