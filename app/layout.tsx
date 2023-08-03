@@ -18,21 +18,6 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
   },
-  openGraph: {
-    title: 'Lambert Theisen',
-    description: 'Developer, writer, and creator.',
-    url: 'https://thsn.dev',
-    siteName: 'Lambert Theisen',
-    images: [
-      {
-        url: '/favicon.ico',
-        width: 650,
-        height: 650,
-      },
-    ],
-    locale: 'en-US',
-    type: 'website',
-  },
   robots: {
     index: true,
     follow: true,
