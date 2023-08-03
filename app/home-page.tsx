@@ -841,6 +841,7 @@ export default function Home({ allPostsData }: any) {
       <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><span className="relative">Contact</span></span>
     </h2>
     <h3>
+      <FontAwesomeIcon className="pr-1" icon={faEnvelope} />
       E-Mail
     </h3>
     <p className='leading-6'>
