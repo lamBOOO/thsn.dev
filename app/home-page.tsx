@@ -384,8 +384,8 @@ export default function Home({ allPostsData }: any) {
         <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative">News</span></span>
       </h2>
       <span className='grid columns-1 gap-2 pl-0 leading-6'>
-        {news_data.map(({ id, date, text }: any) => (
-          <span className="pl-0" key={id}>
+        {news_data.map(({ date, text } ,ind) => (
+          <span className="pl-0" key={ind}>
             <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>{date}</b>
             {" "}
             {text}
