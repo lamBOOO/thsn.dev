@@ -49,7 +49,7 @@ const news_data = [
     </>,
   },
   {
-    date: "2023-06-07",
+    date: "2022-10-01",
     text: <>
       From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
     </>,
