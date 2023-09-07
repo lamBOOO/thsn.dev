@@ -19,6 +19,12 @@ import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
 const news_data = [
   {
+    date: "2023-09-05",
+    text: <>
+      I gave a talk about <i>Publishing Reproducible Numerics: A Student's Perspective</i> at the RDM Workshop of the <Link href="https://www.sfb-s3.de/">SFB 1481: Sparsity and Singular Structures</Link> in Aachen. In the <Link href="/blog/publishing-reproducable-numerics">blogpost</Link>, you can find a summary and download the slides.
+    </>,
+  },
+  {
     date: "2023-07-20",
     text: <>
       There's a chance to visit me in Stuttgart in the <Link href="https://moansi.wixsite.com/gamm/2023">MOANSI Annual Meeting 2023</Link> at 16-17 November 2023. Further information follow. <b>Save the date! 🚨🚨</b>
