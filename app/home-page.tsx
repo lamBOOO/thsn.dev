@@ -1073,22 +1073,31 @@ export default function Home({ allPostsData }: any) {
     </p>
     <div className='flex flex-wrap gap-2 leading-3'>
       <Badge
-        link="https://www.acom.rwth-aachen.de/5people/theisen/start"
+        link="https://www.ians.uni-stuttgart.de/institute/team/Theisen/"
         icon={<FontAwesomeIcon icon={faBuildingColumns} />}
-        left="ACoM @ RWTH Aachen"
-        right="LINK"
+        left="University of Stuttgart"
+        right="NMH/IANS"
+        lc="bg-gray-100"
+        rc="bg-gray-50"
+        textcolor="text-[#323232]"
+      />
+      <Badge
+        link="https://www.acom.rwth-aachen.de/the-lab/team-people/name:lambert_theisen"
+        icon={<FontAwesomeIcon icon={faBuildingColumns} />}
+        left="RWTH Aachen"
+        right="ACoM"
         lc="bg-[#00549f]"
         rc="bg-[#356997]"
         textcolor="text-white"
       />
       <Badge
-        link="https://www.ians.uni-stuttgart.de/institute/team/Theisen/"
+        link="https://web.archive.org/web/20230205103143/https://www.acom.rwth-aachen.de/5people/theisen/start"
         icon={<FontAwesomeIcon icon={faBuildingColumns} />}
-        left="NMH/IANS @ University of Stuttgart"
-        right="LINK"
-        lc="bg-gray-100"
-        rc="bg-gray-50"
-        textcolor="text-[#323232]"
+        left="RWTH Aachen"
+        right="MathCCES (archived)"
+        lc="bg-[#00549f]"
+        rc="bg-[#356997]"
+        textcolor="text-white"
       />
     </div>
     <h3>
