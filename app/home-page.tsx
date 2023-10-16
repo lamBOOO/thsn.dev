@@ -541,10 +541,10 @@ export default function Home({ allPostsData }: any) {
         <b>Publishing Reproducible Numerics: A Student’s Perspective</b>, <Link href="https://www.sfb-s3.de/">RDM Workshop @ SFB 1481: Sparsity and Singular Structures</Link>, Aachen (Germany), 05 September, 2023.
       </li>
       <li>
-        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigen- states in Anisotropically Expanding Domains</b>, <Link href="https://numericalanalysisconference.org.uk/">29th Biennial Conference on Numerical Analysis</Link>, Glasgow (Scotland), 27 June, 2023.
+        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://numericalanalysisconference.org.uk/">29th Biennial Conference on Numerical Analysis</Link>, Glasgow (Scotland), 27 June, 2023.
       </li>
       <li>
-        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigen- states in Anisotropically Expanding Domains</b>, <Link href="https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/numa/events/numanaschroedinger/">Workshop on Numerical Analysis of Nonlinear Schrödinger Equations</Link>, Augsburg (Germany), 22 June, 2023.
+        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/numa/events/numanaschroedinger/">Workshop on Numerical Analysis of Nonlinear Schrödinger Equations</Link>, Augsburg (Germany), 22 June, 2023.
       </li>
       <li>
         <b>Robust Solvers for the Schrödinger Eigenvalue Problem with Long-Range Inter- actions in Anisotropically Expanding Domains</b>, <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023/93rd-annual-meeting/">GAMM 93rd AM. Modeling, analysis and simulation of molecular systems (S26)</Link>, Dresden (Germany), 01 June, 2023.
