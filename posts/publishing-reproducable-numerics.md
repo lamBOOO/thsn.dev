@@ -3,6 +3,8 @@ title: "Publishing Reproducible Numerics: A Student's Perspective"
 date: '2023-09-05'
 ---
 
+![Nature Survey](/repro-numerics.png)
+
 # Publishing Reproducible Numerics: A Student's Perspective
 
 I gave a presentation at the RDM Workshop from the [SFB 1481: Sparsity and Singular Structures](https://www.sfb-s3.de/) at the RWTH Aachen about reproducible numerics. You can download the slides [here](/talks/presentation_c622ad28b665e7b61ce86733b96942111df15e1b.pdf). This post is a short summary.
