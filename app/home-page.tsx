@@ -64,6 +64,59 @@ const news_data = [
 
 const publication_data = [
   {
+    title: "A Scalable Two-Level Domain Decomposition Eigensolver for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains",
+    issue: "Preprint",
+    date: "11/2023",
+    authors: [
+      {
+        me: true
+      },
+      {
+        name: "Benjamin Stamm",
+        link: "https://www.ians.uni-stuttgart.de/institute/team/Stamm/",
+        me: false
+      }
+    ],
+    abstract: "Accelerating iterative eigenvalue algorithms is often achieved by employing a spectral shifting strategy. Unfortunately, improved shifting typically leads to a smaller eigenvalue for the resulting shifted operator, which in turn results in a high condition number of the underlying solution matrix, posing a major challenge for iterative linear solvers. This paper introduces a two-level domain decomposition preconditioner that addresses this issue for the linear Schrödinger eigenvalue problem, even in the presence of a vanishing eigenvalue gap in non-uniform, expanding domains. Since the quasi-optimal shift, which is already available as the solution to a spectral cell problem, is required for the eigenvalue solver, it is logical to also use its associated eigenfunction as a generator to construct a coarse space. We analyze the resulting two-level additive Schwarz preconditioner and obtain a condition number bound that is independent of the domain's anisotropy, despite the need for only one basis function per subdomain for the coarse solver. Several numerical examples are presented to illustrate its flexibility and efficiency.",
+    images: [
+      {
+        src: "/p3-1.jpg",
+        alt: "Geomtry"
+      },
+      {
+        src: "/p3-2.jpg",
+        alt: "Factorization Coarse Space"
+      },
+      {
+        src: "/p3-3.jpg",
+        alt: "Domain decomposition"
+      },
+      {
+        src: "/p3-4.jpg",
+        alt: "Model description"
+      },
+      {
+        src: "/p3-5.jpg",
+        alt: "Converge Rates"
+      },
+      {
+        src: "/p3-6.jpg",
+        alt: "Chain of Particles"
+      },
+    ],
+    keywords: [
+      "Schrödinger equation",
+      "iterative methods",
+      "preconditioning",
+      "domain decomposition",
+      "coarse spaces",
+      "finite element method"
+    ],
+    doi: "10.48550/arXiv.2311.08757",
+    arxiv: "2311.08757",
+    zenodo: "10.5281/zenodo.10121779"
+  },
+  {
     title: "A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains",
     issue: "SIAM Journal on Numerical Analysis Vol. 60, Iss. 5 (2022)",
     date: "09/2022",
@@ -422,7 +475,7 @@ export default function Home({ allPostsData }: any) {
     <h2 id="research" className="scroll-mt-20">
       <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
     </h2>
-    <h3>Journal Publications</h3>
+    <h3>Journal Publications & Preprints</h3>
 
     {
       publication_data.map(
