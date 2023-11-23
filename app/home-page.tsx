@@ -19,6 +19,12 @@ import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
 const news_data = [
   {
+    date: "2023-11-23",
+    text: <>
+    I gave a short 75min introduction to sustainable coding in Julia. You can find the content <Link href="https://lambooo.github.io/SustainableSoftwareEngineering.jl/dev/">hosted on Gitlab Pages</Link> or checkout the <Link href="https://github.com/lamBOOO/SustainableSoftwareEngineering.jl">repo</Link>.
+    </>,
+  },
+  {
     date: "2023-09-05",
     text: <>
       I gave a talk about <i>Publishing Reproducible Numerics: A Student's Perspective</i> at the RDM Workshop of the <Link href="https://www.sfb-s3.de/">SFB 1481: Sparsity and Singular Structures</Link> in Aachen. In the <Link href="/blog/publishing-reproducable-numerics">blogpost</Link>, you can find a summary and download the slides.
