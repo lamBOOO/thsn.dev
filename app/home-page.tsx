@@ -158,7 +158,7 @@ const publication_data = [
     zenodo: "10.5281/zenodo.6576197"
   },
   {
-    title: "fenicsR13: A Tensorial Mixed Finite Element Solver for theLinear R13 Equations Using the FEniCS Computing Platform",
+    title: "fenicsR13: A Tensorial Mixed Finite Element Solver for the Linear R13 Equations Using the FEniCS Computing Platform",
     issue: "ACM Trans. Math. Softw. 47, 2, Article 17 (April 2021)",
     date: "04/2021",
     authors: [
