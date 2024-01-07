@@ -9,8 +9,8 @@ import Footer from '../components/footer'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Lambert Theisen | Scientist, computational engineer, developer.',
-    template: '%s | Lambert Theisen',
+    default: 'Lambert Theisen - Scientist, computational engineer, developer.',
+    template: '%s - Lambert Theisen',
   },
   description: 'Scientist, computational engineer, developer.',
   keywords: ["research", "science", "portfolio", "personal webpage"],

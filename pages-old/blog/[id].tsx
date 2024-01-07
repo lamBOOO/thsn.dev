@@ -29,7 +29,7 @@ export async function getStaticPaths() {
 export default function Post({ postData }: any) {
   return <>
     <Head>
-      <title>{postData.title} | Lambert Theisen</title>
+      <title>{postData.title} - Lambert Theisen</title>
     </Head>
     <ReactMarkdown
       remarkPlugins={[[remarkGfm, { singleTilde: false }], [remarkMath]]}
