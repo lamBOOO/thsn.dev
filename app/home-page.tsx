@@ -19,6 +19,19 @@ import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
 const news_data = [
   {
+    date: "2024-06-03",
+    text: <>
+    After the successful <Link href="https://sfb1481.rwth-aachen.de/news-events/events/spring-school-2024">Spring School</Link> from <Link href="https://sfb1481.rwth-aachen.de/">SFB 1481</Link>,
+    I also had the opportunity to participate in the workshop <Link href="https://sfb1481.rwth-aachen.de/news-events/events/optimization-qc">Optimization Techniques in Quantum Chemistry</Link>. Many thanks to <Link href="https://fabianfaulstich.com/">Fabian</Link>, <Link href="https://sites.google.com/view/maxpfeffer/">Max</Link>, and <Link href="https://www.mathematik.rwth-aachen.de/cms/mathematik/fachgruppe/institute-lehrstuehle/personen/~bkbg/mitarbeiter-campus-/?gguid=PER-G9GYJDN&allou=1">Mathias</Link> for organizing!
+    </>,
+  },
+  {
+    date: "2024-04-01",
+    text: <>
+    On April 1st, I will be working again in Aachen with <Link href="https://www.acom.rwth-aachen.de/5people/torrilhon/start">Manuel Torrilhon</Link> at the <Link href="https://www.acom.rwth-aachen.de/">ACoM institute</Link> on moment-based PDEs.
+    </>,
+  },
+  {
     date: "2023-11-23",
     text: <>
     I gave a short 75min introduction to sustainable coding in Julia. You can find the content <Link href="https://lambooo.github.io/SustainableSoftwareEngineering.jl/dev/">hosted on Gitlab Pages</Link> or checkout the <Link href="https://github.com/lamBOOO/SustainableSoftwareEngineering.jl">repo</Link>.
