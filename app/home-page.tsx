@@ -413,7 +413,7 @@ export default function Home({ allPostsData }: any) {
               Dr. rer. nat.
             </p>
             <p className='leading-5 my-2'>
-              → Computational Engineer, PhD Student, Digital Creator.
+              → Computational Engineer, Applied Mathematician, Digital Creator.
               <br></br>
               @ <Link href="https://www.rwth-aachen.de/">RWTH Aachen University</ Link> / <Link href="https://www.uni-stuttgart.de/">University of Stuttgart</Link>
             </p>
