@@ -1098,7 +1098,7 @@ export default function Home({ allPostsData }: any) {
       <Badge
         link="https://www.webofscience.com/wos/author/record/AAR-2324-2021"
         icon={<i className="ai ai-clarivate"></i>}
-        left="Web of Science"
+        left="ResearcherID"
         right="AAR-2324-2021"
         lc="bg-violet-800"
         rc="bg-violet-700"
@@ -1135,6 +1135,14 @@ export default function Home({ allPostsData }: any) {
         link="https://scite.ai/users/lambert-theisen-jOAj"
         left="scite_"
         right="lambert-theisen-jOAj"
+        lc="bg-gray-300"
+        rc="bg-gray-200"
+        textcolor="text-gray-900"
+      />
+      <Badge
+        link="https://viaf.org/viaf/8973172126418103340002/"
+        left="VIAF"
+        right="LINK"
         lc="bg-gray-300"
         rc="bg-gray-200"
         textcolor="text-gray-900"
