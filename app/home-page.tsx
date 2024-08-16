@@ -410,7 +410,7 @@ export default function Home({ allPostsData }: any) {
               Lambert Theisen
             </h1>
             <p className='text-gray-500 text-xl font-bold m-0'>
-              M.Sc.
+              Dr. rer. nat.
             </p>
             <p className='leading-5 my-2'>
               → Computational Engineer, PhD Student, Digital Creator.
