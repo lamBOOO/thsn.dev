@@ -451,7 +451,10 @@ export default function Home({ allPostsData }: any) {
         className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline"
         href="#"
       >
-        <button className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0" onClick={() => print()}>
+        <button className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0" onClick={
+          // () => print()
+          () => window.open("https://cv.hal.science/lambert-theisen", "_blank")
+        }>
           <FontAwesomeIcon icon={faFile} /> CV
         </button>
       </Link>
@@ -671,7 +674,7 @@ export default function Home({ allPostsData }: any) {
           src="/logo_ddeigenlab.png"
           width={1}
           height={1}
-          alt="3rd-order Lagrangian basis function on simplex #8"
+          alt="ddEigenLab logo"
           sizes="160px"
         /> <Link href="https://git.rwth-aachen.de/lamBOO/ddEigenLab.jl">ddEigenlab.jl</Link>: A Domain-Decomposition Eigenvalue Problem Lab to benchmark various algorithms.
       </li>
@@ -681,7 +684,7 @@ export default function Home({ allPostsData }: any) {
           src="/sticker.png"
           width={1}
           height={1}
-          alt="3rd-order Lagrangian basis function on simplex #8"
+          alt="fenicsR13 logo with Git link"
           sizes="160px"
         /> <Link href="https://git.rwth-aachen.de/lamBOO/fenicsR13">fenicsR13</Link>: A Tensorial Mixed Finite Element Solver for the Linear R13 Equations Using the FEniCS Computing Platform.
       </li>
