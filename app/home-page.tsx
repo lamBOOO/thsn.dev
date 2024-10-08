@@ -19,6 +19,12 @@ import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
 const news_data = [
   {
+    date: "2024-09-18",
+    text: <>
+    I participated at the <Link href="https://sfb1481.rwth-aachen.de">SFB 1481</Link> retreat from 16th to 18th of September 2024 and presented a posted about <i>Mixed Fem for the 13-Moment Equations</i>.
+    </>,
+  },
+  {
     date: "2024-06-03",
     text: <>
     After the successful <Link href="https://sfb1481.rwth-aachen.de/news-events/events/spring-school-2024">Spring School</Link> from <Link href="https://sfb1481.rwth-aachen.de/">SFB 1481</Link>,
@@ -84,8 +90,8 @@ const news_data = [
 const publication_data = [
   {
     title: "A Scalable Two-Level Domain Decomposition Eigensolver for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains",
-    issue: "Preprint",
-    date: "11/2023",
+    issue: "SIAM Journal on Scientific Computing Vol. 46, Iss. 5 (2024)",
+    date: "10/2024",
     authors: [
       {
         me: true
@@ -131,9 +137,9 @@ const publication_data = [
       "coarse spaces",
       "finite element method"
     ],
-    doi: "10.48550/arXiv.2311.08757",
+    doi: "10.1137/23M161848X",
     arxiv: "2311.08757",
-    zenodo: "10.5281/zenodo.10121779"
+    zenodo: "10.5281/zenodo.11072863"
   },
   {
     title: "A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains",
