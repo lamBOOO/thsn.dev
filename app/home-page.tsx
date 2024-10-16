@@ -670,14 +670,24 @@ export default function Home({ allPostsData }: any) {
     </ul>
     {/* TODO Upload PDFs at uniform location, indicate invited and contributed talks, make first page as preview clickable. */}
 
-    <h3>Software</h3>
+    <h3>Open Source Software</h3>
     <ul>
+      <li>
+        <Image
+          className="h-14 m-0 w-auto inline-block float-right pr-2"
+          src="/logo_textcentered.png"
+          width={1}
+          height={1}
+          alt="GeMotion.jl logo"
+          sizes="160px"
+        /> <Link href="https://github.com/lamBOOO/GeMotion.jl">GeMotion.jl</Link>: A Navier-Stokes-Fourier Solver for generalized material laws.
+      </li>
       <li>
         <Link href="https://github.com/lamBOOO/DBPrices.jl">DBPrices.jl</Link>: A Julia wrapper for the <Link href="https://github.com/juliuste/db-prices">db-prices</Link> module from <Link href="https://github.com/juliuste">@juliuste</Link>.
       </li>
       <li>
         <Image
-          className="h-14 m-0 w-auto inline-block"
+          className="h-14 m-0 w-auto inline-block float-right pr-2"
           src="/logo_ddeigenlab.png"
           width={1}
           height={1}
@@ -687,7 +697,7 @@ export default function Home({ allPostsData }: any) {
       </li>
       <li>
         <Image
-          className="h-14 m-0 w-auto inline-block fill"
+          className="h-14 m-0 w-auto inline-block float-right pr-2"
           src="/sticker.png"
           width={1}
           height={1}
@@ -921,7 +931,7 @@ export default function Home({ allPostsData }: any) {
     <ul>
       <li>
         <Image
-          className="h-8 m-0 w-auto inline-block"
+          className="h-8 m-0 w-auto inline-block float-right pr-2"
           src="/gradescaler_logo.png"
           width={1}
           height={1}
