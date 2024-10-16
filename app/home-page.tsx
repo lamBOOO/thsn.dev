@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
 import Badge from '../components/badge'
 import 'academicons'
@@ -430,6 +431,7 @@ export default function Home({ allPostsData }: any) {
               src={logo_me}
               alt="A picture of Lambert Theisen"
               sizes="80px"
+              priority
             />
           </div>
         </div>

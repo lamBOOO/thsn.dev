@@ -58,6 +58,7 @@ export default function Navbar() {
                       src={logo}
                       alt="Lambert Theisens logo"
                       sizes="32px"
+                      priority
                     />
                   </Link>
                 </div>
@@ -89,6 +90,7 @@ export default function Navbar() {
                         src={logo_me}
                         alt="Picture of the author"
                         sizes="32px"
+                        priority
                       />
                     </Menu.Button>
                   </div>
