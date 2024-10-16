@@ -29,7 +29,7 @@ function classNames(...classes: any[]) {
 export default function Navbar() {
   const [effect, setEffect] = useState(false);
   return (
-    <Disclosure as="nav" className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 border-b border-gray-100 px-4">
+    <Disclosure as="nav" className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 dark:bg-neutral-800/90 border-b px-4">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-3xl">
@@ -54,7 +54,7 @@ export default function Navbar() {
                     onAnimationEnd={() => setEffect(false)}
                   >
                     <Image
-                      className="block h-8 w-auto"
+                      className="block h-8 w-auto dark:invert"
                       src={logo}
                       alt="Lambert Theisens logo"
                       sizes="32px"
@@ -69,7 +69,7 @@ export default function Navbar() {
                         href={"/" + item.id}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100 hover:text-black',
-                          'px-3 py-2 rounded-md text-sm font-medium border-2 border-gray-100'
+                          'px-3 py-2 rounded-md text-sm font-medium border-2 border-gray-100 dark:invert'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -127,8 +127,8 @@ export default function Navbar() {
                   as={Link}
                   href={"/" + item.id}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100',
-                    'block py-2 rounded-md text-base font-medium'
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100 border-neutral-500',
+                    'block py-2 rounded-md text-base font-medium dark:invert'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >

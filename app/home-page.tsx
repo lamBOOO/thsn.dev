@@ -436,7 +436,7 @@ export default function Home({ allPostsData }: any) {
 
         <div className='leading-6'>
           <i><small>
-            # Researching <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-amber-100 relative inline-block"><b className="relative">PDE eigenvalue problems</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-red-100 relative inline-block"><b className="relative">asymptotic analysis</b></em> of expanding domains, directional <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-teal-100 relative inline-block"><b className="relative">homogenization</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 relative inline-block"><b className="relative">eigenvalue algorithms</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 relative inline-block"><b className="relative">linear solvers</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><b className="relative">spectral coarse spaces</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><b className="relative">domain decomposition</b></em>, and <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><b className="relative">Galerkin methods</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 relative inline-block"><b className="relative">moment models</b></em> in rarefied gas modelling.
+            # Researching <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-amber-100 dark:before:bg-amber-700 relative inline-block"><b className="relative">PDE eigenvalue problems</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-red-100 dark:before:bg-red-700 relative inline-block"><b className="relative">asymptotic analysis</b></em> of expanding domains, directional <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-teal-100 dark:before:bg-teal-700 relative inline-block"><b className="relative">homogenization</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 dark:before:bg-orange-700 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-orange-100 dark:before:bg-orange-700 relative inline-block"><b className="relative">eigenvalue algorithms</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 dark:before:bg-blue-700 relative inline-block"><b className="relative">preconditioners</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-blue-100 dark:before:bg-blue-700 relative inline-block"><b className="relative">linear solvers</b></em>, <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 dark:before:bg-cyan-700 relative inline-block"><b className="relative">spectral coarse spaces</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-cyan-100 dark:before:bg-cyan-700 relative inline-block"><b className="relative">domain decomposition</b></em>, and <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 dark:before:bg-pink-700 relative inline-block"><b className="relative">Galerkin methods</b></em> for <em className="before:block before:absolute before:inset-0.5 before:-skew-y-1 before:bg-pink-100 dark:before:bg-pink-700 relative inline-block"><b className="relative">moment models</b></em> in rarefied gas modelling.
           </small></i>
         </div>
       </div>
@@ -446,7 +446,7 @@ export default function Home({ allPostsData }: any) {
         alt="A picture of Lambert Theisen"
       />
     </div>
-    <div className='flex flex-wrap items-center gap-3 border-b border-gray-100 pb-5'>
+    <div className='flex flex-wrap items-center gap-3 border-b pb-5'>
       <span className="text-3xl align-middle animate-waving-hand">👋</span>
       <button className="inline-block transform transition-all duration-100 hover:scale-105 text-white bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-md sm:px-5 px-2 py-2.5 text-center no-underline" onClick={() => scrollToIdNoUrlChange("contact", { behavior: "smooth" })}>
         <span className='font-extralight'>Say </span>
@@ -454,21 +454,20 @@ export default function Home({ allPostsData }: any) {
         <span className='font-extralight'> [a​͜igud​ə​ʼwi​ː]</span>
       </button>
       <Link
-        className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate hover:text-white focus:ring-4 focus:outline-none focus:ring-red-200 no-underline"
-        href="#"
+        className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-red-200 no-underline"
+        href="https://cv.hal.science/lambert-theisen"
       >
-        <button className="text-md relative sm:px-5 px-2 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0" onClick={
-          // () => print()
-          () => window.open("https://cv.hal.science/lambert-theisen", "_blank")
-        }>
-          <FontAwesomeIcon icon={faFile} /> CV
+        <button className="text-md group-hover:invert dark:group-hover:invert-0 relative sm:px-5 px-2 py-2 bg-white dark:bg-gray-800 rounded-md group-hover:bg-opacity-0 transition-all duration-200">
+          <span className='text-black dark:text-white'>
+            <FontAwesomeIcon icon={faFile} /> CV
+          </span>
         </button>
       </Link>
     </div>
 
     <aside>
       <h2 id="news" className="scroll-mt-20">
-        <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 relative inline-block"><span className="relative">News</span></span>
+        <span className="before:block before:absolute before:-inset-50 before:-skew-y-1 before:bg-amber-100 dark:before:bg-amber-700 relative inline-block"><span className="relative">News</span></span>
       </h2>
       <span className='grid columns-1 gap-2 pl-0 leading-6'>
         {news_data.map(({ date, text } ,ind) => (
@@ -482,7 +481,7 @@ export default function Home({ allPostsData }: any) {
     </aside>
 
     <h2 id="blog" className="scroll-mt-20">
-      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-red-100 relative inline-block"><span className="relative">Blog</span></span>
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-red-100 dark:before:bg-red-700 relative inline-block"><span className="relative">Blog</span></span>
     </h2>
     <span className='grid columns-1 gap-2 pl-0 leading-6'>
       {allPostsData.map(({ id, date, title }: any) => (
@@ -501,14 +500,14 @@ export default function Home({ allPostsData }: any) {
     </div>
 
     <h2 id="research" className="scroll-mt-20">
-      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-teal-100 dark:before:bg-teal-700 relative inline-block"><span className="relative">Research Interest & Projects</span></span>
     </h2>
     <h3>Journal Publications & Preprints</h3>
 
     {
       publication_data.map(
         ({ title, issue, date, authors, abstract, images, keywords, doi, arxiv, zenodo }, ind) =>
-          <div key={ind} className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
+          <div key={ind} className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200 dark:bg-neutral-800 dark:shadow-gray-900 dark:border-neutral-600">
             <span className='leading-5 mb-2'>
               <span className='font-bold text-lg leading-4'>
                 {title}
@@ -607,7 +606,7 @@ export default function Home({ allPostsData }: any) {
                     textcolor="text-violet-900"
                   />
                 </div>
-                <span className="col-span-1 opacity-10 text-black italic justify-self-end self-end p-0 absolute bottom-2 right-3">
+                <span className="col-span-1 opacity-20 italic justify-self-end self-end p-0 absolute bottom-2 right-3">
                   <span className='text-xl mr-1'>#</span><span className="text-5xl font-black">{publication_data.length - ind}</span>
                 </span>
               </div>
@@ -815,7 +814,7 @@ export default function Home({ allPostsData }: any) {
     <p className='text-xs text-gray-500 leading-3'>[TODO Link PDFs, think about where to host, checkout people and link them, upload own theses to RWTHPublications.]</p>
 
     <h2 id="teaching" className='scroll-mt-20'>
-      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-orange-100 relative inline-block"><span className="relative">Teaching</span></span>
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-orange-100 dark:before:bg-orange-700 relative inline-block"><span className="relative">Teaching</span></span>
     </h2>
     <p>
       You can find most of my teaching activity in the Github repository <Link href="https://github.com/lamBOOO/teaching">@lamBOOO/teaching</Link>.
@@ -824,7 +823,7 @@ export default function Home({ allPostsData }: any) {
     {
       teaching_data.map(
         ({ title_de, title_en, description, students, coursenotes, labcodes, location, semester, people }, ind) =>
-          <div key={ind} className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200">
+          <div key={ind} className="relative border flex flex-col justify-between h-full bg-white rounded-md p-4 my-4 shadow-md border-gray-200 dark:bg-neutral-800 dark:shadow-gray-900 dark:border-neutral-600">
             <span className='leading-5 mb-0'>
               <span className='font-bold text-lg leading-4'>
                 {title_en}
@@ -915,7 +914,7 @@ export default function Home({ allPostsData }: any) {
     <p className='text-xs text-gray-500 leading-3'>[TODO: Add PDFs previews of notes]</p>
 
     <h2 id="projects" className="scroll-mt-20">
-      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 relative inline-block"><span className="relative">Selected Projects</span></span>
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-blue-100 dark:before:bg-blue-700 relative inline-block"><span className="relative">Selected Projects</span></span>
     </h2>
     <ul>
       <li>
@@ -937,7 +936,7 @@ export default function Home({ allPostsData }: any) {
     </ul>
 
     <h2 id="contact" className="scroll-mt-20 mb-5">
-      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-cyan-100 relative inline-block"><span className="relative">Contact</span></span>
+      <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-cyan-100 dark:before:bg-cyan-700 relative inline-block"><span className="relative">Contact</span></span>
     </h2>
     <h3>
       <FontAwesomeIcon className="pr-1" icon={faEnvelope} />
@@ -948,7 +947,7 @@ export default function Home({ allPostsData }: any) {
     </p>
     <h3>
       <Image
-        className="h-6 m-0 w-auto inline-block"
+        className="h-6 m-0 w-auto inline-block dark:invert"
         src="/matrix.svg"
         width={1}
         height={1}

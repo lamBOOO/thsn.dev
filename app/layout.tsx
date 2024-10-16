@@ -40,10 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className='dark:bg-neutral-800'>
         <Stickynavbar />
         {/* <Metadata /> */}
-        <main className='px-4 my-10 prose mx-auto'>{children}</main>
+        <main className='px-4 my-10 prose dark:prose-invert mx-auto'>{children}</main>
         <Footer />
       </body>
     </html>

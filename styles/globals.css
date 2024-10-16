@@ -38,6 +38,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
+/* @layer utilities {
+  .prose a {
+    @apply text-gray-900 dark:text-gray-300;
+  }
+} */
 
 * {
   box-sizing: border-box;
