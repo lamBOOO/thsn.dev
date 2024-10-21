@@ -620,6 +620,12 @@ export default function Home({ allPostsData }: any) {
     <h3>Talks</h3>
     <ul>
       <li>
+        <b>Scalable Domain Decomposition Eigensolvers for Schrödinger Operators in Anisotropic Structures</b>, PhD Thesis Defense, Aachen (Germany), 13 June, 2024.
+      </li>
+      <li>
+        <b>Scalable Domain Decomposition Eigensolvers for Schrödinger Operators in Anisotropic Structures</b>, <Link href="https://www.c3s.uni-hamburg.de/news-events/seminar-c3s.html">Lothat Collatz Seminar in @ RTG 2583: Modeling, Simulation and Optimization of Fluid Dynamic Applications</Link>, Hamburg (Germany), 29 May, 2024.
+      </li>
+      <li>
         <b>Publishing Reproducible Numerics: A Student’s Perspective</b>, <Link href="https://www.sfb-s3.de/">RDM Workshop @ SFB 1481: Sparsity and Singular Structures</Link>, Aachen (Germany), 05 September, 2023.
       </li>
       <li>
