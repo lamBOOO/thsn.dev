@@ -618,15 +618,15 @@ export default function Home({ allPostsData }: any) {
     }
 
     <h3>Talks</h3>
-    <ul>
+    <ol>
       <li>
         <b>Scalable Domain Decomposition Eigensolvers for Schrödinger Operators in Anisotropic Structures</b>, PhD Thesis Defense, Aachen (Germany), 13 June, 2024.
       </li>
       <li>
-        <b>Scalable Domain Decomposition Eigensolvers for Schrödinger Operators in Anisotropic Structures</b>, <Link href="https://www.c3s.uni-hamburg.de/news-events/seminar-c3s.html">Lothat Collatz Seminar in @ RTG 2583: Modeling, Simulation and Optimization of Fluid Dynamic Applications</Link>, Hamburg (Germany), 29 May, 2024.
+        <b>Scalable Domain Decomposition Eigensolvers for Schrödinger Operators in Anisotropic Structures</b>, <Link href="https://www.c3s.uni-hamburg.de/news-events/seminar-c3s.html">Lothar Collatz Seminar at RTG 2583: Modeling, Simulation and Optimization of Fluid Dynamic Applications</Link>, Hamburg (Germany), 29 May, 2024.
       </li>
       <li>
-        <b>Publishing Reproducible Numerics: A Student’s Perspective</b>, <Link href="https://www.sfb-s3.de/">RDM Workshop @ SFB 1481: Sparsity and Singular Structures</Link>, Aachen (Germany), 05 September, 2023.
+        <b>Publishing Reproducible Numerics: A Student's Perspective</b>, <Link href="https://www.sfb-s3.de/">Research Data Management (RDM) Workshop at SFB 1481: Sparsity and Singular Structures</Link>, Aachen (Germany), 05 September, 2023.
       </li>
       <li>
         <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://numericalanalysisconference.org.uk/">29th Biennial Conference on Numerical Analysis</Link>, Glasgow (Scotland), 27 June, 2023.
@@ -635,7 +635,7 @@ export default function Home({ allPostsData }: any) {
         <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/numa/events/numanaschroedinger/">Workshop on Numerical Analysis of Nonlinear Schrödinger Equations</Link>, Augsburg (Germany), 22 June, 2023.
       </li>
       <li>
-        <b>Robust Solvers for the Schrödinger Eigenvalue Problem with Long-Range Inter- actions in Anisotropically Expanding Domains</b>, <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023/93rd-annual-meeting/">GAMM 93rd AM. Modeling, analysis and simulation of molecular systems (S26)</Link>, Dresden (Germany), 01 June, 2023.
+        <b>Robust Solvers for the Schrödinger Eigenvalue Problem with Long-Range Inter- actions in Anisotropically Expanding Domains</b>, <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023/93rd-annual-meeting/">GAMM 93rd Annual Meeting. Section S26: Modeling, Analysis, and Simulation of Molecular Systems</Link>, Dresden (Germany), 01 June, 2023.
       </li>
       <li>
         <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://erc-emc2.eu/emc2-seminars/">EMC2 Seminar (ERC Synergy project - Extreme-scale Mathematically-based Computational Chemistry)</Link>, Paris (France), 10 March, 2023.
@@ -644,36 +644,36 @@ export default function Home({ allPostsData }: any) {
         <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.siam.org/conferences/cm/program/cse23">SIAM Conference on Computational Science and Engineering (CSE23)</Link>, Amsterdam (Netherlands), 28 February, 2023.
       </li>
       <li>
-        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.ians.uni-stuttgart.de/nmh/events/">IANS Oberseminar @ University of Stuttgart</Link>, Stuttgart (Germany), 24 November, 2022.
+        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.ians.uni-stuttgart.de/nmh/events/">IANS Oberseminar, University of Stuttgart</Link>, Stuttgart (Germany), 24 November, 2022.
       </li>
       <li>
-        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.dd27.cz/">DD27: 7th International Domain Decomposition Conference – MS4: SCSs in DDMs and Multiscale Discretizations</Link>, Prague (Czech Republic), 27 July, 2022.
+        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.dd27.cz/">DD27: 27th International Domain Decomposition Conference – MS4: SCSs in DDMs and Multiscale Discretizations</Link>, Prague (Czech Republic), 27 July, 2022.
       </li>
       <li>
         <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.esco2022.femhub.com/">ESCO 2022: 8th European Seminar on Computing</Link>, Pilsen (Czech Republic), 14 June, 2022.
       </li>
       <li>
-        <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 7 June, 2022.
+        <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen University, Aachen (Germany), 7 June, 2022.
       </li>
       <li>
-        <b>An Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen, 15 June, 2021.
+        <b>An Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.acom.rwth-aachen.de/4events/start">ACoM Lunch Seminar</Link>, RWTH Aachen University, Aachen (Germany), 15 June, 2021.
       </li>
       <li>
-        <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://moansi.wixsite.com/gamm/2020">GAMM Activity Group: Modelling, Analysis and Simulation of Molecular Systems (MOANSI) Annual Meeting 2020</Link>, 24-25 September, 2020.
+        <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://moansi.wixsite.com/gamm/2020">GAMM Activity Group: Modelling, Analysis and Simulation of Molecular Systems (MOANSI) Annual Meeting 2020</Link>, Aachen (Germany), 24-25 September, 2020.
       </li>
       <li>
-        <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 30 June, 2020.
+        <b>Optimal Eigensolvers for Dirichlet Schrödinger Operators with Non-Negative Additively Separable Potentials in Long Domains</b>, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen University, Aachen (Germany), 30 June, 2020.
       </li>
       <li>
-        <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 15 October, 2019.
+        <b>Simulation of Non-Equilibrium Gas Flows Using the FEniCS Computing Platform</b>, Master Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen University, Aachen (Germany), 15 October, 2019.
       </li>
       <li>
-        <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, <Link href="https://www.acom.rwth-aachen.de/3teaching/0classes/ceswseminar/start">CES Seminar Presentation</Link>, RWTH Aachen, 10 April, 2019.
+        <b>Shear-Slip Mesh Update Method for Compressible Flow Simulations Involving Rotating Sub-Domains</b>, <Link href="https://www.acom.rwth-aachen.de/3teaching/0classes/ceswseminar/start">CES Seminar Presentation</Link>, RWTH Aachen University, 10 April, 2019.
       </li>
       <li>
-        <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen, 10 April, 2018.
+        <b>Automated Boundary Layer Mesh Generation for Simulation of Convective Cooling</b>, Bachelor Thesis Defense, <Link href="https://www.mathcces.rwth-aachen.de/4events/start">MathCCES Lunch Seminar</Link>, RWTH Aachen University, 10 April, 2018.
       </li>
-    </ul>
+    </ol>
     {/* TODO Upload PDFs at uniform location, indicate invited and contributed talks, make first page as preview clickable. */}
 
     <h3>Open Source Software</h3>
