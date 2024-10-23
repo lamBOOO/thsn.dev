@@ -22,71 +22,70 @@ const news_data = [
   {
     date: "2024-09-18",
     text: <>
-    I participated at the <Link href="https://sfb1481.rwth-aachen.de">SFB 1481</Link> retreat from 16th to 18th of September 2024 and presented a posted about <i>Mixed Fem for the 13-Moment Equations</i>.
+      I participated in the <Link href="https://sfb1481.rwth-aachen.de">SFB 1481</Link> retreat from 16th to 18th of September 2024 and presented a poster about <i>Mixed FEM for the 13-Moment Equations</i>.
     </>,
   },
   {
     date: "2024-06-03",
     text: <>
-    After the successful <Link href="https://sfb1481.rwth-aachen.de/news-events/events/spring-school-2024">Spring School</Link> from <Link href="https://sfb1481.rwth-aachen.de/">SFB 1481</Link>,
-    I also had the opportunity to participate in the workshop <Link href="https://sfb1481.rwth-aachen.de/news-events/events/optimization-qc">Optimization Techniques in Quantum Chemistry</Link>. Many thanks to <Link href="https://fabianfaulstich.com/">Fabian</Link>, <Link href="https://sites.google.com/view/maxpfeffer/">Max</Link>, and <Link href="https://www.mathematik.rwth-aachen.de/cms/mathematik/fachgruppe/institute-lehrstuehle/personen/~bkbg/mitarbeiter-campus-/?gguid=PER-G9GYJDN&allou=1">Mathias</Link> for organizing!
+      Following the successful <Link href="https://sfb1481.rwth-aachen.de/news-events/events/spring-school-2024">Spring School</Link> from <Link href="https://sfb1481.rwth-aachen.de/">SFB 1481</Link>, I also had the opportunity to participate in the workshop <Link href="https://sfb1481.rwth-aachen.de/news-events/events/optimization-qc">Optimization Techniques in Quantum Chemistry</Link>. I would like to thank <Link href="https://fabianfaulstich.com/">Fabian</Link>, <Link href="https://sites.google.com/view/maxpfeffer/">Max</Link>, and <Link href="https://www.mathematik.rwth-aachen.de/cms/mathematik/fachgruppe/institute-lehrstuehle/personen/~bkbg/mitarbeiter-campus-/?gguid=PER-G9GYJDN&allou=1">Mathias</Link> for organizing the event.
     </>,
   },
   {
     date: "2024-04-01",
     text: <>
-    On April 1st, I will be working again in Aachen with <Link href="https://www.acom.rwth-aachen.de/5people/torrilhon/start">Manuel Torrilhon</Link> at the <Link href="https://www.acom.rwth-aachen.de/">ACoM institute</Link> on moment-based PDEs.
+      On April 1st, I will be working again in Aachen with <Link href="https://www.acom.rwth-aachen.de/5people/torrilhon/start">Manuel Torrilhon</Link> at the <Link href="https://www.acom.rwth-aachen.de/">ACoM Institute</Link> on moment-based PDEs.
     </>,
   },
   {
     date: "2023-11-23",
     text: <>
-    I gave a short 75min introduction to sustainable coding in Julia. You can find the content <Link href="https://lambooo.github.io/SustainableSoftwareEngineering.jl/dev/">hosted on Gitlab Pages</Link> or checkout the <Link href="https://github.com/lamBOOO/SustainableSoftwareEngineering.jl">repo</Link>.
+      I gave a short 75-minute introduction to sustainable coding in Julia. You can find the content <Link href="https://lambooo.github.io/SustainableSoftwareEngineering.jl/dev/">hosted on GitLab Pages</Link> or check out the <Link href="https://github.com/lamBOOO/SustainableSoftwareEngineering.jl">repository</Link>.
     </>,
   },
   {
     date: "2023-09-05",
     text: <>
-      I gave a talk about <i>Publishing Reproducible Numerics: A Student's Perspective</i> at the RDM Workshop of the <Link href="https://www.sfb-s3.de/">SFB 1481: Sparsity and Singular Structures</Link> in Aachen. In the <Link href="/blog/publishing-reproducable-numerics">blogpost</Link>, you can find a summary and download the slides.
+      I gave a talk about <i>Publishing Reproducible Numerics: A Student's Perspective</i> at the RDM Workshop of the <Link href="https://sfb1481.rwth-aachen.de">SFB 1481: Sparsity and Singular Structures</Link> in Aachen. In the <Link href="/blog/publishing-reproducible-numerics">blog post</Link>, you can find a summary and download the slides.
     </>,
   },
   {
     date: "2023-07-20",
     text: <>
-      There's a chance to visit me in Stuttgart in the <Link href="https://moansi.wixsite.com/gamm/2023">MOANSI Annual Meeting 2023</Link> at 16-17 November 2023. Further information follow. <b>Save the date! 🚨🚨</b>
+      I will be attending the <Link href="https://moansi.wixsite.com/gamm/2023">MOANSI Annual Meeting 2023</Link> in Stuttgart on 16–17 November 2023. Further information will follow. Please save the date.
     </>,
   },
   {
     date: "2023-06-22",
     text: <>
-      We had a great workshop in Augsburg about the <Link href="https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/numa/events/numanaschroedinger/">Numerical Analysis of Nonlinear Schrödinger Equations</Link> organized by the group of <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/peterseim/">Daniel Peterseim</Link>. I learned a lot from the talks of <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/tatjana-stykel/">Tatjana</Link>, <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/christoph-zimmer/">Christoph</Link>, <Link href="https://gaspardkemlin.frama.io/">Gaspard</Link>, <Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">Benjamin</Link>, <Link href="https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/mds/team/uschmajew/">André</Link>. Also, many thanks to <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/hauck/">Moritz</Link> for an SLOD intro and <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/jonas-pueschel/">Jonas</Link> for the nice city tour. 😄
+      I attended a workshop in Augsburg on the <Link href="https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/numa/events/numanaschroedinger/">Numerical Analysis of Nonlinear Schrödinger Equations</Link> organized by the group of <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/peterseim/">Daniel Peterseim</Link>. I learned a lot from the talks by <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/tatjana-stykel/">Tatjana</Link>, <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/christoph-zimmer/">Christoph</Link>, <Link href="https://gaspardkemlin.frama.io/">Gaspard</Link>, <Link href="https://www.ians.uni-stuttgart.de/institute/team/Stamm/">Benjamin</Link>, and <Link href="https://www.uni-augsburg.de/en/fakultaet/mntf/math/prof/mds/team/uschmajew/">André</Link>. Special thanks to <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/hauck/">Moritz</Link> for the introduction to SLOD and <Link href="https://www.uni-augsburg.de/de/fakultaet/mntf/math/prof/numa/team/jonas-pueschel/">Jonas</Link> for the city tour.
     </>,
   },
   {
     date: "2023-06-07",
     text: <>
-      End of june, I'll join the <Link href="https://numericalanalysisconference.org.uk/">Biennial Numerical Analysis Conference</Link> in Glasgow. Many thanks to <Link href="https://www.numerical.rl.ac.uk/people/h_aldaas/">Hussam</Link> and <Link href="https://giref.ulaval.ca/~fkwok/index_en.htm">Felix</Link> for organizing a mini about <i>Recent advances in multilevel, multiscale, and parallel in time methods</i>.
+      At the end of June, I will attend the <Link href="https://numericalanalysisconference.org.uk/">Biennial Numerical Analysis Conference</Link> in Glasgow. Many thanks to <Link href="https://www.numerical.rl.ac.uk/people/h_aldaas/">Hussam</Link> and <Link href="https://giref.ulaval.ca/~fkwok/index_en.htm">Felix</Link> for organizing a mini-symposium on <i>Recent Advances in Multilevel, Multiscale, and Parallel-in-Time Methods</i>.
     </>,
   },
   {
     date: "2023-03-10",
     text: <>
-      I had a short (but great 😍) visit to the <Link href="https://www.ljll.math.upmc.fr/?lang=fr">LJLL</Link> in Paris, where I had the chance to present my work in the EMC2 seminar series organized by <Link href="https://www.ljll.math.upmc.fr/hassan/">Hassan</Link> and <Link href="https://msdupuy.github.io">Mi-Song</Link>.
+      I had a productive visit to the <Link href="https://www.ljll.math.upmc.fr/?lang=fr">LJLL</Link> in Paris, where I presented my work in the EMC² seminar series organized by <Link href="https://www.ljll.math.upmc.fr/hassan/">Hassan</Link> and <Link href="https://msdupuy.github.io">Mi-Song</Link>.
     </>,
   },
   {
     date: "2023-01-03",
     text: <>
-      I will be present at the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, NL. I also plan to attent the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd annual GAMM meeting</Link> in Dresden, GER.
+      I will be attending the <Link href="https://www.siam.org/conferences/cm/conference/cse23">SIAM CSE23</Link> in Amsterdam, Netherlands. I also plan to attend the <Link href="https://jahrestagung.gamm-ev.de/annual-meeting-2023">93rd Annual GAMM Meeting</Link> in Dresden, Germany.
     </>,
   },
   {
     date: "2022-10-01",
     text: <>
-      From Monday to Thursday, you can find me in Stuttgart. On Fridays, I'm usually in Aachen.
+      From Monday to Thursday, I am in Stuttgart. On Fridays, I am usually in Aachen.
     </>,
   },
-]
+];
 
 const publication_data = [
   {
@@ -626,7 +625,7 @@ export default function Home({ allPostsData }: any) {
         <b>Scalable Domain Decomposition Eigensolvers for Schrödinger Operators in Anisotropic Structures</b>, <Link href="https://www.c3s.uni-hamburg.de/news-events/seminar-c3s.html">Lothar Collatz Seminar at RTG 2583: Modeling, Simulation and Optimization of Fluid Dynamic Applications</Link>, Hamburg (Germany), 29 May, 2024.
       </li>
       <li>
-        <b>Publishing Reproducible Numerics: A Student's Perspective</b>, <Link href="https://www.sfb-s3.de/">Research Data Management (RDM) Workshop at SFB 1481: Sparsity and Singular Structures</Link>, Aachen (Germany), 05 September, 2023.
+        <b>Publishing Reproducible Numerics: A Student's Perspective</b>, <Link href="https://sfb1481.rwth-aachen.de">Research Data Management (RDM) Workshop at SFB 1481: Sparsity and Singular Structures</Link>, Aachen (Germany), 05 September, 2023.
       </li>
       <li>
         <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://numericalanalysisconference.org.uk/">29th Biennial Conference on Numerical Analysis</Link>, Glasgow (Scotland), 27 June, 2023.
