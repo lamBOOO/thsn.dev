@@ -1044,7 +1044,7 @@ export default function Home({ allPostsData }: any) {
         textcolor="text-teal-900"
       />
       <Badge
-        link="https://www.linkedin.com/in/lambert-theisen-4027b3184/"
+        link="https://www.linkedin.com/in/lmbrt-thsn/"
         icon={<FontAwesomeIcon icon={faLinkedin} />}
         left="LinkedIn"
         right="LINK"
