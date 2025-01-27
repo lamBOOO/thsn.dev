@@ -89,6 +89,69 @@ const news_data = [
 
 const publication_data = [
   {
+    title: "Well-Posedness of the R13 Equations Using Tensor-Valued Korn Inequalities",
+    issue: "Preprint",
+    date: "01/2025",
+    authors: [
+      {
+        name: "Peter Lewintan",
+        link: "https://www.math.kit.edu/~lewintan/de",
+        me: false
+      },
+      {
+        me: true
+      },
+      {
+        name: "Manuel Torrilhon",
+        link: "https://www.acom.rwth-aachen.de/5people/torrilhon/start",
+        me: false
+      },
+    ],
+    abstract: "In this paper, we finally catch up with proving the well-posedness of the linearized R13 moment model, which describes, e.g., rarefied gas flows. As an extension of the classical fluid equations, moment models are robust and have been frequently used, yet they are challenging to analyze due to their additional equations. By effectively grouping variables, we identify a 2-by-2 block structure, allowing the analysis of the well-posedness within the abstract LBB framework of saddle point problems. Due to the unique tensorial structure of the equations, in addition to an interesting combination of tools from Stokes' and linear elasticity theory, we also need new coercivity estimates for tensor fields. These Korn-type inequalities are established by analyzing the symbol map of the symmetric and trace-free part of tensor derivative fields. Together with the corresponding right inverse of the tensorial divergence, we obtain the existence and uniqueness of weak solutions.",
+    images: [
+      {
+        src: "/p4-1.png",
+        alt: "Saddle Point System",
+        width: 40
+      },
+      // {
+      //   src: "/p4-6.png",
+      //   alt: "Saddle Point System",
+      //   width: "24"
+      // },
+      // {
+      //   src: "/p4-2.png",
+      //   alt: "Saddle Point System",
+      //   width: 60
+      // },
+      // {
+      //   src: "/p4-3.png",
+      //   alt: "Saddle Point System"
+      // },
+      {
+        src: "/p4-4.png",
+        alt: "Saddle Point System",
+        width: 40
+      },
+      {
+        src: "/p4-5.png",
+        alt: "Saddle Point System",
+        width: 40
+      }
+    ],
+    keywords: [
+      "regularized 13-moment equations",
+      "well-posedness",
+      "Korn inequalities",
+      "coercivity estimates",
+      "ellipticity",
+      "saddle point problem"
+    ],
+    doi: "10.48550/arXiv.2501.14108",
+    arxiv: "2501.14108",
+    // zenodo: "NONE"
+  },
+  {
     title: "A Scalable Two-Level Domain Decomposition Eigensolver for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains",
     issue: "SIAM Journal on Scientific Computing Vol. 46, Iss. 5 (2024)",
     date: "10/2024",
@@ -553,17 +616,17 @@ export default function Home({ allPostsData }: any) {
               }
             </div>
             <div>
-              <figure className='float-right ml-2 my-2 border'>
+              <figure className={`float-right ml-2 my-2 border`}>
                 {
                   images.map(
-                    ({ src, alt }, ind) =>
+                    (image, ind) =>
                       <Image
                         key={ind}
-                        className="w-40 m-0"
-                        src={src}
+                        className={`w-${'width' in image ? image.width : 40} m-0`}
+                        src={image.src}
                         width={100}
                         height={10}
-                        alt={alt}
+                        alt={image.alt}
                       />
                   )
                 }
@@ -572,7 +635,7 @@ export default function Home({ allPostsData }: any) {
                 {abstract}
               </p>
 
-              <p className='text-xs text-gray-800 my-2'>Keywords:
+              <p className='text-xs text-gray-800 my-2'><b>Keywords</b>:
                 {" "}
                 {keywords.join(", ")}
               </p>
@@ -597,6 +660,8 @@ export default function Home({ allPostsData }: any) {
                     rc="bg-lime-200"
                     textcolor="text-lime-900"
                   />
+                  {
+                  zenodo != undefined ?
                   <Badge
                     link={"https://doi.org/" + zenodo}
                     icon={<FontAwesomeIcon icon={faCode} />}
@@ -606,6 +671,9 @@ export default function Home({ allPostsData }: any) {
                     rc="bg-violet-200"
                     textcolor="text-violet-900"
                   />
+                  :
+                  ""
+                  }
                 </div>
                 <span className="col-span-1 opacity-20 italic justify-self-end self-end p-0 absolute bottom-2 right-3">
                   <span className='text-xl mr-1'>#</span><span className="text-5xl font-black">{publication_data.length - ind}</span>
