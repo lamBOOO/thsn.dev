@@ -961,7 +961,7 @@ export default function Home({ allPostsData }: any) {
               }
             </div>
             <div>
-              <p className='font-normal text-xs leading-3 text-justify my-2 text-gray-500'>
+              <p className='font-normal text-xs leading-3 text-justify my-2'>
                 {description}
               </p>
               <div className="flex flex-wrap gap-2 leading-none">
