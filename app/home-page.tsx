@@ -635,7 +635,7 @@ export default function Home({ allPostsData }: any) {
                 {abstract}
               </p>
 
-              <p className='text-xs text-gray-800 my-2'><b>Keywords</b>:
+              <p className='text-xs text-gray-800 my-2 dark:text-gray-200'><b>Keywords</b>:
                 {" "}
                 {keywords.join(", ")}
               </p>
