@@ -34,7 +34,7 @@ const news_data = [
   {
     date: "2024-04-01",
     text: <>
-      On April 1st, I will be working again in Aachen with <Link href="https://www.acom.rwth-aachen.de/5people/torrilhon/start">Manuel Torrilhon</Link> at the <Link href="https://www.acom.rwth-aachen.de/">ACoM Institute</Link> on moment-based PDEs.
+      On April 1st, I will be working again in Aachen with <Link href="https://www.acom.rwth-aachen.de/the-lab/team-people/name:manuel_torrilhon">Manuel Torrilhon</Link> at the <Link href="https://www.acom.rwth-aachen.de/">ACoM Institute</Link> on moment-based PDEs.
     </>,
   },
   {
@@ -103,7 +103,7 @@ const publication_data = [
       },
       {
         name: "Manuel Torrilhon",
-        link: "https://www.acom.rwth-aachen.de/5people/torrilhon/start",
+        link: "https://www.acom.rwth-aachen.de/the-lab/team-people/name:manuel_torrilhon",
         me: false
       },
     ],
@@ -255,7 +255,7 @@ const publication_data = [
       },
       {
         name: "Manuel Torrilhon",
-        link: "https://www.acom.rwth-aachen.de/5people/torrilhon/start",
+        link: "https://www.acom.rwth-aachen.de/the-lab/team-people/name:manuel_torrilhon",
         highlight: false
       },
     ],
@@ -344,7 +344,7 @@ const teaching_data = [
     "people": [
       {
         name: "Prof. Manuel Torrilhon",
-        link: "https://www.acom.rwth-aachen.de/5people/torrilhon/start"
+        link: "https://www.acom.rwth-aachen.de/the-lab/team-people/name:manuel_torrilhon"
       },
       {
         name: "TT-Prof. Sebastian Krumscheid",
@@ -424,7 +424,7 @@ const teaching_data = [
     "people": [
       {
         name: "Prof. Manuel Torrilhon",
-        link: "https://www.acom.rwth-aachen.de/5people/torrilhon/start"
+        link: "https://www.acom.rwth-aachen.de/the-lab/team-people/name:manuel_torrilhon"
       },
       {
         name: "Prof. Benjamin Berkels",
