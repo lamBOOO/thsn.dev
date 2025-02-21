@@ -22,7 +22,7 @@ const news_data = [
   {
     date: "2024-09-18",
     text: <>
-      I participated in the <Link href="https://sfb1481.rwth-aachen.de">SFB 1481</Link> retreat from 16th to 18th of September 2024 and presented a poster about <i>Mixed FEM for the 13-Moment Equations</i>.
+      I participated in the <Link href="https://sfb1481.rwth-aachen.de">SFB 1481</Link> retreat from 16th to 18th of September 2024 and presented a poster about <Link href="https://doi.org/10.18154/RWTH-2024-09892">Mixed FEM for the 13-Moment Equations</Link>.
     </>,
   },
   {
