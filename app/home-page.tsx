@@ -95,6 +95,63 @@ const news_data = [
 
 const publication_data = [
   {
+    title: "A generalized fundamental solution technique for the regularized 13-moment system in rarefied gas flows",
+    issue: "Preprint",
+    date: "04/2025",
+    authors: [
+      {
+        name: "Himanshi",
+        link: "https://www.researchgate.net/profile/Himanshi-Khungar",
+        me: false
+      },
+      {
+        me: true
+      },
+      {
+        name: "Anirudh Singh Rana",
+        link: "https://www.bits-pilani.ac.in/pilani/anirudh-singh-rana/",
+        me: false
+      },
+      {
+        name: "Manuel Torrilhon",
+        link: "https://www.acom.rwth-aachen.de/the-lab/team-people/name:manuel_torrilhon",
+        me: false
+      },
+      {
+        name: "Vinay Kumar Gupta",
+        link: "https://people.iiti.ac.in/~vkg/",
+        me: false
+      },
+    ],
+    abstract: "In this work, we explore the method of fundamental solutions (MFS) for solving the regularized 13-moment (R13) equations for rarefied monatomic gases. While previous applications of the MFS in rarefied gas flows relied on problem-specific fundamental solutions, we propose a generic approach that systematically computes the fundamental solutions for any linear moment system without predefined source terms. The generalized framework is first introduced using a simple example involving the Stokes equations, and is then extended to the R13 equations. The results obtained from the generic MFS are validated against an analytical solution for the R13 equations. Following validation, the framework is applied to the case of thermally-induced flow between two non-coaxial cylinders. Since no analytical solution exists for this case, we compare the results obtained from the MFS with those obtained from the finite element method (FEM). To further assess computational efficiency, we analyze the runtimes of the FEM and MFS. The results indicate that the MFS converges faster than the FEM and serves as a promising alternative to conventional meshing-based techniques.",
+    images: [
+      {
+        src: "/p5-1.png",
+        alt: "Saddle Point System",
+        width: 40
+      },
+      {
+        src: "/p5-2.png",
+        alt: "Saddle Point System",
+        width: 40
+      },
+      {
+        src: "/p5-3.png",
+        alt: "Saddle Point System",
+        width: 40
+      }
+    ],
+    keywords: [
+      "regularized 13-moment equations",
+      "fundamental solution",
+      "method of manufactured solutions",
+      "finite element method",
+    ],
+    doi: "10.48550/arXiv.2504.18261",
+    arxiv: "2504.18261",
+    zenodo: "10.5281/zenodo.15279486"
+  },
+  {
     title: "Well-Posedness of the R13 Equations Using Tensor-Valued Korn Inequalities",
     issue: "Preprint",
     date: "01/2025",
