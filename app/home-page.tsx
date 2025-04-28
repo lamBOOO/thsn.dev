@@ -20,6 +20,12 @@ import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
 const news_data = [
   {
+    date: "2025-03-07",
+    text: <>
+      I presented “<a href="https://meetings.siam.org/sess/dsp_talk.cfm?p=143395" target="_blank" rel="noopener">A Mixed Formulation for the Linear Regularized 13-Moment Equations</a>” at the <a href="https://www.siam.org/conferences-events/siam-conferences/cse25/" target="_blank" rel="noopener">SIAM CSE25 conference</a> in Fort Worth on March 7, 2025 and attended the <a href="https://netp.scimeeting.cn/" target="_blank" rel="noopener">1<sup>st</sup> International Symposium on Non-Equilibrium Transport Phenomena (NETP)</a> in Beijing, April 7–10 2025.
+    </>,
+  },
+  {
     date: "2024-09-18",
     text: <>
       I participated in the <Link href="https://sfb1481.rwth-aachen.de">SFB 1481</Link> retreat from 16th to 18th of September 2024 and presented a poster about <Link href="https://doi.org/10.18154/RWTH-2024-09892">Mixed FEM for the 13-Moment Equations</Link>.
@@ -531,17 +537,36 @@ export default function Home({ allPostsData }: any) {
 
     <aside>
       <h2 id="news" className="scroll-mt-20">
-        <span className="before:block before:absolute before:-inset-50 before:-skew-y-1 before:bg-amber-100 dark:before:bg-amber-700 relative inline-block"><span className="relative">News</span></span>
+        <span className="before:block before:absolute before:-inset-2 before:-skew-y-1 before:bg-amber-100 dark:before:bg-amber-700 relative inline-block">
+          <span className="relative">News</span>
+        </span>
       </h2>
-      <span className='grid columns-1 gap-2 pl-0 leading-6'>
-        {news_data.map(({ date, text } ,ind) => (
+      {/* Latest 5 items */}
+      <span className="grid columns-1 gap-2 pl-0 leading-6">
+        {news_data.slice(0, 5).map(({ date, text }, ind) => (
           <span className="pl-0" key={ind}>
-            <b className='font-mono font-bold bg-gray-800 text-white p-0.5 text-sm'>{date}</b>
-            {" "}
+            <b className="font-mono font-bold bg-gray-800 text-white p-0.5 text-sm">{date}</b>{" "}
             {text}
           </span>
         ))}
       </span>
+
+      {/* Folded earlier items */}
+      {news_data.slice(5).length > 0 && (
+        <details className="mt-2">
+          <summary className="cursor-pointer underline inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+            See all →
+          </summary>
+          <span className="grid columns-1 gap-2 pl-0 leading-6 mt-2">
+            {news_data.slice(5).map(({ date, text }, ind) => (
+              <span className="pl-0" key={ind}>
+                <b className="font-mono font-bold bg-gray-800 text-white p-0.5 text-sm">{date}</b>{" "}
+                {text}
+              </span>
+            ))}
+          </span>
+        </details>
+      )}
     </aside>
 
     <h2 id="blog" className="scroll-mt-20">
@@ -661,18 +686,18 @@ export default function Home({ allPostsData }: any) {
                     textcolor="text-lime-900"
                   />
                   {
-                  zenodo != undefined ?
-                  <Badge
-                    link={"https://doi.org/" + zenodo}
-                    icon={<FontAwesomeIcon icon={faCode} />}
-                    left="Code"
-                    right={zenodo}
-                    lc="bg-violet-300"
-                    rc="bg-violet-200"
-                    textcolor="text-violet-900"
-                  />
-                  :
-                  ""
+                    zenodo != undefined ?
+                      <Badge
+                        link={"https://doi.org/" + zenodo}
+                        icon={<FontAwesomeIcon icon={faCode} />}
+                        left="Code"
+                        right={zenodo}
+                        lc="bg-violet-300"
+                        rc="bg-violet-200"
+                        textcolor="text-violet-900"
+                      />
+                      :
+                      ""
                   }
                 </div>
                 <span className="col-span-1 opacity-20 italic justify-self-end self-end p-0 absolute bottom-2 right-3">
