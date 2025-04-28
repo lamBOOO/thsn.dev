@@ -1240,6 +1240,14 @@ export default function Home({ allPostsData }: any) {
         rc="bg-gray-200"
         textcolor="text-gray-900"
       />
+      <Badge
+        link="https://www.alphaxiv.org/profile/680f8ee1c69e3e867ad8eaca"
+        left="alphaXiv"
+        right="LINK"
+        lc="bg-red-300"
+        rc="bg-red-200"
+        textcolor="text-red-900"
+      />
     </div>
     <p className='mb-1'>
       Also have a look at my institute webpages:
