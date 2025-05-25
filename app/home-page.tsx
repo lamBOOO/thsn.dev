@@ -97,6 +97,70 @@ const publication_data = [
   {
     title: "A generalized fundamental solution technique for the regularized 13-moment system in rarefied gas flows",
     issue: "Preprint",
+    date: "05/2025",
+    authors: [
+      {
+        name: "Jan Habscheid",
+        link: "https://orcid.org/0009-0005-0040-1562",
+        me: false
+      },
+      {
+        name: "Satyvir Singh",
+        link: "https://acom.rwth-aachen.de/the-lab/team-people/name:satyvir_singh",
+        me: false
+      },
+      {
+        me: true
+      },
+      {
+        name: "Stefanie Braun",
+        link: "https://www.acom.rwth-aachen.de/the-lab/submenu/team-people/name:stefanie_braun",
+        me: false
+      },
+      {
+        name: "Manuel Torrilhon",
+        link: "https://www.acom.rwth-aachen.de/the-lab/team-people/name:manuel_torrilhon",
+        me: false
+      }
+    ],
+    abstract: "In this study, we present a finite element solver for a thermodynamically consistent electrolyte model that accurately captures multicomponent ionic transport by incorporating key physical phenomena such as steric effects, solvation, and pressure coupling. The model is rooted in the principles of non-equilibrium thermodynamics and strictly enforces mass conservation, charge neutrality, and entropy production. It extends beyond classical frameworks like the Nernst-Planck system by employing modified partial mass balances, the electrostatic Poisson equation, and a momentum balance expressed in terms of electrostatic potential, atomic fractions, and pressure, thereby enhancing numerical stability and physical consistency. Implemented using the FEniCSx platform, the solver efficiently handles one- and two-dimensional problems with varied boundary conditions and demonstrates excellent convergence behavior and robustness. Validation against benchmark problems confirms its improved physical fidelity, particularly in regimes characterized by high ionic concentrations and strong electrochemical gradients. Simulation results reveal critical electrolyte phenomena, including electric double layer formation, rectification behavior, and the effects of solvation number, Debye length, and compressibility. The solver's modular variational formulation facilitates its extension to complex electrochemical systems involving multiple ionic species with asymmetric valences. ",
+    images: [
+      {
+        src: "/p6-1.png",
+        alt: "Saddle Point System",
+        width: 40
+      },
+      {
+        src: "/p6-2.png",
+        alt: "Saddle Point System",
+        width: 40
+      },
+      {
+        src: "/p6-3.png",
+        alt: "Saddle Point System",
+        width: 40
+      },
+      {
+        src: "/p6-4.png",
+        alt: "Saddle Point System",
+        width: 40
+      }
+    ],
+    keywords: [
+      "Electrochemistry",
+      "Electrical double layer",
+      "Thermodynamics",
+      "Electrolyte models",
+      "FEniCS",
+      "Finite element method"
+    ],
+    doi: "10.48550/arXiv.2505.16296",
+    arxiv: "2504.18261",
+    zenodo: "10.5281/zenodo.15388656"
+  },
+  {
+    title: "A generalized fundamental solution technique for the regularized 13-moment system in rarefied gas flows",
+    issue: "Preprint",
     date: "04/2025",
     authors: [
       {
