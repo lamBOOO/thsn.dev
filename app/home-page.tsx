@@ -95,7 +95,7 @@ const news_data = [
 
 const publication_data = [
   {
-    title: "A generalized fundamental solution technique for the regularized 13-moment system in rarefied gas flows",
+    title: "A finite element solver for a thermodynamically consistent electrolyte model",
     issue: "Preprint",
     date: "05/2025",
     authors: [
