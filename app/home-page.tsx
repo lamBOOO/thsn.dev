@@ -155,7 +155,7 @@ const publication_data = [
       "Finite element method"
     ],
     doi: "10.48550/arXiv.2505.16296",
-    arxiv: "2504.18261",
+    arxiv: "2505.16296",
     zenodo: "10.5281/zenodo.15388656"
   },
   {
