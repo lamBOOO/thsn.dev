@@ -20,15 +20,39 @@ import { scrollToIdNoUrlChange } from '../lib/scrolling';
 
 const news_data = [
   {
+    date: "2025-06-22",
+    text: <>
+      I attened the <a href="https://www.dd29.polimi.it/" target="_blank" rel="noopener">29th Domain Decomposition conference</a> in Milano from 22 to 27th of June 2025 and presented <a href="https://epubs.siam.org/doi/10.1137/23M161848X" target="_blank" rel="noopener">my recent work</a> within the minisymposium <a href="https://www.dd29.polimi.it/program/" target="_blank" rel="noopener">Multilevel DD and coarse spaces</a> organized by <a href="https://searhein.github.io/" target="_blank" rel="noopener">A. Heinlein</a> and <a href="https://www.unige.ch/~gander/index.php" target="_blank" rel="noopener">M. Gander</a>. I also enjoyed a <a href="https://github.com/gridap/Gridap.jl" target="_blank" rel="noopener">Gridap.jl</a> course by <a href="https://research.monash.edu/en/persons/santiago-badia" target="_blank" rel="noopener">S. Badia</a> and <a href="https://jordimanyer.deno.dev/" target="_blank" rel="noopener">J. Manyer</a>.
+    </>,
+  },
+  {
     date: "2025-03-07",
     text: <>
-      I presented “<a href="https://meetings.siam.org/sess/dsp_talk.cfm?p=143395" target="_blank" rel="noopener">A Mixed Formulation for the Linear Regularized 13-Moment Equations</a>” at the <a href="https://www.siam.org/conferences-events/siam-conferences/cse25/" target="_blank" rel="noopener">SIAM CSE25 conference</a> in Fort Worth on March 7, 2025 and attended the <a href="https://netp.scimeeting.cn/" target="_blank" rel="noopener">1<sup>st</sup> International Symposium on Non-Equilibrium Transport Phenomena (NETP)</a> in Beijing, April 7–10 2025.
+      I presented “<a href="https://meetings.siam.org/sess/dsp_talk.cfm?p=143395" target="_blank" rel="noopener">A Mixed Formulation for the Linear Regularized 13-Moment Equations</a>” at the <a href="https://www.siam.org/conferences-events/siam-conferences/cse25/" target="_blank" rel="noopener">SIAM CSE25 conference</a> in Fort Worth on March 7, 2025 and attended the <a href="https://netp.scimeeting.cn/" target="_blank" rel="noopener">1<sup>st</sup> International Symposium on Non-Equilibrium Transport Phenomena (NETP)</a> in Beijing, April 7-10 2025.
+    </>,
+  },
+  {
+    date: "2025-05-16",
+    text: <>
+      I took part in the <Link href="https://sfb1481.rwth-aachen.de/news-events/events/spring-school-2025">SFB 1481 Spring School 2025</Link> at Abbey Rolduc in Kerkrade from 12 - 16 May 2025.
+    </>,
+  },
+  {
+    date: "2025-03-19",
+    text: <>
+      I attended the <Link href="https://sustainable-cse.org">Kármán Conference on Sustainable Computational Science & Engineering 2025</Link> at Steinfeld Abbey from 16 - 19 March 2025.
+    </>,
+  },
+  {
+    date: "2024-10-23",
+    text: <>
+      I joined the workshop <Link href="https://sfb1481.rwth-aachen.de/news-events/events/workshopoct24">“Nonlinear Approximation, PDEs and High-Dimensional Problems”</Link> in Aachen from 21 - 23 October 2024.
     </>,
   },
   {
     date: "2024-09-18",
     text: <>
-      I participated in the <Link href="https://sfb1481.rwth-aachen.de">SFB 1481</Link> retreat from 16th to 18th of September 2024 and presented a poster about <Link href="https://doi.org/10.18154/RWTH-2024-09892">Mixed FEM for the 13-Moment Equations</Link>.
+      I participated in the <Link href="https://sfb1481.rwth-aachen.de">SFB 1481 retreat</Link> from 16th to 18th of September 2024 and presented a poster about <Link href="https://doi.org/10.18154/RWTH-2024-09892">Mixed FEM for the 13-Moment Equations</Link>.
     </>,
   },
   {
@@ -58,7 +82,7 @@ const news_data = [
   {
     date: "2023-07-20",
     text: <>
-      I will be attending the <Link href="https://moansi.wixsite.com/gamm/2023">MOANSI Annual Meeting 2023</Link> in Stuttgart on 16–17 November 2023. Further information will follow. Please save the date.
+      I will be attending the <Link href="https://moansi.wixsite.com/gamm/2023">MOANSI Annual Meeting 2023</Link> in Stuttgart on 16-17 November 2023. Further information will follow. Please save the date.
     </>,
   },
   {
@@ -860,7 +884,7 @@ export default function Home({ allPostsData }: any) {
         <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.ians.uni-stuttgart.de/nmh/events/">IANS Oberseminar, University of Stuttgart</Link>, Stuttgart (Germany), 24 November, 2022.
       </li>
       <li>
-        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.dd27.cz/">DD27: 27th International Domain Decomposition Conference – MS4: SCSs in DDMs and Multiscale Discretizations</Link>, Prague (Czech Republic), 27 July, 2022.
+        <b>A Two-Level Domain Decomposition Method for Periodic Schrödinger Eigenstates in Anisotropically Expanding Domains</b>, <Link href="https://www.dd27.cz/">DD27: 27th International Domain Decomposition Conference - MS4: SCSs in DDMs and Multiscale Discretizations</Link>, Prague (Czech Republic), 27 July, 2022.
       </li>
       <li>
         <b>A Quasi-Optimal Factorization Preconditioner for Periodic Schrödinger Eigenstates in Non-Uniformly Expanding Domains</b>, <Link href="https://www.esco2022.femhub.com/">ESCO 2022: 8th European Seminar on Computing</Link>, Pilsen (Czech Republic), 14 June, 2022.
