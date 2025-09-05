@@ -23,7 +23,7 @@ zwischen Usern oder Objekten zusammenhängend (kollaborativ) bewertet,
 z.B. aufgrund vorherigen Interaktionen und dadurch Vorhersagen erstellt.
 Da dies keine explizite Erstellung von Merkmalen benötigt, können so
 auch komplexere Zusammenhänge erfasst werden (z.B. Einkommen, was nicht
-direkt aus Bewertungen ersichtlicht ist (Zhou, Kannan, and Prasanna
+direkt aus Bewertungen ersichtlich ist (Zhou, Kannan, and Prasanna
 2020)). (Koren, Bell, and Volinsky 2009)
 
 ### Matrixzerlegungs-Modelle (MZ-Modelle)
@@ -117,7 +117,7 @@ fehlenden Werte ($\textcolor{red}{?} = 3$) liefert.
 ### Formulierung als Optimierungsproblem
 
 Nehmen wir nun an, dass $\boldsymbol{P}$ und $\boldsymbol{Q}$ bekannt
-sind, dann lässt sich das Rating vorraussagen mit
+sind, dann lässt sich das Rating vorhersagen mit
 
 $$
 \tilde{r}_{ui} = \langle \boldsymbol{p}_u , \boldsymbol{q}_i \rangle
@@ -149,10 +149,10 @@ Problem abhängig, in Klassifizierungsaufgaben wird sogar ein diskreter
 
 In der Praxis, passiert es oft, dass Daten aus dem Trainingssset sehr
 gut vorhergesagt werden (sehr kleiner Felher $e_{ui}$), das Modell für
-neue Datenpunkte jedoch “komische” Weter vorraussagt. Man kann dies
+neue Datenpunkte jedoch “komische” Werte vorhersagt. Man kann dies
 beobachten, wenn man nicht alle bekannten Daten ins Traingsset mit
 aufnimmt sondern einige Daten als Testsset zur Validierung verwendet.
-Dieses Phänomen wird als *Overfitting* bezeichnet und tritt vorallem bei
+Dieses Phänomen wird als *Overfitting* bezeichnet und tritt vor allem bei
 Modellen auf, in denen es mehr Optimierungsparameter als Daten gibt (bei
 uns z.B. wenn es mehr Einträge in $\boldsymbol{P},\boldsymbol{Q}$ gibt
 als es bekannte Bewertungen in $\boldsymbol{R}$ gibt).
@@ -237,7 +237,7 @@ Die Minibatchgröße $B$ sowie die Learning Rate $\eta_k$, die Modellgröße
 Regularisierungsparameter $\lambda$ müssen im Vorfeld sorgfältig
 ausgewählt werden. Da all diese Parameter nicht Teil der eigentlichen
 Optimierung sind sondern nur die Rahmenbedingen setzen, werden diese
-auch als *Hyperparameter* bezeichnet (vorallem im machine learning /
+auch als *Hyperparameter* bezeichnet (vor allem im machine learning /
 artifical intelligence (AI) Kontext). Die Wahl ist erst einmal gar nicht
 so klar und wird im Kontext von “Hyperparameter optimization”
 untersucht.

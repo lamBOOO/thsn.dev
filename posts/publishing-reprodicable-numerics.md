@@ -51,7 +51,7 @@ But, **What can go wrong?**
 
 ## Tools & Best Practices
 
-### Reprodicable Progress (with Git)
+### Reproducible Progress (with Git)
 
 **Version Control** is achievable with Git.
 - The common **Problem**: Filenames like `paper-v1.tex` progress to `paper-v3-final.tex` and sometimes even `paper-v3-FINALLL.tex`.
@@ -63,7 +63,7 @@ But, **What can go wrong?**
 
 ![Git Commit](/git-commit.png)
 
-### Reprodicable Environments (with Docker)
+### Reproducible Environments (with Docker)
 
 Different individuals have different setups. One solution is **Virtualization** with Docker.
 - It lets you create a universal "cooking recipe" or a `Dockerfile`.
@@ -73,7 +73,7 @@ Different individuals have different setups. One solution is **Virtualization** 
 
 ![Dockerfile Example](/dockerfile.png)
 
-### Reprodicable Workflows (with Gitlab/-hub)
+### Reproducible Workflows (with Gitlab/-hub)
 
 Explain how your code or tool works with a `README.md` file.
 - **Documentation** can be automated with tools like `Sphinx` or `Documenter.jl`.
