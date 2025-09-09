@@ -40,6 +40,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Resource hints for better LCP */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      </head>
       <body className='dark:bg-neutral-800'>
         <Stickynavbar />
         {/* <Metadata /> */}
