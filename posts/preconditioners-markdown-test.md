@@ -9,17 +9,17 @@ When solving a system of equations
 $$
   \boldsymbol{A} \boldsymbol{x} = \boldsymbol{b},
 $$
-iteratively (using, e.g., the [conjugate gradient method](https://en.wikipedia.org/wiki/Conjugate_gradient_method)), the convergene speed is usually determined by the condition number $\kappa(A)$, where
+iteratively (using, e.g., the [conjugate gradient method](https://en.wikipedia.org/wiki/Conjugate_gradient_method)), the convergence speed is usually determined by the condition number $\kappa(A)$, where
 $$
 \kappa := \frac{\lambda_{\max}(\boldsymbol{A})}{\lambda_{\min}(\boldsymbol{A})}
 .
 $$
 
-Thus, if $\lambda_{\min}(\boldsymbol{A}) \propto \tfrac{1}{h^2}$, which happends for example when solving a Poison problem using a finite element approximation with meshsize $h$, iterative solvers have a very hard time to solve the system efficiently.
+Thus, if $\lambda_{\min}(\boldsymbol{A}) \propto \tfrac{1}{h^2}$, which happens for example when solving a Poison problem using a finite element approximation with meshsize $h$, iterative solvers have a very hard time to solve the system efficiently.
 
 ## Preconditioners
 
-In order to archieve robustness w.r.t. $h$, one strategy is to apply preconditioning to the linear system. This means that instead of solving $\boldsymbol{A} \boldsymbol{x} = \boldsymbol{b}$, we now solve
+In order to achieve robustness w.r.t. $h$, one strategy is to apply preconditioning to the linear system. This means that instead of solving $\boldsymbol{A} \boldsymbol{x} = \boldsymbol{b}$, we now solve
 $$
   \boldsymbol{M}^{-1} \boldsymbol{A} \boldsymbol{x} = \boldsymbol{M}^{-1} \boldsymbol{b}
   ,
@@ -35,4 +35,4 @@ $$
   \kappa(\boldsymbol{M}^{-1} \boldsymbol{A}) \le \mathsf{C}
   ,
 $$
-where the constant $\mathsf{C}$ is independent of $h$. In this case, we would have archieved full robustness w.r.t. $h$.
+where the constant $\mathsf{C}$ is independent of $h$. In this case, we would have achieved full robustness w.r.t. $h$.

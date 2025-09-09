@@ -14,7 +14,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the pages  in the `app` repository.
+You can start editing the pages in the `app` directory.
 
 ## Learn More
 

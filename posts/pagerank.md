@@ -199,7 +199,7 @@ data-reference="eq:markov">[eq:markov]</a> den PageRank Vektor.
 
 <div class="bem">
 
-**Bemerkung 1.11**. Sofern ein PageRank Vektor exisitert, gilt
+**Bemerkung 1.11**. Sofern ein PageRank Vektor existiert, gilt
 
 $$
 \boldsymbol{\tilde{U}} \boldsymbol{x}^*
@@ -450,7 +450,7 @@ $$
   \end{aligned}
 $$
  Da $\boldsymbol{v},\boldsymbol{w}$ aber linear
-unahnängig sind, ist $\boldsymbol{x} \neq \boldsymbol{0}$. Die Tatsache
+unabhängig sind, ist $\boldsymbol{x} \neq \boldsymbol{0}$. Die Tatsache
 dass $\sum_{i=1}^n x_i = 0$ impliziert somit dass $\boldsymbol{x}$
 Einträge mit unterschiedlichen Vorzeichen haben muss. $\square$
 
