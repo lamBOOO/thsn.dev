@@ -1372,9 +1372,9 @@ export default function Home({ allPostsData }: any) {
         icon={<i className="ai ai-dblp"></i>}
         left="dblp"
         right="270/0289"
-        lc="bg-sky-700"
+        lc="bg-sky-600"
         rc="bg-yellow-400"
-        textcolor="text-white"
+        textcolor="text-gray-900"
       />
       <Badge
         link="https://scholar.archive.org/search?q=%22lambert+theisen%22"
