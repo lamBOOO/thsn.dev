@@ -672,11 +672,9 @@ export default function Home({ allPostsData }: any) {
         className="transform transition-all duration-100 hover:scale-105 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 via-violet-500 to-teal-500 background-animate focus:ring-4 focus:outline-none focus:ring-red-200 no-underline"
         href="https://cv.hal.science/lambert-theisen"
       >
-        <button className="text-md group-hover:invert dark:group-hover:invert-0 relative sm:px-5 px-4 py-2 bg-white dark:bg-gray-800 rounded-md group-hover:bg-opacity-0 transition-all duration-200">
-          <span className='text-black dark:text-white'>
-            <FontAwesomeIcon icon={faFile} /> CV
-          </span>
-        </button>
+        <span className="text-md group-hover:invert dark:group-hover:invert-0 relative sm:px-5 px-4 py-2 bg-white dark:bg-gray-800 rounded-md group-hover:bg-opacity-0 transition-all duration-200 text-black dark:text-white">
+          <FontAwesomeIcon icon={faFile} /> CV
+        </span>
       </Link>
     </div>
 
