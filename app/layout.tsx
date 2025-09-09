@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import '../styles/globals.css'
 
@@ -48,7 +49,10 @@ export default function RootLayout({
       <body className='dark:bg-neutral-800'>
         <Stickynavbar />
         {/* <Metadata /> */}
-        <main className='px-4 my-10 prose dark:prose-invert mx-auto'>{children}</main>
+        <main className='px-4 my-10 prose dark:prose-invert mx-auto'>
+          {children}
+          <SpeedInsights />
+        </main>
         <Footer />
       </body>
     </html>
