@@ -119,8 +119,100 @@ const news_data = [
 
 const publication_data = [
   {
-    title: "A finite element solver for a thermodynamically consistent electrolyte model",
+    title: "Sparse and low-rank kinetic distribution estimation",
     issue: "Preprint",
+    date: "06/2026",
+    authors: [
+      {
+        name: "Georgii Oblapenko",
+        link: "https://knstmrd.github.io/",
+        me: false
+      },
+      {
+        me: true
+      },
+      {
+        name: "Rostislav-Paul Wilhelm",
+        link: "https://scholar.google.com/citations?user=bAQXHW0AAAAJ&hl=de",
+        me: false
+      },
+      {
+        name: "Michael Herty",
+        link: "https://www.igpm.rwth-aachen.de/team/herty",
+        me: false
+      },
+      {
+        name: "Manuel Torrilhon",
+        link: "https://www.acom.rwth-aachen.de/the-lab/team-people/name:manuel_torrilhon",
+        me: false
+      },
+    ],
+    abstract: "In this paper, we consider methods that allow for memory-efficient storage of high-dimensional distributions and retain certain key features thereof, specifically in a kinetic theory context. We propose an extension to the entropic quadrature method that allows for enforcing sparsity, and propose a new low-rank decomposition approach that ensures preservation of moment information. The methods are applied to several model kinetic distributions, as well as to distributions obtained from high-resolution kinetic simulations of the Vlasov--Maxwell system.",
+    images: [
+      {
+        src: "/p8_1.png",
+        alt: "Sparse and low-rank kinetic distribution estimation",
+        width: 40
+      },
+      {
+        src: "/p8_2.png",
+        alt: "Sparse and low-rank kinetic distribution estimation",
+        width: 40
+      }
+    ],
+    keywords: [
+      "kinetic theory",
+      "entropic quadrature",
+      "low-rank decomposition",
+      "sparsity",
+      "Vlasov-Maxwell system",
+    ],
+    doi: "10.48550/arXiv.2606.04878",
+    arxiv: "2606.04878",
+    zenodo: ["10.5281/zenodo.20026362", "10.5281/zenodo.20305509", "10.5281/zenodo.1981619"]
+  },
+  {
+    title: "Effects of Thermal Boundary Conditions on Natural Convection and Entropy Generation in Non-Newtonian Power-Law Fluids",
+    issue: "Preprint",
+    date: "05/2026",
+    authors: [
+      {
+        me: true
+      },
+      {
+        name: "Satyvir Singh",
+        link: "https://acom.rwth-aachen.de/the-lab/team-people/name:satyvir_singh",
+        me: false
+      },
+    ],
+    abstract: "This study investigates the role of thermal boundary conditions on natural convection and entropy generation in non-Newtonian power-law fluids confined within a square cavity and a concentric cylindrical annulus. Steady, two-dimensional governing equations based on the incompressible power-law model and the Boussinesq approximation are solved using the Gridap.jl finite element framework. The numerical methodology is validated against benchmark solutions for both Newtonian and non-Newtonian convection, showing good agreement in terms of isotherm fields, streamlines, local Nusselt number distributions, and entropy generation. The effects of fluid rheology and heating mode are examined for shear-thinning, Newtonian, and shear-thickening fluids under uniform and non-uniform thermal boundary conditions. The results show that shear-thinning behavior enhances buoyancy-driven circulation, steepens thermal gradients, and increases heat transfer, whereas shear-thickening behavior suppresses convection and promotes conduction-dominated transport. Thermal boundary conditions are found to play an important role in controlling the intensity and spatial distribution of flow, heat transfer, and irreversibility. In both geometries, uniform heating produces stronger and more distributed convective structures, while non-uniform sinusoidal heating localizes thermal forcing and consistently reduces total entropy generation. An entropy analysis further reveals that viscous dissipation dominates irreversibility in shear-thinning fluids, whereas heat-transfer irreversibility becomes dominant as the power-law index increases. The study demonstrates that appropriate thermal boundary design, together with fluid rheology, provides an effective route for controlling heat transfer and minimizing thermodynamic losses in non-Newtonian convection systems. The source code and metadata are publicly available.",
+    images: [
+      {
+        src: "/p7_1.png",
+        alt: "Effects of Thermal Boundary Conditions on Natural Convection and Entropy Generation in Non-Newtonian Power-Law Fluids",
+        width: 40
+      },
+      {
+        src: "/p7_2.png",
+        alt: "Effects of Thermal Boundary Conditions on Natural Convection and Entropy Generation in Non-Newtonian Power-Law Fluids",
+        width: 40
+      }
+    ],
+    keywords: [
+      "natural convection",
+      "entropy generation",
+      "non-Newtonian fluids",
+      "power-law fluids",
+      "finite element method",
+      "Gridap.jl",
+    ],
+    doi: "10.48550/arXiv.2605.13633",
+    arxiv: "2605.13633",
+    zenodo: "10.5281/zenodo.20128652"
+  },
+  {
+    title: "A finite element solver for a thermodynamically consistent electrolyte model",
+    issue: "Computer Physics Communications, Vol. 319, Article 109916 (February 2026)",
     date: "05/2025",
     authors: [
       {
@@ -178,13 +270,13 @@ const publication_data = [
       "FEniCS",
       "Finite element method"
     ],
-    doi: "10.48550/arXiv.2505.16296",
+    doi: "10.1016/j.cpc.2025.109916",
     arxiv: "2505.16296",
     zenodo: "10.5281/zenodo.15388656"
   },
   {
     title: "A generalized fundamental solution technique for the regularized 13-moment system in rarefied gas flows",
-    issue: "Preprint",
+    issue: "Journal of Computational Physics, Vol. 549, Article 114591 (2026)",
     date: "04/2025",
     authors: [
       {
@@ -235,7 +327,7 @@ const publication_data = [
       "method of manufactured solutions",
       "finite element method",
     ],
-    doi: "10.48550/arXiv.2504.18261",
+    doi: "10.1016/j.jcp.2025.114591",
     arxiv: "2504.18261",
     zenodo: "10.5281/zenodo.15279486"
   },
@@ -784,21 +876,26 @@ export default function Home({ allPostsData }: any) {
               }
             </div>
             <div>
-              <figure className={`float-right ml-2 my-2 border`}>
-                {
-                  images.map(
-                    (image, ind) =>
-                      <Image
-                        key={ind}
-                        className={`w-${'width' in image ? image.width : 40} m-0`}
-                        src={image.src}
-                        width={100}
-                        height={10}
-                        alt={image.alt}
-                      />
-                  )
-                }
-              </figure>
+              {
+                images.length > 0 ?
+                  <figure className={`float-right ml-2 my-2 border`}>
+                    {
+                      images.map(
+                        (image, ind) =>
+                          <Image
+                            key={ind}
+                            className={`w-${'width' in image ? image.width : 40} m-0`}
+                            src={image.src}
+                            width={100}
+                            height={10}
+                            alt={image.alt}
+                          />
+                      )
+                    }
+                  </figure>
+                  :
+                  ""
+              }
               <p className='text-xs leading-4 text-justify my-2'>
                 {abstract}
               </p>
@@ -830,15 +927,19 @@ export default function Home({ allPostsData }: any) {
                   />
                   {
                     zenodo != undefined ?
-                      <Badge
-                        link={"https://doi.org/" + zenodo}
-                        icon={<FontAwesomeIcon icon={faCode} />}
-                        left="Code"
-                        right={zenodo}
-                        lc="bg-violet-300"
-                        rc="bg-violet-200"
-                        textcolor="text-violet-900"
-                      />
+                      (Array.isArray(zenodo) ? zenodo : [zenodo]).map(
+                        (z, ind) =>
+                          <Badge
+                            key={ind}
+                            link={"https://doi.org/" + z}
+                            icon={<FontAwesomeIcon icon={faCode} />}
+                            left="Code"
+                            right={z}
+                            lc="bg-violet-300"
+                            rc="bg-violet-200"
+                            textcolor="text-violet-900"
+                          />
+                      )
                       :
                       ""
                   }
