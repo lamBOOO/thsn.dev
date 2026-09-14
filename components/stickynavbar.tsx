@@ -1,17 +1,19 @@
 "use client"
 
-import { Fragment, useState } from 'react'
+import { Fragment, useState, type MouseEvent } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMugSaucer } from '@fortawesome/free-solid-svg-icons'
 
 import logo from '../public/favicon.png'
 import logo_me from '../public/me.jpg'
+import { scrollToIdNoUrlChange } from '../lib/scrolling'
 
 const navigation = [
   { name: 'Home', id: '#home', current: false },  //  📢
@@ -28,6 +30,14 @@ function classNames(...classes: any[]) {
 
 export default function Navbar() {
   const [effect, setEffect] = useState(false);
+  const pathname = usePathname();
+
+  const scrollToSection = (id: string, event: MouseEvent<HTMLElement>) => {
+    if (pathname === '/' && id.startsWith('#')) {
+      event.preventDefault();
+      scrollToIdNoUrlChange(id.slice(1), { behavior: 'smooth' });
+    }
+  };
   return (
     <Disclosure as="nav" className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 dark:bg-neutral-800/90 border-b px-4">
       {({ open }) => (
@@ -47,8 +57,8 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <Link
-                    onClick={() => { setEffect(true); }}
-                    href="/#home"
+                    onClick={(event) => { setEffect(true); scrollToSection('#home', event)} } 
+                    href="/"
                     className={`${effect && "animate-rotate"
                       }`}
                     onAnimationEnd={() => setEffect(false)}
@@ -68,6 +78,7 @@ export default function Navbar() {
                       <Link
                         key={item.name}
                         href={"/" + item.id}
+                        onClick={(event) => scrollToSection(item.id, event)}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100 hover:text-black',
                           'px-3 py-2 rounded-md text-sm font-medium border-2 border-gray-100 dark:invert'
@@ -128,6 +139,7 @@ export default function Navbar() {
                   key={item.name}
                   as={Link}
                   href={"/" + item.id}
+                  onClick={(event: MouseEvent<HTMLElement>) => scrollToSection(item.id, event)}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-100 border-neutral-500',
                     'block py-2 rounded-md text-base font-medium dark:invert'
