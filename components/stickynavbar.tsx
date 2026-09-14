@@ -48,7 +48,7 @@ export default function Navbar() {
                 <div className="flex flex-shrink-0 items-center">
                   <Link
                     onClick={() => { setEffect(true); }}
-                    href="/"
+                    href="/#home"
                     className={`${effect && "animate-rotate"
                       }`}
                     onAnimationEnd={() => setEffect(false)}
