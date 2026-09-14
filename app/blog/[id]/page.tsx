@@ -9,9 +9,8 @@ import ReactMarkdown from 'react-markdown'
 
 import { Metadata, ResolvingMetadata } from 'next';
 
-export async function generateMetadata(
-  { params }: any,
-): Promise<Metadata> {
+export async function generateMetadata(props: any): Promise<Metadata> {
+  const params = await props.params;
   const postData = await getPostData(params.id);
   // console.log(postData)
   return {
@@ -23,7 +22,8 @@ export function generateStaticParams() {
   return getAllPostIds()
 }
 
-export default async function Page({ params }: any) {
+export default async function Page(props: any) {
+  const params = await props.params;
   const { id } = params;
   const postData = await getPostData(id);
   return <>
